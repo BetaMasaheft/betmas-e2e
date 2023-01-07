@@ -1,0 +1,13 @@
+{
+  "name": "betmas-e2e",
+  "version": "1.0.0",
+  "description": "end to end test for betamasaheft",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "author": "Duncan Paterson",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "cypress": "^12.3.0"
+  }
+}

@@ -1,3 +1,10 @@
+# cypress
+/cypress/screenshots/
+/cypress/videos/
+
+## IDE
+.vscode/
+
 # Logs
 logs
 *.log
