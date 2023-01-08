@@ -1,6 +1,7 @@
 # cypress
-/cypress/screenshots/
-/cypress/videos/
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
 
 ## IDE
 .vscode/
