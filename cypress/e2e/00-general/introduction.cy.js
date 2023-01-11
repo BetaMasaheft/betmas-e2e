@@ -1,6 +1,6 @@
 describe('Introducio section', () => {
     beforeEach(() => {
-      cy.visit('https://betamasaheft.eu')
+      cy.visit('')
     })
 
     it('displays four language selection buttons', () => {
