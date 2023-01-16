@@ -1,9 +1,16 @@
 describe('additions page', () => {
     beforeEach(() => {
-        cy.visit('additions')
+        // TODO(DP): This is SLOW !! see #5
+        cy.visit({
+            url: 'additions',
+            timeout: 100000
+        })
+
     })
 
-    it.skip('', () => {
+    it('', () => {
+        cy.get('h3')
+            .should('be.visible')
     })
 })
 

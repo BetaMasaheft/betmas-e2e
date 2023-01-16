@@ -44,7 +44,7 @@ describe('landing page', () => {
       .should('have.length', 2)
   })
 
-  // Contribue
+  // Contribute
   it('displays contribution section', () => {
     cy.get('#contribute')
       .children()
@@ -70,7 +70,7 @@ describe('landing page', () => {
     cy.get('#sidebar')
       .should('not.be.visible')
   })
-  // Search + Keyboard
+  // Search + Custom Keyboard
 
 })
 
