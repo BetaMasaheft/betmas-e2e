@@ -20,7 +20,4 @@ We collect necessary workflows for admin users here. Including steps that requir
 6. Save
 7. **GET ERROR MESSAGE** - and a broken user as a result https://github.com/BetaMasaheft/jinntec/issues/1
 
-## Server administration
-
-1. as described https://github.com/BetaMasaheft/Documentation/wiki/Application-maintenance-and-routine-operation-documentation
 
