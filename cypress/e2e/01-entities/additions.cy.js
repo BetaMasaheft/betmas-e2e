@@ -8,7 +8,7 @@ describe('additions page', () => {
 
     })
 
-    it('', () => {
+    it('the header should appear', () => {
         cy.get('h3')
             .should('be.visible')
     })
