@@ -8,7 +8,7 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 2. In Navigation bar (left), select Login, in the dropdown insert login credentials
 3. In the Navigation bar (right), select "work" (or other type of record) and click "new"
 4. Fill the form and click "create new entry"
-5. Download the XML file, to be further edited in Oxygen
+5. Download the XML file, to be further edited in Oxygen https://betamasaheft.eu/Guidelines/?id=newEntry
 6. **NB NEGATIVE**: the Login button is always present in the Navigation bar but since the latest release it only works from the homepage, not from subpages
 
 ## See activity
