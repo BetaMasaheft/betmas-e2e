@@ -18,7 +18,7 @@ We collect necessary workflows for admin users here. Including steps that requir
 4. Select User
 5. Change groups / password etc.
 6. Save
-7. **GET ERROR MESSAGE** - and a broken user as a result
+7. **GET ERROR MESSAGE** - and a broken user as a result https://github.com/BetaMasaheft/jinntec/issues/1
 
 ## Server administration
 
