@@ -14,6 +14,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. The xqm knows what the prefix means so takes you to the correct landing page for each entry type, e.g. 
 -- person ID PRS9429Tewodros so typing https://betamasaheft.eu/PRS9429Tewodros will resolve to https://betamasaheft.eu/persons/PRS9429Tewodros/main
 -- work ID LIT1385Fekkar typing https://betamasaheft.eu/LIT1385Fekkar will resolve to https://betamasaheft.eu/works/LIT1385Fekkar/main
+-- mss ID ESum040 typing https://betamasaheft.eu/ESum040 resolves to https://betamasaheft.eu/manuscripts/ESum040/main etc.
 
 
 ## Quick simple search
