@@ -8,6 +8,13 @@ We collect necessary workflows for users of BM app here. Including steps that re
 3. Click on "Beta masaheft in numbers" button
 4. Get the popup with the current number of records broke down by type ![image](https://user-images.githubusercontent.com/17987728/213142014-17e6dafe-c2f4-48c5-9eeb-7c3a00f15545.png)
 
+## Open record when ID known
+
+1. GO to http://betamasaheft.eu/ID 
+2. The xqm knows what the prefix means so takes you to the correct landing page for each entry type, e.g. 
+-- person ID PRS9429Tewodros so typing https://betamasaheft.eu/PRS9429Tewodros will resolve to https://betamasaheft.eu/persons/PRS9429Tewodros/main
+-- work ID LIT1385Fekkar typing https://betamasaheft.eu/LIT1385Fekkar will resolve to https://betamasaheft.eu/works/LIT1385Fekkar/main
+
 
 ## Quick simple search
 
