@@ -106,12 +106,20 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 7. **NB NEGATIVE** in the new full search, the search string is always extremely long as contains all possible fields, even if these are not used, possibly resulting in issues such as https://github.com/BetaMasaheft/BetMasWeb/issues/3 ![image](https://user-images.githubusercontent.com/17987728/213144936-117c4dbd-34e8-441d-91f5-c19a4017bb00.png)
 
 
-# User Story Dillmann (gez-en)
+# User Story Lexicon (Dillmann = gez-en)
 
 We collect necessary workflows for users of BM app here. Including steps that require external services or locations. 
 
-## TODO
+## Search for a lemma in the dictionary
 
-1. GO to `URL`
-2. Open Document
-3. see ... 
+1. GO to https://betamasaheft.eu/Dillmann 
+2. In the search field, enter the string in Ethiopic, e.g. ሀሰሰ
+3. Specify search mode (standard is Normal with homophones) and click on the search icon OR click enter
+4. Get search results with all occurrences and a short preview, here https://betamasaheft.eu/Dillmann/?q=%E1%88%80%E1%88%B0%E1%88%B0&mode=none 
+![image](https://user-images.githubusercontent.com/17987728/213470593-785821ea-ff5a-49ce-a76d-75d990f3906f.png)
+5. Click on the needed lemma (highlighted by a blue background) to get to the record, e.g. clicking on the first suggested lemma gets to https://betamasaheft.eu/Dillmann/?mode=none&q=%E1%88%80%E1%88%B0%E1%88%B0&id=La28f0d661a324ba5a2364e70e63ef317
+![image](https://user-images.githubusercontent.com/17987728/213470992-fad4acf1-d6ec-476c-9a46-3de81d9181e0.png)
+6. To see attestations in the texts encoded by the Beta masaheft project: click the green button "Load" at the bottom of the entry, under "Attestations in the Beta maṣāḥǝft corpus"
+![image](https://user-images.githubusercontent.com/17987728/213471506-1acb5944-ecba-4cb8-8eec-5937d9c1a920.png)
+
+
