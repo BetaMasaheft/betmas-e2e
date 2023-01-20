@@ -128,6 +128,13 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 ## Identifiy the work ID through text search (when text is available)
 
+1.  Go to https://betamasaheft.eu/ 
+2.  Type characteristic 1-3 word combinations from the beginning of the work, i.e. "አንጋረ፡ ፈላስፋ፡" https://betamasaheft.eu/simpleSearch.html?query=%22%E1%8A%A0%E1%8A%95%E1%8C%8B%E1%88%A8%E1%8D%A1+%E1%8D%88%E1%88%8B%E1%88%B5%E1%8D%8B%22
+3.  Open one of the manuscripts listed among the results in new tab, i.e. https://betamasaheft.eu/manuscripts/BNFet205/main?hi=%22%E1%8A%A0%E1%8A%95%E1%8C%8B%E1%88%A8%E1%8D%A1%20%E1%8D%88%E1%88%8B%E1%88%B5%E1%8D%8B%22
+4.  Scroll the description until the occurence is found ("Fols 26v and following Sentences of the wise philosophers (አንጋረ፡ ፈላስፋ፡ ዘውእቶሙ፡ ጠቢባን።)") 
+5.  Go to viewer by clicking on "images" in the upper menu and go to page 27 to read the text
+6.  also open the work records referred in other places in the manuscript description (by opening linked title in new tab, i.e. Fols 3r–16r መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡ (CAe 1925) to got to https://betamasaheft.eu/works/LIT1925Mashaf/main) to compare their info with available text, i.e.  
+
 # User Story Lexicon (Dillmann = gez-en)
 
 We collect necessary workflows for users of BM app here. Including steps that require external services or locations. 
