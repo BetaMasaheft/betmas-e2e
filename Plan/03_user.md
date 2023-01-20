@@ -163,7 +163,19 @@ We collect necessary workflows for users of BM app here. Including steps that re
 ![image](https://user-images.githubusercontent.com/17987728/213470593-785821ea-ff5a-49ce-a76d-75d990f3906f.png)
 5. Click on the needed lemma (highlighted by a blue background) to get to the record, e.g. clicking on the first suggested lemma gets to https://betamasaheft.eu/Dillmann/?mode=none&q=%E1%88%80%E1%88%B0%E1%88%B0&id=La28f0d661a324ba5a2364e70e63ef317
 ![image](https://user-images.githubusercontent.com/17987728/213470992-fad4acf1-d6ec-476c-9a46-3de81d9181e0.png)
-6. To see attestations in the texts encoded by the Beta masaheft project: click the green button "Load" at the bottom of the entry, under "Attestations in the Beta maṣāḥǝft corpus"
+
+## View attestations
+
+1. Go to the page of the lemma https://betamasaheft.eu/Dillmann/lemma/La28f0d661a324ba5a2364e70e63ef317
+2. Under "Attestations in the Beta maṣāḥǝft corpus": click "Load" 
 ![image](https://user-images.githubusercontent.com/17987728/213471506-1acb5944-ecba-4cb8-8eec-5937d9c1a920.png)
-7. In Ethiopic examples, hover over any word in Ethiopic to see the list of further options ![image](https://user-images.githubusercontent.com/17987728/213689018-43cd1a75-86ca-4fd6-bce6-cac390c7f081.png)
-8. Click on "search in the Online Lexicon" to get to the search results for this lemma https://betamasaheft.eu/Dillmann/?mode=fuzzy&q=%E1%88%88%E1%8A%AA
+
+## Parsing and linking
+
+1. In Ethiopic examples in the lemma or in the attestations, hover over any word in Ethiopic to see the list of further options ![image](https://user-images.githubusercontent.com/17987728/213689018-43cd1a75-86ca-4fd6-bce6-cac390c7f081.png)
+2. Click on "search in the Online Lexicon" to get to the search results for this lemma https://betamasaheft.eu/Dillmann/?mode=fuzzy&q=%E1%88%88%E1%8A%AA  OR
+3. Click on "Geez Morphological Parser" to get to the parser page at https://betamasaheft.eu/morpho?query=%E1%88%B0%E1%88%8B%E1%88%9B ![image](https://user-images.githubusercontent.com/17987728/213695502-8f1921dd-1013-4f03-a8d9-5116e4e99a50.png)
+ OR
+4. Doublie click on the term to get Alpheios results ![image](https://user-images.githubusercontent.com/17987728/213695287-1b849032-98ca-4cd9-94ad-ca43a98af7da.png)
+
+
