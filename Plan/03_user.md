@@ -108,11 +108,9 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 ## Search: Clavis Aethiopica reference lookup (when Clavis reference is known)
 
-1. GO to https://betamasaheft.eu/ 
-2. Press the search symbol (Navigation bar top right) to get to the starting search page https://betamasaheft.eu/simpleSearch.html
-3. Click the button Full search to get to https://betamasaheft.eu/newSearch.html
-4. In the dropdown, select Lookup Clavis Aethiopica Number
-5. In the text field, insert the number
+1. GO to Full search page https://betamasaheft.eu/newSearch.html
+2. In the dropdown, select Lookup Clavis Aethiopica Number
+3. In the text field, insert the number, e.g. 6666
 6. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=clavis&clavistype=&query=6666&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field=
 
 
