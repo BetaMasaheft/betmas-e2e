@@ -171,6 +171,13 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. Under "Attestations in the Beta maṣāḥǝft corpus": click "Load" 
 ![image](https://user-images.githubusercontent.com/17987728/213471506-1acb5944-ecba-4cb8-8eec-5937d9c1a920.png)
 
+## View the lemma in the scan of Dillmann's Lexicon
+
+1. Go to the page of the lemma https://betamasaheft.eu/Dillmann/lemma/La28f0d661a324ba5a2364e70e63ef317
+2. On top, click on the symbol with the book and page numbers ![image](https://user-images.githubusercontent.com/17987728/213696358-45670d05-c85a-4533-a905-a2a526439a68.png)
+3. You are redirected to the relevant page (external domain) https://www.tau.ac.il/~hacohen/Lexicon/pp583.html
+
+
 ## Parsing and linking
 
 1. In Ethiopic examples in the lemma or in the attestations, hover over any word in Ethiopic to see the list of further options ![image](https://user-images.githubusercontent.com/17987728/213689018-43cd1a75-86ca-4fd6-bce6-cac390c7f081.png)
