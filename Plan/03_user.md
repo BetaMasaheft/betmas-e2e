@@ -114,7 +114,17 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 5. In the text field, insert the number
 6. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=clavis&clavistype=&query=6666&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field=
 
-## Find manuscripts containing a work (when work ID is known)
+## Compare text of a work in manuscripts (when work ID is known)
+
+1. Go to page of the work by inserting its ID in the URL after typing betamasaheft.eu/: betamasaheft.eu/LIT1631Homily
+2. Look at red box on the right "This unit, or parts of it, is contained in 13 manuscript records 13 times"
+3. Scroll through the list, noting of which manuscripts images are available
+4. Open one result in new tab after having noted the number of the msItem of the work, i.e. https://betamasaheft.eu/manuscripts/ESdz010/main / ms_i1.10.3
+5. On https://betamasaheft.eu/manuscripts/ESdz010/main, click on "contents" to expand view
+6. Scroll until ms_i1.10.3 is found 
+7. Note Folio numbers of the msItem: Fols 181va–186vb
+8. Open viewer by scrolling to the upper menu and clicking on "images"
+9. Go to image 182 to look at text 
 
 ## Identifiy the work ID through text search (when text is available)
 
