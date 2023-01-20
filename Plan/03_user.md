@@ -126,7 +126,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 8. Open viewer by scrolling to the upper menu and clicking on "images"
 9. Go to image 182 to look at text 
 
-## Identifiy the work ID through text search (when text is available)
+## Identify the work ID through text search (when text is available)
 
 1.  Go to https://betamasaheft.eu/ 
 2.  Type characteristic 1-3 word combinations from the beginning of the work, i.e. "አንጋረ፡ ፈላስፋ፡" https://betamasaheft.eu/simpleSearch.html?query=%22%E1%8A%A0%E1%8A%95%E1%8C%8B%E1%88%A8%E1%8D%A1+%E1%8D%88%E1%88%8B%E1%88%B5%E1%8D%8B%22
@@ -134,6 +134,14 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 4.  Scroll the description until the occurence is found ("Fols 26v and following Sentences of the wise philosophers (አንጋረ፡ ፈላስፋ፡ ዘውእቶሙ፡ ጠቢባን።)") 
 5.  Go to viewer by clicking on "images" in the upper menu and go to page 27 to read the text
 6.  also open the work records referred in other places in the manuscript description (by opening linked title in new tab, i.e. Fols 3r–16r መጽሐፈ፡ ፈላስፋ፡ ጠቢባን፡ (CAe 1925) to got to https://betamasaheft.eu/works/LIT1925Mashaf/main) to compare their info with available text, i.e.  
+
+## Check whether there already is a record for a person named in a manuscript NOT FINISHED :)
+
+1. I have a manuscript in which a Mātewos and his son Kǝnfa Mikāʾel are mentioned. I want to check whether records exist for them, and if not, create them
+2. Go to https://betamasaheft.eu/ 
+3. Search for Matewos in simple search https://betamasaheft.eu/simpleSearch.html?query=matewos
+4. I open all all person records for persons called Matewos in new tab
+5. I go to each of the pages and check whether the person might be identical to my Matewos: 
 
 # User Story Lexicon (Dillmann = gez-en)
 
