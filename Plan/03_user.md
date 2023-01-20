@@ -105,6 +105,16 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 6. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=bmid&clavistype=&query=646&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field= 
 7. **NB NEGATIVE** in the new full search, the search string is always extremely long as contains all possible fields, even if these are not used, possibly resulting in issues such as https://github.com/BetaMasaheft/BetMasWeb/issues/3 ![image](https://user-images.githubusercontent.com/17987728/213144936-117c4dbd-34e8-441d-91f5-c19a4017bb00.png)
 
+## Search: Other Claves lookup 
+
+1. GO to full search page https://betamasaheft.eu/newSearch.html
+4. In the dropdown, select Lookup other Clavis ID
+5. In the new dropdown, select the Clavis (e.g. CPG) ![image](https://user-images.githubusercontent.com/17987728/213688093-1a013311-9ade-42f0-a577-114d6fb6129d.png)
+
+6. In the text field, insert the ID (exact match only) (e.g. 6127)
+7. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=otherclavis&clavistype=CPG&query=6127&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field= ![image](https://user-images.githubusercontent.com/17987728/213688185-4bc00dff-520d-439e-bd4c-1fce75f26aeb.png)
+
+
 ## Search: Clavis reference lookup (when Clavis reference is known)
 
 1. GO to https://betamasaheft.eu/ 
