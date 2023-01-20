@@ -169,5 +169,4 @@ We collect necessary workflows for users of BM app here. Including steps that re
 ![image](https://user-images.githubusercontent.com/17987728/213470992-fad4acf1-d6ec-476c-9a46-3de81d9181e0.png)
 6. To see attestations in the texts encoded by the Beta masaheft project: click the green button "Load" at the bottom of the entry, under "Attestations in the Beta maṣāḥǝft corpus"
 ![image](https://user-images.githubusercontent.com/17987728/213471506-1acb5944-ecba-4cb8-8eec-5937d9c1a920.png)
-
-
+7. In Ethiopic examples, hover over any word in Ethiopic to see the list of further options ![image](https://user-images.githubusercontent.com/17987728/213689018-43cd1a75-86ca-4fd6-bce6-cac390c7f081.png)
