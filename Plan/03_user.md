@@ -85,14 +85,12 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 ## Search in specific TEI tags
 
-1. GO to https://betamasaheft.eu/ 
-2. Press the search symbol (Navigation bar top right) to get to the starting search page https://betamasaheft.eu/simpleSearch.html
-3. Click the button Full search to get to https://betamasaheft.eu/newSearch.html
-4. Select the search type (for text search - Simple search)
-5. Insert the string in the search field in the middle, e.g. 'miracles' (for a phrase, "" can **NOT** be used, **one should select 'phrase' as the search mode, but this does not work**)
-6. Under the text field, click on the three-line-button to get additional options
-7. Type additional search parameters (e.g. I want to look for "fine" in handDesc and "Mary" in msContent) ![image](https://user-images.githubusercontent.com/17987728/213151689-79229176-a7c3-4878-8084-11b7a1fb840c.png)
-8. Click the search symbol and get the results https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracles&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=fine&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=mary&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field=
+1. GO to Full search https://betamasaheft.eu/newSearch.html
+2. Select the search type (for text search - Simple search)
+3. Insert the string in the search field in the middle, e.g. 'miracles' (for a phrase, "" can **NOT** be used, **one should select 'phrase' as the search mode, but this does not work**)
+4. Under the text field, click on the three-line-button to get additional options
+5. Type additional search parameters (e.g. I want to look for "fine" in handDesc and "Mary" in msContent) ![image](https://user-images.githubusercontent.com/17987728/213151689-79229176-a7c3-4878-8084-11b7a1fb840c.png)
+6. Click the search symbol and get the results https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracles&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=fine&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=mary&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field=
 
 
 ## Search: ID lookup (when partial ID is known)
