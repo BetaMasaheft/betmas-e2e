@@ -129,6 +129,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 1. Go to the page of a manuscript e.g. https://betamasaheft.eu/ESap028
 2. In the top menu, click Images
 3. The page https://betamasaheft.eu/manuscripts/ESap028/viewer opens, with MIRADOR viewer and images visible
+4. To get to the main entry view, select Entry in the top menu, you will be redirected to https://betamasaheft.eu/manuscripts/ESap028/main
 
 ## View work text
 1. Go to the page of a work record e.g. https://betamasaheft.eu/works/LIT1709Kebran/main
