@@ -125,17 +125,30 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 6. In the text field, insert the ID (exact match only) (e.g. 6127)
 7. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=otherclavis&clavistype=CPG&query=6127&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field= ![image](https://user-images.githubusercontent.com/17987728/213688185-4bc00dff-520d-439e-bd4c-1fce75f26aeb.png)
 
-## Compare text of a work in manuscripts (when work ID is known)
+## View manuscript images
+1. Go to the page of a manuscript e.g. https://betamasaheft.eu/ESap028
+2. In the top menu, click Images
+3. The page https://betamasaheft.eu/manuscripts/ESap028/viewer opens, with MIRADOR viewer and images visible
 
-1. Go to page of the work by inserting its ID in the URL after typing betamasaheft.eu/: betamasaheft.eu/LIT1631Homily
-2. Look at red box on the right "This unit, or parts of it, is contained in 13 manuscript records 13 times"
-3. Scroll through the list, noting of which manuscripts images are available
-4. Open one result in new tab after having noted the number of the msItem of the work, i.e. https://betamasaheft.eu/manuscripts/ESdz010/main / ms_i1.10.3
-5. On https://betamasaheft.eu/manuscripts/ESdz010/main, click on "contents" to expand view
-6. Scroll until ms_i1.10.3 is found 
-7. Note Folio numbers of the msItem: Fols 181va–186vb
-8. Open viewer by scrolling to the upper menu and clicking on "images"
-9. Go to image 182 to look at text 
+## View work text
+1. Go to the page of a work record e.g. https://betamasaheft.eu/works/LIT1709Kebran/main
+2. In the top menu, click Text
+3. The page  https://betamasaheft.eu/works/LIT1709Kebran/text opens ![image](https://user-images.githubusercontent.com/17987728/213690747-1932659a-ea06-4f5e-aa3d-3bc888d9f1e7.png)
+
+## See the witnesses of a work
+
+1. Go to page of the work e.g. https://betamasaheft.eu/works/LIT1631Homily/main
+2. See the red box on the right "This unit, or parts of it, is contained in 13 manuscript records 13 times"
+3. For more details on the witness, click on the underlined shelfmark in the list ![image](https://user-images.githubusercontent.com/17987728/213691491-f9800406-4217-4a2f-9372-0b7cab6d65e8.png)
+4. The manuscript page opens https://betamasaheft.eu/manuscripts/ESdz010/main
+
+## View manuscript table of content
+
+1. Open manuscript page, e.g. https://betamasaheft.eu/manuscripts/ESdz010/main 
+2. Click on "contents" to expand view ![image](https://user-images.githubusercontent.com/17987728/213691920-fa5669c9-cfc3-48b4-a1c0-57a36bde7fcf.png)
+3. Click other eventual boxes to expand view ![image](https://user-images.githubusercontent.com/17987728/213692081-8d35b9b2-c583-468f-b5b1-416146a88252.png)
+4. To get more information about a work contained, click on the underlined work title ![image](https://user-images.githubusercontent.com/17987728/213692227-07a5aca4-2a9e-4a3e-951c-6148f8bb278e.png)
+5. You are redirected to the work, here https://betamasaheft.eu/works/LIT1544Gebrah/main 
 
 ## Identify the work ID through text search (when text is available)
 
