@@ -151,6 +151,13 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 4. To get more information about a work contained, click on the underlined work title ![image](https://user-images.githubusercontent.com/17987728/213692227-07a5aca4-2a9e-4a3e-951c-6148f8bb278e.png)
 5. You are redirected to the work, here https://betamasaheft.eu/works/LIT1544Gebrah/main 
 
+# User Story Guidelines
+## Look up transcription guidelines
+1. Go to https://betamasaheft.eu/Guidelines/
+2. In the search field (top right) type *transcription* and click Search
+3. Get to https://betamasaheft.eu/Guidelines/?q=transcription 
+4. Scroll (and go to second page) to find the fitting title, here Transliteration Principles, click to get to https://betamasaheft.eu/Guidelines/?q=transcription&start=6&id=transliteration-principles 
+
 # User Story Lexicon (Dillmann = gez-en)
 
 We collect necessary workflows for users of BM app here. Including steps that require external services or locations. 
