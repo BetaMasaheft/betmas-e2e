@@ -52,6 +52,15 @@ describe('landing page', () => {
       .should('have.length', 2)
   })
 
+  // See user.md#BM_statistics
+  it('Produces readable statistics', () => {
+    cy.get(':nth-child(2) > .w3-margin-bottom > .w3-black')
+      .click()
+    cy.get('b.lead')
+      .should('be.visible') 
+      .should('have.length', 5)    
+  })
+
   // Footer
   it('displays contribution section', () => {
     cy.get('#footer')
