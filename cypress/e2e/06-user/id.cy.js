@@ -1,16 +1,21 @@
-describe('ID URL', () => {
-    beforeEach(() => {
-        cy.visit('ID')
-    })
+describe('id based URL routing', () => {
 
-    // (DP) is broken
     // see #6
-    it.skip('should not display an exist error', () => {
-        cy.get('h1')
-          .should('not.contain', 'An error has occured')
+    it('resolves person ids', () => {
+        cy.visit('PRS9429Tewodros')
+        cy.url()
+          .should('contain', 'persons')
     })
 
-    it.skip('should find the proper landing for each type', () => {
-        
+    it('resolves work ids', () => {
+        cy.visit('LIT1385Fekkar')
+        cy.url()
+          .should('contain', 'works')
+    })
+
+    it('resolves manuscript ids', () => {
+        cy.visit('ESum040')
+        cy.url()
+          .should('contain', 'manuscripts')
     })
 })
