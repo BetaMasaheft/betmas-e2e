@@ -152,7 +152,9 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 5. You are redirected to the work, here https://betamasaheft.eu/works/LIT1544Gebrah/main 
 
 # User Story Guidelines
+
 ## Look up transcription guidelines
+
 1. Go to https://betamasaheft.eu/Guidelines/
 2. In the search field (top right) type *transcription* and click Search
 3. Get to https://betamasaheft.eu/Guidelines/?q=transcription 

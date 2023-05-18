@@ -5,6 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'https://betamasaheft.eu'
+    baseUrl: 'https://betamasaheft.eu', 
+    responseTimeout: 100000
   },
 });
