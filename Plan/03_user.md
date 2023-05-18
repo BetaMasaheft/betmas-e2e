@@ -27,12 +27,16 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. Get the view  : manuscripts - e.g. AG0001 - https://betamasaheft.eu/resources/images/homepage/manuscript.jpg ; works - e.g. LIT1709Kebran - https://betamasaheft.eu/resources/images/homepage/texts.png etc.
 3. In the top record menu click Relations; this redirects to "analytic" subpage, e.g. https://betamasaheft.eu/works/LIT1709Kebran/analytic with a graph (**NB not working in the new release**) and a list of relations ![image](https://user-images.githubusercontent.com/17987728/213405059-dc6a0de0-5c52-4ffa-8746-3d7357c8bbb1.png)
 
+- [x] done
+
 ## Browse through manuscripts
 
 1. GO to https://betamasaheft.eu/ (or any subpage), in the Navigation bar hover over Manuscripts and select Shelf marks (full list)
 ![image](https://user-images.githubusercontent.com/17987728/213405627-066ceaf7-f1e6-44be-a590-3487bb9d46c4.png)
 2. This takes you to https://betamasaheft.eu/manuscripts/browse, a list of all mss arranged alphabetically by repositories ![image](https://user-images.githubusercontent.com/17987728/213405956-173f59c9-f0ab-44de-ae29-4c8b4b1054c5.png)
 3. Clicking on a repository takes to the search results for manuscripts preserved in that repository. E.g. clicking on Bayerische Staatsbibliothek redirects to https://betamasaheft.eu/newSearch.html?searchType=text&mode=any&work-types=mss&reporef=INS0318BSB ![image](https://user-images.githubusercontent.com/17987728/213406246-a0bb95b1-4846-4b9e-8fb8-3b320359d6fa.png)
+
+- [ ] Done
 
 ## Browse through additions in manuscripts
 
@@ -44,6 +48,8 @@ We collect necessary workflows for users of BM app here. Including steps that re
 5. E.g. to find Ownership Notes referring to Antoine d'Abbadie click Ownership Note and select d'Abbadie in the scroll-down menu for persons mentioned. Get the results at https://betamasaheft.eu/additions?type=OwnershipNote&termText=&otherText=&target-pers=https%3A%2F%2Fbetamasaheft.eu%2FPRS1071dAbbadi
 ![image](https://user-images.githubusercontent.com/17987728/213427940-b92727f7-725b-4888-a8c2-6e95130f54c3.png)
 
+- [ ] Done
+
 
 ## Quick simple search
 
@@ -54,6 +60,8 @@ We collect necessary workflows for users of BM app here. Including steps that re
 ![image](https://user-images.githubusercontent.com/17987728/213134725-e44319ad-4cbb-47a5-9547-a6b67ff698a3.png)
 5. Scroll to the result that you need and click on the link to get to the requested record  
 6. **NB** this search mode was thought to be deprecated once the new Full search works properly, it was "reactivated" because of the issues with the new search after the new release, see https://github.com/BetaMasaheft/Documentation/issues/2219
+
+- [ ] Done
 
 ## Advanced search 
 
@@ -70,6 +78,8 @@ We collect necessary workflows for users of BM app here. Including steps that re
 10. **NEGATIVE** the additional filter (here: Minimal number of codicological units) is not applied to search results in the new release; Many additional filters do not work in the new release (the date range earlier resulted in a scrollable selection of years that was then applied to results, cannot reproduce) 
 11. **NB** this search mode was thought to be deprecated once the new Full search works properly, it was "reactivated" because of the issues with the new search after the new release, see https://github.com/BetaMasaheft/Documentation/issues/2219
 ![image](https://user-images.githubusercontent.com/17987728/213139080-27711862-8ee7-46f2-9487-11352594f294.png)
+
+- [ ] Done
 
 ## New faceted search
 
@@ -89,6 +99,8 @@ We collect necessary workflows for users of BM app here. Including steps that re
 https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracles+of+mary&defaultoperator=OR&mode=phrase&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field=
 13. **NB Negative** The new search is over sensitive to spaces, if one adds a space at the end of the search string one gets error https://github.com/BetaMasaheft/Documentation/issues/2015
 
+- [ ] Done
+
 ## Search in specific TEI tags
 
 1. GO to Full search https://betamasaheft.eu/newSearch.html
@@ -98,6 +110,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 5. Type additional search parameters (e.g. I want to look for "fine" in handDesc and "Mary" in msContent) ![image](https://user-images.githubusercontent.com/17987728/213151689-79229176-a7c3-4878-8084-11b7a1fb840c.png)
 6. Click the search symbol and get the results https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracles&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=fine&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=mary&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field=
 
+- [ ] Done
 
 ## Search: ID lookup (when partial ID is known)
 
@@ -107,6 +120,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 4. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=bmid&clavistype=&query=646&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field= 
 5. **NB NEGATIVE** in the new full search, the search string is always extremely long as contains all possible fields, even if these are not used, possibly resulting in issues such as https://github.com/BetaMasaheft/BetMasWeb/issues/3 ![image](https://user-images.githubusercontent.com/17987728/213144936-117c4dbd-34e8-441d-91f5-c19a4017bb00.png)
 
+- [ ] Done
 
 ## Search: Clavis Aethiopica reference lookup (when Clavis reference is known)
 
@@ -115,6 +129,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 3. In the text field, insert the number, e.g. 6666
 6. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=clavis&clavistype=&query=6666&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field=
 
+- [ ] Done
 
 ## Search: Other Claves lookup 
 
@@ -125,16 +140,24 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 6. In the text field, insert the ID (exact match only) (e.g. 6127)
 7. Click the search symbol to get to the results https://betamasaheft.eu/newSearch.html?searchType=otherclavis&clavistype=CPG&query=6127&defaultoperator=OR&mode=none&homophones=on&signature-operator-field=AND&signature-field=&handDesc-operator-field=AND&handDesc-field=&decoDesc-operator-field=AND&decoDesc-field=&binding-operator-field=AND&binding-field=&supportDesc-operator-field=AND&supportDesc-field=&msContent-operator-field=AND&msContent-field=&additions-operator-field=AND&additions-field=&incipit-operator-field=AND&incipit-field=&explicit-operator-field=AND&explicit-field=&colophon-operator-field=AND&colophon-field=&title-operator-field=AND&title-field=&text-operator-field=AND&text-field=&person-operator-field=AND&person-field=&place-operator-field=AND&place-field= ![image](https://user-images.githubusercontent.com/17987728/213688185-4bc00dff-520d-439e-bd4c-1fce75f26aeb.png)
 
+- [ ] Done
+
 ## View manuscript images
+
 1. Go to the page of a manuscript e.g. https://betamasaheft.eu/ESap028
 2. In the top menu, click Images
 3. The page https://betamasaheft.eu/manuscripts/ESap028/viewer opens, with MIRADOR viewer and images visible
 4. To get to the main entry view, select Entry in the top menu, you will be redirected to https://betamasaheft.eu/manuscripts/ESap028/main
 
+- [ ] Done
+
 ## View work text
+
 1. Go to the page of a work record e.g. https://betamasaheft.eu/works/LIT1709Kebran/main
 2. In the top menu, click Text
 3. The page  https://betamasaheft.eu/works/LIT1709Kebran/text opens ![image](https://user-images.githubusercontent.com/17987728/213690747-1932659a-ea06-4f5e-aa3d-3bc888d9f1e7.png)
+
+- [ ] Done
 
 ## See the witnesses of a work
 
@@ -143,6 +166,8 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 3. For more details on the witness, click on the underlined shelfmark in the list ![image](https://user-images.githubusercontent.com/17987728/213691491-f9800406-4217-4a2f-9372-0b7cab6d65e8.png)
 4. The manuscript page opens https://betamasaheft.eu/manuscripts/ESdz010/main
 
+- [ ] Done
+
 ## View manuscript table of content
 
 1. Open manuscript page, e.g. https://betamasaheft.eu/manuscripts/ESdz010/main 
@@ -150,6 +175,8 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 3. Click other eventual boxes to expand view ![image](https://user-images.githubusercontent.com/17987728/213692081-8d35b9b2-c583-468f-b5b1-416146a88252.png)
 4. To get more information about a work contained, click on the underlined work title ![image](https://user-images.githubusercontent.com/17987728/213692227-07a5aca4-2a9e-4a3e-951c-6148f8bb278e.png)
 5. You are redirected to the work, here https://betamasaheft.eu/works/LIT1544Gebrah/main 
+
+- [ ] Done
 
 # User Story Guidelines
 
@@ -174,11 +201,15 @@ We collect necessary workflows for users of BM app here. Including steps that re
 5. Click on the needed lemma (highlighted by a blue background) to get to the record, e.g. clicking on the first suggested lemma gets to https://betamasaheft.eu/Dillmann/?mode=none&q=%E1%88%80%E1%88%B0%E1%88%B0&id=La28f0d661a324ba5a2364e70e63ef317
 ![image](https://user-images.githubusercontent.com/17987728/213470992-fad4acf1-d6ec-476c-9a46-3de81d9181e0.png)
 
+- [ ] Done
+
 ## View attestations
 
 1. Go to the page of the lemma https://betamasaheft.eu/Dillmann/lemma/La28f0d661a324ba5a2364e70e63ef317
 2. Under "Attestations in the Beta maṣāḥǝft corpus": click "Load" 
 ![image](https://user-images.githubusercontent.com/17987728/213471506-1acb5944-ecba-4cb8-8eec-5937d9c1a920.png)
+
+- [ ] Done
 
 ## View the lemma in the scan of Dillmann's Lexicon
 
@@ -186,6 +217,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. On top, click on the symbol with the book and page numbers ![image](https://user-images.githubusercontent.com/17987728/213696358-45670d05-c85a-4533-a905-a2a526439a68.png)
 3. You are redirected to the relevant page (external domain) https://www.tau.ac.il/~hacohen/Lexicon/pp583.html
 
+- [ ] Done
 
 ## Parsing and linking
 
@@ -194,5 +226,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 3. Click on "Geez Morphological Parser" to get to the parser page at https://betamasaheft.eu/morpho?query=%E1%88%B0%E1%88%8B%E1%88%9B ![image](https://user-images.githubusercontent.com/17987728/213695502-8f1921dd-1013-4f03-a8d9-5116e4e99a50.png)
  OR
 4. Doublie click on the term to get Alpheios results ![image](https://user-images.githubusercontent.com/17987728/213695287-1b849032-98ca-4cd9-94ad-ca43a98af7da.png)
+
+- [ ] Done
 
 

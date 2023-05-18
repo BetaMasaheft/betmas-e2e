@@ -4,7 +4,7 @@ describe('additions page', () => {
         // HTTPS errors are ignored to make the test run at all
         cy.visit({
             url: 'additions',
-            timeout: 100000 
+            timeout: 100000
         })
 
     })
