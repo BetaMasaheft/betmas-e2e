@@ -2,7 +2,7 @@
 
 We collect necessary workflows for users of BM app here. Including steps that require external services or locations. 
 
-## BM statistics
+## 1 BM statistics
 
 1. GO to `https://betamasaheft.eu/` 
 2. Scroll down to "Reuse the data"
@@ -11,7 +11,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [x] done
 
-## Open record when ID known
+## 2 Open record when ID known
 
 1. GO to `http://betamasaheft.eu/ID` 
 2. The xqm knows what the prefix means so takes you to the correct landing page for each entry type, e.g. 
@@ -21,7 +21,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [x] done
 
-## View all records connected through ontology relations with a given ID
+## 3 View all records connected through ontology relations with a given ID
 
 1. GO to http://betamasaheft.eu/ID or use search or browsing (see below) to open the needed record
 2. Get the view  : manuscripts - e.g. AG0001 - https://betamasaheft.eu/resources/images/homepage/manuscript.jpg ; works - e.g. LIT1709Kebran - https://betamasaheft.eu/resources/images/homepage/texts.png etc.
@@ -29,7 +29,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [x] done
 
-## Browse through manuscripts
+## 4 Browse through manuscripts
 
 1. GO to https://betamasaheft.eu/ (or any subpage), in the Navigation bar hover over Manuscripts and select Shelf marks (full list)
 ![image](https://user-images.githubusercontent.com/17987728/213405627-066ceaf7-f1e6-44be-a590-3487bb9d46c4.png)
@@ -38,7 +38,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [ ] Done
 
-## Browse through additions in manuscripts
+## 5 Browse through additions in manuscripts
 
 1. GO to https://betamasaheft.eu/additions
 2. Get the results of a filtered search arranged by the addition @type; clicking on the type drops down the list of hits, showing shelfmark and the text of the addition when provided 
@@ -51,7 +51,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 - [ ] Done
 
 
-## Quick simple search
+## 6 Quick simple search
 
 1. GO to https://betamasaheft.eu/ 
 2. Insert the string in the search field in the middle (for a phrase, "" can be used, e.g. "Miracles of Mary")
@@ -63,7 +63,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [ ] Done
 
-## Advanced search 
+## 7 Advanced search 
 
 1. GO to https://betamasaheft.eu/ 
 2. Press the search symbol (Navigation bar top right) to get to the starting search page https://betamasaheft.eu/simpleSearch.html
@@ -81,7 +81,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [ ] Done
 
-## New faceted search
+## 8 New faceted search
 
 1. GO to https://betamasaheft.eu/ 
 2. Press the search symbol (Navigation bar top right) to get to the starting search page https://betamasaheft.eu/simpleSearch.html
@@ -101,7 +101,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## Search in specific TEI tags
+## 9 Search in specific TEI tags
 
 1. GO to Full search https://betamasaheft.eu/newSearch.html
 2. Select the search type (for text search - Simple search)
@@ -112,7 +112,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## Search: ID lookup (when partial ID is known)
+## 10 Search: ID lookup (when partial ID is known)
 
 1. GO Full search at https://betamasaheft.eu/newSearch.html
 2. In the dropdown, select Lookup Betamasaheft ID
@@ -122,7 +122,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## Search: Clavis Aethiopica reference lookup (when Clavis reference is known)
+## 11 Search: Clavis Aethiopica reference lookup (when Clavis reference is known)
 
 1. GO to Full search page https://betamasaheft.eu/newSearch.html
 2. In the dropdown, select Lookup Clavis Aethiopica Number
@@ -131,7 +131,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## Search: Other Claves lookup 
+## 12 Search: Other Claves lookup 
 
 1. GO to full search page https://betamasaheft.eu/newSearch.html
 4. In the dropdown, select Lookup other Clavis ID
@@ -142,7 +142,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## View manuscript images
+## 13 View manuscript images
 
 1. Go to the page of a manuscript e.g. https://betamasaheft.eu/ESap028
 2. In the top menu, click Images
@@ -151,7 +151,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## View work text
+## 14 View work text
 
 1. Go to the page of a work record e.g. https://betamasaheft.eu/works/LIT1709Kebran/main
 2. In the top menu, click Text
@@ -159,7 +159,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## See the witnesses of a work
+## 15 See the witnesses of a work
 
 1. Go to page of the work e.g. https://betamasaheft.eu/works/LIT1631Homily/main
 2. See the red box on the right "This unit, or parts of it, is contained in 13 manuscript records 13 times"
@@ -168,7 +168,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 - [ ] Done
 
-## View manuscript table of content
+## 16 View manuscript table of content
 
 1. Open manuscript page, e.g. https://betamasaheft.eu/manuscripts/ESdz010/main 
 2. Click on "contents" to expand view ![image](https://user-images.githubusercontent.com/17987728/213691920-fa5669c9-cfc3-48b4-a1c0-57a36bde7fcf.png)
@@ -180,7 +180,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 # User Story Guidelines
 
-## Look up transcription guidelines
+## 17 Look up transcription guidelines
 
 1. Go to https://betamasaheft.eu/Guidelines/
 2. In the search field (top right) type *transcription* and click Search
@@ -191,7 +191,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 We collect necessary workflows for users of BM app here. Including steps that require external services or locations. 
 
-## Search for a lemma in the dictionary
+## 18 Search for a lemma in the dictionary
 
 1. GO to https://betamasaheft.eu/Dillmann 
 2. In the search field, enter the string in Ethiopic, e.g. ሀሰሰ
@@ -203,7 +203,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [ ] Done
 
-## View attestations
+## 19 View attestations
 
 1. Go to the page of the lemma https://betamasaheft.eu/Dillmann/lemma/La28f0d661a324ba5a2364e70e63ef317
 2. Under "Attestations in the Beta maṣāḥǝft corpus": click "Load" 
@@ -211,7 +211,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [ ] Done
 
-## View the lemma in the scan of Dillmann's Lexicon
+## 20 View the lemma in the scan of Dillmann's Lexicon
 
 1. Go to the page of the lemma https://betamasaheft.eu/Dillmann/lemma/La28f0d661a324ba5a2364e70e63ef317
 2. On top, click on the symbol with the book and page numbers ![image](https://user-images.githubusercontent.com/17987728/213696358-45670d05-c85a-4533-a905-a2a526439a68.png)
@@ -219,7 +219,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [ ] Done
 
-## Parsing and linking
+## 21 Parsing and linking
 
 1. In Ethiopic examples in the lemma or in the attestations, hover over any word in Ethiopic to see the list of further options ![image](https://user-images.githubusercontent.com/17987728/213689018-43cd1a75-86ca-4fd6-bce6-cac390c7f081.png)
 2. Click on "search in the Online Lexicon" to get to the search results for this lemma https://betamasaheft.eu/Dillmann/?mode=fuzzy&q=%E1%88%88%E1%8A%AA  OR

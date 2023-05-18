@@ -52,7 +52,7 @@ describe('landing page', () => {
       .should('have.length', 2)
   })
 
-  // See user.md#BM_statistics
+  // See user 1
   it('Produces readable statistics', () => {
     cy.get(':nth-child(2) > .w3-margin-bottom > .w3-black')
       .click()

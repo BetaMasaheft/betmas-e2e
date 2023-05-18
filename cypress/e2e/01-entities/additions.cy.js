@@ -1,6 +1,7 @@
 describe('additions page', () => {
     beforeEach(() => {
         // TODO(DP): This is SLOW !! see #5
+        // see User 5
         // HTTPS errors are ignored to make the test run at all
         cy.visit({
             url: 'additions',

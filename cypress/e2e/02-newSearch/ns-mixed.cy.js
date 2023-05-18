@@ -1,4 +1,5 @@
 describe('New Search Place and INS', () => {
+    // See User 8, 9 
     beforeEach(() => {
         cy.visit('newSearch', {
             qs: {

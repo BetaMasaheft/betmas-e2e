@@ -2,7 +2,7 @@
 
 We collect necessary workflows for cataloguer users here. Including steps that require external services or locations. 
 
-## Create new work (or other type of) record
+## 1 Create new work (or other type of) record
 
 1. GO to `[URL](https://betamasaheft.eu/)`
 2. In Navigation bar (left), select Login, in the dropdown insert login credentials
@@ -11,7 +11,9 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 5. Download the XML file, to be further edited in Oxygen https://betamasaheft.eu/Guidelines/?id=newEntry
 6. **NB NEGATIVE**: the Login button is always present in the Navigation bar but since the latest release it only works from the homepage, not from subpages
 
-## See activity
+- [ ] Done
+
+## 2 See activity
 
 1. GO to `[URL](https://betamasaheft.eu/)`
 2. In Navigation bar (left), select Login, in the dropdown insert login credentials
@@ -19,11 +21,13 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 4. This takes you to https://betamasaheft.eu/user/USERNAME (e.g. https://betamasaheft.eu/user/Eugenia)
 5. See the personal page documenting activities (Your latest 50 changes in files out of XXX you recorded in a change element / The last 50 pages you visited / Your queries / Your xpaths). **NB NEGATIVE**: in some cases the xquery does not do the matching right, in case of Eugenia=ES the page only shows **4** files with the change element even though they are several thousand; for most users all is correct though, possibly related to user management issue
 
+- [ ] Done
+
 # Contributor User Story - Lexicon
 
 We collect necessary workflows for lexicon users here. Including steps that require external services or locations. 
 
-## See activity
+## 3 See activity
 
 1. GO to https://betamasaheft.eu/Dillmann/
 2. In Navigation bar (left), select Login, in the dropdown insert login credentials
@@ -31,7 +35,9 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 4. This takes you to the personal page
 5. See the page documenting activities (Your made XXX changes in these files after the last conversion of the data from the original txt / The last 50 pages you visited)
 
-## Create new entry
+- [ ] Done
+
+## 4 Create new entry
 1. GO to https://betamasaheft.eu/Dillmann/
 2. In Navigation bar (left), select Login, in the dropdown insert login credentials
 4. Click "New Entry" button
@@ -39,7 +45,9 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 6. Click "Confirm", this saves the entry (in the backend it is transformed to xml and saved in the DillmannData/new) and takes you to the page with the link to the result
 **NB NEGATIVE**: on the form page it is first often necessary to repeat the login procedure as otherwise one sometimes cannot write the results
 
-## Edit existing entry
+- [ ] Done
+
+## 5 Edit existing entry
 1. GO to https://betamasaheft.eu/Dillmann/
 2. In Navigation bar (left), select Login, in the dropdown insert login credentials
 4. Go to the entry that needs to be edited, e.g. https://betamasaheft.eu/Dillmann/lemma/La7ad658e1d5b4858b709e05798f68a89
@@ -48,4 +56,6 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 7. Click "Confirm", this saves the entry and takes you to the page with the link to the result
 **NB NEGATIVE**: on the form page it is first often necessary to repeat the login procedure as otherwise one sometimes cannot write the results
 **NB NEGATIVE**: after each change saved one gets the issue with duplicate session cookies and has to clean the browser cookies (at least in chrome) https://github.com/BetaMasaheft/Dillmann/issues/387
+
+- [ ] Done
 
