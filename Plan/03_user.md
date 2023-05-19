@@ -36,7 +36,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. This takes you to https://betamasaheft.eu/manuscripts/browse, a list of all mss arranged alphabetically by repositories ![image](https://user-images.githubusercontent.com/17987728/213405956-173f59c9-f0ab-44de-ae29-4c8b4b1054c5.png)
 3. Clicking on a repository takes to the search results for manuscripts preserved in that repository. E.g. clicking on Bayerische Staatsbibliothek redirects to https://betamasaheft.eu/newSearch.html?searchType=text&mode=any&work-types=mss&reporef=INS0318BSB ![image](https://user-images.githubusercontent.com/17987728/213406246-a0bb95b1-4846-4b9e-8fb8-3b320359d6fa.png)
 
-- [ ] Done
+- [x] Done
 
 ## 5 Browse through additions in manuscripts
 

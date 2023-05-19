@@ -4,13 +4,31 @@ describe('landing page', () => {
   })
   // General Layout of landing page
   // Menu Bar
-  it('displays menu bar', () => {
-    cy.get('#main > :nth-child(1) > .w3-black')
-      .children()
-      .children()
-      .should('have.length', 18)
-  })
+  describe('menubar', () => {
+    it('displays 15 items', () => {
+      cy.get('#main > :nth-child(1) > .w3-black')
+        .children()
+        .children()
+        .should('have.length', 18)
+    })
 
+    // see user 4
+    // see https://docs.cypress.io/api/commands/hover
+    // see #7 realHover broken in Chrome > 100
+    it('manuscripts menu', () => {
+      cy.get('#mss')
+        .trigger('mouseover')
+      cy.get(['data-value="shelfmarks"'])
+        // (DP) actually it should be visible s.a.
+        .should('not.be.visible')
+        .then(() => {
+          cy.request('/manuscripts/browse')
+            .its('body')
+            .should('include', 'id="group-A"')
+            .and('include', '</html>')
+        })
+    })
+  })
   // Check for search icon
   // cy.get('.w3-hover-red')
 
@@ -57,8 +75,8 @@ describe('landing page', () => {
     cy.get(':nth-child(2) > .w3-margin-bottom > .w3-black')
       .click()
     cy.get('b.lead')
-      .should('be.visible') 
-      .should('have.length', 5)    
+      .should('be.visible')
+      .should('have.length', 5)
   })
 
   // Footer
