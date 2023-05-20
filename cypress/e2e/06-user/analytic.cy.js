@@ -1,5 +1,5 @@
 describe('analytic page', () => {
-  // see user 3
+  // see 03_user 3
   beforeEach(() => {
     cy.visit('works/LIT1709Kebran/analytic')
   })
@@ -13,7 +13,7 @@ describe('analytic page', () => {
       .should('have.length.of.at.least', 4)
   })
 
-  // See User.md the graph is not working, aka empty
+  // See 03_user 3 the graph is not working, aka empty
   it('shows relationship graph area', () => {
     cy.get('#BetMasRelView')
       .should('be.visible')
@@ -44,6 +44,8 @@ describe('analytic page', () => {
             .and('include', '</html>')
         })
     })
+
+    // see #8
     it('contains a working Works link', () => {
       cy.get('[href^="/works"]')
         .then(function ($a) {

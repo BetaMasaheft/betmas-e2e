@@ -12,7 +12,7 @@ describe('landing page', () => {
         .should('have.length', 18)
     })
 
-    // see user 4
+    // see 03_user 4
     // see https://docs.cypress.io/api/commands/hover
     // see #7 realHover broken in Chrome > 100
     it('manuscripts menu', () => {

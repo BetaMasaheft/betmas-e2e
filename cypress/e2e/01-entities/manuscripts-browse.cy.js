@@ -18,7 +18,7 @@ describe('Manuscripts browsing page', () => {
       .should('be.visible')
   })
 
-  // see user 4
+  // see 03_user 4
   it('it redirects to new search', () => {
     cy.get('[href*="INS0333SBB"]')
       .contains('Berlin State Library')
