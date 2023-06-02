@@ -97,7 +97,26 @@ describe('landing page', () => {
     cy.get('#sidebar')
       .should('not.be.visible')
   })
-  // Search + Custom Keyboard
-
+  // see 03_User 6
+  describe('simple search', () => {
+    // (DP) for proper tests of result page see simpleSearch.cy.js
+    // 6.2-  6.3 
+    it('should load new page via search button', () => {
+      cy.get('#q')
+        .type('"Miracles of Mary"')
+      cy.get('#f-btn-search')
+        .click()
+      cy.url()
+        .should('contain', 'Miracles+of+Mary')
+    })
+    // 6.2 - 6.3
+    it('should search via keyboard', () => {
+      cy.get('#q')
+        .type('"Miracles of Mary"{enter}')
+      cy.get('.container')
+        .should('be.visible')
+        .and('contain', 'Miracles of Mary')
+    })
+  })
 })
 

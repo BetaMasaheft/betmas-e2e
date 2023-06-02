@@ -61,7 +61,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 5. Scroll to the result that you need and click on the link to get to the requested record  
 6. **NB** this search mode was thought to be deprecated once the new Full search works properly, it was "reactivated" because of the issues with the new search after the new release, see https://github.com/BetaMasaheft/Documentation/issues/2219
 
-- [ ] Done
+- [x] Done
 
 ## 7 Advanced search 
 
