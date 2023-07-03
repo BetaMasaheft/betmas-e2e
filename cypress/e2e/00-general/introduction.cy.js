@@ -1,4 +1,4 @@
-describe('Introducio section', () => {
+describe('Introducion section', () => {
     beforeEach(() => {
       cy.visit('')
     })
