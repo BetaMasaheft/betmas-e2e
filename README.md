@@ -5,7 +5,7 @@
 
  ## Requirements
 
-- node `v16` or later
+- node `v18` or later
 
 ## How to use
 
@@ -13,4 +13,4 @@ You can see the results of the latest run on the `Actions` tab here on Github. T
 
 1. `npm install` (you only need to do this once)
 
-2. `npm test`
+2. `npx cypress run -b firefox`
