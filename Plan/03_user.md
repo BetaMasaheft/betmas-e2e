@@ -43,9 +43,8 @@ We collect necessary workflows for users of BM app here. Including steps that re
 1. GO to https://betamasaheft.eu/additions
 2. Get the results of a filtered search arranged by the addition @type; clicking on the type drops down the list of hits, showing shelfmark and the text of the addition when provided 
 ![image](https://user-images.githubusercontent.com/17987728/213426533-d1335f0d-3341-4d9a-9f7a-50d6c3fd9b66.png)
-<!-- DP Continue Here -->
-4. For types with more than 100 hits (more are not printed as otherwise we get a Time Out error https://github.com/BetaMasaheft/Documentation/issues/1944#issuecomment-1119696815 ) - or whenever needed - apply additional filters on the left. 
-5. E.g. to find Ownership Notes referring to `Antoine d'Abbadie` click Ownership Note and select `Antoine d'Abbadie [d'Arrast]` in the scroll-down menu for persons mentioned. Get the results at https://betamasaheft.eu/additions?type=OwnershipNote&termText=&otherText=&target-pers=https%3A%2F%2Fbetamasaheft.eu%2FPRS1071dAbbadi
+1. For types with more than 100 hits (more are not printed as otherwise we get a Time Out error https://github.com/BetaMasaheft/Documentation/issues/1944#issuecomment-1119696815 ) - or whenever needed - apply additional filters on the left. 
+2. E.g. to find Ownership Notes referring to `Antoine d'Abbadie` click Ownership Note and select `Antoine d'Abbadie [d'Arrast]` in the scroll-down menu for persons mentioned. Get the results at https://betamasaheft.eu/additions?type=OwnershipNote&termText=&otherText=&target-pers=https%3A%2F%2Fbetamasaheft.eu%2FPRS1071dAbbadi
 ![image](https://user-images.githubusercontent.com/17987728/213427940-b92727f7-725b-4888-a8c2-6e95130f54c3.png)
 
 - [x] Done
@@ -74,7 +73,8 @@ We collect necessary workflows for users of BM app here. Including steps that re
 6a. Under "Search only a type of entity" tick off "Manuscripts" and under drop down menue select data type Manuscripts, for additional filters
 6b. Select additional filter, e.g. Minimal number of codicological units -> enter 2
 8. Click the SEARCH button (bottom) 
-9. Get to search results page, with the results broke down by entry type if applicable https://betamasaheft.eu/as.html?query=%22miracles+of+mary%22&AttestedInType=1&xmlid= 
+<!-- TODO(DP): continue here -->
+9.  Get to search results page, with the results broke down by entry type if applicable https://betamasaheft.eu/as.html?query=%22miracles+of+mary%22&AttestedInType=1&xmlid= 
 10. **NEGATIVE** the additional filter (here: Minimal number of codicological units) is not applied to search results in the new release; Many additional filters do not work in the new release (the date range earlier resulted in a scrollable selection of years that was then applied to results, cannot reproduce) 
 11. **NB** this search mode was thought to be deprecated once the new Full search works properly, it was "reactivated" because of the issues with the new search after the new release, see https://github.com/BetaMasaheft/Documentation/issues/2219
 ![image](https://user-images.githubusercontent.com/17987728/213139080-27711862-8ee7-46f2-9487-11352594f294.png)

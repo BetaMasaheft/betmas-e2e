@@ -12,6 +12,30 @@ describe('landing page', () => {
         .should('have.length', 18)
     })
 
+    // 7.2
+    // see simpleSearch.cy.js
+    // Check for search icon
+    it('should have working search icon in menu', () => {
+      // slow version with click
+      cy.get('.w3-hover-red')
+        .should('have.attr', 'href')
+        .and('include', 'simpleSearch')
+      cy.get('.w3-hover-red')  
+        .click()
+      cy.url()
+        .should('contain', 'simpleSearch')
+
+      // fast version no click
+      // cy.get('.w3-hover-red')  
+      //   .invoke('attr', 'href')
+      //   .then(href => {
+      //     cy.request(href)
+      //       .its('body')
+      //       .should('include', 'simpleSearch')
+      //       .and('include', '</html>')
+      //   })  
+    })
+
     // see 03_user 4
     // see https://docs.cypress.io/api/commands/hover
     // see #7 realHover broken in Chrome > 100
@@ -29,8 +53,6 @@ describe('landing page', () => {
         })
     })
   })
-  // Check for search icon
-  // cy.get('.w3-hover-red')
 
   // Cover
   it('loads as guest user', () => {

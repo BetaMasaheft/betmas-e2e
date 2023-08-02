@@ -46,4 +46,28 @@ describe('simple search page', () => {
               .and('include', '</html>')
           })
     })
+
+    describe('search options', () => {
+      it('should display 14 modi', () => {
+        cy.get(':nth-child(4) > .w3-bar')
+          .children()
+          .should('have.length', '14')
+      })
+
+    // 03_user 7.3
+    // see advancedSearch.cy.js
+    it('should have working advanced search', () => {
+      cy.get('[href="/as.html"]')  
+        .invoke('attr', 'href')
+        .then(href => {
+          cy.request(href)
+            .its('body')
+            .should('include', 'simpleSearch')
+            .and('include', '</html>')
+        })  
+    })
+    
+    // TODO(DP): 13 more to go
+    })
+    
 })
