@@ -202,6 +202,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 ![image](https://user-images.githubusercontent.com/17987728/213470992-fad4acf1-d6ec-476c-9a46-3de81d9181e0.png)
 
 - [ ] Done
+- [x] Under review
 
 ## 19 View attestations
 
@@ -210,6 +211,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 ![image](https://user-images.githubusercontent.com/17987728/213471506-1acb5944-ecba-4cb8-8eec-5937d9c1a920.png)
 
 - [ ] Done
+- [x] In progress
 
 ## 20 View the lemma in the scan of Dillmann's Lexicon
 
@@ -218,6 +220,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 3. You are redirected to the relevant page (external domain) https://www.tau.ac.il/~hacohen/Lexicon/pp583.html
 
 - [ ] Done
+- [x] In progress
 
 ## 21 Parsing and linking
 
@@ -228,5 +231,6 @@ We collect necessary workflows for users of BM app here. Including steps that re
 4. Doublie click on the term to get Alpheios results ![image](https://user-images.githubusercontent.com/17987728/213695287-1b849032-98ca-4cd9-94ad-ca43a98af7da.png)
 
 - [ ] Done
+- [x] In progress
 
 
