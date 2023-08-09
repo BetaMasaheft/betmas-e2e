@@ -188,7 +188,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 4. Scroll (and go to second page) to find the fitting title, here Transliteration Principles, click to get to https://betamasaheft.eu/Guidelines/?q=transcription&start=6&id=transliteration-principles
 
 - [ ] Done
-- [x] In progress
+- [x] Under review
 
 # User Story Lexicon (Dillmann = gez-en)
 
