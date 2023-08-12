@@ -187,8 +187,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 3. Get to https://betamasaheft.eu/Guidelines/?q=transcription 
 4. Scroll (and go to second page) to find the fitting title, here Transliteration Principles, click to get to https://betamasaheft.eu/Guidelines/?q=transcription&start=6&id=transliteration-principles
 
-- [ ] Done
-- [x] Under review
+- [x] Done
 
 # User Story Lexicon (Dillmann = gez-en)
 
@@ -212,8 +211,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. Under "Attestations in the Beta maṣāḥǝft corpus": click "Load" 
 ![image](https://user-images.githubusercontent.com/17987728/213471506-1acb5944-ecba-4cb8-8eec-5937d9c1a920.png)
 
-- [ ] Done
-- [x] Under review
+- [x] Done
 
 ## 20 View the lemma in the scan of Dillmann's Lexicon
 
@@ -221,8 +219,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. On top, click on the symbol with the book and page numbers ![image](https://user-images.githubusercontent.com/17987728/213696358-45670d05-c85a-4533-a905-a2a526439a68.png)
 3. You are redirected to the relevant page (external domain) https://www.tau.ac.il/~hacohen/Lexicon/pp583.html
 
-- [ ] Done
-- [x] Under review
+- [x] Done
 
 ## 21 Parsing and linking
 

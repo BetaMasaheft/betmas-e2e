@@ -2,6 +2,7 @@ describe('Dillman page', () => {
     // TODO(DP): before we can do anything this application error needs to be gone see #4
     // see 03_User 18-20
     // see 02_Contrib 3-6
+    // see 06-users/lemma.cy.js
     beforeEach(() => {
         // cy.on('uncaught:exception', (err, runnable) => {
         //     expect(err.message).to.include('Cannot read properties of undefined')
@@ -103,5 +104,4 @@ describe('Dillman page', () => {
                 })
         })
     })
-
 })
