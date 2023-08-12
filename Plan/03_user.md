@@ -204,8 +204,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 5. Click on the needed lemma (highlighted by a blue background) to get to the record, e.g. clicking on the first suggested lemma gets to https://betamasaheft.eu/Dillmann/?mode=none&q=%E1%88%80%E1%88%B0%E1%88%B0&id=La28f0d661a324ba5a2364e70e63ef317
 ![image](https://user-images.githubusercontent.com/17987728/213470992-fad4acf1-d6ec-476c-9a46-3de81d9181e0.png)
 
-- [ ] Done
-- [x] Under review
+- [x] Done
 
 ## 19 View attestations
 
