@@ -1,10 +1,10 @@
-describe('advanced search page', () => {
+describe('The advanced search page', () => {
   beforeEach(() => {
     cy.visit('as.html')
   })
 
   // DP: Usability could not display hide show button on initial load
-  describe('The advanced search page', () => {
+  describe('layout', () => {
     // 03_User 7.3 
     it('should contain proper header', () => {
       cy.get('h3')
@@ -47,7 +47,7 @@ describe('advanced search page', () => {
     })
     
   })
-  describe('Searching', () => {
+  describe('search', () => {
     // it would be better to use ID attr instead of name
     it('should use filters', () => {
       // 03_User 7.4 
@@ -80,7 +80,7 @@ describe('advanced search page', () => {
         .should('contain', 'Taʾammǝra')
     })
   })
-  describe('search results', () => {
+  describe('results', () => {
     it('should be broken down by type', () => {
       // 03_User 7.10
       cy.visit('as.html', {
