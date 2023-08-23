@@ -4,12 +4,48 @@ describe('advanced search page', () => {
   })
 
   // DP: Usability could not display hide show button on initial load
-  describe('Structure', () => {
+  describe('The advanced search page', () => {
     // 03_User 7.3 
     it('should contain proper header', () => {
       cy.get('h3')
         .contains('General Search Options')
     })
+
+    it('should toggle filters', () => {
+      cy.get('#gsf')
+        .should('exist')
+      cy.get('#tooglesearchfield')
+        .click()
+        .find('#gsf')
+        .should('not.exist')
+    })
+
+    it('should show general filters', () => {
+      // 03_User 7.11
+      // see BetaMasaheft/Documentation#2219
+      // known to be broken hence we can't test effect on results
+      cy.get('[value="languages"]')
+        .check()
+      cy.get('#language')
+        .should('exist')
+
+      cy.get('[value="keywords"]')
+        .check()
+      cy.get('#keywords')
+        .should('exist')
+
+      cy.get('[value="relations"]')
+        .check()
+      cy.get('#relations')
+        .should('exist')
+
+      cy.get('[value="date"]')
+        .check()
+      cy.get('#datesform')
+        .should('exist')
+ 
+    })
+    
   })
   describe('Searching', () => {
     // it would be better to use ID attr instead of name
@@ -53,38 +89,7 @@ describe('advanced search page', () => {
           AttestedInType: 1
         }
       })
-      // TODO(DP): adjust assertions via requests
-      cy.get('#results')
-        .within(($results) => {
-          cy.get('.resultspersons')
-            .should('contain', 'Mary')
-          cy.get('.resultsworks')
-            .should('contain', 'Mary')
-          cy.get('.resultsstudies')
-            .should('contain', 'Mary')
-          cy.get('.resultsplaces')
-            .should('contain', 'Mary')
-          cy.get('.resultsauthority-files')
-            .should('contain', 'Mary')
-          cy.get('.resultsinstitutions')
-            .should('contain', 'Mary')
-          cy.get('.resultsmanuscripts')
-            .should('contain', 'Mary')
-          cy.get('.resultsnarratives')
-            .should('contain', 'Mary')
-        })
-    })
-
-    it.skip('should apply filters', () => {
-      // 03_User 7.11
-      // known to be broken
-      cy.visit('as.html', {
-        qs: {
-          query: 'miracles+of+mary',
-          AttestedInType: 1
-        }
-      })
-      // TODO(DP): adjust assertions
+      
       cy.get('#results')
         .within(($results) => {
           cy.get('.resultspersons')
