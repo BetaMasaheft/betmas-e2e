@@ -48,10 +48,11 @@ describe('simple search page', () => {
     })
 
     describe('search options', () => {
-      it('should display 14 modi', () => {
+      // DP: was 14 modi see #20
+      it('should display 13 modi', () => {
         cy.get(':nth-child(4) > .w3-bar')
           .children()
-          .should('have.length', '14')
+          .should('have.length', '13')
       })
 
     // 03_user 7.3
