@@ -22,8 +22,8 @@ describe('Look up transcription guidelines', () => {
         .should('eq', '?q=transcription&start=6&id=transliteration-principles')
         .then(href => {
               cy.request(href)
-                .its('status')
-                .should('eq', 200)
+                .its('body')
+                .should('include', '</html>')
          })
     }
     )
@@ -33,8 +33,9 @@ describe('Look up transcription guidelines', () => {
         .should('eq', '/Guidelines/?id=transliteration-principles')
         .then(href => {
               cy.request(href)
-                .its('status')
-                .should('eq', 200)
+              .its('body')
+              .should('include', '</html>')
+              .and('include', 'Transliteration')
          })
     })
 })
