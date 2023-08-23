@@ -20,6 +20,7 @@ import './commands'
 // require('./commands')
 
 Cypress.on('uncaught:exception', (err, runnable) => {
+
   // we expect a 3rd party library error with message 'list not defined'
   // and don't want to fail the test so we return false
   // see #1
@@ -33,6 +34,24 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // on the advanced search submit button
   // see #14
   if (err.message.includes('form is not defined')) {
+    return false
+  }
+})
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // we expect a 3rd party library error with message 'trimmed is undefined'
+  // and don't want to fail the test so we return false
+  // see #4
+  if (err.message.includes('trimmed is undefined')) {
+    return false
+  }
+})
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // we expect a 3rd party library error with message 'data is null'
+  // and don't want to fail the test so we return false
+  // see #4
+  if (err.message.includes('data is null')) {
     return false
   }
 })
