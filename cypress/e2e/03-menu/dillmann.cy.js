@@ -37,16 +37,15 @@ describe('Dillman page', () => {
 
     describe('lemma search', () => {
         // see 03_user 18
-
         it('should work with mouse', () => {
             cy.get('[name="q"]')
                 .type('ሀሰሰ')
-
-            
             cy.get('[name="mode"]').should('have.value', 'none')
             // 3_user 18.3 default mode is "Normal, with homophones"
-            // cy.get('[name="mode"]').contains('Normal, with homophones')
             cy.get('[name="mode"]').find(':selected').contains('Normal, with homophones')
+            cy.get('[selected=""]')
+            .should('have.length', 1)
+            .should('have.value', 'none')
             cy.get('.fa-search').click()
             // 03_user 18.4
             cy.get('#results > .w3-row')
@@ -59,7 +58,7 @@ describe('Dillman page', () => {
                     cy.get('#results > .w3-row').its('length').should('be.lte', pagination_int)
                 })
  
-            cy.get('#results .w3-twothird > a').first().invoke('attr', 'href')
+                cy.get('#results .w3-twothird > a').first().invoke('attr', 'href')
                 // first link leads to page with correct mode and searched phrase and any id
                 .should('contain', '?mode=none&q=ሀሰሰ&id=')
                 .then(href => {
@@ -72,7 +71,6 @@ describe('Dillman page', () => {
             // a record appears indicated by the newly visible h3 dillman section
             cy.get('.entry')
               .contains('Dillman')
-
         });
 
 
@@ -102,8 +100,8 @@ describe('Dillman page', () => {
                 .should('contain', '?mode=fuzzy&q=ሀሰሰ&id=')
                 .then(href => {
                     cy.request(href)
-                        .its('status')
-                        .should('eq', 200);
+                        .its('body')
+                        .should('include','</html>')
                 })
 
             // first link opens the page with lemma description headed with first link text
