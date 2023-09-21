@@ -149,6 +149,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 4. To get to the main entry view, select Entry in the top menu, you will be redirected to https://betamasaheft.eu/manuscripts/ESap028/main
 
 - [ ] Done
+- [x] In progress 
 
 ## 14 View work text
 
@@ -157,6 +158,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 3. The page  https://betamasaheft.eu/works/LIT1709Kebran/text opens ![image](https://user-images.githubusercontent.com/17987728/213690747-1932659a-ea06-4f5e-aa3d-3bc888d9f1e7.png)
 
 - [ ] Done
+- [x] In progress 
 
 ## 15 See the witnesses of a work
 
@@ -166,6 +168,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 4. The manuscript page opens https://betamasaheft.eu/manuscripts/ESdz010/main
 
 - [ ] Done
+- [x] In progress 
 
 ## 16 View manuscript table of content
 
