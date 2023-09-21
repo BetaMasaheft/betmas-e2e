@@ -12,6 +12,7 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 6. **NB NEGATIVE**: the Login button is always present in the Navigation bar but since the latest release it only works from the homepage, not from subpages
 
 - [ ] Done
+- [x] In progress
 
 ## 2 See activity
 
@@ -22,6 +23,7 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 5. See the personal page documenting activities (Your latest 50 changes in files out of XXX you recorded in a change element / The last 50 pages you visited / Your queries / Your xpaths). **NB NEGATIVE**: in some cases the xquery does not do the matching right, in case of Eugenia=ES the page only shows **4** files with the change element even though they are several thousand; for most users all is correct though, possibly related to user management issue
 
 - [ ] Done
+- [x] In progress
 
 # Contributor User Story - Lexicon
 
@@ -36,6 +38,7 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 5. See the page documenting activities (Your made XXX changes in these files after the last conversion of the data from the original txt / The last 50 pages you visited)
 
 - [ ] Done
+- [x] In progress
 
 ## 4 Create new entry
 1. GO to https://betamasaheft.eu/Dillmann/
@@ -46,6 +49,7 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 **NB NEGATIVE**: on the form page it is first often necessary to repeat the login procedure as otherwise one sometimes cannot write the results
 
 - [ ] Done
+- [x] In progress
 
 ## 5 Edit existing entry
 1. GO to https://betamasaheft.eu/Dillmann/
