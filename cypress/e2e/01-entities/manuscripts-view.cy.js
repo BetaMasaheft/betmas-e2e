@@ -1,6 +1,9 @@
 describe('Manuscripts: view images and content', () => {
     // See user 13 and 16
 
+    // Tests done with manuscript ESdz01. Short title stored in constant
+    const msTitle = 'Gǝbra Ḥǝmāmāt'
+
     beforeEach(() => {
         cy.visit('/manuscripts/ESdz010')
     })
@@ -9,15 +12,6 @@ describe('Manuscripts: view images and content', () => {
         // See 03_user 13
         // In the top menu, click Images
         cy.get('[href*="/manuscripts/ESdz010/viewer"]')
-        // HBS: I get a “too much recursion” error with the following code, 
-        // so I use 'removeAttr' instead
-        // .invoke('attr', 'href')
-        // .then(href => {
-        //   cy.request(href)
-        //     .its('body')
-        //     .should('include', '</html>')
-        //     .and('include', 'mirador-main-menu-bar')
-          //})
         .invoke('removeAttr', 'target')
         .click()
         // The page opens with MIRADOR viewer and images visible
@@ -32,10 +26,11 @@ describe('Manuscripts: view images and content', () => {
           cy.request(href)
             .its('body')
             .should('include', '</html>')
+            .and('include', msTitle)
           })
       })
 
-      it('View manuscript contents', () => {
+      it('View manuscript contents', () => {       
         // See 03_user 16
         // Click on "contents" to expand view 
         cy.get('button[resource="https://betamasaheft.eu/ESdz010/msitem/ms_i1"][onclick^="openAccordion"]')
@@ -49,6 +44,7 @@ describe('Manuscripts: view images and content', () => {
           cy.request(href)
             .its('body')
             .should('include', '</html>')
+            .and('include', msTitle)
           })
       })
 
