@@ -1,4 +1,4 @@
-describe('Manuscripts viewer page', () => {
+describe('A works page', () => {
     // see user 14 and 15
 
     beforeEach(() => {
