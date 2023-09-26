@@ -36,6 +36,8 @@ describe('Necessary workflows for cataloguer users', () => {
     cy.get('.w3-dropdown-content')
     .invoke('removeAttr', 'class')
     cy.get('#navexplanationintro a').first().click()
+    // Test users are not listed as editors and thus the personal page doesn’t get generated.
+    // Therefore, we just check that the URL contains the username
     cy.url().should('include', username)
    })
 
