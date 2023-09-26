@@ -1,5 +1,5 @@
 const username = 'JinntecCatalogue'
-const password = Cypress.env('passwordCat')
+const password = Cypress.env('passwordCataloguer')
 
 const placeholder = 'to-be-deleted'
 
@@ -11,10 +11,11 @@ describe('Necessary workflows for cataloguer users', () => {
     cy.visit('/')
     //In Navigation bar (left), select Login, in the dropdown insert login credentials
     cy.get('#logging')
-    // HBS: since the visualization of a the login dialog depends
-    // on a CSS hover selector, we check the presence of the pertinent classes
+    // Since the visualization of a the login dialog depends
+    // on a CSS hover selector, we first check the presence of the pertinent classes
     .should('have.class', 'w3-dropdown-hover')
     .and('have.descendants', 'div.w3-dropdown-content')
+    //Then we take out the class that makes the content invisible, so we can access the elements
     cy.get('.w3-dropdown-content')
     .invoke('removeAttr', 'class')
     cy.get('input[name="user"]')
@@ -35,24 +36,25 @@ describe('Necessary workflows for cataloguer users', () => {
     cy.get('.w3-dropdown-content')
     .invoke('removeAttr', 'class')
     cy.get('#navexplanationintro a').first().click()
+    cy.url().should('include', username)
    })
 
-   //See test 02_01
-  //  it.skip('Create a new work entry', () => {
-  //   // In the Navigation bar (right), select "work" (or other type of record) and click "new"
-  //  cy.get('form[action="/newentry.html"] > select')
-  //  .select('works')
-  //  cy.get('form[action="/newentry.html"] > button')
-  //  .click()
-  //  // Fill the form and click "create new entry"
-  //  cy.get('#suffix')
-  //  .type(placeholder)
-  //   cy.get('#title')
-  //   .type(placeholder)
-  //   cy.get('input[value="Poetry"]')
-  //   .check()
-  //   cy.get('#confirmcreatenew')
-  //   .click()
-  //  })
+  // See test 02_01
+   it.skip('Create a new work entry', () => {
+    // In the Navigation bar (right), select "work" (or other type of record) and click "new"
+   cy.get('form[action="/newentry.html"] > select')
+   .select('works')
+   cy.get('form[action="/newentry.html"] > button')
+   .click()
+   // Fill the form and click "create new entry"
+   cy.get('#suffix')
+   .type(placeholder)
+    cy.get('#title')
+    .type(placeholder)
+    cy.get('input[value="Poetry"]')
+    .check()
+    cy.get('#confirmcreatenew')
+    .click()
+   })
 
 })
