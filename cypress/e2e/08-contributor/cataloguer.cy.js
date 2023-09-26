@@ -7,7 +7,7 @@ const placeholder = 'to-be-deleted'
 
 describe('Necessary workflows for cataloguer users', () => {
 
-  before('Logging in', () => {
+  beforeEach('Logging in', () => {
     cy.visit('/')
     //In Navigation bar (left), select Login, in the dropdown insert login credentials
     cy.get('#logging')
@@ -40,7 +40,7 @@ describe('Necessary workflows for cataloguer users', () => {
    })
 
   // See test 02_01
-   it.skip('Create a new work entry', () => {
+   it('Create a new work entry', () => {
     // In the Navigation bar (right), select "work" (or other type of record) and click "new"
    cy.get('form[action="/newentry.html"] > select')
    .select('works')
@@ -55,6 +55,10 @@ describe('Necessary workflows for cataloguer users', () => {
     .check()
     cy.get('#confirmcreatenew')
     .click()
+    cy.url().should('include', placeholder)
+    cy.get('#confirmation ')
+    .invoke('text')
+    .should('contain', 'has been saved!')
    })
 
 })
