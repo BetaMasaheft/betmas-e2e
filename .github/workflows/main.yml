@@ -19,8 +19,11 @@ jobs:
         uses: actions/checkout@v3
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
+      - name: Cypress run        
+        uses: cypress-io/github-action@v5       
         with:
           build: npm install
           browser: firefox
+        env: 
+          CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}  
+          CYPRESS_PASSWORD_LEXICOGRAPHER: ${{ secrets.CYPRESS_PASSWORD_LEXICOGRAPHER }}

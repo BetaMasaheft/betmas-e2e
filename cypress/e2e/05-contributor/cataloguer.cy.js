@@ -1,5 +1,5 @@
 const username = 'JinntecCatalogue'
-const password = Cypress.env('passwordCataloguer')
+const password = Cypress.env('PASSWORD_CATALOGUER')
 
 const placeholder = 'to-be-deleted'
 
@@ -59,7 +59,7 @@ describe('Necessary workflows for cataloguer users', () => {
     .click()
     cy.url().should('include', placeholder)
     cy.get('#confirmation ')
-    .invoke('text')
+    // .invoke('text')
     .should('contain', 'has been saved!')
    })
 
