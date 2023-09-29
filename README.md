@@ -7,6 +7,12 @@
 
 - node `v18` or later
 
+ ### Environment variables
+
+ This test suite assumes the presence of the following environment variables:
+ 
+ - `PASSWORD_CATALOGUER` with the password for test user `JinntecCatalogue`
+
 ## How to use
 
 You can see the results of the latest run on the `Actions` tab here on Github. To run the tests locally open a local copy of this repository in your shell:
