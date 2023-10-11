@@ -98,10 +98,42 @@ describe('Dillman page', () => {
             // Click "New Entry" button
             cy.contains("New Entry").click()
             cy.get('#form')
-            .type('dupa') 
+            .type('test') 
             cy.get('.alert-success').invoke('text')
             .should('include','this is a new lemma!')
+            // cy.intercept('/Dillmann/newentry.html', (req) => {
+            //     req.reply({
+            //       statusCode: 200, // default
+            //     })
+            // })
+            cy.get('#msg')
+            .type('test') 
+            // cy.contains("Confirm").click()
+        });
+        
+    })
+
+    describe('Edit existing entry', () => {
+        // see 02_05    
+
+          it('Edit existing entry', () => {
+            cy.visit('https://betamasaheft.eu/Dillmann/lemma/L111j0m1v77fds7qynv79wee76jx62ae1')
+            // Click "Update" button
+            cy.contains("Update").click()
+            cy.get('.w3-panel').invoke('text')
+            .should('include','You are updating')
+            // cy.intercept('/Dillmann/update.html', (req) => {
+            //     req.reply({
+            //       statusCode: 200, // default
+            //     })
+            // })
+            // cy.get('#msg')
+            // .type('test') 
+            cy.contains("Confirm").click()
             
         });
+
+
+        
     })
 })
