@@ -108,6 +108,7 @@ describe('Dillman page', () => {
             // })
             cy.get('#msg')
             .type('test') 
+            // The last step is disabled
             // cy.contains("Confirm").click()
         });
         
@@ -127,9 +128,10 @@ describe('Dillman page', () => {
             //       statusCode: 200, // default
             //     })
             // })
-            // cy.get('#msg')
-            // .type('test') 
-            cy.contains("Confirm").click()
+            cy.get('#msg')
+            .type('test') 
+            // The last step is disabled
+            // cy.contains("Confirm").click()
             
         });
 
