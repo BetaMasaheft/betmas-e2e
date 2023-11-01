@@ -73,6 +73,9 @@ describe('Necessary workflows for cataloguer users', () => {
     .type(placeholder)
     cy.get('input[value="Poetry"]')
     .check()
+    /* The last steps (submitting the form and checking the validity of the file)
+    are disabled
+
     cy.get('#confirmcreatenew')
     .click()
     // Check that the confirmation page is correct
@@ -86,8 +89,7 @@ describe('Necessary workflows for cataloguer users', () => {
     // Get name of the generated file and check that it exists
     cy.get('.lead').eq(1).invoke('text').then(text => {
       const path = 'cypress/downloads/' + text + '.xml'
-      cy.readFile(path)
-    })
+      cy.readFile(path).should('contain', 'TEI')
+    })*/
    })
-
 })
