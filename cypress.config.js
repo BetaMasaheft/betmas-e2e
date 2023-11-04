@@ -6,6 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'https://betamasaheft.eu', 
-    responseTimeout: 100000
+    responseTimeout: 100000,
+    trashAssetsBeforeRuns: true
   },
 });

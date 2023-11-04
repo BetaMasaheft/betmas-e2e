@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('removeHover', (menuId) => {
+    cy.get(menuId)
+    //we first check the presence of the pertinent classes related to hover
+    .should('have.class', 'w3-dropdown-hover')
+    .and('have.descendants', 'div.w3-dropdown-content')
+    //Then we take out the class that makes the content invisible, so we can access the elements
+    cy.get('.w3-dropdown-content')
+    .invoke('removeAttr', 'class')
+})

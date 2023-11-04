@@ -55,3 +55,19 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
   }
 })
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // we expect a error with message '$ is not defined'
+  // see #25 and test plan 02_01
+  if (err.message.includes('$ is not defined')) {
+    return false
+  }
+})
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // we expect a error with message 'Bootstrap requires jQuery'
+   // see #25 and test plan 02_01
+  if (err.message.includes('Bootstrap requires jQuery')) {
+    return false
+  }
+})
