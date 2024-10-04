@@ -55,6 +55,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
   }
 })
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // The cookiebar has a CORS issue.
+  if (err.message.includes('Script error.')) {
+    return false
+  }
+})
+
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // we expect a error with message '$ is not defined'
