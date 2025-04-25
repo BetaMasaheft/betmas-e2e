@@ -5,8 +5,8 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'https://betamasaheft.eu', 
+    baseUrl: "http://ml-s-betmas.ad.uni-hamburg.de",
     responseTimeout: 100000,
-    trashAssetsBeforeRuns: true
+    trashAssetsBeforeRuns: true,
   },
 });

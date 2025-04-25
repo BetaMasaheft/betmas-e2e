@@ -19,7 +19,7 @@ describe('Manuscripts: view images and content', () => {
           .should('be.visible')
           cy.get('li.highlight > .thumbnail-image')
           .should('be.visible')
-        // To get to the main entry view, select Entry in the top menu, you will be redirected to https://betamasaheft.eu/manuscripts/ESap028/main  
+        // To get to the main entry view, select Entry in the top menu, you will be redirected to https://betamasaheft.eu/manuscripts/ESap028/main
         cy.get('[href*="/manuscripts/ESdz010/main"]')
         .invoke('attr', 'href')
         .then(href => {
@@ -30,15 +30,15 @@ describe('Manuscripts: view images and content', () => {
           })
       })
 
-      it('View manuscript contents', () => {       
+      it('View manuscript contents', () => {
         // See 03_user 16
-        // Click on "contents" to expand view 
+        // Click on "contents" to expand view
         cy.get('button[resource="https://betamasaheft.eu/ESdz010/msitem/ms_i1"][onclick^="openAccordion"]')
         .click()
-        // Click other eventual boxes to expand view 
-        cy.get('[onClick^=openAccordion][onClick*=itemms_i1-4]')  
-        // To get more information about a work contained, click on the underlined work title 
-        cy.get('[href="/LIT1544Gebrah"]')
+        // Click other eventual boxes to expand view
+        cy.get('[onClick^=openAccordion][onClick*=itemms_i1-4]')
+        // To get more information about a work contained, click on the underlined work title
+        cy.get('[href$="/LIT1544Gebrah"]')
         .invoke('attr', 'href')
         .then(href => {
           cy.request(href)
