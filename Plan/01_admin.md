@@ -1,6 +1,8 @@
 # BM Admin User Story
 
-We collect necessary workflows for admin users here. Including steps that require external services or locations. 
+We collect necessary workflows for admin users here. Including steps that require external services or locations.
+
+**NOTE**: Admin tests introduce side effects (create/edit users) and should not be automated in E2E tests. These scenarios are documented for manual testing only. 
 
 ## 1 Create new user
 
