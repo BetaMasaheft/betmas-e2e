@@ -38,7 +38,7 @@ describe('Manuscripts: view images and content', () => {
         // Click other eventual boxes to expand view 
         cy.get('[onClick^=openAccordion][onClick*=itemms_i1-4]')  
         // To get more information about a work contained, click on the underlined work title 
-        cy.get('[href="/LIT1544Gebrah"]')
+        cy.get('[href$="/LIT1544Gebrah"]')
         .invoke('attr', 'href')
         .then(href => {
           cy.request(href)
