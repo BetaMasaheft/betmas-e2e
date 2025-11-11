@@ -1,8 +1,8 @@
 name: Cypress Tests
 
 on: 
-  push:
-  pull_request:
+  push: 
+    branches: [ main, master ]
   schedule: 
     # every saturday at 01:00
     - cron: "0 1 * * 6"

@@ -1,0 +1,101 @@
+name: Test against Container
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+  schedule:
+    # Run tests daily at 23:30 UTC
+    - cron: '30 23 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: betmas-bot
+          password: ${{ secrets.BOT_CONTAINER_PAT }}
+        continue-on-error: false
+
+      - name: Cache Docker image
+        uses: actions/cache@v4
+        id: docker-image-cache
+        with:
+          path: /tmp/docker-image-cache
+          key: docker-image-betamasaheft-6.4.0-manuscript-expanded
+          restore-keys: |
+            docker-image-betamasaheft-
+
+      - name: Load Docker image from cache
+        if: steps.docker-image-cache.outputs.cache-hit == 'true'
+        run: |
+          echo "Loading Docker image from cache..."
+          docker load -i /tmp/docker-image-cache/betamasaheft.tar
+          # Verify image is loaded
+          docker image inspect ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded > /dev/null
+
+      - name: Pull Docker image
+        if: steps.docker-image-cache.outputs.cache-hit != 'true'
+        run: |
+          echo "Cache miss - pulling Docker image..."
+          docker pull ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded
+
+      - name: Save Docker image to cache
+        if: steps.docker-image-cache.outputs.cache-hit != 'true'
+        run: |
+          echo "Saving Docker image to cache..."
+          mkdir -p /tmp/docker-image-cache
+          docker save ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded -o /tmp/docker-image-cache/betamasaheft.tar
+
+      - name: Clean up any existing container
+        if: always()
+        run: |
+          docker stop betmas2 || true
+          docker rm betmas2 || true
+
+      - name: Start container
+        run: |
+          docker run -e APP_URL=http://localhost:9090/exist/apps/BetMasWeb \
+            -dit -p 8080:8080 -p 8443:8443\
+            --name betmas2 \
+            ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded
+
+      - name: wait for install to finish
+        timeout-minutes: 3
+        run: |
+          while ! docker logs betmas2 | grep -q "Server has started"; \
+          do sleep 2s; \
+          done
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: firefox
+          install: npm ci
+          config: baseUrl=http://localhost:8080/exist/apps/BetMasWeb/
+          wait-on: http://localhost:8080/exist/apps/BetMasWeb/
+          # wait-on-timeout: 120
+
+      - name: Upload Cypress screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          retention-days: 7
+
+      - name: Clean up container
+        if: always()
+        run: |
+          docker stop betmas2 || true
+          docker rm betmas2 || true
+
