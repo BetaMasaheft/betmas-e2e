@@ -11,6 +11,8 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 5. Download the XML file, to be further edited in Oxygen https://betamasaheft.eu/Guidelines/?id=newEntry
 6. **NB NEGATIVE**: the Login button is always present in the Navigation bar but since the latest release it only works from the homepage, not from subpages
 
+**NOTE**: Form submission introduces side effects (creates new entries). E2E tests only cover form filling, not submission. Full workflow testing should be done manually or in a dedicated test environment.
+
 - [ ] Done
 - [x] In progress
 
@@ -27,7 +29,9 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 
 # Contributor User Story - Lexicon
 
-We collect necessary workflows for lexicon users here. Including steps that require external services or locations. 
+We collect necessary workflows for lexicon users here. Including steps that require external services or locations.
+
+**NOTE**: Lexicon and Dillmann tests have moved to another repo next to the source code. This E2E test suite only keeps minimal smoke tests for basic functionality (search, viewing). Entry creation/editing tests are not included here as they introduce side effects. 
 
 ## 3 See activity
 

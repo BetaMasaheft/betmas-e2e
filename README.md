@@ -5,7 +5,7 @@
 
  ## Requirements
 
-- node `v18` or later
+- node `v22` or later
 
  ### Environment variables
 
@@ -20,3 +20,9 @@ You can see the results of the latest run on the `Actions` tab here on Github. T
 1. `npm install` (you only need to do this once)
 
 2. `npx cypress run -b firefox`
+
+### Against a local Instance
+
+You can change the URL of the instance under test via the `--config` flag, eg.:
+
+1. `npx cypress --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ open` 

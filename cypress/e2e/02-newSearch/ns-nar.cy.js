@@ -1,16 +1,25 @@
-describe('New Search ETH', () => {
-    beforeEach(() => {
-        cy.visit('newSearch', {
+describe('New Search NAR', () => {
+    // See 03_user 8
+    it('should perform search filtered to narratives', () => {
+        // 03_user 8.8: Apply filters on the left, e.g. Item type -> tick Narratives
+        // 03_user 8.9: Get to the new filtered results page
+        cy.visit('newSearch.html', {
             qs: {
-              searchType: 'text',
-              mode: 'any',
-              'work-types': 'nar'            
-            },
+                searchType: 'text',
+                query: 'miracles',
+                defaultoperator: 'OR',
+                mode: 'none',
+                homophones: 'on',
+                'type-facet': 'narrative'
+            }
         })
-    })
-
-    it.skip('', () => {
         
+        // 03_user 8.9: Verify filtered results page
+        cy.url()
+            .should('include', 'newSearch.html')
+            .and('include', 'type-facet=narrative')
+        
+        cy.get('#results')
+            .should('be.visible')
     })
-
 })

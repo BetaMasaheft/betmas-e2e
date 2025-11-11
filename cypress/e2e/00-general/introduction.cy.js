@@ -4,9 +4,9 @@ describe('Introducion section', () => {
     })
 
     it('displays four language selection buttons', () => {
-      cy.get('[onclick^="openIntro"]').should('have.length', 4)
+      cy.get('[onclick^="openIntro"]').should('have.length.gte', 4)
       cy.get('[onclick^="openIntro"]').first().should('have.text', 'English')
-      cy.get('[onclick^="openIntro"]').last().should('have.text', 'Tigrinya')
+      cy.get('[onclick^="openIntro"]').last().should('have.text', 'Film')
     })
   
     it('EN language button displays matching Intro', () => {

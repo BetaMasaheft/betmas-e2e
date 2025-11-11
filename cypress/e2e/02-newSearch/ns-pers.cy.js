@@ -1,27 +1,26 @@
 describe('New Search PERS', () => {
-    beforeEach(() => {
-        // Todo(DP): There is something fishy goin on with the request
-        // i see constant fetches, and i cannot use the qs object syntax to load 
-        // desire page in chrome
-        // qs: {
-        //     searchType: 'text',
-        //     mode: 'any',
-        //     'work-types': 'pers'            
-        //   },
-        cy.visit('newSearch.html?searchType=text&mode=any&work-types=pers')
-    })
-
-    it('loads properly', () => {
+    // See 03_user 8
+    it('should perform search filtered to persons', () => {
+        // 03_user 8.8: Apply filters on the left, e.g. Item type -> tick Persons
+        // 03_user 8.9: Get to the new filtered results page
+        cy.visit('newSearch.html', {
+            qs: {
+                searchType: 'text',
+                query: 'Mary',
+                defaultoperator: 'OR',
+                mode: 'none',
+                homophones: 'on',
+                'type-facet': 'person'
+            }
+        })
+        
+        // 03_user 8.9: Verify filtered results page
+        cy.url()
+            .should('include', 'newSearch.html')
+            .and('include', 'query=Mary')
+            .and('include', 'type-facet=person')
+        
         cy.get('#results')
-          .should('be.visible')
+            .should('be.visible')
     })
-
-    // TODO(DP) search for PRS9429Tewodros
-    // see user.md#Open_record… 2.1
-    it.skip('performs simple searches', () => {
-        cy.get('#sparql')
-          .should('be.visible')
-    })
-
-
 })

@@ -58,7 +58,7 @@ describe('simple search page', () => {
     // 03_user 7.3
     // see advancedSearch.cy.js
     it('should have working advanced search', () => {
-      cy.get('[href="/as.html"]')  
+      cy.get('[href~="/as.html"]')  
         .invoke('attr', 'href')
         .then(href => {
           cy.request(href)
