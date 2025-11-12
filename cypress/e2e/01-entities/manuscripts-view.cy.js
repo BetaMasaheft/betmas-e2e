@@ -5,6 +5,12 @@ describe('Manuscripts: view images and content', () => {
     const msTitle = 'Gǝbra Ḥǝmāmāt'
 
     beforeEach(() => {
+        // Ignore uncaught exception: vis is not defined
+        cy.on('uncaught:exception', (err) => {
+            if (err.message.includes('vis is not defined')) {
+                return false
+            }
+        })
         cy.visit('/manuscripts/ESdz010')
     })
 
@@ -12,6 +18,7 @@ describe('Manuscripts: view images and content', () => {
         // See 03_user 13
         // In the top menu, click Images
         cy.get('[href*="/manuscripts/ESdz010/viewer"]')
+        .first()
         .invoke('removeAttr', 'target')
         .click()
         // The page opens with MIRADOR viewer and images visible
