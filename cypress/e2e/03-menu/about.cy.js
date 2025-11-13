@@ -9,17 +9,17 @@ describe('about page', () => {
           .should('be.visible')
     })
 
-    it('about page has video section', () => {
+    it('about page has no video section', () => {
         cy.get('#video')
-          .should('be.visible')
+          .should('not.exist')
     })
 
     // TODO(DP): need to fine tune this:
     // - bounding boxes need a fix, 
     // - http mixed content loading needs a fix
-    it('about page displays video buttons', () => {
+    it('about page displays no video buttons', () => {
         cy.get('#unlocked-video')
-          .should('be.visible')
+          .should('not.exist')
     })
 
     it('about page displays team sidebar', () => {
