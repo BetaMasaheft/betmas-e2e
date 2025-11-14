@@ -13,6 +13,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        image-tag: ['6.4.0-expanded', 'release-expanded']
     
     steps:
       - name: Checkout code
@@ -26,35 +30,10 @@ jobs:
           password: ${{ secrets.BOT_CONTAINER_PAT }}
         continue-on-error: false
 
-      - name: Cache Docker image
-        uses: actions/cache@v4
-        id: docker-image-cache
-        with:
-          path: /tmp/docker-image-cache
-          key: docker-image-betamasaheft-6.4.0-manuscript-expanded
-          restore-keys: |
-            docker-image-betamasaheft-
-
-      - name: Load Docker image from cache
-        if: steps.docker-image-cache.outputs.cache-hit == 'true'
-        run: |
-          echo "Loading Docker image from cache..."
-          docker load -i /tmp/docker-image-cache/betamasaheft.tar
-          # Verify image is loaded
-          docker image inspect ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded > /dev/null
-
       - name: Pull Docker image
-        if: steps.docker-image-cache.outputs.cache-hit != 'true'
         run: |
-          echo "Cache miss - pulling Docker image..."
-          docker pull ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded
-
-      - name: Save Docker image to cache
-        if: steps.docker-image-cache.outputs.cache-hit != 'true'
-        run: |
-          echo "Saving Docker image to cache..."
-          mkdir -p /tmp/docker-image-cache
-          docker save ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded -o /tmp/docker-image-cache/betamasaheft.tar
+          echo "Pulling Docker image..."
+          docker pull ghcr.io/betamasaheft/betamasaheft:${{ matrix.image-tag }}
 
       - name: Clean up any existing container
         if: always()
@@ -64,10 +43,10 @@ jobs:
 
       - name: Start container
         run: |
-          docker run -e APP_URL=http://localhost:9090/exist/apps/BetMasWeb \
+          docker run \
             -dit -p 8080:8080 -p 8443:8443\
             --name betmas2 \
-            ghcr.io/betamasaheft/betamasaheft:6.4.0-manuscript-expanded
+            ghcr.io/betamasaheft/betamasaheft:${{ matrix.image-tag }}
 
       - name: wait for install to finish
         timeout-minutes: 3
@@ -89,7 +68,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v5
         with:
-          name: cypress-screenshots
+          name: cypress-screenshots-${{ matrix.image-tag }}
           path: cypress/screenshots
           retention-days: 7
 
