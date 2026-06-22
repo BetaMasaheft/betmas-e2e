@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 150
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run        
