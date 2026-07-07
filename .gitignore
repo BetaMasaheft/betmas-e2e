@@ -8,6 +8,8 @@ cypress.env.json
 
 ## IDE
 .vscode/
+.zed/
+.cursor/
 
 # Logs
 logs
@@ -139,3 +141,5 @@ dist
 .DS_Store
 
 notes/
+.moderne/
+.claude/
