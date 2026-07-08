@@ -1,0 +1,21 @@
+cypress/e2e/api/api-itemxqm-forx0003.cy.js
+  s_f0568da613eee3::t_0a0bd051aa410c 1-48
+cypress/e2e/api/api-exptit-robot-policy-400.cy.js
+  s_f0568da613eee3::t_a5f102cc256f18 1-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "be032737f2034d3db04566207061d69fa4ca6720",
+  "prompts": {},
+  "sessions": {
+    "s_f0568da613eee3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ee40683a-da5b-4cb0-b76e-39c462da0b51",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
