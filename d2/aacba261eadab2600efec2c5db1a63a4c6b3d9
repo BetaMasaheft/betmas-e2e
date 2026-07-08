@@ -1,0 +1,34 @@
+cypress/e2e/01-entities/manuscripts-browse.cy.js
+  s_f0568da613eee3::t_dc93881a6e3c1d 36,43
+  s_f0568da613eee3::t_14170980487aa2 5
+  s_f0568da613eee3::t_c3fc0c763f14c0 6
+  s_f0568da613eee3::t_a14417bc791564 20,24,37-42,44-45
+cypress/e2e/03-menu/apidoc.cy.js
+  s_f0568da613eee3::t_35317007043b46 9,13
+cypress/e2e/03-menu/guidelines.cy.js
+  s_f0568da613eee3::t_b21bac1d7a90c4 35
+  s_f0568da613eee3::t_8302b9c2ee9142 8-9,13-18,27-31,34,37-43
+  s_f0568da613eee3::t_bc63c92e278283 36
+cypress/e2e/03-menu/dillmann.cy.js
+  s_f0568da613eee3::t_01d497a12f9c02 53-93
+  s_f0568da613eee3::t_8980d6077c2d26 39-47
+  s_f0568da613eee3::t_5ee88c3914caa2 35
+cypress/e2e/06-user/id.cy.js
+  s_f0568da613eee3::t_10d3f56ec73a71 11,19,42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "d2aacba261eadab2600efec2c5db1a63a4c6b3d9",
+  "prompts": {},
+  "sessions": {
+    "s_f0568da613eee3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ee40683a-da5b-4cb0-b76e-39c462da0b51",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
