@@ -4,7 +4,7 @@ const placeholder = 'to-be-deleted'
 
 // See tests 02_01 and 02_02
 
-describe('Necessary workflows for cataloguer users', () => {
+describe('Necessary workflows for cataloguer users', { tags: ['@auth', '@container'] }, () => {
 
   beforeEach('Logging in', () => {
     cy.visit('/')
