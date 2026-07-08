@@ -1,0 +1,32 @@
+cypress/e2e/00-general/landing.cy.js
+  s_f0568da613eee3::t_51bfdc8fd7dcc9 1
+cypress/e2e/03-menu/simpleSearch.cy.js
+  s_f0568da613eee3::t_4c730c40131b1c 1
+cypress/e2e/06-user/advancedSearch.cy.js
+  s_f0568da613eee3::t_bddfbb7a0062e0 1
+.github/workflows/test-container.yml
+  s_f0568da613eee3::t_bea21b7f9bd095 16,32,45,48,50,61-63,69
+.github/workflows/main.yml
+  s_f0568da613eee3::t_6bb7f6b5c5d537 16
+  s_f0568da613eee3::t_3e8cafed5fe474 28
+cypress/e2e/06-user/lemma.cy.js
+  s_f0568da613eee3::t_4a63bb0e8ca763 1
+cypress/e2e/06-user/analytic.cy.js
+  s_f0568da613eee3::t_5947b10dde0c64 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "c3451f98f13c194f349cde04a613cc7c3a02a51a",
+  "prompts": {},
+  "sessions": {
+    "s_f0568da613eee3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ee40683a-da5b-4cb0-b76e-39c462da0b51",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
