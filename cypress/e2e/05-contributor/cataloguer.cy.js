@@ -1,5 +1,4 @@
 const username = 'JinntecCatalogue'
-const password = Cypress.env('PASSWORD_CATALOGUER')
 
 const placeholder = 'to-be-deleted'
 
@@ -9,17 +8,7 @@ describe('Necessary workflows for cataloguer users', () => {
 
   beforeEach('Logging in', () => {
     cy.visit('/')
-    // In Navigation bar (left), select Login, in the dropdown insert login credentials
-    // Since the visualization of a the login dialog depends on a CSS hover selector,
-    // we use a custom command that checks the presence of the pertinent classes and then
-    // removes the attribute that hides the contents
-    cy.removeHover('#logging')
-    cy.get('input[name="user"]')
-    .type(username)
-    cy.get('input[name="password"]')
-    .type(password)
-    cy.get('#login-nav > .w3-button')
-    .click()
+    cy.loginCataloguer()
   })
 
   afterEach('Logging out', () => {
@@ -37,13 +26,7 @@ describe('Necessary workflows for cataloguer users', () => {
     // Click on a item of the menu and remove hover
     cy.removeHover('#mss')
     cy.get('#mss a[href="/availableImages.html"]').click()
-    cy.removeHover('#logging')
-    cy.get('input[name="user"]')
-    .type(username)
-    cy.get('input[name="password"]')
-    .type(password)
-    cy.get('#login-nav > .w3-button')
-    .click()
+    cy.loginCataloguer()
   })
 
     //See test 02_02

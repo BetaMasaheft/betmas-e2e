@@ -24,6 +24,15 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('loginCataloguer', (username = 'JinntecCatalogue') => {
+  cy.env(['PASSWORD_CATALOGUER']).then(({ PASSWORD_CATALOGUER }) => {
+    cy.removeHover('#logging')
+    cy.get('input[name="user"]').type(username)
+    cy.get('input[name="password"]').type(PASSWORD_CATALOGUER)
+    cy.get('#login-nav > .w3-button').click()
+  })
+})
+
 Cypress.Commands.add('removeHover', (menuId) => {
     cy.get(menuId)
     //we first check the presence of the pertinent classes related to hover
