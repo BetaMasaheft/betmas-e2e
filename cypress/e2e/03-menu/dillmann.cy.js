@@ -1,4 +1,9 @@
 describe('Dillman page', { tags: '@container' }, () => {
+    /**
+     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/66
+     * Container: `cy.visit('Dillmann/')` returns HTTP 405 (GET not allowed).
+     * The spec should be updated to use the correct route variant.
+     */
     // TODO(DP): before we can do anything this application error needs to be gone see #4
     // see 03_User 18-20
     // see 02_Contrib 3-6

@@ -1,4 +1,10 @@
 describe('Manuscripts: view images and content', { tags: '@container' }, () => {
+    /**
+     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/62
+     * Container: `GET /manuscripts/ESdz010/main` returns HTTP 500 `FORX0003`
+     * (runtime error in `modules/item.xqm`), so this failure is backend-drift,
+     * not selector drift.
+     */
     // See user 13 and 16
 
     // Tests done with manuscript ESdz01. Short title stored in constant

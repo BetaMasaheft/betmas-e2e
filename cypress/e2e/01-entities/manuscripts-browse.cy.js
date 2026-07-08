@@ -1,4 +1,10 @@
 describe('Manuscripts browsing page', { tags: '@container' }, () => {
+    /**
+     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/64
+     * Container drift in this spec comes from:
+     * - `cy.request()` using the wrong base URL for `/manuscripts/*/list` links
+     * - a brittle visibility assertion around the accordion element (`w3-hide`).
+     */
   beforeEach(() => {
     cy.visit('manuscripts/browse')
   })

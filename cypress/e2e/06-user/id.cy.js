@@ -1,4 +1,10 @@
 describe('id based URL routing', { tags: '@container' }, () => {
+  /**
+   * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/65
+   * Container drift: ID-based `cy.visit()` endpoints return intermediate 404
+   * before redirecting to canonical `/persons|/works|/manuscripts/*/main`.
+   * Cypress currently fails the spec on the intermediate non-2xx.
+   */
   // see 03_user2
   // see #6
   it('resolves person ids', () => {

@@ -5,6 +5,11 @@ const placeholder = 'to-be-deleted'
 // See tests 02_01 and 02_02
 
 describe('Necessary workflows for cataloguer users', { tags: ['@auth', '@container'] }, () => {
+  /**
+   * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/68
+   * Container CI: cataloguer login depends on `CYPRESS_PASSWORD_CATALOGUER`
+   * being present in the container workflow environment.
+   */
 
   beforeEach('Logging in', () => {
     cy.visit('/')

@@ -1,4 +1,10 @@
 describe('Look up transcription guidelines', { tags: '@container' }, () => {
+    /**
+     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/67
+     * Container: Guidelines route/layout differs, so selectors like
+     * `input[type="search"]` and the `Transliteration` quick-link are missing
+     * (or moved) and the spec times out.
+     */
     // see user 17
     beforeEach(() => {
         cy.visit('Guidelines')
