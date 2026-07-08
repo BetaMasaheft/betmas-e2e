@@ -1,0 +1,21 @@
+cypress/e2e/03-menu/guidelines.cy.js
+  s_f0568da613eee3::t_5911477c76d7a6 1,4-21,45-46,49,55-57
+cypress/e2e/03-menu/dillmann.cy.js
+  s_f0568da613eee3::t_08e86f337d40e6 1,6-15,17-19,23-24,30-35,37-46,48-55,57-62,65,68,70,72,75,78,87
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "298345bccf5b7a08c6cc1ead29620a1104c76d4c",
+  "prompts": {},
+  "sessions": {
+    "s_f0568da613eee3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ee40683a-da5b-4cb0-b76e-39c462da0b51",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
