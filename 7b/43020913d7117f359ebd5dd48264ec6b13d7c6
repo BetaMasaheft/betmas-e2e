@@ -1,0 +1,101 @@
+cypress/e2e/00-general/entities.cy.js
+  s_f0568da613eee3::t_da981760e6b918 1
+cypress/e2e/00-general/introduction.cy.js
+  s_f0568da613eee3::t_9e42673a838fa1 1
+cypress/e2e/01-entities/additions.cy.js
+  s_f0568da613eee3::t_62d67bed3526c2 1
+cypress/e2e/01-entities/art-themes.cy.js
+  s_f0568da613eee3::t_73c07cb1189bfc 1
+cypress/e2e/01-entities/authority-files.cy.js
+  s_f0568da613eee3::t_d105abc15e8041 1
+cypress/e2e/01-entities/availableImages.cy.js
+  s_f0568da613eee3::t_12d9f77767ae9f 1
+cypress/e2e/01-entities/bibliography.cy.js
+  s_f0568da613eee3::t_53d6e49c175a3a 1
+cypress/e2e/01-entities/bindings.cy.js
+  s_f0568da613eee3::t_2e1a23f6232ffb 1
+cypress/e2e/01-entities/catalogues.cy.js
+  s_f0568da613eee3::t_ccd007841024da 1
+cypress/e2e/01-entities/compare.cy.js
+  s_f0568da613eee3::t_c57668cd3bd975 1
+cypress/e2e/01-entities/decorations.cy.js
+  s_f0568da613eee3::t_dd3df619954c35 1
+cypress/e2e/01-entities/indexPersons.cy.js
+  s_f0568da613eee3::t_0a0d53aebb3f3b 1
+cypress/e2e/01-entities/indexPlaces.cy.js
+  s_f0568da613eee3::t_d2aed03a48d24e 1
+cypress/e2e/01-entities/manuscripts-browse.cy.js
+  s_f0568da613eee3::t_9f91e0234c48f9 1
+cypress/e2e/01-entities/manuscripts-view.cy.js
+  s_f0568da613eee3::t_b9fb4c71d2a087 1
+cypress/e2e/01-entities/placeOfOrigin.cy.js
+  s_f0568da613eee3::t_68c3b399c63204 1
+cypress/e2e/01-entities/titles.cy.js
+  s_f0568da613eee3::t_7774cb442bb53d 1
+cypress/e2e/01-entities/works.cy.js
+  s_f0568da613eee3::t_214d47a757068e 1
+cypress/e2e/02-newSearch/ns-clavis-aethiopica.cy.js
+  s_f0568da613eee3::t_695d6d05700293 1
+cypress/e2e/02-newSearch/ns-eth.cy.js
+  s_f0568da613eee3::t_b9723d3f28c0b1 1
+cypress/e2e/02-newSearch/ns-id-lookup.cy.js
+  s_f0568da613eee3::t_2b1cd40acd7d61 1
+cypress/e2e/02-newSearch/ns-ins.cy.js
+  s_f0568da613eee3::t_e8dfad0bcd4f6f 1
+cypress/e2e/02-newSearch/ns-mixed.cy.js
+  s_f0568da613eee3::t_db415aa387d5ae 1
+cypress/e2e/02-newSearch/ns-mss.cy.js
+  s_f0568da613eee3::t_ea35d3686d1605 1
+cypress/e2e/02-newSearch/ns-nar.cy.js
+  s_f0568da613eee3::t_5af201252e4e78 1
+cypress/e2e/02-newSearch/ns-other-claves.cy.js
+  s_f0568da613eee3::t_5e114e16670e4e 1
+cypress/e2e/02-newSearch/ns-pers.cy.js
+  s_f0568da613eee3::t_ae7808888a3abc 1
+cypress/e2e/02-newSearch/ns-studies.cy.js
+  s_f0568da613eee3::t_6183144c1c0159 1
+cypress/e2e/02-newSearch/ns-tei-tags.cy.js
+  s_f0568da613eee3::t_039f2a16dbd55c 1
+cypress/e2e/02-newSearch/ns-work.cy.js
+  s_f0568da613eee3::t_e9c6a522193b32 1
+cypress/e2e/03-menu/about.cy.js
+  s_f0568da613eee3::t_19ba222e3efc26 1
+cypress/e2e/03-menu/apidoc.cy.js
+  s_f0568da613eee3::t_2fe63fb3c4a198 1
+cypress/e2e/03-menu/dillmann.cy.js
+  s_f0568da613eee3::t_f05edfa760b80d 1
+cypress/e2e/03-menu/guidelines.cy.js
+  s_f0568da613eee3::t_2a4dd29f477c83 1
+cypress/e2e/03-menu/help.cy.js
+  s_f0568da613eee3::t_7b4aa3650e1657 1
+cypress/e2e/03-menu/indexesList.cy.js
+  s_f0568da613eee3::t_90957129e05586 1
+cypress/e2e/03-menu/lod.cy.js
+  s_f0568da613eee3::t_987f427d61f640 1
+cypress/e2e/03-menu/morpho.cy.js
+  s_f0568da613eee3::t_27e825e1dc9236 1
+cypress/e2e/03-menu/pid.cy.js
+  s_f0568da613eee3::t_21f2621f36d68f 1
+cypress/e2e/03-menu/projects.cy.js
+  s_f0568da613eee3::t_982f9761beecb2 1
+cypress/e2e/03-menu/visualizations.cy.js
+  s_f0568da613eee3::t_446588e237b7c7 1
+cypress/e2e/07-docs/permalinks.cy.js
+  s_f0568da613eee3::t_608df917c4b8f0 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7b43020913d7117f359ebd5dd48264ec6b13d7c6",
+  "prompts": {},
+  "sessions": {
+    "s_f0568da613eee3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ee40683a-da5b-4cb0-b76e-39c462da0b51",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
