@@ -1,0 +1,28 @@
+cypress/support/commands.js
+  s_f0568da613eee3::t_379dbf315cd73c 14-46
+cypress/e2e/06-user/id.cy.js
+  s_f0568da613eee3::t_f2636210c71eac 4-6,11-14,16,22-25,27,42-44,46
+  s_f0568da613eee3::t_366a83a9e679ec 28,33
+cypress/e2e/03-menu/apidoc.cy.js
+  s_f0568da613eee3::t_0a9fdd3638918b 4-5,8
+cypress/e2e/01-entities/manuscripts-browse.cy.js
+  s_f0568da613eee3::t_2f930ed13506bb 2-5,21,32,36-37,42
+cypress/e2e/06-user/id-production.cy.js
+  s_f0568da613eee3::t_8a90cc018d0964 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "df374cb4587d2c6fd2cf37479b1c1d1b4f68a74c",
+  "prompts": {},
+  "sessions": {
+    "s_f0568da613eee3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ee40683a-da5b-4cb0-b76e-39c462da0b51",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
