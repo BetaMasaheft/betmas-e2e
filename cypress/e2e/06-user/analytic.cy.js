@@ -1,4 +1,4 @@
-describe('analytic page', () => {
+describe('analytic page', { tags: ['@container', '@container-only'] }, () => {
   // see 03_user 3
   beforeEach(() => {
     cy.visit('works/LIT1709Kebran/analytic')

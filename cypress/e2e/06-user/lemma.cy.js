@@ -1,4 +1,4 @@
-describe('viewing lemma in the scan of Dillmann’s Lexicon', () => {
+describe('viewing lemma in the scan of Dillmann’s Lexicon', { tags: ['@container', '@container-only'] }, () => {
     // see 03-menu/dillman.cy.js
 
     beforeEach(() => {

@@ -1,4 +1,4 @@
-describe('The advanced search page', () => {
+describe('The advanced search page', { tags: ['@container', '@container-only'] }, () => {
   beforeEach(() => {
     cy.visit('as.html')
   })

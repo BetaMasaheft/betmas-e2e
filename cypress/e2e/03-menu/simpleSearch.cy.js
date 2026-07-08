@@ -1,4 +1,4 @@
-describe('simple search page', () => {
+describe('simple search page', { tags: ['@container', '@container-only'] }, () => {
     beforeEach(() => {
         // see #2
         // TODO(DP): depending on the continued use see BetaMasaheft/Documentation#2219, 

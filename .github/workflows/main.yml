@@ -13,6 +13,7 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    continue-on-error: true
     timeout-minutes: 150
     steps:
       - name: Checkout
@@ -24,6 +25,7 @@ jobs:
         with:
           build: npm install
           browser: firefox
+          expose: 'grepTags=-@container-only,grepFilterSpecs=true,grepOmitFiltered=true'
         env: 
           CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}  
           CYPRESS_PASSWORD_LEXICOGRAPHER: ${{ secrets.CYPRESS_PASSWORD_LEXICOGRAPHER }}

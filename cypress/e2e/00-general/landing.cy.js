@@ -1,4 +1,4 @@
-describe('landing page', () => {
+describe('landing page', { tags: ['@container', '@container-only'] }, () => {
   beforeEach(() => {
     // Set desktop viewport (1280x720 is a standard desktop size)
     cy.viewport(1280, 720)
