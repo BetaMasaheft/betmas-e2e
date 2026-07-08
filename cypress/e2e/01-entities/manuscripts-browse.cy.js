@@ -2,8 +2,8 @@ describe('Manuscripts browsing page', { tags: '@container' }, () => {
     /**
      * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/64
      * Container drift in this spec comes from:
-     * - `cy.request()` using the wrong base URL for `/manuscripts/*/list` links
-     * - a brittle visibility assertion around the accordion element (`w3-hide`).
+     * - cy.request() using the wrong base URL for /manuscripts/<repo>/list links
+     * - a brittle visibility assertion around the accordion element (w3-hide).
      */
   beforeEach(() => {
     cy.visit('manuscripts/browse')
@@ -17,11 +17,11 @@ describe('Manuscripts browsing page', { tags: '@container' }, () => {
   it('expands the list of mss per repo', () => {
     // workaround the missing selector on the button
     cy.get('#listINS0333SBB')
-      .should('not.be.visible')
+      .should('have.class', 'w3-hide')
       .prev()
       .click()
     cy.get('#listINS0333SBB')
-      .should('be.visible')
+      .should('not.have.class', 'w3-hide')
   })
 
   // see 03_user 4
@@ -33,7 +33,16 @@ describe('Manuscripts browsing page', { tags: '@container' }, () => {
         const href = $a.prop('href')
         // Verify the URL contains the repository reference
         expect(href).to.include('INS0333SBB')
-        cy.request(href)
+        const baseUrl = Cypress.config('baseUrl').replace(/\/$/, '')
+        const base = new URL(baseUrl)
+        const appPath = base.pathname.replace(/\/$/, '')
+        const hrefUrl = href.startsWith('http') ? new URL(href) : new URL(href, base.origin)
+
+        const requestUrl = hrefUrl.pathname.startsWith(appPath)
+          ? hrefUrl.toString()
+          : base.origin + appPath + hrefUrl.pathname
+
+        cy.request(requestUrl)
           .its('body')
           .should('include', '</html>')
           // Check that it's a search page (has search form or reporef parameter)

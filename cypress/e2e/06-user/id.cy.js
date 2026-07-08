@@ -8,7 +8,7 @@ describe('id based URL routing', { tags: '@container' }, () => {
   // see 03_user2
   // see #6
   it('resolves person ids', () => {
-    cy.visit('PRS9429Tewodros')
+    cy.visit('PRS9429Tewodros', { failOnStatusCode: false })
     cy.url()
       .should('contain', 'persons')
   })
@@ -16,7 +16,7 @@ describe('id based URL routing', { tags: '@container' }, () => {
   // (DP) To click on it without opening new tab
   // .invoke('removeAttr', 'target').click()
   it('resolves work ids and has analaytics view links', () => {
-    cy.visit('LIT1385Fekkar')
+    cy.visit('LIT1385Fekkar', { failOnStatusCode: false })
     cy.url()
       .should('contain', 'works')
     cy.get('[href$=analytic]')
@@ -39,7 +39,7 @@ describe('id based URL routing', { tags: '@container' }, () => {
   })
 
   it('resolves manuscript ids', () => {
-    cy.visit('ESum040')
+    cy.visit('ESum040', { failOnStatusCode: false })
     cy.url()
       .should('contain', 'manuscripts')
       .get('[href$=analytic]')

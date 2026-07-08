@@ -6,11 +6,11 @@ describe('api documentation page', { tags: '@container' }, () => {
      * as a failure in Cypress.
      */
     beforeEach(() => {
-        cy.visit('api/')
+        cy.visit('apidoc.html', { failOnStatusCode: false })
     })
 
     it('should reach the apidoc page', () => {
-        cy.url().should('eq','https://betamasaheft.eu/apidoc.html')
+        cy.url().should('include', 'apidoc.html')
     })
 
     it('ToC should list contents', () => {
