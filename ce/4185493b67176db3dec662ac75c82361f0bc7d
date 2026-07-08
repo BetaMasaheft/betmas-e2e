@@ -1,0 +1,30 @@
+cypress.config.mjs
+  s_f0568da613eee3::t_ce71ecfc3a305d 2,8
+cypress/support/e2e.js
+  s_f0568da613eee3::t_b35363367825a1 18-21
+package.json
+  s_f0568da613eee3::t_3ff3a02b8f2d4f 6-10
+  s_f0568da613eee3::t_b1b87601ce0e5e 15
+cypress/support/env.js
+  s_f0568da613eee3::t_22897a6830a5f4 1-5
+cypress/e2e/05-contributor/cataloguer.cy.js
+  s_f0568da613eee3::t_646fe00cf3f0a8 7
+package-lock.json
+  s_f0568da613eee3::t_4ddaa388bd8725 12,16-308,357-449,469-494,555-564,638-651,674-721,787-808,1022-1029,1160-1172,1199-1206,1284-1294,1337-1394,1397,1400-1403,1405-1418,1472-1482,1560-1572,1588-1608,1750-1759,1769-1778,1788-1800,1817-1826,1880-1887,1895-1908,1923-1936,2107-2117,2134-2157,2219-2229,2294-2303,2318-2338,2401-2421,2477-2487,2495-2518,2547-2557,2661-2680,2836-2883,2914-2926,2988-3019,3141-3148
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "ce4185493b67176db3dec662ac75c82361f0bc7d",
+  "prompts": {},
+  "sessions": {
+    "s_f0568da613eee3": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ee40683a-da5b-4cb0-b76e-39c462da0b51",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
