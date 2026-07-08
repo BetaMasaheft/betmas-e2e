@@ -1,4 +1,4 @@
-describe('art themes page', () => {
+describe('art themes page', { tags: '@container' }, () => {
   beforeEach(() => {
       cy.visit('art-themes/list')
   })

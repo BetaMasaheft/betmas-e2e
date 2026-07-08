@@ -1,4 +1,4 @@
-describe('Manuscripts: view images and content', () => {
+describe('Manuscripts: view images and content', { tags: '@container' }, () => {
     // See user 13 and 16
 
     // Tests done with manuscript ESdz01. Short title stored in constant

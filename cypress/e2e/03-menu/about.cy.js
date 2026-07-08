@@ -1,4 +1,4 @@
-describe('about page', () => {
+describe('about page', { tags: '@container' }, () => {
     // TODO(DP) see #2
     beforeEach(() => {
         cy.visit('about.html')

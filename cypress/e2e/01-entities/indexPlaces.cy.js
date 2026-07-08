@@ -1,4 +1,4 @@
-describe('Place Index page', () => {
+describe('Place Index page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('IndexPlaces')
     })

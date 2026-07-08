@@ -1,4 +1,4 @@
-describe('Decorations page', () => {
+describe('Decorations page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('decorations')
     })

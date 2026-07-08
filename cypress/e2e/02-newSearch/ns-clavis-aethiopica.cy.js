@@ -1,4 +1,4 @@
-describe('New Search: Clavis Aethiopica reference lookup', () => {
+describe('New Search: Clavis Aethiopica reference lookup', { tags: '@container' }, () => {
     // See 03_user 11
     it('should lookup Clavis Aethiopica Number', () => {
         // 03_user 11.1: GO to Full search page https://betamasaheft.eu/newSearch.html

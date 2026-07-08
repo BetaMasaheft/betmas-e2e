@@ -1,4 +1,4 @@
-describe('Look up transcription guidelines', () => {
+describe('Look up transcription guidelines', { tags: '@container' }, () => {
     // see user 17
     beforeEach(() => {
         cy.visit('Guidelines')

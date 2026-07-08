@@ -1,4 +1,4 @@
-describe('compare page', () => {
+describe('compare page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('compare')
     })

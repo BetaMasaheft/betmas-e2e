@@ -1,4 +1,4 @@
-describe('A works page', () => {
+describe('A works page', { tags: '@container' }, () => {
     // see user 14 and 15
 
     beforeEach(() => {

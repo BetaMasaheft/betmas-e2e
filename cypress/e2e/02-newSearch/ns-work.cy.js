@@ -1,4 +1,4 @@
-describe('New Search work', () => {
+describe('New Search work', { tags: '@container' }, () => {
     // See 03_user 8
     beforeEach(() => {
         cy.visit('newSearch.html')

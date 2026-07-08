@@ -1,4 +1,4 @@
-describe('Dillman page', () => {
+describe('Dillman page', { tags: '@container' }, () => {
     // TODO(DP): before we can do anything this application error needs to be gone see #4
     // see 03_User 18-20
     // see 02_Contrib 3-6

@@ -1,4 +1,4 @@
-describe('additions page', () => {
+describe('additions page', { tags: ['@container', '@slow'] }, () => {
   beforeEach(() => {
     // TODO(DP): This is SLOW !! 
     // see #5

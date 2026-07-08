@@ -1,4 +1,4 @@
-describe('Catalogues files page', () => {
+describe('Catalogues files page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('catalogues/list')
     })

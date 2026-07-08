@@ -1,4 +1,4 @@
-describe('permalinks page', () => {
+describe('permalinks page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('pid')
     })

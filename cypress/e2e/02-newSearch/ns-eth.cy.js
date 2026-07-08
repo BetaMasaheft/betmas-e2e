@@ -1,4 +1,4 @@
-describe('New Search ETH', () => {
+describe('New Search ETH', { tags: '@container' }, () => {
     // See 03_user 8
     it('should perform search filtered to authority files', () => {
         // 03_user 8.8: Apply filters on the left, e.g. Item type -> tick Authority Files

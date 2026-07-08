@@ -1,4 +1,4 @@
-describe('id based URL routing', () => {
+describe('id based URL routing', { tags: '@container' }, () => {
   // see 03_user2
   // see #6
   it('resolves person ids', () => {

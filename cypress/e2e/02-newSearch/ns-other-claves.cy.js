@@ -1,4 +1,4 @@
-describe('New Search: Other Claves lookup', () => {
+describe('New Search: Other Claves lookup', { tags: '@container' }, () => {
     // See 03_user 12
     it('should lookup other Clavis ID', () => {
         // 03_user 12.1: GO to full search page https://betamasaheft.eu/newSearch.html

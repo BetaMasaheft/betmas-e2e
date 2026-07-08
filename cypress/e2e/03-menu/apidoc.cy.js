@@ -1,4 +1,4 @@
-describe('api documentation page', () => {
+describe('api documentation page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('api/')
     })
