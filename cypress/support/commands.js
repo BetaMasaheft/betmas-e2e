@@ -11,7 +11,39 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-// TODO(DP):  make request based link check a custom command
+function getAppBase () {
+  const baseUrl = Cypress.config('baseUrl').replace(/\/$/, '')
+  const base = new URL(baseUrl)
+  const appPath = base.pathname.replace(/\/$/, '')
+  return { baseUrl, base, appPath }
+}
+
+function withAppPath (url, { baseUrl, appPath }) {
+  const resolved = url.startsWith('http') ? new URL(url) : new URL(url, baseUrl)
+  if (appPath && !resolved.pathname.startsWith(appPath + '/') && resolved.pathname !== appPath) {
+    resolved.pathname = appPath + (resolved.pathname.startsWith('/') ? resolved.pathname : '/' + resolved.pathname)
+  }
+  return resolved.toString()
+}
+
+Cypress.Commands.add('requestFollowingAppRedirects', (url, options = {}) => {
+  const appBase = getAppBase()
+
+  const requestOnce = (targetUrl) => {
+    return cy.request({
+      ...options,
+      url: withAppPath(targetUrl, appBase),
+      followRedirect: false
+    }).then((response) => {
+      if (response.status >= 300 && response.status < 400 && response.headers.location) {
+        return requestOnce(response.headers.location)
+      }
+      return response
+    })
+  }
+
+  return requestOnce(url)
+})
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

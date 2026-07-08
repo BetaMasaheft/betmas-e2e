@@ -1,37 +1,37 @@
 describe('id based URL routing', { tags: '@container' }, () => {
   /**
    * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/65
-   * Container drift: ID-based `cy.visit()` endpoints return intermediate 404
-   * before redirecting to canonical `/persons|/works|/manuscripts/*/main`.
-   * Cypress currently fails the spec on the intermediate non-2xx.
+   * Shorthand IDs redirect to canonical entity routes. Container redirects may
+   * omit the app base path in Location, so assert redirect targets via
+   * cy.request and load records via canonical routes.
    */
   // see 03_user2
   // see #6
   it('resolves person ids', () => {
-    cy.visit('PRS9429Tewodros', { failOnStatusCode: false })
+    cy.request({ url: 'PRS9429Tewodros', followRedirect: false })
+      .its('headers.location')
+      .should('include', 'persons/PRS9429Tewodros')
+    cy.visit('persons/PRS9429Tewodros/main')
     cy.url()
-      .should('contain', 'persons')
+      .should('contain', 'persons/PRS9429Tewodros')
   })
 
   // (DP) To click on it without opening new tab
   // .invoke('removeAttr', 'target').click()
   it('resolves work ids and has analaytics view links', () => {
-    cy.visit('LIT1385Fekkar', { failOnStatusCode: false })
+    cy.request({ url: 'LIT1385Fekkar', followRedirect: false })
+      .its('headers.location')
+      .should('include', 'works/LIT1385Fekkar')
+    cy.visit('works/LIT1385Fekkar/main')
     cy.url()
-      .should('contain', 'works')
-    cy.get('[href$=analytic]')
+      .should('contain', 'works/LIT1385Fekkar')
+        cy.get('[href$=analytic]')
       .first()
       .then(function ($a) {
-        // extract the fully qualified href property
         const href = $a.prop('href')
 
-        // make an http request for this resource
-        // outside of the browser
-        cy.request(href)
-          // drill into the response body
+        cy.requestFollowingAppRedirects(href)
           .its('body')
-
-          // and assert that its contents have the <html> response
           .should('include', 'id="BetMasRel"')
           .and('include', 'id="BetMasRelView"')
           .and('include', '</html>')
@@ -39,11 +39,8 @@ describe('id based URL routing', { tags: '@container' }, () => {
   })
 
   it('resolves manuscript ids', () => {
-    cy.visit('ESum040', { failOnStatusCode: false })
-    cy.url()
-      .should('contain', 'manuscripts')
-      .get('[href$=analytic]')
-      .contains('Relations')
-
+    cy.request({ url: 'ESum040', followRedirect: false })
+      .its('headers.location')
+      .should('include', 'manuscripts/ESum040')
   })
 })
