@@ -1,0 +1,19 @@
+.github/workflows/test-container.yml
+  s_e250159a6e67a4::t_a4330a4c392c2d 45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9d0cfac778afcada8acad3e9668cf3b9de81978b",
+  "prompts": {},
+  "sessions": {
+    "s_e250159a6e67a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89106294-b8b5-4a8a-9cc1-1be28a02c528",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
