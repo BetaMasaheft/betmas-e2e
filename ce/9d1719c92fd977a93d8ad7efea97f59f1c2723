@@ -1,0 +1,24 @@
+cypress/e2e/05-contributor/cataloguer.cy.js
+  s_e250159a6e67a4::t_a647674b444232 33-35
+  s_e250159a6e67a4::t_2ab8af788e16e0 55-56,58
+  s_e250159a6e67a4::t_c0a66ad2868504 21,27,73
+.github/workflows/test-container.yml
+  s_e250159a6e67a4::t_379db1d354aeb9 55,59-63,65-66
+  s_e250159a6e67a4::t_2b30501934a8be 56-58,64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "ce9d1719c92fd977a93d8ad7efea97f59f1c2723",
+  "prompts": {},
+  "sessions": {
+    "s_e250159a6e67a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89106294-b8b5-4a8a-9cc1-1be28a02c528",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
