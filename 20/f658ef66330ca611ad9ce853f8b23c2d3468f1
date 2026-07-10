@@ -1,0 +1,22 @@
+cypress/e2e/06-user/analytic.cy.js
+  s_e250159a6e67a4::t_e5c5d92a1eed34 50
+cypress/e2e/00-general/base-path-drift.cy.js
+  s_e250159a6e67a4::t_8032a1448038c4 3-5,10-11
+  s_e250159a6e67a4::t_ce6db15e691116 1-2,6-9,12-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.11",
+  "base_commit_sha": "20f658ef66330ca611ad9ce853f8b23c2d3468f1",
+  "prompts": {},
+  "sessions": {
+    "s_e250159a6e67a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89106294-b8b5-4a8a-9cc1-1be28a02c528",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
