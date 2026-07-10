@@ -1,0 +1,22 @@
+cypress/e2e/06-user/lemma.cy.js
+  s_e250159a6e67a4::t_bfe4d5ae1ddd4c 16,18-20,28
+  s_e250159a6e67a4::t_efebdb1bcd3b04 34-37,40
+cypress/e2e/03-menu/dillmann.cy.js
+  s_e250159a6e67a4::t_a59bcf1d01cc02 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.11",
+  "base_commit_sha": "0ac1fc8e800f8fa0dbf5039dc171a65934cee6f8",
+  "prompts": {},
+  "sessions": {
+    "s_e250159a6e67a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89106294-b8b5-4a8a-9cc1-1be28a02c528",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
