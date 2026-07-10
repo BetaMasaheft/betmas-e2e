@@ -1,0 +1,22 @@
+cypress/e2e/03-menu/simpleSearch.cy.js
+  s_e250159a6e67a4::t_aa3864677b4ee8 1
+  s_e250159a6e67a4::t_81e8b87a1644e9 51-52,55,60-69,73
+cypress/e2e/01-entities/manuscripts-view.cy.js
+  s_e250159a6e67a4::t_43d2d8fb574306 26-35,41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8b7be31591b6322e1c66a598df0d39eb2d180397",
+  "prompts": {},
+  "sessions": {
+    "s_e250159a6e67a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89106294-b8b5-4a8a-9cc1-1be28a02c528",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
