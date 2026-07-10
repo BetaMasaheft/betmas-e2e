@@ -23,15 +23,22 @@ describe('Manuscripts: view images and content', { tags: '@container' }, () => {
         .click()
         // Click other eventual boxes to expand view
         cy.get('[onClick^=openAccordion][onClick*=itemms_i1-4]')
-        // To get more information about a work contained, click on the underlined work title
-        // The work title is a canonical PID link (`//betamasaheft.eu/...`), so
-        // resolve it via the href property like a browser would
+        // The work title link to LIT1544Gebrah is present in the contents
+        cy.get('[href$="/LIT1544Gebrah"]')
+        .should('exist')
+      })
+
+    // To get more information about a work contained, click on the underlined work title.
+    // Container renders the work-title href as `/https://betamasaheft.eu/LIT1544Gebrah`
+    // ('/' prepended to the unstripped canonical PID) when APP_URL is set.
+    // Production renders `/LIT1544Gebrah` and resolves fine.
+    it('Follow work title link from contents', { tags: '@production-only' }, () => {
         cy.get('[href$="/LIT1544Gebrah"]')
         .first()
         .then(($a) => {
           const href = $a.prop('href')
 
-          cy.request(href)
+          cy.requestFollowingAppRedirects(href)
             .its('body')
             .should('include', '</html>')
             .and('include', msTitle)
