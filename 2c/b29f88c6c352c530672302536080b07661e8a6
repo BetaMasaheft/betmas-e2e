@@ -1,0 +1,20 @@
+cypress/e2e/06-user/advancedSearch.cy.js
+  s_e250159a6e67a4::t_23fd338baa541d 27-35,38-39,45-46,52-53,59-60
+  s_e250159a6e67a4::t_22efdd56aa49ab 63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "2cb29f88c6c352c530672302536080b07661e8a6",
+  "prompts": {},
+  "sessions": {
+    "s_e250159a6e67a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89106294-b8b5-4a8a-9cc1-1be28a02c528",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
