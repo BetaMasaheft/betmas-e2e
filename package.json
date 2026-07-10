@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "end to end test for betamasaheft",
   "scripts": {
-    "test": "cypress run"
+    "test": "cypress run",
+    "test:prod": "cypress run -b firefox",
+    "test:container": "cypress run -b firefox --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ --env grepTags='@container -@production-only -@slow',grepFilterSpecs=true,grepOmitFiltered=true",
+    "test:container:open": "cypress open --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/",
+    "test:perf": "cypress run -b firefox --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ --env grepTags=@perf,grepFilterSpecs=true"
   },
   "author": "Duncan Paterson",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "cypress": "^15.15.0"
+    "@cypress/grep": "^6.0.2",
+    "cypress": "^15.18.1"
   }
 }

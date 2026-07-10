@@ -1,4 +1,4 @@
-describe('Place of Origin page', () => {
+describe('Place of Origin page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('placeoforigin')
     })

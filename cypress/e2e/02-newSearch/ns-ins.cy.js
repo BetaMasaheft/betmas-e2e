@@ -1,4 +1,4 @@
-describe('New Search INS', () => {
+describe('New Search INS', { tags: '@container' }, () => {
     // See 03_user 8
     it('should perform search filtered to institutions', () => {
         // 03_user 8.8: Apply filters on the left, e.g. Item type -> tick Institutions

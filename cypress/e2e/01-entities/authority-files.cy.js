@@ -1,4 +1,4 @@
-describe('authority files page', () => {
+describe('authority files page', { tags: '@container' }, () => {
   beforeEach(() => {
       cy.visit('authority-files/list')
   })

@@ -1,4 +1,4 @@
-describe('New Search Place and INS', () => {
+describe('New Search Place and INS', { tags: '@container' }, () => {
     // See 03_user 8, 9
     it('should perform search with multiple type filters', () => {
         // 03_user 8.8: Apply filters on the left, e.g. Item type -> tick multiple types

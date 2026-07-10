@@ -1,4 +1,4 @@
-describe('New Search: ID lookup', () => {
+describe('New Search: ID lookup', { tags: '@container' }, () => {
     // See 03_user 10
     it('should lookup Betamasaheft ID', () => {
         // 03_user 10.1: GO Full search at https://betamasaheft.eu/newSearch.html

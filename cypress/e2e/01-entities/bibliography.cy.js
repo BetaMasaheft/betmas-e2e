@@ -1,4 +1,4 @@
-describe('Bibliography page', () => {
+describe('Bibliography page', { tags: '@container' }, () => {
   beforeEach(() => {
       cy.visit('bibliography')
   })

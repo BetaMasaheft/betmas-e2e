@@ -1,4 +1,8 @@
-describe('Manuscripts browsing page', () => {
+describe('Manuscripts browsing page', { tags: '@container' }, () => {
+  /**
+   * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/64
+   * Container redirects may omit the app base path in Location headers.
+   */
   beforeEach(() => {
     cy.visit('manuscripts/browse')
   })
@@ -9,13 +13,12 @@ describe('Manuscripts browsing page', () => {
   })
 
   it('expands the list of mss per repo', () => {
-    // workaround the missing selector on the button
     cy.get('#listINS0333SBB')
-      .should('not.be.visible')
+      .should('have.class', 'w3-hide')
       .prev()
       .click()
     cy.get('#listINS0333SBB')
-      .should('be.visible')
+      .should('have.class', 'w3-show')
   })
 
   // see 03_user 4
@@ -23,22 +26,17 @@ describe('Manuscripts browsing page', () => {
     cy.get('[href*="INS0333SBB"]')
       .contains('Berlin State Library')
       .then(function ($a) {
-        // extract the fully qualified href property
         const href = $a.prop('href')
-        // Verify the URL contains the repository reference
         expect(href).to.include('INS0333SBB')
-        cy.request(href)
+
+        cy.requestFollowingAppRedirects(href)
           .its('body')
           .should('include', '</html>')
-          // Check that it's a search page (has search form or reporef parameter)
-          // This works regardless of whether the repository name is in the HTML
-          // The local database might not have the same repository data as production
           .and('satisfy', (body) => {
-            return body.includes('id="searchform"') || 
-                   body.includes('reporef') || 
+            return body.includes('id="searchform"') ||
+                   body.includes('reporef') ||
                    body.includes('searchType')
           })
       })
-
   })
 })

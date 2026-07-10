@@ -1,4 +1,4 @@
-describe('data page', () => {
+describe('data page', { tags: '@container' }, () => {
     beforeEach(() => {
         cy.visit('lod')
     })

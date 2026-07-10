@@ -1,5 +1,10 @@
-describe('viewing lemma in the scan of Dillmann’s Lexicon', () => {
-    // see 03-menu/dillman.cy.js
+describe('viewing lemma in the scan of Dillmann’s Lexicon', { tags: '@production-only' }, () => {
+    // see 03-menu/dillmann.cy.js
+    /**
+     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/66
+     * Container: all `Dillmann/` routes (incl. `Dillmann/lemma/...`) return
+     * HTTP 405, so this spec can only run against production.
+     */
 
     beforeEach(() => {
         cy.visit('Dillmann/lemma/La28f0d661a324ba5a2364e70e63ef317')

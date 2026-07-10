@@ -1,4 +1,4 @@
-describe('simple search page', () => {
+describe('simple search page', { tags: '@container' }, () => {
     beforeEach(() => {
         // see #2
         // TODO(DP): depending on the continued use see BetaMasaheft/Documentation#2219, 
@@ -48,24 +48,29 @@ describe('simple search page', () => {
     })
 
     describe('search options', () => {
-      // DP: was 14 modi see #20
-      it('should display 13 modi', () => {
+      // DP: was 14 modi see #20, then 13; 12 on both targets since 2026-07-10
+      it('should display 12 modi', () => {
         cy.get(':nth-child(4) > .w3-bar')
           .children()
-          .should('have.length', '13')
+          .should('have.length', '12')
       })
 
     // 03_user 7.3
     // see 06-user/advancedSearch.cy.js and 02-newSearch/*.js
-    it('should have working advanced search', () => {
-      cy.get('[href~="as.html"]')  
-        .invoke('attr', 'href')
-        .then(href => {
-          cy.request(href)
+    // The "repeat search in advanced search" link is commented out on the
+    // production deploy (verified 2026-07-10); it only renders in the
+    // release-expanded container, hence @container-only.
+    it('should have working advanced search', { tags: '@container-only' }, () => {
+      cy.get('[href*="as.html"]')
+        .first()
+        .then(($a) => {
+          const href = $a.prop('href')
+
+          cy.requestFollowingAppRedirects(href)
             .its('body')
             .should('include', 'simpleSearch')
             .and('include', '</html>')
-        })  
+        })
     })
   })
 })

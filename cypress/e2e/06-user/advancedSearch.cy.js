@@ -1,4 +1,4 @@
-describe('The advanced search page', () => {
+describe('The advanced search page', { tags: '@container' }, () => {
   beforeEach(() => {
     cy.visit('as.html')
   })
@@ -24,26 +24,43 @@ describe('The advanced search page', () => {
       // 03_User 7.11
       // see BetaMasaheft/Documentation#2219
       // known to be broken hence we can't test effect on results
+      // Each field is fetched once via ajax (filters.js callformpart) from an
+      // XQuery-generated form partial, which can be slow on a cold container.
+      // Wait on the request itself (responseTimeout applies) instead of
+      // polling the DOM with a padded timeout.
+      cy.intercept('GET', '**/forms/formlanguages.html').as('formlanguages')
+      cy.intercept('GET', '**/forms/formkeywords.html').as('formkeywords')
+      cy.intercept('GET', '**/forms/formrelations.html').as('formrelations')
+      cy.intercept('GET', '**/forms/formdates.html').as('formdates')
+
       cy.get('[value="languages"]')
         .check()
+      cy.wait('@formlanguages')
+        .its('response.statusCode').should('eq', 200)
       cy.get('#language')
         .should('exist')
 
       cy.get('[value="keywords"]')
         .check()
+      cy.wait('@formkeywords')
+        .its('response.statusCode').should('eq', 200)
       cy.get('#keywords')
         .should('exist')
 
       cy.get('[value="relations"]')
         .check()
+      cy.wait('@formrelations')
+        .its('response.statusCode').should('eq', 200)
       cy.get('#relations')
         .should('exist')
 
       cy.get('[value="date"]')
         .check()
+      cy.wait('@formdates')
+        .its('response.statusCode').should('eq', 200)
       cy.get('#datesform')
         .should('exist')
- 
+
     })
     
   })

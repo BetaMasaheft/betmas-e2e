@@ -1,4 +1,4 @@
-describe('analytic page', () => {
+describe('analytic page', { tags: ['@container', '@container-only'] }, () => {
   // see 03_user 3
   beforeEach(() => {
     cy.visit('works/LIT1709Kebran/analytic')
@@ -26,6 +26,9 @@ describe('analytic page', () => {
   it('shows sidebar on analytic view', () => {
     // Note: The sidebar is rendered when $collection = 'works' in RestNav (item.xqm line 959).
     // Since the analytic view is for works, the sidebar should be visible here too.
+    // #sidebar exists in the release-expanded container but not yet on the
+    // production deploy (verified 2026-07-10) — this is why the spec stays
+    // @container-only until production catches up.
     cy.get('#sidebar')
       .should('exist')
       .should('be.visible')
@@ -44,7 +47,9 @@ describe('analytic page', () => {
 
         // make an http request for this resource
         // outside of the browser
-        cy.request(href)
+        // the rendered href is root-absolute (missing app base in container),
+        // see BP-007 in notes/base-path-report.md
+        cy.requestFollowingAppRedirects(href)
           // drill into the response body
           .its('body')
           .should('include', '<h2>Index of person annotations</h2>')

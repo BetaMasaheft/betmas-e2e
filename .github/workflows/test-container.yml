@@ -13,11 +13,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        image-tag: ['6.4.0-expanded', 'release-expanded']
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
@@ -33,7 +29,7 @@ jobs:
       - name: Pull Docker image
         run: |
           echo "Pulling Docker image..."
-          docker pull ghcr.io/betamasaheft/betamasaheft:${{ matrix.image-tag }}
+          docker pull ghcr.io/betamasaheft/betamasaheft:release-expanded
 
       - name: Clean up any existing container
         if: always()
@@ -46,14 +42,27 @@ jobs:
           docker run \
             -dit -p 8080:8080 -p 8443:8443\
             --name betmas2 \
-            ghcr.io/betamasaheft/betamasaheft:${{ matrix.image-tag }}
+            -e APP_URL=http://localhost:8080/exist/apps/BetMasWeb \
+            ghcr.io/betamasaheft/betamasaheft:release-expanded
 
       - name: wait for install to finish
-        timeout-minutes: 3
+        timeout-minutes: 5
         run: |
-          while ! docker logs betmas2 | grep -q "Server has started"; \
+          while ! docker logs betmas2 2>&1 | grep -q "Server has started"; \
           do sleep 2s; \
           done
+
+      # The image ships without test users; create the cataloguer account the
+      # @auth specs log in with. Editors membership is required for the
+      # personal page and newentry form (nav.xqm). Note: a single quote in the
+      # secret would break the XQuery string literal.
+      - name: Provision cataloguer test user
+        env:
+          CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}
+        run: |
+          curl -sf -u admin: -G http://localhost:8080/exist/rest/db \
+            --data-urlencode "_query=if (sm:user-exists('JinntecCatalogue')) then 'user exists' else (sm:create-account('JinntecCatalogue', '${CYPRESS_PASSWORD_CATALOGUER}', 'Cataloguers'), sm:add-group-member('Editors', 'JinntecCatalogue'), 'user created')" \
+            --data-urlencode "_wrap=no"
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v7
@@ -61,14 +70,17 @@ jobs:
           browser: firefox
           install: npm ci
           config: baseUrl=http://localhost:8080/exist/apps/BetMasWeb/
+          expose: 'grepTags=-@production-only,grepFilterSpecs=true,grepOmitFiltered=true'
           wait-on: http://localhost:8080/exist/apps/BetMasWeb/
-          # wait-on-timeout: 120
+          wait-on-timeout: 300
+        env:
+          CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}
 
       - name: Upload Cypress screenshots
         if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: cypress-screenshots-${{ matrix.image-tag }}
+          name: cypress-screenshots-release-expanded
           path: cypress/screenshots
           retention-days: 7
 
@@ -77,4 +89,3 @@ jobs:
         run: |
           docker stop betmas2 || true
           docker rm betmas2 || true
-

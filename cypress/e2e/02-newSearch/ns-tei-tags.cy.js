@@ -1,4 +1,4 @@
-describe('New Search: Search in specific TEI tags', () => {
+describe('New Search: Search in specific TEI tags', { tags: '@container' }, () => {
     // See 03_user 9
     it('should search in specific TEI tags', () => {
         // 03_user 9.1: GO to Full search https://betamasaheft.eu/newSearch.html

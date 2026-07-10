@@ -1,32 +1,25 @@
-describe('Dillman page', () => {
-    // TODO(DP): before we can do anything this application error needs to be gone see #4
-    // see 03_User 18-20
-    // see 02_Contrib 3-6
-    // see 06-users/lemma.cy.js
-    beforeEach(() => {
-        // cy.on('uncaught:exception', (err, runnable) => {
-        //     expect(err.message).to.include('Cannot read properties of undefined')
+describe('Dillmann page (container)', { tags: '@container' }, () => {
+    /**
+     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/66
+     * Container: `cy.visit('Dillmann/')` returns HTTP 405 (GET not allowed).
+     * Re-verified 2026-07-10 on the image containing the #62/#63 fixes:
+     * still 405 on `Dillmann`, `Dillmann/` and `Dillmann/lemma/...`.
+     */
+    it('loads the HTTP ERROR 405 page', () => {
+        cy.request({
+            method: 'GET',
+            url: 'Dillmann/',
+            followRedirect: true,
+            failOnStatusCode: false
+        }).then((response) => {
+            expect(response.status).to.eq(405)
+            expect(response.body).to.include('HTTP ERROR 405')
+        })
+    })
+})
 
-        //     // done()
-        //     return false
-        // })
-        // cy.on('uncaught:exception', (err, runnable) => {
-        //     // we expect a 3rd party library error with message 'trimmed is undefined'
-        //     // and don't want to fail the test so we return false
-        //     // see #4
-        //     if (err.message.includes('trimmed is undefined')) {
-        //       return false
-        //     }
-        //   })
-        
-        //   cy.on('uncaught:exception', (err, runnable) => {
-        //     // we expect a 3rd party library error with message 'data is null'
-        //     // and don't want to fail the test so we return false
-        //     // see #4
-        //     if (err.message.includes('data is null')) {
-        //       return false
-        //     }
-        //   })
+describe('Dillmann page', { tags: '@production-only' }, () => {
+    beforeEach(() => {
         cy.visit('Dillmann/')
     })
 
@@ -38,15 +31,13 @@ describe('Dillman page', () => {
     describe('lemma search', () => {
         // see 03_user 18
         it('should work with mouse', () => {
-            cy.get('[name="q"]')
-                .type('ሀሰሰ')
+            cy.get('[name="q"]').type('ሀሰሰ')
             cy.get('[name="mode"]').should('have.value', 'none')
             // 3_user 18.3 default mode is "Normal, with homophones"
             cy.get('[name="mode"]').find(':selected').contains('Normal, with homophones')
-            cy.get('[selected=""]')
-            .should('have.length', 1)
-            .should('have.value', 'none')
+            cy.get('[selected=""]').should('have.length', 1).should('have.value', 'none')
             cy.get('.fa-search').click()
+
             // 03_user 18.4
             cy.get('#results > .w3-row')
                 .should('be.visible')
@@ -54,54 +45,50 @@ describe('Dillman page', () => {
                 .should('contain', 'You found "ሀሰሰ" in ')
             cy.get('#results').invoke('attr', 'data-template-per-page')
                 .then(value => {
-                    const pagination_int = parseInt(value);
+                    const pagination_int = parseInt(value)
                     cy.get('#results > .w3-row').its('length').should('be.lte', pagination_int)
                 })
- 
-                cy.get('#results .w3-twothird > a').first().invoke('attr', 'href')
+
+            cy.get('#results .w3-twothird > a').first().invoke('attr', 'href')
                 // first link leads to page with correct mode and searched phrase and any id
                 .should('contain', '?mode=none&q=ሀሰሰ&id=')
                 .then(href => {
                     cy.request(href)
                         .its('status')
                         .should('eq', 200)
-                });
+                })
+
             // 03_user 18.5
             cy.get('#results .w3-twothird').first().click()
             // a record appears indicated by the newly visible h3 dillman section
             cy.get('.entry')
-              .contains('Dillman')
-        });
-
+                .contains('Dillman')
+        })
 
         it('should work with keyboard', () => {
-            // 3_user 18.3 
+            // 3_user 18.3
             // select mode of searching as Fuzzy Search
             cy.get('[name="mode"]').select('fuzzy')
-            
+
             // search for lemma ሀሰሰ
-            cy.get('[name="q"]')
-                .type('ሀሰሰ')
-                .type('{enter}')
+            cy.get('[name="q"]').type('ሀሰሰ').type('{enter}')
             cy.get('#results > .w3-row')
-                .should('be.visible');
+                .should('be.visible')
             cy.get('h3').find('#hit-count').contains(/\d+/)
 
-            // the list of results has >= elements then pagination 
+            // the list of results has >= elements then pagination
             cy.get('#results').invoke('attr', 'data-template-per-page')
                 .then(value => {
-                    const pagination_int = parseInt(value);
+                    const pagination_int = parseInt(value)
                     cy.get('#results > .w3-row').its('length').should('be.lte', pagination_int)
                 })
 
-
-            // first link leads to page with correct mode and searched phrase and any id
             cy.get('#results .w3-twothird > a').first().invoke('attr', 'href')
                 .should('contain', '?mode=fuzzy&q=ሀሰሰ&id=')
                 .then(href => {
                     cy.request(href)
                         .its('body')
-                        .should('include','</html>')
+                        .should('include', '</html>')
                 })
 
             // first link opens the page with lemma description headed with first link text

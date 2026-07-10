@@ -26,3 +26,39 @@ You can see the results of the latest run on the `Actions` tab here on Github. T
 You can change the URL of the instance under test via the `--config` flag, eg.:
 
 1. `npx cypress --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ open` 
+
+## Active tags
+
+The suite uses `@cypress/grep` tags to keep container and production runs aligned without deleting tests.
+
+| Tag | Purpose |
+|-----|---------|
+| `@container` | Default tag for specs that belong to the Docker-aligned test suite |
+| `@container-only` | Spec is currently excluded from production runs because it depends on container-only behaviour/data or currently fails on production |
+| `@auth` | Spec needs `CYPRESS_PASSWORD_CATALOGUER` |
+| `@slow` | Spec is intentionally slow and useful for focused/local runs |
+
+### Current CI selection
+
+- Container workflow runs the tagged container suite.
+- Production workflow excludes specs tagged `@container-only`.
+
+### Local examples
+
+Run the full tagged container-oriented subset:
+
+```bash
+npx cypress run --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ --expose grepTags="@container",grepFilterSpecs=true,grepOmitFiltered=true
+```
+
+Run the production-safe subset:
+
+```bash
+npx cypress run --expose grepTags="-@container-only",grepFilterSpecs=true,grepOmitFiltered=true
+```
+
+Run auth-tagged specs only:
+
+```bash
+npx cypress run --expose grepTags="@auth",grepFilterSpecs=true,grepOmitFiltered=true
+```
