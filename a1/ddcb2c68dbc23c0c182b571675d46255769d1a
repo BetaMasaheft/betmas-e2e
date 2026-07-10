@@ -1,0 +1,19 @@
+cypress/e2e/01-entities/manuscripts-view.cy.js
+  s_e250159a6e67a4::t_38907a022b72aa 32-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.11",
+  "base_commit_sha": "a1ddcb2c68dbc23c0c182b571675d46255769d1a",
+  "prompts": {},
+  "sessions": {
+    "s_e250159a6e67a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89106294-b8b5-4a8a-9cc1-1be28a02c528",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
