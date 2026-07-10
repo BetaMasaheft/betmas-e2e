@@ -18,19 +18,21 @@ describe('Necessary workflows for cataloguer users', { tags: ['@auth', '@contain
 
   afterEach('Logging out', () => {
     // We visit the home page to be sure that we can log out:
-    // one of the tests ends in an error page 
+    // one of the tests ends in an error page
     // HBS: and for some reason, cy.get('back') doesn’t work from there
     cy.visit('/')
     cy.get('#logout-nav button').click()
   })
 
-  // See NB NEGATIVE of 02_01 
+  // See NB NEGATIVE of 02_01
   it('Logging in from subpages', () => {
     // we first log out
     cy.get('#logout-nav button').click()
     // Click on a item of the menu and remove hover
     cy.removeHover('#mss')
-    cy.get('#mss a[href="/availableImages.html"]').click()
+    // ends-with match: the href is root-absolute on production but
+    // appUrl-qualified in the container
+    cy.get('#mss a[href$="/availableImages.html"]').click()
     cy.loginCataloguer()
   })
 
@@ -50,9 +52,10 @@ describe('Necessary workflows for cataloguer users', { tags: ['@auth', '@contain
   // See test 02_01
    it('Create a new work entry', () => {
     // In the Navigation bar (right), select "work" (or other type of record) and click "new"
-   cy.get('form[action="/newentry.html"] > select')
+   // ends-with match: the form action is appUrl-qualified in the container
+   cy.get('form[action$="/newentry.html"] > select')
    .select('works')
-   cy.get('form[action="/newentry.html"] > button')
+   cy.get('form[action$="/newentry.html"] > button')
    .click()
    // Fill the form and click "create new entry"
    cy.get('#suffix')
@@ -67,7 +70,7 @@ describe('Necessary workflows for cataloguer users', { tags: ['@auth', '@contain
     cy.get('#confirmcreatenew')
     .click()
     // Check that the confirmation page is correct
-    // First we check that some of the values submitted are contained in the URL 
+    // First we check that some of the values submitted are contained in the URL
     cy.url().should('include', placeholder)
     // Then we check the contents of the confirmation page
     cy.get('#confirmation')
