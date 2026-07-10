@@ -47,8 +47,7 @@ describe('analytic page', { tags: ['@container', '@container-only'] }, () => {
 
         // make an http request for this resource
         // outside of the browser
-        // the rendered href is root-absolute (missing app base in container),
-        // see BP-007 in notes/base-path-report.md
+        // the rendered href is root-absolute (missing app base in container)
         cy.requestFollowingAppRedirects(href)
           // drill into the response body
           .its('body')
