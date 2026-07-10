@@ -1,9 +1,4 @@
 describe('New Search work', { tags: '@container' }, () => {
-    /**
-     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/63
-     * Container: several `newSearch.html` requests return HTTP 400 because
-     * `modules/exptit.xqm` fails during external lookup (robot-policy / user-agent).
-     */
     // See 03_user 8
     beforeEach(() => {
         cy.visit('newSearch.html')

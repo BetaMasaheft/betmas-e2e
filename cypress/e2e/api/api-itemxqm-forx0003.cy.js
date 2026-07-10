@@ -1,48 +1,34 @@
-describe('API: item.xqm FORX0003', { tags: '@container' }, () => {
+describe('API regression: item.xqm FORX0003', { tags: '@container' }, () => {
   /**
    * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/62
-   * Container currently returns HTTP 500 with `FORX0003` in `modules/item.xqm`
-   * for specific manuscript/work endpoints.
+   * Fixed in `release-expanded` (verified 2026-07-10). These requests used to
+   * return HTTP 500 `FORX0003` from `modules/item.xqm` in the container;
+   * keep them as strict regression guards on both targets.
    */
 
-  it('manuscripts/ESdz010/main (container may return 500)', () => {
+  it('manuscripts/ESdz010/main returns 200 without FORX0003', () => {
     cy.request({
       method: 'GET',
-      url: '/manuscripts/ESdz010/main',
-      failOnStatusCode: false
+      url: '/manuscripts/ESdz010/main'
     }).then((response) => {
-      const status = response.status
       const body = typeof response.body === 'string' ? response.body : JSON.stringify(response.body)
 
-      expect([200, 500]).to.include(status)
-
-      if (status === 500) {
-        expect(body).to.include('FORX0003')
-        expect(body).to.include('modules/item.xqm')
-      } else {
-        expect(body).to.include('</html>')
-      }
+      expect(response.status).to.eq(200)
+      expect(body).to.include('</html>')
+      expect(body).to.not.include('FORX0003')
     })
   })
 
-  it('manuscripts/BLorient818/main (witness link, container may return 500)', () => {
+  it('manuscripts/BLorient818/main (witness link) returns 200 without FORX0003', () => {
     cy.request({
       method: 'GET',
-      url: '/manuscripts/BLorient818/main',
-      failOnStatusCode: false
+      url: '/manuscripts/BLorient818/main'
     }).then((response) => {
-      const status = response.status
       const body = typeof response.body === 'string' ? response.body : JSON.stringify(response.body)
 
-      expect([200, 500]).to.include(status)
-
-      if (status === 500) {
-        expect(body).to.include('FORX0003')
-        expect(body).to.include('modules/item.xqm')
-      } else {
-        expect(body).to.include('</html>')
-      }
+      expect(response.status).to.eq(200)
+      expect(body).to.include('</html>')
+      expect(body).to.not.include('FORX0003')
     })
   })
 })
-

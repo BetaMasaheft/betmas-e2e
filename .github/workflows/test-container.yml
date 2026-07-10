@@ -57,6 +57,7 @@ jobs:
           browser: firefox
           install: npm ci
           config: baseUrl=http://localhost:8080/exist/apps/BetMasWeb/
+          expose: 'grepTags=-@production-only,grepFilterSpecs=true,grepOmitFiltered=true'
           wait-on: http://localhost:8080/exist/apps/BetMasWeb/
           wait-on-timeout: 300
         env:

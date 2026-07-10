@@ -1,9 +1,4 @@
 describe('New Search PERS', { tags: '@container' }, () => {
-    /**
-     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/63
-     * Container: `newSearch.html` can return HTTP 400 due to `exptit.xqm`
-     * external lookup/robot-policy errors while resolving place/person names.
-     */
     // See 03_user 8
     it('should perform search filtered to persons', () => {
         // 03_user 8.8: Apply filters on the left, e.g. Item type -> tick Persons

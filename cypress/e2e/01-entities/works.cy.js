@@ -79,11 +79,6 @@ describe('A works page', { tags: '@container' }, () => {
     })
 
     it('See the witnesses of a work', () => {
-    /**
-     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/62
-     * Container: witness link request (e.g. `/manuscripts/BLorient818/main`)
-     * returns HTTP 500 `FORX0003` (runtime error in `modules/item.xqm`).
-     */
       // see 03_user 15
       //See the red box on the right "This unit, or parts of it, is contained in 13 manuscript records 13 times"
       cy.get('#computedWitnesses .openInDialog').invoke('text').should(text => {

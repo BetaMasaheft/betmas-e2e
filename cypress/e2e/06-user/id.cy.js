@@ -43,4 +43,17 @@ describe('id based URL routing', { tags: '@container' }, () => {
       .its('headers.location')
       .should('include', 'manuscripts/ESum040')
   })
+
+  it('manuscript records show Relations link', () => {
+    // Ignore uncaught exception: vis is not defined
+    // see https://github.com/BetaMasaheft/betmas-e2e/issues/34
+    cy.on('uncaught:exception', (err) => {
+      if (err.message.includes('vis is not defined')) {
+        return false
+      }
+    })
+    cy.visit('manuscripts/ESum040/main')
+    cy.get('[href$=analytic]')
+      .contains('Relations')
+  })
 })
