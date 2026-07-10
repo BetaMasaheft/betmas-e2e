@@ -42,6 +42,7 @@ jobs:
           docker run \
             -dit -p 8080:8080 -p 8443:8443\
             --name betmas2 \
+            -e APP_URL=http://localhost:8080/exist/apps/BetMasWeb \
             ghcr.io/betamasaheft/betamasaheft:release-expanded
 
       - name: wait for install to finish
