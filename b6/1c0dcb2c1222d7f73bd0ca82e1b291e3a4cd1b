@@ -1,0 +1,24 @@
+cypress/e2e/api/api-collatex-cross-service.cy.js
+  s_de4e41d1a53e51::t_5e4adc230f5bdd 1,11,14-15,19,49,52-58
+  s_de4e41d1a53e51::t_04a5701d4140b0 2-10,12-13,16-18,20-48,50-51,59-61
+README.md
+  s_de4e41d1a53e51::t_f64256836c94e5 37-38,44-45
+Plan/03_user.md
+  s_de4e41d1a53e51::t_ef0bb294a06fba 240-250
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "b61c0dcb2c1222d7f73bd0ca82e1b291e3a4cd1b",
+  "prompts": {},
+  "sessions": {
+    "s_de4e41d1a53e51": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b4e3ecdc-3b86-4f5e-b635-ee7ad1e44324",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
