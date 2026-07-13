@@ -237,4 +237,15 @@ We collect necessary workflows for users of BM app here. Including steps that re
 - [ ] Done
 - [x] In progress
 
+## 22 Collate manuscript passages (Collatex)
+
+1. GO to https://betamasaheft.eu/collate (menu: Collate passages with Collatex)
+2. Enter two DTS passage references (e.g. `ESamm007.5va` and `ESmr001.93rb`) — see on-page URN help
+3. Click **Collate**
+4. A table appears with aligned witness tokens (Ethiopic text from expanded transcriptions)
+
+**Automated coverage:** `cypress/e2e/api/api-collatex-cross-service.cy.js` (`@production-only`, #55). Cross-service: BetMasWeb → collatex servlet on host `:8081`. Not runnable in `release-expanded` until collatex is containerised.
+
+- [x] In progress (API contract test on prod)
+- [ ] Done (UI `/collate` flow not yet covered)
 

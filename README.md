@@ -34,14 +34,15 @@ The suite uses `@cypress/grep` tags to keep container and production runs aligne
 | Tag | Purpose |
 |-----|---------|
 | `@container` | Default tag for specs that belong to the Docker-aligned test suite |
-| `@container-only` | Spec is currently excluded from production runs because it depends on container-only behaviour/data or currently fails on production |
+| `@container-only` | Excluded from production CI — container-specific behaviour/data or currently fails on production |
+| `@production-only` | Excluded from container CI — depends on production-only services (e.g. collatex on host `:8081`, Dillmann routing, external WAF) |
 | `@auth` | Spec needs `CYPRESS_PASSWORD_CATALOGUER` |
 | `@slow` | Spec is intentionally slow and useful for focused/local runs |
 
 ### Current CI selection
 
-- Container workflow runs the tagged container suite.
-- Production workflow excludes specs tagged `@container-only`.
+- Container workflow (`test-container.yml`): excludes `@production-only`.
+- Production workflow (`main.yml`): excludes `@container-only`.
 
 ### Local examples
 
