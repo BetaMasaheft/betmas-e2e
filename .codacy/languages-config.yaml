@@ -1,0 +1,6 @@
+languages:
+  - name: JavaScript
+    extensions:
+      - .js
+      - .mjs
+      - .cjs

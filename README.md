@@ -63,3 +63,29 @@ Run auth-tagged specs only:
 ```bash
 npx cypress run --expose grepTags="@auth",grepFilterSpecs=true,grepOmitFiltered=true
 ```
+
+## Local code analysis (Codacy CLI)
+
+Uses [codacy-cli-v2](https://github.com/codacy/codacy-cli-v2) in **local mode** (no BetaMasaheft org on Codacy Cloud required).
+
+**One-time setup** (after `npm install`):
+
+```bash
+npm run codacy:init
+```
+
+This creates `.codacy/codacy.yaml` (ESLint + Node 22 only), installs tool runtimes, and patches Cypress globals into the generated ESLint config.
+
+**Analyze Cypress specs:**
+
+```bash
+npm run codacy:analyze -- cypress/e2e/api/api-collatex-cross-service.cy.js
+# or whole tree:
+npm run codacy:analyze -- cypress/
+```
+
+**Notes:**
+
+- `BetaMasaheft/betmas-e2e` is not on Codacy Cloud — use local CLI only (`npm run codacy:analyze`). Codacy MCP is disabled in this project (`.cursor/mcp.json` stub, `.cursor/permissions.json`, `.cursor/rules/codacy-local-only.mdc`).
+- Helpers live under `.codacy/` (`patch-eslint.mjs`, `languages-config.yaml`, `codacy.yaml`).
+- `.codacy/tools-configs/` is gitignored by Codacy — re-run `npm run codacy:init` after deleting `.codacy/` on a fresh clone.
