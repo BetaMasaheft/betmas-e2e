@@ -1,0 +1,36 @@
+.codacy/patch-eslint.mjs
+  s_de4e41d1a53e51::t_a452c79fd8004d 1-2,4-18,20,23-33,36-38,60,67-68,73-74
+  s_de4e41d1a53e51::t_1d064078a5e0bd 3,19,21-22,34-35,39-59,61-66,69-72,75
+.codacy/languages-config.yaml
+  s_de4e41d1a53e51::t_135712c5af3fb2 1-6
+cypress/support/e2e.js
+  s_de4e41d1a53e51::t_cf40ecc0575e5f 26,36,45,54,62,70,78
+package.json
+  s_de4e41d1a53e51::t_9deb69aa3e021d 11
+  s_de4e41d1a53e51::t_6e7abc88e98173 10
+  s_de4e41d1a53e51::t_0d287020dce32e 12
+cypress/e2e/06-user/advancedSearch.cy.js
+  s_de4e41d1a53e51::t_347ef38bee53b4 111
+README.md
+  s_de4e41d1a53e51::t_64456604372584 89
+  s_de4e41d1a53e51::t_fd601a23c2561e 90-91
+  s_de4e41d1a53e51::t_5c33b05ae379dd 65-88
+.codacy/codacy.yaml
+  s_de4e41d1a53e51::t_07c9a653aad2a6 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "815a5431a329c924d2f4bb7f8a7bcc32f59528e2",
+  "prompts": {},
+  "sessions": {
+    "s_de4e41d1a53e51": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b4e3ecdc-3b86-4f5e-b635-ee7ad1e44324",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
