@@ -52,16 +52,21 @@ jobs:
           do sleep 2s; \
           done
 
-      # The image ships without test users; create the cataloguer account the
-      # @auth specs log in with. Editors membership is required for the
-      # personal page and newentry form (nav.xqm). Note: a single quote in the
-      # secret would break the XQuery string literal.
-      - name: Provision cataloguer test user
+      # The image ships without test users; create the accounts the @auth
+      # specs log in with. Editors membership is required for the personal
+      # page and newentry form (nav.xqm); Dillmann accounts use the
+      # Cataloguers primary group (Dillmann accounts/createaccount.xql).
+      # Note: a single quote in a secret would break the XQuery string literal.
+      - name: Provision test users
         env:
           CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}
+          CYPRESS_PASSWORD_LEXICOGRAPHER: ${{ secrets.CYPRESS_PASSWORD_LEXICOGRAPHER }}
         run: |
           curl -sf -u admin: -G http://localhost:8080/exist/rest/db \
             --data-urlencode "_query=if (sm:user-exists('JinntecCatalogue')) then 'user exists' else (sm:create-account('JinntecCatalogue', '${CYPRESS_PASSWORD_CATALOGUER}', 'Cataloguers'), sm:add-group-member('Editors', 'JinntecCatalogue'), 'user created')" \
+            --data-urlencode "_wrap=no"
+          curl -sf -u admin: -G http://localhost:8080/exist/rest/db \
+            --data-urlencode "_query=if (sm:user-exists('JinntecLexicon')) then 'user exists' else (sm:create-account('JinntecLexicon', '${CYPRESS_PASSWORD_LEXICOGRAPHER}', 'Cataloguers'), 'user created')" \
             --data-urlencode "_wrap=no"
 
       - name: Run Cypress tests
@@ -75,6 +80,7 @@ jobs:
           wait-on-timeout: 300
         env:
           CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}
+          CYPRESS_PASSWORD_LEXICOGRAPHER: ${{ secrets.CYPRESS_PASSWORD_LEXICOGRAPHER }}
 
       - name: Upload Cypress screenshots
         if: failure()

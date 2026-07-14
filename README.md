@@ -12,6 +12,7 @@
  This test suite assumes the presence of the following environment variables:
  
  - `PASSWORD_CATALOGUER` with the password for test user `JinntecCatalogue`
+ - `PASSWORD_LEXICOGRAPHER` with the password for test user `JinntecLexicon` (production Dillmann login smoke in `05-contributor/lexicon.cy.js`; contributor depth is in the Dillmann app repo)
 
 ## How to use
 
@@ -36,7 +37,7 @@ The suite uses `@cypress/grep` tags to keep container and production runs aligne
 | `@container` | Default tag for specs that belong to the Docker-aligned test suite |
 | `@container-only` | Excluded from production CI — container-specific behaviour/data or currently fails on production |
 | `@production-only` | Excluded from container CI — depends on production-only services (e.g. collatex on host `:8081`, Dillmann routing, external WAF) |
-| `@auth` | Spec needs `CYPRESS_PASSWORD_CATALOGUER` |
+| `@auth` | Spec needs `CYPRESS_PASSWORD_CATALOGUER` and/or `CYPRESS_PASSWORD_LEXICOGRAPHER` |
 | `@slow` | Spec is intentionally slow and useful for focused/local runs |
 
 ### Current CI selection

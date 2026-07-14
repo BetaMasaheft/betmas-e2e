@@ -1,15 +1,39 @@
 # User Story BM
 
-We collect necessary workflows for users of BM app here. Including steps that require external services or locations. 
+We collect necessary workflows for users of BM app here. Including steps that require external services or locations.
+
+## Sprint status (2026-07-13)
+
+**Shipped this sprint**
+
+- [PR #70](https://github.com/BetaMasaheft/betmas-e2e/pull/70): **Test against Container** green; prod/container tag split (`@production-only` / `@container-only`); collatex cross-service API spec (`api-collatex-cross-service.cy.js`, #55).
+- Codacy: local CLI under `.codacy/`; remote Codacy MCP disabled for this project.
+- Lexicon contributor split: §3–§5 depth in [Dillmann](https://github.com/BetaMasaheft/Dillmann) `user_admin.cy.js` (+ `editor.cy.js` pending read-only refactor); betmas-e2e keeps `05-contributor/lexicon.cy.js` integration smoke only ([PR #26](https://github.com/BetaMasaheft/betmas-e2e/pull/26) superseded).
+- Index-page stories **§23–§34** added below; stub specs in `cypress/e2e/01-entities/` (`it.skip` placeholders).
+- **Read-only policy:** no automated creates/updates/deletes — `cypress/support/read-only.js` allows only known session/search POSTs on app hosts and blocks every other mutating request (browser and `cy.request`); cataloguer/lexicon forms stop before Confirm.
+
+**Next up**
+
+- §1: move statistics test from skipped `landing.cy.js` to `about.html` / `#countModal`.
+- §23–§34: implement index-page specs (replace stubs).
+- Land Dillmann `user_admin.cy.js` changes; refactor `editor.cy.js` to match read-only policy (update form only, no Confirm).
+- Merge PR #70.
+
+---
 
 ## 1 BM statistics
 
-1. GO to `https://betamasaheft.eu/` 
-2. Scroll down to "Reuse the data"
-3. Click on "Beta masaheft in numbers" button
-4. Get the popup with the current number of records broke down by type ![image](https://user-images.githubusercontent.com/17987728/213142014-17e6dafe-c2f4-48c5-9eeb-7c3a00f15545.png)
+1. GO to `https://betamasaheft.eu/about.html`
+2. Scroll down to **Reuse the data**
+3. Click **Beta maṣāḥǝft in numbers**
+4. Get the popup (`#countModal`) with the current number of records broken down by type ![image](https://user-images.githubusercontent.com/17987728/213142014-17e6dafe-c2f4-48c5-9eeb-7c3a00f15545.png)
 
-- [x] done
+**Note:** This control was moved from `index.html` to `about.html` in the BetMasWeb redesign (April 2025). The homepage no longer shows the statistics button.
+
+**E2E:** Skipped in `landing.cy.js` (`Produces readable statistics`); needs new spec against `about.html` / `#countModal`.
+
+- [ ] Done
+- [x] In progress
 
 ## 2 Open record when ID known
 
@@ -27,7 +51,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. Get the view  : manuscripts - e.g. AG0001 - https://betamasaheft.eu/resources/images/homepage/manuscript.jpg ; works - e.g. LIT1709Kebran - https://betamasaheft.eu/resources/images/homepage/texts.png etc.
 3. In the top record menu click Relations; this redirects to "analytic" subpage, e.g. https://betamasaheft.eu/works/LIT1709Kebran/analytic with a graph (**NB not working in the new release**) and a list of relations ![image](https://user-images.githubusercontent.com/17987728/213405059-dc6a0de0-5c52-4ffa-8746-3d7357c8bbb1.png)
 
-- [x] done
+**E2E:** `analytic.cy.js` — relations table covered on container; `it.skip('shows relationship graph area')` because `#BetMasRelView` is commented out upstream. `id.cy.js` checks Relations links on entity pages.
+
+- [x] done (graph still broken upstream; table automated)
 
 ## 4 Browse through manuscripts
 
@@ -47,7 +73,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. E.g. to find Ownership Notes referring to `Antoine d'Abbadie` click Ownership Note and select `Antoine d'Abbadie [d'Arrast]` in the scroll-down menu for persons mentioned. Get the results at https://betamasaheft.eu/additions?type=OwnershipNote&termText=&otherText=&target-pers=https%3A%2F%2Fbetamasaheft.eu%2FPRS1071dAbbadi
 ![image](https://user-images.githubusercontent.com/17987728/213427940-b92727f7-725b-4888-a8c2-6e95130f54c3.png)
 
-- [x] Done
+**E2E:** `additions.cy.js` (`@slow`) — layout, browse-by-type, and Antoine d'Abbadie filter covered. **Gaps:** free-text search skipped (`#12` crash); weak assertions on link behaviour, select-all, and hit-count parity (`#9`–`11`).
+
+- [x] Done (partial automation)
 
 
 ## 6 Quick simple search
@@ -148,8 +176,10 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 3. The page https://betamasaheft.eu/manuscripts/ESap028/viewer opens, with MIRADOR viewer and images visible
 4. To get to the main entry view, select Entry in the top menu, you will be redirected to https://betamasaheft.eu/manuscripts/ESap028/main
 
+**E2E:** `manuscripts-view.cy.js` — Mirador smoke is `@production-only` (container IIIF `/api/` returns 405, #66). Container block covers contents / TOC only (§16).
+
 - [ ] Done
-- [x] In progress 
+- [x] In progress (prod: images; container: blocked on IIIF)
 
 ## 14 View work text
 
@@ -157,8 +187,10 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 2. In the top menu, click Text
 3. The page  https://betamasaheft.eu/works/LIT1709Kebran/text opens ![image](https://user-images.githubusercontent.com/17987728/213690747-1932659a-ea06-4f5e-aa3d-3bc888d9f1e7.png)
 
+**E2E:** `works.cy.js` — requests work `/text` URL; asserts structure on container, substantial text on production only (localhost often empty/slow).
+
 - [ ] Done
-- [x] In progress 
+- [x] In progress
 
 ## 15 See the witnesses of a work
 
@@ -167,8 +199,10 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 3. For more details on the witness, click on the underlined shelfmark in the list ![image](https://user-images.githubusercontent.com/17987728/213691491-f9800406-4217-4a2f-9372-0b7cab6d65e8.png)
 4. The manuscript page opens https://betamasaheft.eu/manuscripts/ESdz010/main
 
-- [ ] Done
-- [x] In progress 
+**E2E:** `works.cy.js` — witness box text + shelfmark link request on container.
+
+- [x] In progress (container)
+- [ ] Done (prod UI click-through not asserted)
 
 ## 16 View manuscript table of content
 
@@ -178,8 +212,10 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 4. To get more information about a work contained, click on the underlined work title ![image](https://user-images.githubusercontent.com/17987728/213692227-07a5aca4-2a9e-4a3e-951c-6148f8bb278e.png)
 5. You are redirected to the work, here https://betamasaheft.eu/works/LIT1544Gebrah/main 
 
+**E2E:** `manuscripts-view.cy.js` — expand contents + follow work-title link (`BetMas#113` href fix).
+
+- [x] In progress (container)
 - [ ] Done
-- [x] In progress
 
 # User Story Guidelines
 
@@ -196,7 +232,7 @@ https://betamasaheft.eu/newSearch.html?searchType=text&clavistype=&query=miracle
 
 We collect necessary workflows for users of BM app here. Including steps that require external services or locations.
 
-**NOTE**: Comprehensive Lexicon and Dillmann tests have moved to another repo next to the source code. This E2E test suite only keeps minimal smoke tests for basic viewing/searching functionality (scenarios 18-20). Entry creation/editing and parsing/linking tests are in the other repo. 
+**NOTE**: Comprehensive Lexicon and Dillmann tests live in the [Dillmann](https://github.com/BetaMasaheft/Dillmann) app repo. This suite keeps public viewing/search smoke (§18–20), a thin production login integration smoke (`05-contributor/lexicon.cy.js`), and contributor depth in Dillmann (Plan/02_contributor §3–§5). 
 
 ## 18 Search for a lemma in the dictionary
 
@@ -234,8 +270,10 @@ We collect necessary workflows for users of BM app here. Including steps that re
  OR
 4. Doublie click on the term to get Alpheios results ![image](https://user-images.githubusercontent.com/17987728/213695287-1b849032-98ca-4cd9-94ad-ca43a98af7da.png)
 
+**E2E:** Not in this repo (see NOTE above). `morpho.cy.js` is a **placeholder stub** only. Dillmann search/attestations/scan covered in `dillmann.cy.js` + `lemma.cy.js` (§18–20).
+
 - [ ] Done
-- [x] In progress
+- [x] In progress (out of scope here; morpho stub)
 
 ## 22 Collate manuscript passages (Collatex)
 
@@ -246,6 +284,141 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 **Automated coverage:** `cypress/e2e/api/api-collatex-cross-service.cy.js` (`@production-only`, #55). Cross-service: BetMasWeb → collatex servlet on host `:8081`. Not runnable in `release-expanded` until collatex is containerised.
 
-- [x] In progress (API contract test on prod)
+- [x] In progress (API contract test on prod — **automated**)
 - [ ] Done (UI `/collate` flow not yet covered)
 
+---
+
+## 23 Browse the persons index
+
+1. GO to `https://betamasaheft.eu/IndexPersons` (homepage **Taxonomy** section → **Index Persons**, or entity sidebar **Persons Index**)
+2. See the heading **Index of person annotations**
+3. Use the filter form on the left; results appear on the right with hit count and pagination
+4. Open a result link to reach the related person or manuscript record
+
+**E2E:** `indexPersons.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 24 Browse the places index
+
+1. GO to `https://betamasaheft.eu/IndexPlaces` (homepage **Taxonomy** section → **Index Places**, or entity sidebar **Places Index**)
+2. See the heading **Index of places annotations**
+3. Use the filter form on the left; results appear on the right with hit count and pagination
+4. Open a result link to reach the related place or manuscript record
+
+**E2E:** `indexPlaces.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 25 Browse authority keywords (taxonomy)
+
+1. GO to `https://betamasaheft.eu/authority-files/list` (homepage **Taxonomy** → **Keywords**)
+2. See the list of authority-file keywords used to classify records
+3. Open a keyword to reach filtered search results or related records
+
+**E2E:** `authority-files.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 26 Browse art themes
+
+1. GO to `https://betamasaheft.eu/art-themes/list` (homepage **Taxonomy** → **Art themes**)
+2. See the art-theme taxonomy (general keywords and detailed art-theme records)
+3. Open a theme to reach related decoration or manuscript records
+
+**E2E:** `art-themes.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 27 Search the decorations index
+
+1. GO to `https://betamasaheft.eu/decorations`
+2. See **Decorations Filtered Search** with filters on the left and results on the right
+3. Apply filters and confirm hit count and result list update
+
+**E2E:** `decorations.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 28 Search illuminations (miniatures)
+
+1. GO to `https://betamasaheft.eu/decorations?type=miniature` (homepage **Taxonomy** → **Miniatures**)
+2. See decoration results limited to miniatures
+3. Confirm thumbnails or links appear where images are available
+
+**E2E:** `decorations.cy.js` (miniatures URL) — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 29 Browse the bibliography
+
+1. GO to `https://betamasaheft.eu/bibliography` (homepage **Taxonomy** → **Bibliography**)
+2. See the bibliography listing (references cited in project records)
+3. Filter or open entries as needed
+
+**E2E:** `bibliography.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 30 Search titles, colophons, and supplications
+
+1. GO to `https://betamasaheft.eu/titles` (homepage **Taxonomy** → **Titles, Colophons, Supplications**)
+2. See **Titles Filtered Search** with filters on the left
+3. Apply filters and confirm results and hit count on the right
+
+**E2E:** `titles.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 31 Browse catalogues encoded
+
+1. GO to `https://betamasaheft.eu/catalogues/list` (homepage **Manuscripts** → **Catalogues Encoded**)
+2. See the list of manuscript catalogues used as sources
+3. Click a catalogue title to open the list of manuscripts encoded from that source
+
+**E2E:** `catalogues.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 32 Consult digitized manuscripts available elsewhere
+
+1. GO to `https://betamasaheft.eu/availableImages.html` (homepage **Manuscripts** → **List of Digitized Manuscripts**)
+2. Read the introduction and external links to digitized collections
+3. Follow an external link (opens in a new tab) to a host institution
+
+**E2E:** `availableImages.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 33 Search bindings
+
+1. GO to `https://betamasaheft.eu/bindings` (homepage **Taxonomy** → **Bindings**)
+2. See **Bindings Filtered Search** with filters on the left
+3. Apply filters and confirm results and hit count on the right
+
+**E2E:** `bindings.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
+
+## 34 View places of origin (map)
+
+1. GO to `https://betamasaheft.eu/placeoforigin.html`
+2. See the embedded map of places of origin (`origPlaces` / GeoBrowser iframe)
+3. Interact with the map to explore manuscript origin locations
+
+**E2E:** `placeOfOrigin.cy.js` — stub only.
+
+- [ ] Done
+- [x] In progress
