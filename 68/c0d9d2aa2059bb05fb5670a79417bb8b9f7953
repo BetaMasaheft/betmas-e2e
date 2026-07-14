@@ -1,0 +1,33 @@
+cypress/e2e/08-performance/slow-pages.cy.js
+  s_16a6cdccdd371f::t_2cf1e54497d983 1-46
+.github/workflows/benchmark.yml
+  s_16a6cdccdd371f::t_a7958887399c7d 1-82
+cypress.config.mjs
+  s_16a6cdccdd371f::t_5e69811c188938 1,10-29
+package.json
+  s_16a6cdccdd371f::t_bd8391818bc488 11-12
+.github/workflows/test-container.yml
+  s_16a6cdccdd371f::t_52bd18060c41c0 78-79
+.gitignore
+  s_16a6cdccdd371f::t_bd8391818bc488 146
+.github/workflows/main.yml
+  s_16a6cdccdd371f::t_ec1055bdfdf530 28-29
+cypress/fixtures/perf-budgets.json
+  s_16a6cdccdd371f::t_e2e157e848eea0 1-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "68c0d9d2aa2059bb05fb5670a79417bb8b9f7953",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
