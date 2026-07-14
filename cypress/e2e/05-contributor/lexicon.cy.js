@@ -24,7 +24,8 @@ describe('Dillmann lexicon integration smoke', { tags: ['@auth', '@production-on
 
   it('logs in and opens the personal page from Dillmann', () => {
     cy.get('#about').should('contain', `Hi ${username}!`)
-    cy.get('[title="about"] > a')
+    // logged-in nav renders the personal-page link as the titled anchor itself
+    cy.get('a[title="about"]')
       .invoke('attr', 'href')
       .then((href) => {
         cy.visit(href)
