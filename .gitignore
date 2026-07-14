@@ -143,3 +143,4 @@ dist
 notes/
 .moderne/
 .claude/
+benchmark-results.json

@@ -1,0 +1,35 @@
+{
+  "samples": 3,
+  "pages": [
+    {
+      "key": "newsearch-mss-filter",
+      "path": "newSearch.html?searchType=text&mode=any&work-types=mss",
+      "budgetMs": { "container": 45000, "production": 35000 }
+    },
+    {
+      "key": "manuscripts-browse",
+      "path": "manuscripts/browse",
+      "budgetMs": { "container": 30000, "production": 25000 }
+    },
+    {
+      "key": "catalogues-list",
+      "path": "catalogues/list",
+      "budgetMs": { "container": 30000, "production": 25000 }
+    },
+    {
+      "key": "decorations",
+      "path": "decorations",
+      "budgetMs": { "container": 30000, "production": 25000 }
+    },
+    {
+      "key": "additions",
+      "path": "additions",
+      "budgetMs": { "container": 120000, "production": 100000 }
+    },
+    {
+      "key": "work-text",
+      "path": "works/LIT1709Kebran/text",
+      "budgetMs": { "container": 90000, "production": 60000 }
+    }
+  ]
+}

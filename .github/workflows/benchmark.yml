@@ -1,0 +1,82 @@
+name: Benchmarks against Container
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 02:30 UTC — after the nightly container test run (23:30)
+    - cron: '30 2 * * *'
+
+permissions:
+  # github-action-benchmark pushes the data series to gh-pages
+  contents: write
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: betmas-bot
+          password: ${{ secrets.BOT_CONTAINER_PAT }}
+
+      - name: Pull Docker image
+        run: docker pull ghcr.io/betamasaheft/betamasaheft:release-expanded
+
+      - name: Clean up any existing container
+        if: always()
+        run: |
+          docker stop betmas2 || true
+          docker rm betmas2 || true
+
+      - name: Start container
+        run: |
+          docker run \
+            -dit -p 8080:8080 -p 8443:8443 \
+            --name betmas2 \
+            -e APP_URL=http://localhost:8080/exist/apps/BetMasWeb \
+            ghcr.io/betamasaheft/betamasaheft:release-expanded
+
+      - name: Wait for install to finish
+        timeout-minutes: 5
+        run: |
+          while ! docker logs betmas2 2>&1 | grep -q "Server has started"; \
+          do sleep 2s; \
+          done
+
+      # cy.request timings are taken by the Cypress server process, so the
+      # browser choice does not affect the numbers; default Electron is fine.
+      - name: Run benchmark specs
+        uses: cypress-io/github-action@v7
+        with:
+          install: npm ci
+          config: baseUrl=http://localhost:8080/exist/apps/BetMasWeb/
+          expose: 'grepTags=@perf,grepFilterSpecs=true,grepOmitFiltered=true'
+          wait-on: http://localhost:8080/exist/apps/BetMasWeb/
+          wait-on-timeout: 300
+
+      - name: Track results on gh-pages
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: Container slow pages
+          tool: customSmallerIsBetter
+          output-file-path: benchmark-results.json
+          benchmark-data-dir-path: bench/container
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # report-only: alert on >150% regressions, never fail the run
+          alert-threshold: '150%'
+          comment-on-alert: true
+          fail-on-alert: false
+          summary-always: true
+
+      - name: Clean up container
+        if: always()
+        run: |
+          docker stop betmas2 || true
+          docker rm betmas2 || true
