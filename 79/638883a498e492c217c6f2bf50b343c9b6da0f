@@ -1,0 +1,106 @@
+Plan/02_contributor.md
+  s_de4e41d1a53e51::t_987e791d6b8870 37-38
+  s_de4e41d1a53e51::t_8c2c4dbfb43ab2 24-25
+  s_de4e41d1a53e51::t_f8fde3a22f4131 56-57
+  s_de4e41d1a53e51::t_9291f273e302b0 84
+  s_de4e41d1a53e51::t_64bbb5c0eb8a87 69-70
+  s_de4e41d1a53e51::t_5f87e6578d0d32 3-11
+  s_de4e41d1a53e51::t_831d0aba16eaff 46
+  s_de4e41d1a53e51::t_e82816e8a206ed 85,87
+cypress/support/e2e.js
+  s_de4e41d1a53e51::t_04bf09b7def8e8 19
+cypress/support/commands.js
+  s_de4e41d1a53e51::t_74bfedf7d6cce8 71
+  s_de4e41d1a53e51::t_dbf04618a8021a 70,72,74-75
+  s_16a6cdccdd371f::t_c348827694d609 59-60,63,68-69,73
+cypress/e2e/05-contributor/lexicon.cy.js
+  s_de4e41d1a53e51::t_d047e7115d23a1 9-15,23-24,33-34
+  s_16a6cdccdd371f::t_3105b5791ce4b1 16-22
+  s_de4e41d1a53e51::t_afe04a5219e556 1-8,25-32
+cypress/e2e/00-general/read-only-guard.cy.js
+  s_16a6cdccdd371f::t_628b0889fd88b2 1,3-4,13,15-22,26,30,35-36,38-48,65-76
+  s_6a01a7c5e4b8a2::t_d8a614eee20e62 6-11,14,23-25,28,52-56,60-63,85,87-91
+  s_6a01a7c5e4b8a2::t_055f140eb4de0c 29,86
+  s_16a6cdccdd371f::t_bd54629d5edf02 31-34,37,49-51,57-59,77-81,84,92-102
+  s_6a01a7c5e4b8a2::t_bc804da2422e08 2,5,12,27,64,82-83,103-105
+README.md
+  s_de4e41d1a53e51::t_f01e5a8810a5f0 40
+  s_de4e41d1a53e51::t_53d058aa3f3d61 15
+cypress/support/read-only-policy.js
+  s_16a6cdccdd371f::t_043b9adef14a42 5-7,10,13,16-22,31-43,45-52,71-74,77
+  s_6a01a7c5e4b8a2::t_a7e58887aa258e 1,8-9,14,25,58,64,66,75-76,78
+  s_6a01a7c5e4b8a2::t_1090f51a673777 15
+  s_16a6cdccdd371f::t_e3f962951f9c0e 2-4,11-12,23-24,26-30,44,53-57,59-63,65,67-70
+cypress/support/read-only.js
+  s_6a01a7c5e4b8a2::t_41630c71e5456c 10,25,44,53,59,63-65
+  s_de4e41d1a53e51::t_8070093e47e66f 1-2,6-7,9,43,47,49-52,54-55,66
+  s_16a6cdccdd371f::t_327a7353031e3f 30,36
+  s_6a01a7c5e4b8a2::t_62669b97ca1452 46,56-58,60-62
+  s_16a6cdccdd371f::t_80a35ba43ec6b6 3-5,8,11-24,26-29,31-35,37-42,45,48
+Plan/03_user.md
+  s_de4e41d1a53e51::t_adb0a64c87e302 399-400,402
+  s_de4e41d1a53e51::t_07af63f1f6538e 366-367,369
+  s_16a6cdccdd371f::t_b0acd60646487a 13
+  s_de4e41d1a53e51::t_2094807abe2fdc 292-298,301,303-310,313,315-321,324,326-332,335,337-343,346,348-354,357,359-365,368,370-376,379,381-387,390,392-398,401,403-409,412,414-420,423
+  s_de4e41d1a53e51::t_ed13b9ba0f6f09 190-191,193
+  s_de4e41d1a53e51::t_ccdec04e37fa4f 388-389,391
+  s_de4e41d1a53e51::t_1e17556e7fd90e 421-422,424
+  s_de4e41d1a53e51::t_c7a506c37a5675 333-334,336
+  s_de4e41d1a53e51::t_7c5030e5b77ed8 76-78
+  s_de4e41d1a53e51::t_ab3dcc4cbf5894 54-56
+  s_de4e41d1a53e51::t_c9a3bc79b52402 273-274,276
+  s_de4e41d1a53e51::t_13d2a8abdd50e6 33-34,36
+  s_de4e41d1a53e51::t_87ac330b6d73e0 299-300,302
+  s_de4e41d1a53e51::t_52e8fd1f28c793 344-345,347
+  s_de4e41d1a53e51::t_4217dfc0003970 32
+  s_de4e41d1a53e51::t_aaab43791fa911 179-180,182
+  s_de4e41d1a53e51::t_b7e56bfe46f38a 290-291
+  s_de4e41d1a53e51::t_18ee9446cf92fe 311-312,314
+  s_de4e41d1a53e51::t_2a7098c95353a0 202-205
+  s_de4e41d1a53e51::t_8256f2ae5f3c09 322-323,325
+  s_de4e41d1a53e51::t_0648d71ec7fac8 410-411,413
+  s_de4e41d1a53e51::t_94a6ae3d21d874 215-217
+  s_de4e41d1a53e51::t_2cbfd2e0004674 26-28,31,35
+  s_de4e41d1a53e51::t_8adb5010cc3b89 235
+  s_6a01a7c5e4b8a2::t_2bc1b23fedc9de 29
+  s_de4e41d1a53e51::t_08a4ce1ef0adf8 355-356,358
+  s_de4e41d1a53e51::t_c0b58d5be88475 377-378,380
+  s_de4e41d1a53e51::t_2c7914ae281cfa 287
+  s_de4e41d1a53e51::t_77aa83f3355e08 3-12,14-22
+.github/workflows/test-container.yml
+  s_16a6cdccdd371f::t_197d85510d84f4 83
+  s_16a6cdccdd371f::t_3d8a3077712995 55-60,63,68-69
+  s_16a6cdccdd371f::t_2478b63ce4ad59 70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.13",
+  "base_commit_sha": "79638883a498e492c217c6f2bf50b343c9b6da0f",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": null
+    },
+    "s_6a01a7c5e4b8a2": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6102d942-f5fe-4813-a9c6-2addc8fe50ed",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    },
+    "s_de4e41d1a53e51": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "b4e3ecdc-3b86-4f5e-b635-ee7ad1e44324",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
