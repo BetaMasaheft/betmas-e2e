@@ -25,7 +25,8 @@ jobs:
         with:
           build: npm install
           browser: firefox
-          expose: 'grepTags=-@container-only,grepFilterSpecs=true,grepOmitFiltered=true'
+          # note: '+' joins tag conditions with AND; space-separated would be OR
+          expose: 'grepTags=-@container-only+-@perf,grepFilterSpecs=true,grepOmitFiltered=true'
         env: 
           CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}  
           CYPRESS_PASSWORD_LEXICOGRAPHER: ${{ secrets.CYPRESS_PASSWORD_LEXICOGRAPHER }}
