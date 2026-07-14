@@ -1,0 +1,31 @@
+README.md
+  s_16a6cdccdd371f::t_ffaf5128d03bd4 71-82
+  s_16a6cdccdd371f::t_7da3e31c5aef9d 42,46-49
+  s_16a6cdccdd371f::t_660bd7070d0679 83-84
+lighthouserc.json
+  s_16a6cdccdd371f::t_b7a8f4758236f8 1-24
+cypress/fixtures/perf-budgets.json
+  s_16a6cdccdd371f::t_12fa06b6625208 22,27,32
+  s_16a6cdccdd371f::t_65196e25376f88 7,12,17
+.github/workflows/lighthouse.yml
+  s_16a6cdccdd371f::t_c595f1f8276033 1-31
+.github/workflows/benchmark-prod.yml
+  s_16a6cdccdd371f::t_715b6de63679f7 6-10
+  s_16a6cdccdd371f::t_28f45bb0eca292 1-5,11-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "aa381ea6b4f370be0a6c5e91728c0dbd0c7cf8ee",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
