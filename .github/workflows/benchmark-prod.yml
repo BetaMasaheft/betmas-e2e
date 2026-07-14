@@ -1,0 +1,47 @@
+name: Benchmarks against Production
+
+# Manual only: production changes are infrequent, so datapoints are taken
+# deliberately (e.g. after a deploy) rather than on a schedule. Add a cron
+# trigger here if/when production starts moving again.
+#
+# Do NOT dispatch repeatedly in short succession: the sampled pages are the
+# heaviest XQuery endpoints, and back-to-back runs have been observed to
+# degrade production to gateway errors (504/502). The proxy caps responses
+# around 60s, so production budgets beyond that are unreachable anyway.
+on:
+  workflow_dispatch:
+
+permissions:
+  # github-action-benchmark pushes the data series to gh-pages
+  contents: write
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      # cy.request timings are taken by the Cypress server process, so the
+      # browser choice does not affect the numbers; default Electron is fine.
+      - name: Run benchmark specs
+        uses: cypress-io/github-action@v7
+        with:
+          install: npm ci
+          expose: 'grepTags=@perf,grepFilterSpecs=true,grepOmitFiltered=true'
+
+      - name: Track results on gh-pages
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: Production slow pages
+          tool: customSmallerIsBetter
+          output-file-path: benchmark-results.json
+          benchmark-data-dir-path: bench/production
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # report-only: alert on >150% regressions, never fail the run
+          alert-threshold: '150%'
+          comment-on-alert: true
+          fail-on-alert: false
+          summary-always: true
