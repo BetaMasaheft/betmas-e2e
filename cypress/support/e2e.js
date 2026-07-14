@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './env'
+import './read-only'
 import { register as registerCypressGrep } from '@cypress/grep'
 
 registerCypressGrep()
@@ -23,7 +24,7 @@ registerCypressGrep()
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', (err, _runnable) => {
 
   // we expect a 3rd party library error with message 'list not defined'
   // and don't want to fail the test so we return false
@@ -33,7 +34,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   }
 })
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', (err, _runnable) => {
   // we expect a error with message 'form is not defined'
   // on the advanced search submit button
   // see #14
@@ -42,7 +43,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   }
 })
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', (err, _runnable) => {
   // we expect a 3rd party library error with message 'trimmed is undefined'
   // and don't want to fail the test so we return false
   // see #4
@@ -51,7 +52,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   }
 })
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', (err, _runnable) => {
   // we expect a 3rd party library error with message 'data is null'
   // and don't want to fail the test so we return false
   // see #4
@@ -59,7 +60,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
   }
 })
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', (err, _runnable) => {
   // The cookiebar has a CORS issue.
   if (err.message.includes('Script error.')) {
     return false
@@ -67,7 +68,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', (err, _runnable) => {
   // we expect a error with message '$ is not defined'
   // see #25 and test plan 02_01
   if (err.message.includes('$ is not defined')) {
@@ -75,7 +76,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   }
 })
 
-Cypress.on('uncaught:exception', (err, runnable) => {
+Cypress.on('uncaught:exception', (err, _runnable) => {
   // we expect a error with message 'Bootstrap requires jQuery'
    // see #25 and test plan 02_01
   if (err.message.includes('Bootstrap requires jQuery')) {

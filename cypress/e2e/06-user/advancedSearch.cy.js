@@ -108,7 +108,7 @@ describe('The advanced search page', { tags: '@container' }, () => {
       })
       
       cy.get('#results')
-        .within(($results) => {
+        .within(() => {
           cy.get('.resultspersons')
             .should('contain', 'Mary')
           cy.get('.resultsworks')

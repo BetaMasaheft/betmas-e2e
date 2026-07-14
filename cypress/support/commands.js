@@ -56,13 +56,21 @@ Cypress.Commands.add('requestFollowingAppRedirects', (url, options = {}) => {
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('loginCataloguer', (username = 'JinntecCatalogue') => {
-  cy.env(['PASSWORD_CATALOGUER']).then(({ PASSWORD_CATALOGUER }) => {
+Cypress.Commands.add('login', (username, passwordEnvVar) => {
+  cy.env([passwordEnvVar]).then((env) => {
     cy.removeHover('#logging')
     cy.get('input[name="user"]').type(username)
-    cy.get('input[name="password"]').type(PASSWORD_CATALOGUER)
+    cy.get('input[name="password"]').type(env[passwordEnvVar])
     cy.get('#login-nav > .w3-button').click()
   })
+})
+
+Cypress.Commands.add('loginCataloguer', (username = 'JinntecCatalogue') => {
+  cy.login(username, 'PASSWORD_CATALOGUER')
+})
+
+Cypress.Commands.add('loginLexicon', (username = 'JinntecLexicon') => {
+  cy.login(username, 'PASSWORD_LEXICOGRAPHER')
 })
 
 Cypress.Commands.add('removeHover', (menuId) => {

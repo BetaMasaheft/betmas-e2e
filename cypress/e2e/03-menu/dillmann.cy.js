@@ -1,4 +1,4 @@
-describe('Dillmann page (container)', { tags: '@container' }, () => {
+describe('Dillmann page (container)', { tags: '@container-only' }, () => {
     /**
      * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/66
      * Container: `cy.visit('Dillmann/')` returns HTTP 405 (GET not allowed).

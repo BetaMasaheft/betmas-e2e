@@ -29,10 +29,9 @@ describe('Manuscripts: view images and content', { tags: '@container' }, () => {
       })
 
     // To get more information about a work contained, click on the underlined work title.
-    // Container renders the work-title href as `/https://betamasaheft.eu/LIT1544Gebrah`
-    // ('/' prepended to the unstripped canonical PID) when APP_URL is set.
-    // Production renders `/LIT1544Gebrah` and resolves fine.
-    it('Follow work title link from contents', { tags: '@production-only' }, () => {
+    // Container hrefs were broken (`/https://betamasaheft.eu/...`) until
+    // BetaMasaheft/BetMas#113.
+    it('Follow work title link from contents', () => {
         cy.get('[href$="/LIT1544Gebrah"]')
         .first()
         .then(($a) => {

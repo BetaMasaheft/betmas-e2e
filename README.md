@@ -12,6 +12,7 @@
  This test suite assumes the presence of the following environment variables:
  
  - `PASSWORD_CATALOGUER` with the password for test user `JinntecCatalogue`
+ - `PASSWORD_LEXICOGRAPHER` with the password for test user `JinntecLexicon` (production Dillmann login smoke in `05-contributor/lexicon.cy.js`; contributor depth is in the Dillmann app repo)
 
 ## How to use
 
@@ -34,14 +35,15 @@ The suite uses `@cypress/grep` tags to keep container and production runs aligne
 | Tag | Purpose |
 |-----|---------|
 | `@container` | Default tag for specs that belong to the Docker-aligned test suite |
-| `@container-only` | Spec is currently excluded from production runs because it depends on container-only behaviour/data or currently fails on production |
-| `@auth` | Spec needs `CYPRESS_PASSWORD_CATALOGUER` |
+| `@container-only` | Excluded from production CI — container-specific behaviour/data or currently fails on production |
+| `@production-only` | Excluded from container CI — depends on production-only services (e.g. collatex on host `:8081`, Dillmann routing, external WAF) |
+| `@auth` | Spec needs `CYPRESS_PASSWORD_CATALOGUER` and/or `CYPRESS_PASSWORD_LEXICOGRAPHER` |
 | `@slow` | Spec is intentionally slow and useful for focused/local runs |
 
 ### Current CI selection
 
-- Container workflow runs the tagged container suite.
-- Production workflow excludes specs tagged `@container-only`.
+- Container workflow (`test-container.yml`): excludes `@production-only`.
+- Production workflow (`main.yml`): excludes `@container-only`.
 
 ### Local examples
 
@@ -62,3 +64,29 @@ Run auth-tagged specs only:
 ```bash
 npx cypress run --expose grepTags="@auth",grepFilterSpecs=true,grepOmitFiltered=true
 ```
+
+## Local code analysis (Codacy CLI)
+
+Uses [codacy-cli-v2](https://github.com/codacy/codacy-cli-v2) in **local mode** (no BetaMasaheft org on Codacy Cloud required).
+
+**One-time setup** (after `npm install`):
+
+```bash
+npm run codacy:init
+```
+
+This creates `.codacy/codacy.yaml` (ESLint + Node 22 only), installs tool runtimes, and patches Cypress globals into the generated ESLint config.
+
+**Analyze Cypress specs:**
+
+```bash
+npm run codacy:analyze -- cypress/e2e/api/api-collatex-cross-service.cy.js
+# or whole tree:
+npm run codacy:analyze -- cypress/
+```
+
+**Notes:**
+
+- `BetaMasaheft/betmas-e2e` is not on Codacy Cloud — use local CLI only (`npm run codacy:analyze`). Codacy MCP is disabled in this project (`.cursor/mcp.json` stub, `.cursor/permissions.json`, `.cursor/rules/codacy-local-only.mdc`).
+- Helpers live under `.codacy/` (`patch-eslint.mjs`, `languages-config.yaml`, `codacy.yaml`).
+- `.codacy/tools-configs/` is gitignored by Codacy — re-run `npm run codacy:init` after deleting `.codacy/` on a fresh clone.

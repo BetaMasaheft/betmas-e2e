@@ -7,7 +7,9 @@
     "test:prod": "cypress run -b firefox",
     "test:container": "cypress run -b firefox --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ --env grepTags='@container -@production-only -@slow',grepFilterSpecs=true,grepOmitFiltered=true",
     "test:container:open": "cypress open --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/",
-    "test:perf": "cypress run -b firefox --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ --env grepTags=@perf,grepFilterSpecs=true"
+    "test:perf": "cypress run -b firefox --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ --env grepTags=@perf,grepFilterSpecs=true",
+    "codacy:init": "codacy-cli init && codacy-cli install && node .codacy/patch-eslint.mjs && cp .codacy/languages-config.yaml .codacy/tools-configs/languages-config.yaml",
+    "codacy:analyze": "codacy-cli analyze --tool eslint"
   },
   "author": "Duncan Paterson",
   "license": "GPL-3.0-or-later",
