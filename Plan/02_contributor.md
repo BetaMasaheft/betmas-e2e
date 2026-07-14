@@ -2,11 +2,11 @@
 
 We collect necessary workflows for cataloguer users here. Including steps that require external services or locations.
 
-## Sprint status (2026-07-13)
+## Sprint status (2026-07-14)
 
-**Shipped:** Container CI green on [PR #70](https://github.com/BetaMasaheft/betmas-e2e/pull/70). Lexicon contributor tests split to Dillmann repo; betmas-e2e `lexicon.cy.js` is integration smoke only. Read-only policy enforced via `cypress/support/read-only.js` (no Confirm / no data writes in automation).
+**Shipped:** [PR #70](https://github.com/BetaMasaheft/betmas-e2e/pull/70) merged — read-only policy (session POSTs recognised by body; all other writes blocked), both test users provisioned in container CI, lexicon prod smoke. Dillmann [PR #555](https://github.com/BetaMasaheft/Dillmann/pull/555) merged — same read-only policy in the Dillmann suite, `user_admin.cy.js` + `editor.cy.js` refactored to read-only; write flows kept behind `CYPRESS_ALLOW_WRITES=1` (disposable local stacks only).
 
-**Next up:** Merge PR #70; land Dillmann `user_admin.cy.js`; refactor Dillmann `editor.cy.js` to read-only (update form only); cataloguer activity counts (#23).
+**Next up:** cataloguer activity counts (#23); re-enable Dillmann create-entry tests when the New Entry UI returns.
 
 ---
 
@@ -43,7 +43,7 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 
 We collect necessary workflows for lexicon users here. Including steps that require external services or locations.
 
-**NOTE**: Lexicon contributor workflows that change Dillmann data are **not** submitted in automation (same policy as cataloguer §1). **§3–§5** are covered in the [Dillmann](https://github.com/BetaMasaheft/Dillmann) app repo: `test/cypress/e2e/user_admin.cy.js` (activity, create forms — Confirm not clicked) and `editor.cy.js` (**pending read-only refactor** — today still submits Confirm; target is update form only). This repo keeps a thin production integration smoke in `cypress/e2e/05-contributor/lexicon.cy.js` (`@auth`, `@production-only`). Public search/viewing remains in `cypress/e2e/03-menu/dillmann.cy.js` and `cypress/e2e/06-user/lemma.cy.js`.
+**NOTE**: Lexicon contributor workflows that change Dillmann data are **not** submitted in automation (same policy as cataloguer §1). **§3–§5** are covered in the [Dillmann](https://github.com/BetaMasaheft/Dillmann) app repo: `test/cypress/e2e/user_admin.cy.js` (activity; create forms currently skipped — New Entry UI disabled app-side) and `editor.cy.js` (update form opens pre-filled, no Confirm). The Dillmann suite is read-only by default; the actual save flows exist but only run with `CYPRESS_ALLOW_WRITES=1` against a disposable local stack. This repo keeps a thin production integration smoke in `cypress/e2e/05-contributor/lexicon.cy.js` (`@auth`, `@production-only`). Public search/viewing remains in `cypress/e2e/03-menu/dillmann.cy.js` and `cypress/e2e/06-user/lemma.cy.js`.
 
 ## 3 See activity
 
@@ -53,10 +53,9 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 4. This takes you to the personal page
 5. See the page documenting activities (Your made XXX changes in these files after the last conversion of the data from the original txt / The last 50 pages you visited)
 
-**E2E:** Dillmann `user_admin.cy.js` — visit history + change-count summary.
+**E2E:** Dillmann `user_admin.cy.js` — visit history + change-count summary (structure asserted; count may legitimately be 0 after a fresh conversion).
 
-- [ ] Done
-- [x] In progress
+- [x] Done
 
 ## 4 Create new entry
 1. GO to https://betamasaheft.eu/Dillmann/
@@ -66,10 +65,10 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 6. Click "Confirm", this saves the entry (in the backend it is transformed to xml and saved in the DillmannData/new) and takes you to the page with the link to the result
 **NB NEGATIVE**: on the form page it is first often necessary to repeat the login procedure as otherwise one sometimes cannot write the results
 
-**E2E:** Dillmann `user_admin.cy.js` — duplicate-lemma warning + novel-lemma form; Confirm not automated.
+**E2E:** Dillmann `user_admin.cy.js` — duplicate-lemma warning + novel-lemma form + gated Confirm save, all **skipped**: the New Entry UI is currently disabled app-side (no `newentry.html` route). Test bodies kept for re-enabling.
 
 - [ ] Done
-- [x] In progress
+- [x] In progress (blocked on app: New Entry UI disabled)
 
 ## 5 Edit existing entry
 1. GO to https://betamasaheft.eu/Dillmann/
@@ -81,8 +80,7 @@ We collect necessary workflows for lexicon users here. Including steps that requ
 **NB NEGATIVE**: on the form page it is first often necessary to repeat the login procedure as otherwise one sometimes cannot write the results
 **NB NEGATIVE**: after each change saved one gets the issue with duplicate session cookies and has to clean the browser cookies (at least in chrome) https://github.com/BetaMasaheft/Dillmann/issues/387
 
-**E2E:** Dillmann `editor.cy.js` — update form opens; **Confirm must not run in automation** (read-only policy; refactor pending).
+**E2E:** Dillmann `editor.cy.js` — update form opens pre-filled + change message typed; Confirm never clicked in CI (read-only policy). Full save flow (incl. the §5 NB-NEGATIVE failure modes: session loss #387, transformer errors) runs only with `CYPRESS_ALLOW_WRITES=1` on a disposable local stack.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (CI read-only; write flow env-gated)
 
