@@ -1,0 +1,23 @@
+Plan/02_contributor.md
+  s_16a6cdccdd371f::t_c3e3b291cb7c1a 83,85
+  s_16a6cdccdd371f::t_44a85739b3c680 56,58
+  s_16a6cdccdd371f::t_f054375ce9a6ea 5,7,9
+  s_16a6cdccdd371f::t_5f228fa9375316 68,71
+  s_16a6cdccdd371f::t_e88f026db0ee18 46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "fa88cff71018ee070a41975307d1cc25d0c5ba50",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
