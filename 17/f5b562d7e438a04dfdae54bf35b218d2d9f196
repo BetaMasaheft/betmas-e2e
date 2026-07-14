@@ -1,0 +1,19 @@
+cypress/e2e/05-contributor/lexicon.cy.js
+  s_16a6cdccdd371f::t_536cd0eb641391 27-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "17f5b562d7e438a04dfdae54bf35b218d2d9f196",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
