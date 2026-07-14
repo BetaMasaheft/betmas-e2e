@@ -1,0 +1,21 @@
+bench/production/data.js
+  s_16a6cdccdd371f::t_843ae19d4df734 1-54
+bench/production/index.html
+  s_16a6cdccdd371f::t_1b055735be726c 1-281
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "750750b934786e25ac08607594b789a4eea54d4f",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
