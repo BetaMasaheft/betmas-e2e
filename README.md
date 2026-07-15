@@ -74,13 +74,9 @@ Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-perfor
 
 - **CI:** `.github/workflows/benchmark.yml` runs daily against the container and pushes the series to the `gh-pages` branch (`bench/container/`) via [github-action-benchmark](https://github.com/benchmark-action/github-action-benchmark); regressions >150% get a commit comment. A production baseline lives under `bench/production/` and is refreshed manually (`benchmark-prod.yml` via workflow dispatch) since production changes are infrequent.
 - **Local run:** `npm run bench:container` (against `localhost:8080`); the results land in `benchmark-results.json` (gitignored, path overridable via `BENCHMARK_OUT`).
-- **Viewing the charts:** the repo is private, so `gh-pages` is not served. Check out the branch and open the page from disk:
-
-```bash
-git fetch origin gh-pages
-git worktree add /tmp/bench origin/gh-pages
-open /tmp/bench/bench/container/index.html
-```
+- **Viewing the charts:** served via GitHub Pages —
+  [container series](https://betamasaheft.github.io/betmas-e2e/bench/container/) ·
+  [production baseline](https://betamasaheft.github.io/betmas-e2e/bench/production/)
 
 ## Local code analysis (Codacy CLI)
 
