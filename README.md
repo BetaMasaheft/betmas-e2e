@@ -39,11 +39,14 @@ The suite uses `@cypress/grep` tags to keep container and production runs aligne
 | `@production-only` | Excluded from container CI — depends on production-only services (e.g. collatex on host `:8081`, Dillmann routing, external WAF) |
 | `@auth` | Spec needs `CYPRESS_PASSWORD_CATALOGUER` and/or `CYPRESS_PASSWORD_LEXICOGRAPHER` |
 | `@slow` | Spec is intentionally slow and useful for focused/local runs |
+| `@perf` | Benchmark specs — excluded from both gates, run by `benchmark.yml` |
 
 ### Current CI selection
 
-- Container workflow (`test-container.yml`): excludes `@production-only`.
-- Production workflow (`main.yml`): excludes `@container-only`.
+- Container workflow (`test-container.yml`): excludes `@production-only` and `@perf`.
+- Production workflow (`main.yml`): excludes `@container-only` and `@perf`.
+
+**Tag syntax note:** space-separated `grepTags` entries are OR-ed; to exclude several tags at once join them with `+` (e.g. `grepTags=-@production-only+-@perf`).
 
 ### Local examples
 
@@ -63,6 +66,20 @@ Run auth-tagged specs only:
 
 ```bash
 npx cypress run --expose grepTags="@auth",grepFilterSpecs=true,grepOmitFiltered=true
+```
+
+## Benchmarks
+
+Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-performance/slow-pages.cy.js` (`@perf @slow`): three sequential `cy.request` samples per page, the **median** is recorded. Budgets per page and target are in `cypress/fixtures/perf-budgets.json`; going over budget logs a warning but never fails a run (report-only).
+
+- **CI:** `.github/workflows/benchmark.yml` runs daily against the container and pushes the series to the `gh-pages` branch (`bench/container/`) via [github-action-benchmark](https://github.com/benchmark-action/github-action-benchmark); regressions >150% get a commit comment. A production baseline lives under `bench/production/` and is refreshed manually (`benchmark-prod.yml` via workflow dispatch) since production changes are infrequent.
+- **Local run:** `npm run bench:container` (against `localhost:8080`); the results land in `benchmark-results.json` (gitignored, path overridable via `BENCHMARK_OUT`).
+- **Viewing the charts:** the repo is private, so `gh-pages` is not served. Check out the branch and open the page from disk:
+
+```bash
+git fetch origin gh-pages
+git worktree add /tmp/bench origin/gh-pages
+open /tmp/bench/bench/container/index.html
 ```
 
 ## Local code analysis (Codacy CLI)

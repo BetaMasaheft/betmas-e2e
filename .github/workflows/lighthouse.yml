@@ -1,0 +1,31 @@
+name: Lighthouse audit (production)
+
+# Front-end health audit of representative fast pages — complements the
+# server-timing benchmarks (benchmark.yml), which cover the slow-page/TTFB
+# story that Lighthouse cannot (its maxWaitForLoad gives up long before the
+# BetMas#57 pages finish).
+#
+# Manual for now; add a weekly cron once baseline scores are known and the
+# warn-level assertions in lighthouserc.json have been tuned.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: lighthouserc.json
+          # private repo: keep reports as workflow artifacts, never on
+          # public temporary storage
+          uploadArtifacts: true
+          temporaryPublicStorage: false
