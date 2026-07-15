@@ -1,0 +1,21 @@
+cypress/fixtures/sparql-results.json
+  s_16a6cdccdd371f::t_3ff26b190fe418 1-35
+cypress/e2e/03-menu/sparql.cy.js
+  s_16a6cdccdd371f::t_d61f29f1112ace 1-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "463aed5a6a69b4e649eb6ce2db9d60fd554f7c2c",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
