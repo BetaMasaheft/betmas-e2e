@@ -6,7 +6,7 @@ We collect necessary workflows for admin users here. Including steps that requir
 
 ## 1 Create new user
 
-1. GO to exist dashboard http://betamasaheft.eu:8080/exist/apps/dashboard/index.html
+1. GO to the eXist dashboard on the production server
 2. Login in as admin
 3. Open User Manager
 4. Add user (Username, Password), assigning relevant groups (Cataloguers, Editors, lexicon)
@@ -16,7 +16,7 @@ We collect necessary workflows for admin users here. Including steps that requir
 
 ## 2 Edit user (NEGATIVE)
 
-1. GO to exist dashboard http://betamasaheft.eu:8080/exist/apps/dashboard/index.html
+1. GO to the eXist dashboard on the production server
 2. Login in as admin
 3. Open User Manager
 4. Select User

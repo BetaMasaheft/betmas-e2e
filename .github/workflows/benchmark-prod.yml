@@ -4,10 +4,9 @@ name: Benchmarks against Production
 # deliberately (e.g. after a deploy) rather than on a schedule. Add a cron
 # trigger here if/when production starts moving again.
 #
-# Do NOT dispatch repeatedly in short succession: the sampled pages are the
-# heaviest XQuery endpoints, and back-to-back runs have been observed to
-# degrade production to gateway errors (504/502). The proxy caps responses
-# around 60s, so production budgets beyond that are unreachable anyway.
+# Dispatch sparingly to avoid unnecessary load on production; leave time
+# between runs. The proxy caps responses around 60s, so production budgets
+# beyond that are unreachable anyway.
 on:
   workflow_dispatch:
 
