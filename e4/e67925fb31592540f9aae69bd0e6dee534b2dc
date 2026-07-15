@@ -1,0 +1,25 @@
+cypress/fixtures/collatex-alignment.json
+  s_16a6cdccdd371f::t_f773f9d5f0b6e1 1-20
+cypress/e2e/06-user/collate.cy.js
+  s_16a6cdccdd371f::t_4e6efa2c71cb0d 53
+  s_16a6cdccdd371f::t_c15e2bc4ca0c6b 1-24,28-52,54-64
+  s_16a6cdccdd371f::t_55a2c7a9d55c55 25-27
+Plan/03_user.md
+  s_16a6cdccdd371f::t_54339fed622a72 285,287
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "e4e67925fb31592540f9aae69bd0e6dee534b2dc",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-fable-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
