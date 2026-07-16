@@ -1,0 +1,25 @@
+cypress/e2e/api/infra-reachability.cy.js
+  s_16a6cdccdd371f::t_0d61559a6b737a 1-38
+cypress/e2e/api/dts.cy.js
+  s_16a6cdccdd371f::t_da50bdfe067921 1-28
+cypress/support/commands.js
+  s_16a6cdccdd371f::t_2bfb7a765ee96f 39-48
+README.md
+  s_16a6cdccdd371f::t_614a829ffeaad6 71-77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "a28bdddbabab8467e1640e1296b97ee90298fda3",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
