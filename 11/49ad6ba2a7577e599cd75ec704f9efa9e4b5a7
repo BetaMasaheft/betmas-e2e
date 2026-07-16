@@ -1,0 +1,19 @@
+cypress/e2e/06-user/dts-annotations.cy.js
+  s_16a6cdccdd371f::t_da7a8fae678533 1-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "1149ad6ba2a7577e599cd75ec704f9efa9e4b5a7",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
