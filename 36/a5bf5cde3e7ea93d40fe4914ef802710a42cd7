@@ -1,0 +1,21 @@
+cypress/e2e/03-menu/sparql.cy.js
+  s_16a6cdccdd371f::t_6549664460b619 5-10,13
+  s_16a6cdccdd371f::t_f258aeabdda6dc 24
+  s_16a6cdccdd371f::t_4814afc5f1ff33 11-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "36a5bf5cde3e7ea93d40fe4914ef802710a42cd7",
+  "prompts": {},
+  "sessions": {
+    "s_16a6cdccdd371f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bc75cbc0-e576-4db7-a2e7-0e4670c53636",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
