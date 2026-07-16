@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1784092919113,
+  "lastUpdate": 1784179831052,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -116,6 +116,64 @@ window.BENCHMARK_DATA = {
             "value": 4050,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[6974, 4006, 4050]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "duncdrum",
+            "username": "duncdrum",
+            "email": "d.paterson@me.com"
+          },
+          "committer": {
+            "name": "duncdrum",
+            "username": "duncdrum",
+            "email": "d.paterson@me.com"
+          },
+          "id": "d6537bbae94871f93482525287d2cb7c7a4aaf65",
+          "message": "docs(readme): link served benchmark charts on GitHub Pages",
+          "timestamp": "2026-07-15T09:16:49Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/d6537bbae94871f93482525287d2cb7c7a4aaf65"
+        },
+        "date": 1784179830720,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 5334,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[6184, 5334, 4819]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1229,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1487, 1229, 1225]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 741,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[752, 741, 481]"
+          },
+          {
+            "name": "decorations",
+            "value": 20785,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[20915, 20785, 20422]"
+          },
+          {
+            "name": "additions",
+            "value": 26065,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[26065, 26073, 25989]"
+          },
+          {
+            "name": "work-text",
+            "value": 3654,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[4665, 3654, 3474]"
           }
         ]
       }
