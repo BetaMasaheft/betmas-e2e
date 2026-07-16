@@ -2,11 +2,15 @@
 // renders the result table into #resulttable
 describe('SPARQL query page rendering (stubbed endpoint)', { tags: '@container' }, () => {
   /**
-   * The hidden endpoint input hardcodes the root-absolute
-   * /api/SPARQL/json (BetMasApi surface — contract-tested in that
-   * repo), so the live round-trip only works where the API shares the
-   * origin root with the app (production). Stubbing with an observed
-   * response keeps the d3sparql rendering contract testable dual-env.
+   * The hidden endpoint input drives a d3sparql fetch of the
+   * /api/SPARQL/json endpoint (BetMasApi surface — contract-tested in
+   * that repo), so the live round-trip only works where the API is
+   * reachable under the app base (production today; container once it
+   * ships BetMasApi). Stubbing with an observed response keeps the
+   * d3sparql rendering contract testable dual-env. The endpoint value
+   * may be root-absolute (`/api/…`) or app-relative
+   * (`api/…`) depending on the deployed markup; both point
+   * d3sparql at the same endpoint, so we accept either form.
    * NB the endpoint serialises a single-row result as a bindings
    * *object* rather than the standard array; the fixture is a real
    * three-row (array) response captured from production.
@@ -17,7 +21,7 @@ describe('SPARQL query page rendering (stubbed endpoint)', { tags: '@container' 
   })
 
   it('shows the query form wired to the JSON endpoint', () => {
-    cy.get('#endpoint').should('have.value', '/api/SPARQL/json')
+    cy.get('#endpoint').invoke('val').should('match', /^\/?api\/SPARQL\/json$/)
     cy.get('textarea#sparql').should('exist')
     cy.contains('button', 'Run your query').should('be.visible')
     cy.get('#resulttable').should('be.empty')
