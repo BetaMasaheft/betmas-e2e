@@ -1,0 +1,49 @@
+{
+  "@context" : {
+    "lawd" : "http://lawd.info/ontology/",
+    "dts" : "https://w3id.org/dts/api#",
+    "saws" : "http://purl.org/saws/ontology#",
+    "@vocab" : "https://www.w3.org/ns/hydra/core#",
+    "fabio" : "http://purl.org/spar/fabio",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "edm" : "http://www.europeana.eu/schemas/edm/",
+    "sc" : "http://iiif.io/api/presentation/2#",
+    "svcs" : "http://rdfs.org/sioc/services#",
+    "tei" : "http://www.tei-c.org/ns/1.0",
+    "ecrm" : "http://erlangen-crm.org/current/",
+    "doap" : "http://usefulinc.com/ns/doap#",
+    "crm" : "http://www.cidoc-crm.org/cidoc-crm/",
+    "dc" : "http://purl.org/dc/terms/"
+  },
+  "dtslib:dublincore" : {
+    "dc:publisher" : [ "Akademie der Wissenschaften in Hamburg", "Hiob-Ludolf-Zentrum für Äthiopistik" ],
+    "dc:description" : [ {
+      "@lang" : "en",
+      "@value" : "The project Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea (Schriftkultur des christlichen Äthiopiens: eine multimediale Forschungsumgebung) is a long-term project funded within the framework of the Academies' Programme (coordinated by the Union of the German Academies of Sciences and Humanities) under survey of the Akademie der Wissenschaften in Hamburg. The funding will be provided for 25 years, from 2016–2040. The project is hosted by the Hiob Ludolf Centre for Ethiopian Studies at the University of Hamburg. It aims at creating a virtual research environment that shall manage complex data related to predominantly Christian manuscript tradition of the Ethiopian and Eritrean Highlands."
+    } ]
+  },
+  "title" : "Beta maṣāḥǝft",
+  "member" : [ {
+    "title" : "Beta maṣāḥǝft Textual Units",
+    "@type" : "Collection",
+    "@id" : "https://betamasaheft.eu/textualunits",
+    "totalItems" : 3502,
+    "description" : "Collection of textual units of the Ethiopic tradition"
+  }, {
+    "title" : "Beta maṣāḥǝft Narrative Units",
+    "@type" : "Collection",
+    "@id" : "https://betamasaheft.eu/narrativeunits",
+    "totalItems" : 211,
+    "description" : "Collection of narrative units of the Ethiopic tradition"
+  }, {
+    "title" : "Beta maṣāḥǝft Manuscripts",
+    "@type" : "Collection",
+    "@id" : "https://betamasaheft.eu/transcriptions",
+    "totalItems" : 375,
+    "description" : "Collection of Ethiopic Manuscript trasncriptions"
+  } ],
+  "@type" : "Collection",
+  "@id" : "https://betamasaheft.eu",
+  "totalItems" : 3,
+  "description" : "The project Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea (Schriftkultur des christlichen Äthiopiens: eine multimediale Forschungsumgebung) is a long-term project funded within the framework of the Academies' Programme (coordinated by the Union of the German Academies of Sciences and Humanities) under survey of the Akademie der Wissenschaften in Hamburg. The funding will be provided for 25 years, from 2016–2040. The project is hosted by the Hiob Ludolf Centre for Ethiopian Studies at the University of Hamburg. It aims at creating a virtual research environment that shall manage complex data related to predominantly Christian manuscript tradition of the Ethiopian and Eritrean Highlands."
+}

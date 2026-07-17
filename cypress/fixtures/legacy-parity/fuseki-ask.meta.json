@@ -1,0 +1,1 @@
+{"slug":"fuseki-ask","url":"https://betamasaheft.eu/fuseki/betamasaheft/query?query=ASK%7B%7D","file":"fuseki-ask.body.json","sha256":"673c243b8659f8ffff808f8d560cbb18db35a5cbf4c878b18cb03f3a08fa41c8","captured_at":"2026-07-17T14:28:25Z","status":200,"content_type":"application/sparql-results+json; charset=utf-8","time_total":0.123819,"bytes":41}

@@ -1,0 +1,10 @@
+{
+  "indexes" : "/api/dts/indexes",
+  "annotations" : "/api/dts/annotations",
+  "@context" : "api/dts/contexts/EntryPoint.jsonld",
+  "navigation" : "/api/dts/navigation",
+  "collections" : "/api/dts/collections",
+  "@type" : "EntryPoint",
+  "document" : "/api/dts/document",
+  "@id" : "/api/dts"
+}

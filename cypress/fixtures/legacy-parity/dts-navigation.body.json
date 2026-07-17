@@ -1,0 +1,2893 @@
+{
+  "dts:citeType" : "chapter",
+  "dts:level" : 1,
+  "@context" : {
+    "dts" : "https://w3id.org/dts/api#",
+    "@vocab" : "https://www.w3.org/ns/hydra/core#",
+    "dc" : "http://purl.org/dc/terms/"
+  },
+  "@base" : "/api/dts/navigation",
+  "dts:citeDepth" : 1,
+  "dts:passage" : "/api/dts/document?id=https://betamasaheft.eu/LIT1709Kebran",
+  "dc:hasVersion" : "version set to , no version links retrieved from GitHub.",
+  "member" : [ {
+    "dts:citeType" : "incipit",
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ]
+    },
+    "dts:ref" : "Introduction"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                   ፩ ፡ በእንተ፡ ክብረ፡ ነገሥት፡ \n               "
+    },
+    "dts:ref" : "1"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                   ፪ ፡ በእንተ ፡ ዕበየ ፡ ነገሥት ። \n               "
+    },
+    "dts:ref" : "2"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፫ ፡ በእንተ ፡ መንግሥተ ፡ አዳም ። \n               "
+    },
+    "dts:ref" : "3"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፬ ፡ በእንተ ፡ ቅንአት ። \n               "
+    },
+    "dts:ref" : "4"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፭ ፡ በእንተ ፡ መንግሥተ ፡ ሴት ። \n               "
+    },
+    "dts:ref" : "5"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፮ ፡ በእንተ ፡ ኀጢአተ ፡ ቃየን ። \n               "
+    },
+    "dts:ref" : "6"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፯ ፡ በእንተ ፡ ኖሕ ። \n               "
+    },
+    "dts:ref" : "7"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፰ ፡ በእንተ ፡ አይኅ ። \n               "
+    },
+    "dts:ref" : "8"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፱ ፡ በእንተ ፡ ኪዳነ ፡ ኖሕ ። \n               "
+    },
+    "dts:ref" : "9"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲ ፡ በእንተ ፡ ጽዮን ። \n               "
+    },
+    "dts:ref" : "10"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲፩ ፡ ኀበ ፡ ኀብሩ ፡ ፫፻፲ወ፷ ፡ ርቱዓነ ፡ ሃይማኖት ። \n               "
+    },
+    "dts:ref" : "11"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲፪ ፡ በእንተ ፡ ከናኣን ። \n               "
+    },
+    "dts:ref" : "12"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲ወ፫ ፡ በእንተ ፡ አብርሃም ። \n               "
+    },
+    "dts:ref" : "13"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲ወ፬ ፡ በእንተ ፡ ኪዳነ ፡ አብርሃም ። \n               "
+    },
+    "dts:ref" : "14"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲ወ፭ ፡ በእንተ ፡ ይስሐቅ ፡ ወያዕቆብ ። \n               "
+    },
+    "dts:ref" : "15"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲ወ፮ ፡ በእንተ ፡ ሮቤል ። \n               "
+    },
+    "dts:ref" : "16"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲ወ፯ ፡ በእንተ ፡ ክብራ ፡ ለጽዮን ። \n               "
+    },
+    "dts:ref" : "17"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲ወ፰ ፡ ኀበ ፡ ኀብሩ ፡ አበው ፡ ጳጳሳት ። \n               "
+    },
+    "dts:ref" : "18"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፲፱ ፡ በእንተ ፡ ኀበ ፡ ተረከበት ፡ ዛቲ ፡ መጽሐፍ ። \n               "
+    },
+    "dts:ref" : "19"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳ ፡ በእንተ ፡ ክፍለ ፡ ምድር ። \n               "
+    },
+    "dts:ref" : "20"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፩ ፡ በእንተ ፡ ንግሥተ ፡ አዜብ ። \n               "
+    },
+    "dts:ref" : "21"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፪ ፡ በእንተ ፡ ታምሪን ፡ ነጋዲ ። \n               "
+    },
+    "dts:ref" : "22"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፫ ፡ ኀበ ፡ ገብአ ፡ ነጋዲ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "23"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፬ ፡ ኀበ ፡ ተደለወት ፡ ለሐዊር ። \n               "
+    },
+    "dts:ref" : "24"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፭ ፡ ዘከመ ፡ በጽሐት ፡ ኀበ ፡ ሰሎሞን ፡ ንጉሥ ። \n               "
+    },
+    "dts:ref" : "25"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፮ ፡ ኀበ ፡ ተናገረ ፡ ንጉሥ ፡ ምስለ ፡ ንግሥት ። \n               "
+    },
+    "dts:ref" : "26"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፯ ፡ በእንተ ፡ ገባራዊ ። \n               "
+    },
+    "dts:ref" : "27"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፰ ፡ በእንተ ፡ ዘከመ ፡ አዘዛ ፡ ለንግሥት ። \n               "
+    },
+    "dts:ref" : "28"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፳፱ ፡ በእንተ ፡ ፫፻፲ወ፰ ። \n               "
+    },
+    "dts:ref" : "29"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴ ፡ በእንተ ፡ ዘመሐለ ፡ ላቲ ፡ ንጉሥ ፡ ሰሎሞን ። \n               "
+    },
+    "dts:ref" : "30"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴፩ ፡ በእንተ ፡ ዘወሀባ ፡ ትእምርተ ፡ ለንግሥት ። \n               "
+    },
+    "dts:ref" : "31"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴፪ ፡ ዘከመ ፡ ወለደት ፡ ወበጽሐት ፡ ብሔራ ። \n               "
+    },
+    "dts:ref" : "32"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴ወ፫ ፡ ዘከመ ፡ ወረደ ፡ ንጉሠ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "33"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴፬ ፡ ዘከመ ፡ በጽሐ ፡ ብሔረ ፡ እሙ ። \n               "
+    },
+    "dts:ref" : "34"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴ወ፭ ፡ በእንተ ፡ ዘለአከ ፡ ንጉሥ ፡ ሰሎሞን ፡ መልአከ ፡ ኀይሉ ፡ ኀበ ፡ ወልዱ ። \n               "
+    },
+    "dts:ref" : "35"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴፮ ፡ ኀበ ፡ ተራከበ ፡ ምስለ ፡ ወልዱ ፡ ንጉሥ ፡ ሰሎሞን ። ወወፅአ ፡ ኢዮአስ ፡ ወልደ ፡ ዮዳሔ\n            ፡ ወአብኦ ። \n               "
+    },
+    "dts:ref" : "36"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴፯ ፡ ኀበ ፡ ተስእሎ ፡ ሰሎሞን ፡ ለወልዱ ። \n               "
+    },
+    "dts:ref" : "37"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴፰ ፡ ኀበ ፡ መከረ ፡ ንጉሥ ፡ ይፈኑ ፡ ወልዶ ፡ ምስለ ፡ ደቂቆሙ ። \n               "
+    },
+    "dts:ref" : "38"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፴፱ ፡ ኀበ ፡ አንገሥዎ ፡ ለወልደ ፡ ሰሎሞን ። \n               "
+    },
+    "dts:ref" : "39"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵ ፡ ኀበ ፡ አዘዞ ፡ ሳዶቅ ፡ ካህን ፡ ለዳዊት ፡ ንጉሥ ። \n               "
+    },
+    "dts:ref" : "40"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፩ ፡ በእንተ ፡ በረከተ ፡ ነገሥት ። ወስማዕሂ ፡ ዘይረክበከ ፡ ቡራኬ ፡ ለእመ ፡ ገበርከ ፡ ፈቃዶ\n            ፡ ለእግዚኣብሔር ። \n               "
+    },
+    "dts:ref" : "41"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፪ ፡ በእንተ ፡ ፲ ፡ ቃላት ። ወስምዑ ፡ እስራኤል ፡ ዘተአዘዘ ፡ እምእግዚኣብሔር ፡ ከመ ፡ ትዕቀቡ\n            ፡ ኪያሁ ። \n               "
+    },
+    "dts:ref" : "42"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፫ ፡ ኀበ ፡ ተአዘዙ ፡ ደቂቀ ፡ ኀይለ ፡ እስራኤል ። \n               "
+    },
+    "dts:ref" : "43"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፬ ፡ ከመ ፡ ኢመፍትው ፡ ሐምየ ፡ ንጉሥ ። \n               "
+    },
+    "dts:ref" : "44"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፭ ፡ በእንተ ፡ ዘበከዩ ፡ ወመከሩ ፡ እለ ፡ ተፈነዉ ። \n               "
+    },
+    "dts:ref" : "45"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፮ ፡ ዘከመ ፡ መከሩ ፡ በእንተ ፡ ጽዮን ። \n               "
+    },
+    "dts:ref" : "46"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፯ ፡ በእንተ ፡ መሥዋዕተ ፡ አዛርያስ ፡ ወንጉሥ ። \n               "
+    },
+    "dts:ref" : "47"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፰ ፡ ኀበ ፡ አንሥእዋ ፡ ለጽዮን ። \n               "
+    },
+    "dts:ref" : "48"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፵፱ ፡ ኀበ ፡ ባረኮ ፡ አቡሁ ፡ ለወልዱ ። \n               "
+    },
+    "dts:ref" : "49"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶ ፡ ኀበ ፡ ተፋነዉ ፡ ምስለ ፡ አቡሁ ፡ ወላሐወት ፡ ሀገር ። \n               "
+    },
+    "dts:ref" : "50"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፩ ፡ ኀበ ፡ ዘይቤሎ ፡ ለሳዶቅ ፡ ካህን ፡ ሑር ፡ ወአምጽእ ፡ ውእተ ፡ ልብሰ ፡ ዘላዕሌሃ\n            ። \n               "
+    },
+    "dts:ref" : "51"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፪ ፡ ኀበ ፡ ዘሖረ ፡ ሳዶቅ ፡ ካህን ። \n               "
+    },
+    "dts:ref" : "52"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፫ ፡ ኀበ ፡ ተውህበ ፡ ሰረገላ ፡ ለኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "53"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፬ ፡ ኀበ ፡ ተነበየ ፡ ዳዊት ፡ ወተሰለማ ፡ ለጽዮን ። \n               "
+    },
+    "dts:ref" : "54"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፭ ፡ በእንተ ፡ ዘተፈሥሑ ፡ ሰብአ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "55"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፮ ፡ በእንተ ፡ ግብአተ ፡ ሳዶቅ ፡ ካህን ፡ ውሂቦ ፡ ሞፃ ። \n               "
+    },
+    "dts:ref" : "56"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፯ ፡ በእንተ ፡ ውድቀተ ፡ ሳዶቅ ፡ ካህን ። \n               "
+    },
+    "dts:ref" : "57"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፰ ፡ ኀበ ፡ ተንሥአ ፡ ሰሎሞን ፡ ይቅትሎሙ ። \n               "
+    },
+    "dts:ref" : "58"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፶፱ ፡ ኀበ ፡ ሐተቶ ፡ ለግብጻዊ ፡ ገብረ ፡ ፈርዖን ። \n               "
+    },
+    "dts:ref" : "59"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷ ፡ ኀበ ፡ ላሐዋ ፡ ሰሎሞን ፡ ለጽዮን ። \n               "
+    },
+    "dts:ref" : "60"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፩ ፡ በእንተ ፡ ግብአተ ፡ ሰሎሞን ፡ ኢየሩሳሌም ። \n               "
+    },
+    "dts:ref" : "61"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፪ ፡ በእንተ ፡ ዘአውሥኦሙ ፡ ሰሎሞን ። \n               "
+    },
+    "dts:ref" : "62"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፫ ፡ ኀበ ፡ ኀበሩ ፡ ዐበይተ ፡ እስራኤል ። \n               "
+    },
+    "dts:ref" : "63"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፬ ፡ ኀበ ፡ አስሐተቶ ፡ ለሰሎሞን ፡ ወለተ ፡ ፈርዖን ። \n               "
+    },
+    "dts:ref" : "64"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፭ ፡ በእንተ ፡ ኀጢአተ ፡ ሰሎሞን ። \n               "
+    },
+    "dts:ref" : "65"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፮ ፡ በእንተ ፡ ትንቢተ ፡ ክርስቶስ ። \n               "
+    },
+    "dts:ref" : "66"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷ወ፯ ፡ በእንተ ፡ ብካየ ፡ ሰሎሞን ። \n               "
+    },
+    "dts:ref" : "67"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፰ ፡ በእንተ ፡ መድኀኒትነ ፡ ማርያም ። \n               "
+    },
+    "dts:ref" : "68"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፷፱ ፡ በእንተ ፡ ስእለተ ፡ ሰሎሞን ። \n               "
+    },
+    "dts:ref" : "69"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸ ፡ በእንተ ፡ ዘነግሠ ፡ ሮብዓም ። \n               "
+    },
+    "dts:ref" : "70"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                   ፸፩ ፡ በእንተ ፡ ማርያም ፡ ወለተ ፡ ዳዊት ።  \n               "
+    },
+    "dts:ref" : "71"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፪ ፡ በእንተ ፡ ንጉሠ ፡ ሮምሂ ። \n               "
+    },
+    "dts:ref" : "72"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፫ ፡ በእንተ ፡ ቀዳሜ ፡ ፍትሑ ፡ ለአድራሚ ፡ ንጉሠ ፡ ሮም ። \n               "
+    },
+    "dts:ref" : "73"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፬ ፡ በእንተ ፡ ንጉሠ ፡ ምድያም ። \n               "
+    },
+    "dts:ref" : "74"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፭ ፡ በእንተ ፡ ንጉሠ ፡ ባቢሎን ። \n               "
+    },
+    "dts:ref" : "75"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፮ ፡ በእንተ ፡ ሰማዕተ ፡ ሐሰት ። \n               "
+    },
+    "dts:ref" : "76"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፯ ፡ በእንተ ፡ ንጉሠ ፡ ፋርስ ። ወንጉሠ ፡ ፋርስኒ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፡ ወዘበእንቲአሁ ፡\n            ናየድዐክሙ ። \n               "
+    },
+    "dts:ref" : "77"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፰ ፡ በእንተ ፡ ንጉሠ ፡ ሞአብ ። ወንጉሠ ፡ ሞአብሂ ፡ ዘርአ ፡ ሴም ፡ ውእቱ ፡ ወናየድዐክሙ ፡\n            ዘከመሂ ፡ ኮነ ። \n               "
+    },
+    "dts:ref" : "78"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፸፱ ፡ በእንተ ፡ ንጉሠ ፡ ዓማሌቅ ። \n               "
+    },
+    "dts:ref" : "79"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹ ፡ በእንተ ፡ ንጉሠ ፡ ኢሎፍሊ ። ወናሁ ፡ ኢሎፍሊ ፡ ዘርአ ፡ ሳምሶን ፡ ይነግሡ ፡ ላዕሌሆሙ\n            ። \n               "
+    },
+    "dts:ref" : "80"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፩ ፡ ዘከመ ፡ ቀተሎ ፡ ወልደ ፡ ሳምሶን ፡ ለወልደ ፡ ንጉሠ ፡ ኢሎፍሊ ። \n               "
+    },
+    "dts:ref" : "81"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፪ ፡ በእንተ ፡ ርደተ ፡ አብርሃም ፡ ግብጽ ። \n               "
+    },
+    "dts:ref" : "82"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፫ ፡ በእንተ ፡ ንጉሠ ፡ እስማኤላውያን ። \n               "
+    },
+    "dts:ref" : "83"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፬ ፡ በእንተ ፡ ንጉሠ ፡ ኢትዮጵያ ፡ ዘከመ ፡ ገብአ ፡ ሀገሩ ። \n               "
+    },
+    "dts:ref" : "84"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፭ ፡ ኀበ ፡ ተፈሥሐት ፡ ማክዳ ፡ ንግሥት ። \n               "
+    },
+    "dts:ref" : "85"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፮ ፡ ኀበ ፡ አንገሠቶ ፡ ማክዳ ፡ ለወልዳ ። \n               "
+    },
+    "dts:ref" : "86"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፯ ፡ ኀበ ፡ መሐሉ ፡ መኳንንተ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "87"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፰ ፡ ኀበ ፡ ዜነዋ ፡ ለእሙ ፡ ዘከመ ፡ አንገሥዎ ። \n               "
+    },
+    "dts:ref" : "88"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፹፱ ፡ ኀበ ፡ ነገረቶሙ ፡ ንግሥት ፡ ለደቂቀ ፡ እስራኤል ። \n               "
+    },
+    "dts:ref" : "89"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺ ፡ ኀበ ፡ ወደሳ ፡ አዛርያስ ፡ ለንግሥት ፡ ወለሀገራ ። \n               "
+    },
+    "dts:ref" : "90"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፩ ፡ ዘንተ ፡ ዘይበልዑ ፡ ንጹሕ ፡ ወርኩስ ። \n               "
+    },
+    "dts:ref" : "91"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፪ ፡ ኀበ ፡ ሐደሱ ፡ መንግሥቶ ፡ ለዳዊት ። \n               "
+    },
+    "dts:ref" : "92"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፫ ፡ በእንተ ፡ ዘአማሰኑ ፡ ሃይማኖተ ፡ ሮም ። \n               "
+    },
+    "dts:ref" : "93"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፬ ፡ ቀዳሚ ፡ ፀብአ ፡ ንጉሠ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "94"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፭ ፡ ኀበ ፡ ኀብሩ ፡ ክብሩ ፡ ለንጉሠ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "95"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፮ ፡ በእንተ ፡ ትንቢት ፡ ዘክርስቶስ ። \n               "
+    },
+    "dts:ref" : "96"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፯ ፡ ኀበ ፡ አንጐርጐሩ ፡ እስራኤል ። \n               "
+    },
+    "dts:ref" : "97"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፰ ፡ በእንተ ፡ በትረ ፡ ሙሴ ፡ ወአሮን ። \n               "
+    },
+    "dts:ref" : "98"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፺፻ ፡ በእንተ ፡ ክልኤቱ ፡ አግብርት ። \n               "
+    },
+    "dts:ref" : "99"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻ ፡ በእንተ ፡ እለ ፡ ተዐደዉ ፡ መላእክት ። \n               "
+    },
+    "dts:ref" : "100"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፩ ፡ በእንተ ፡ ህላዌ ፡ ኵለሄ ። \n               "
+    },
+    "dts:ref" : "101"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፪ ፡ በእንተ ፡ ቀዳሚ ። \n               "
+    },
+    "dts:ref" : "102"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፫ ፡ በእንተ ፡ አቅርንተ ፡ ምሥዋዕ ። \n               "
+    },
+    "dts:ref" : "103"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፬ ፡ ካዕበ ፡ በእንተ ፡ ታቦት ፡ ወነገረ ፡ ዕልዋን ። \n               "
+    },
+    "dts:ref" : "104"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፭ ፡ በእንተ ፡ አሚነ ፡ አብርሃም ። \n               "
+    },
+    "dts:ref" : "105"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፮ ፡ ትንቢት ፡ በእንተ ፡ ምጽአቱ ፡ ለክርስቶስ ። \n               "
+    },
+    "dts:ref" : "106"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፯ ፡ በእንተ ፡ በአቱ ፡ ኢየሩሳሌም ፡ በስብሐት ። \n               "
+    },
+    "dts:ref" : "107"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፰ ፡ በእንተ ፡ እከየ ፡ ይሁዳ ፡ ዕልው ። \n               "
+    },
+    "dts:ref" : "108"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፱ ፡ በእንተ ፡ ስቅለቱ ። \n               "
+    },
+    "dts:ref" : "109"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲ ፡ በእንተ ፡ ትንሣኤሁ ። \n               "
+    },
+    "dts:ref" : "110"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲፩ ፡ በእንተ ፡ ዕርገቱ ፡ ወዳግም ፡ ምጽአቱ ። \n               "
+    },
+    "dts:ref" : "111"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲፪ ፡ በእንተ ፡ ዘአርአዩ ፡ ነቢያት ፡ በሥጋሆሙ ። \n               "
+    },
+    "dts:ref" : "112"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲፫ ፡ በእንተ ፡ ሰረገላ ፡ ወመግረሬ ፡ ፀር ። \n               "
+    },
+    "dts:ref" : "113"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲፬ ፡ በእንተ ፡ ግብአታ ፡ ለጽዮን ። \n               "
+    },
+    "dts:ref" : "114"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲፭ ፡ በእንተ ፡ ቅስተ ፡ እስራኤል ። \n               "
+    },
+    "dts:ref" : "115"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲፮ ፡ በእንተ ፡ ሰረገላ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "116"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ],
+      "dc:title" : "\n                    ፻፲፯ ፡ በእንተ ፡ ንጉሠ ፡ ሮምያ ፡ ወንጉሠ ፡ ኢትዮጵያ ። \n               "
+    },
+    "dts:ref" : "117"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ]
+    },
+    "dts:ref" : "118"
+  }, {
+    "dts:dublincore" : {
+      "dc:source" : [ {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb225/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet146/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce93/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFet5/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BDLbruce87/manifest"
+      }, {
+        "@type" : "sc:Range",
+        "@id" : "https://betamasaheft.eu/api/iiif/BNFabb97/manifest"
+      } ]
+    },
+    "dts:ref" : "119"
+  } ],
+  "@id" : "/api/dts/navigation?id=https://betamasaheft.eu/LIT1709Kebran"
+}

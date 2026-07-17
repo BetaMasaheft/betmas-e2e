@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 500 javax.servlet.ServletException: javax.servlet.ServletException: An error occurred while processing request to /exist/apps/BetMasWeb/api/dts/collections: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</title>
+</head>
+<body><h2>HTTP ERROR 500 javax.servlet.ServletException: javax.servlet.ServletException: An error occurred while processing request to /exist/apps/BetMasWeb/api/dts/collections: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</h2>
+<table>
+<tr><th>URI:</th><td>/exist/apps/BetMasWeb/api/dts/collections</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>javax.servlet.ServletException: javax.servlet.ServletException: An error occurred while processing request to /exist/apps/BetMasWeb/api/dts/collections: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</td></tr>
+<tr><th>SERVLET:</th><td>XQueryURLRewrite</td></tr>
+<tr><th>CAUSED BY:</th><td>javax.servlet.ServletException: javax.servlet.ServletException: An error occurred while processing request to /exist/apps/BetMasWeb/api/dts/collections: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</td></tr>
+<tr><th>CAUSED BY:</th><td>javax.servlet.ServletException: An error occurred while processing request to /exist/apps/BetMasWeb/api/dts/collections: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</td></tr>
+<tr><th>CAUSED BY:</th><td>javax.servlet.ServletException: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</td></tr>
+<tr><th>CAUSED BY:</th><td>org.exquery.restxq.RestXqServiceException: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</td></tr>
+<tr><th>CAUSED BY:</th><td>org.exist.xquery.XPathException: err:XPTY0004 element()() is not a sub-type of map(*) [at line 939, column 29, source: /db/apps/BetMasWeb/modules/dtslib.xqm]
+In function:
+	dtslib:CollMember(item()*, item()*, item()*, item()*, item()*, item()*) [129:24:/db/apps/BetMasWeb/modules/dtslib.xqm]
+	dts:Collection(xs:string*, xs:integer*, xs:string*, xs:string*) [-1:-1:/db/apps/BetMasApi/specifications/dts.xqm]</td></tr>
+</table>
+<hr><a href="http://eclipse.org/jetty">Powered by Jetty:// 9.4.26.v20200117</a><hr/>
+
+</body>
+</html>
