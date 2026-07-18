@@ -36,6 +36,16 @@ Cypress.Commands.add('requestFollowingAppRedirects', (url, options = {}) => {
       followRedirect: false
     }).then((response) => {
       if (response.status >= 300 && response.status < 400 && response.headers.location) {
+        // Never fetch third-party hosts from CI: their WAFs block runner
+        // traffic and their availability is not our contract. Tests must
+        // assert the emitted href/location instead of following it.
+        const next = new URL(response.headers.location, appBase.baseUrl)
+        if (next.origin !== appBase.base.origin) {
+          throw new Error(
+            `redirect leaves the app origin (${response.headers.location}); ` +
+            'assert the href instead of following it'
+          )
+        }
         return requestOnce(response.headers.location)
       }
       return response

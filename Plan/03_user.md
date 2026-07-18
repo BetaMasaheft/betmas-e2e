@@ -282,10 +282,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 3. Click **Collate**
 4. A table appears with aligned witness tokens (Ethiopic text from expanded transcriptions)
 
-**Automated coverage:** `cypress/e2e/api/api-collatex-cross-service.cy.js` (`@production-only`, #55). Cross-service: BetMasWeb → collatex servlet on host `:8081`. Not runnable in `release-expanded` until collatex is containerised.
+**Automated coverage:** `cypress/e2e/api/api-collatex-cross-service.cy.js` (`@production-only`, #55) — API contract, BetMasWeb → collatex servlet on host `:8081`. `cypress/e2e/06-user/collate.cy.js` — UI flow in two layers: rendering test stubbed with a real CollateX alignment fixture (dual-env; the page JS calls the absolute `/api/collatex` path, so live collation cannot work behind the container base path) and the live end-to-end flow (`@production-only @slow`). Service-level golden fixtures live in the [collatex-service](https://github.com/BetaMasaheft/collatex-service) repo (its PR #1).
 
-- [x] In progress (API contract test on prod — **automated**)
-- [ ] Done (UI `/collate` flow not yet covered)
+- [x] Done (API contract + UI flow automated; container live-collation waits on collatex containerisation)
 
 ---
 

@@ -1,0 +1,35 @@
+{
+  "head" : {
+    "vars" : [ "s", "p" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "p" : {
+        "value" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "type" : "uri"
+      },
+      "s" : {
+        "value" : "https://betamasaheft.eu/silk",
+        "type" : "uri"
+      }
+    }, {
+      "p" : {
+        "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "type" : "uri"
+      },
+      "s" : {
+        "value" : "https://betamasaheft.eu/silk",
+        "type" : "uri"
+      }
+    }, {
+      "p" : {
+        "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "type" : "uri"
+      },
+      "s" : {
+        "value" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+        "type" : "uri"
+      }
+    } ]
+  }
+}

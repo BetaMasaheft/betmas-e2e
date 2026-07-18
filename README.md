@@ -68,6 +68,13 @@ Run auth-tagged specs only:
 npx cypress run --expose grepTags="@auth",grepFilterSpecs=true,grepOmitFiltered=true
 ```
 
+## Third-party hosts
+
+Records link out to external resources (lexica, IIIF viewers, aggregators). The app's contract is **emitting the correct link**, not the third party's uptime, and external WAFs routinely block CI runner traffic (F5 block pages, 404s). Convention for all specs:
+
+- Assert emitted `href`s, form actions, and query params — never `cy.request()`/`cy.visit()` an external host.
+- `cy.requestFollowingAppRedirects` enforces this: it throws when a redirect chain leaves the app origin.
+
 ## Benchmarks
 
 Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-performance/slow-pages.cy.js` (`@perf @slow`): three sequential `cy.request` samples per page, the **median** is recorded. Budgets per page and target are in `cypress/fixtures/perf-budgets.json`; going over budget logs a warning but never fails a run (report-only).
