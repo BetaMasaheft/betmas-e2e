@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1784351639734,
+  "lastUpdate": 1784439740786,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -232,6 +232,64 @@ window.BENCHMARK_DATA = {
             "value": 2969,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[4042, 2969, 2964]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "db406d9463fed8346d34df9662a5d958b8100cc2",
+          "message": "Merge pull request #73 from BetaMasaheft/dp-api",
+          "timestamp": "2026-07-18T10:51:23Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/db406d9463fed8346d34df9662a5d958b8100cc2"
+        },
+        "date": 1784439740230,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 5502,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[5962, 5502, 4854]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1322,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1464, 1322, 1322]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 491,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[491, 449, 510]"
+          },
+          {
+            "name": "decorations",
+            "value": 21671,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[22658, 21671, 21349]"
+          },
+          {
+            "name": "additions",
+            "value": 24272,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[25013, 24272, 24009]"
+          },
+          {
+            "name": "work-text",
+            "value": 3710,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[5349, 3710, 3635]"
           }
         ]
       }
