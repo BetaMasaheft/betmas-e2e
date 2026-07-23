@@ -1,24 +1,9 @@
-describe('Dillmann page (container)', { tags: '@container-only' }, () => {
-    /**
-     * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/66
-     * Container: `cy.visit('Dillmann/')` returns HTTP 405 (GET not allowed).
-     * Re-verified 2026-07-10 on the image containing the #62/#63 fixes:
-     * still 405 on `Dillmann`, `Dillmann/` and `Dillmann/lemma/...`.
-     */
-    it('loads the HTTP ERROR 405 page', () => {
-        cy.request({
-            method: 'GET',
-            url: 'Dillmann/',
-            followRedirect: true,
-            failOnStatusCode: false
-        }).then((response) => {
-            expect(response.status).to.eq(405)
-            expect(response.body).to.include('HTTP ERROR 405')
-        })
-    })
-})
-
 describe('Dillmann page', { tags: '@production-only' }, () => {
+    // GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/66 (closed)
+    // Dillmann now shares the app's own eXist instance in the composed
+    // stack and no longer 405s (BetMas#130) - but Dillmann#558's
+    // videash.js crash (uncaught exception on this exact page) blocks
+    // flipping this dual-env until that's fixed.
     beforeEach(() => {
         cy.visit('Dillmann/')
     })
