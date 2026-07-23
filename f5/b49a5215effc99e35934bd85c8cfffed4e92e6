@@ -1,0 +1,21 @@
+.github/workflows/test-container.yml
+  s_f621eb37f8854e::t_162bef88507f2c 21-26,35-38,40-41,43,46-47,49,51-52,57,65-66,73,76,80-81,87,90,104,107-108
+.github/ci/docker-compose.ci-override.yml
+  s_f621eb37f8854e::t_3601bb6e0ca77f 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "f5b49a5215effc99e35934bd85c8cfffed4e92e6",
+  "prompts": {},
+  "sessions": {
+    "s_f621eb37f8854e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c55e94-39a7-4bfc-8532-53c810e8d334",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
