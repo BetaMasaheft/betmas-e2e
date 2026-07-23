@@ -18,6 +18,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
+      - name: Checkout BetMas (canonical compose stack)
+        uses: actions/checkout@v7
+        with:
+          repository: BetaMasaheft/BetMas
+          path: BetMas
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v4
         with:
@@ -26,29 +32,29 @@ jobs:
           password: ${{ secrets.BOT_CONTAINER_PAT }}
         continue-on-error: false
 
-      - name: Pull Docker image
+      # `betmas` is the only private image; nginx + the full-profile
+      # services (fuseki, collatex, qlever, iipsrv) are all public. Skip
+      # counter-app: no published image, and out of scope for this suite.
+      - name: Pull stack images
         run: |
-          echo "Pulling Docker image..."
-          docker pull ghcr.io/betamasaheft/betamasaheft:release-expanded
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full pull betmas nginx fuseki collatex qlever iipsrv
 
-      - name: Clean up any existing container
+      - name: Clean up any existing stack
         if: always()
         run: |
-          docker stop betmas2 || true
-          docker rm betmas2 || true
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full down -v || true
 
-      - name: Start container
+      - name: Start stack
         run: |
-          docker run \
-            -dit -p 8080:8080 -p 8443:8443\
-            --name betmas2 \
-            -e APP_URL=http://localhost:8080/exist/apps/BetMasWeb \
-            ghcr.io/betamasaheft/betamasaheft:release-expanded
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full up -d --no-build betmas nginx fuseki collatex qlever iipsrv
 
       - name: wait for install to finish
         timeout-minutes: 5
         run: |
-          while ! docker logs betmas2 2>&1 | grep -q "Server has started"; \
+          while ! docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml logs betmas 2>&1 | grep -q "Server has started"; \
           do sleep 2s; \
           done
 
@@ -56,28 +62,32 @@ jobs:
       # specs log in with. Editors membership is required for the personal
       # page and newentry form (nav.xqm); Dillmann accounts use the
       # Cataloguers primary group (Dillmann accounts/createaccount.xql).
+      # Goes straight to the eXist container (host port 8081, see the CI
+      # override) since nginx doesn't route /exist/rest/db.
       # Note: a single quote in a secret would break the XQuery string literal.
       - name: Provision test users
         env:
           CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}
           CYPRESS_PASSWORD_LEXICOGRAPHER: ${{ secrets.CYPRESS_PASSWORD_LEXICOGRAPHER }}
         run: |
-          curl -sf -u admin: -G http://localhost:8080/exist/rest/db \
+          curl -sf -u admin: -G http://localhost:8081/exist/rest/db \
             --data-urlencode "_query=if (sm:user-exists('JinntecCatalogue')) then 'user exists' else (sm:create-account('JinntecCatalogue', '${CYPRESS_PASSWORD_CATALOGUER}', 'Cataloguers'), sm:add-group-member('Editors', 'JinntecCatalogue'), 'user created')" \
             --data-urlencode "_wrap=no"
-          curl -sf -u admin: -G http://localhost:8080/exist/rest/db \
+          curl -sf -u admin: -G http://localhost:8081/exist/rest/db \
             --data-urlencode "_query=if (sm:user-exists('JinntecLexicon')) then 'user exists' else (sm:create-account('JinntecLexicon', '${CYPRESS_PASSWORD_LEXICOGRAPHER}', 'Cataloguers'), 'user created')" \
             --data-urlencode "_wrap=no"
 
+      # nginx is the app's origin now (matches prod: app at "/"), not the
+      # bare eXist app-path base of the old single-container setup (#75).
       - name: Run Cypress tests
         uses: cypress-io/github-action@v7
         with:
           browser: firefox
           install: npm ci
-          config: baseUrl=http://localhost:8080/exist/apps/BetMasWeb/
+          config: baseUrl=http://localhost:8080/
           # note: '+' joins tag conditions with AND; space-separated would be OR
           expose: 'grepTags=-@production-only+-@perf,grepFilterSpecs=true,grepOmitFiltered=true'
-          wait-on: http://localhost:8080/exist/apps/BetMasWeb/
+          wait-on: http://localhost:8080/
           wait-on-timeout: 300
         env:
           CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}
@@ -91,8 +101,8 @@ jobs:
           path: cypress/screenshots
           retention-days: 7
 
-      - name: Clean up container
+      - name: Clean up stack
         if: always()
         run: |
-          docker stop betmas2 || true
-          docker rm betmas2 || true
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full down -v || true
