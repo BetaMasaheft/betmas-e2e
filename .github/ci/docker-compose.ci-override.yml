@@ -1,0 +1,8 @@
+# CI-only overlay on top of BetMas's canonical docker-compose.yml. nginx is
+# the stack's sole public entry point by design (#130) - this adds a host
+# port straight to the eXist container so the workflow can provision test
+# users over the REST API, which nginx doesn't route.
+services:
+  betmas:
+    ports:
+      - "8081:8080"
