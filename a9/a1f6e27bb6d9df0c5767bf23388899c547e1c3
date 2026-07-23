@@ -1,0 +1,21 @@
+cypress/e2e/05-contributor/lexicon.cy.js
+  s_f621eb37f8854e::t_678b680420ad85 7-10
+  s_f621eb37f8854e::t_a991a91b8cd1d3 31-32
+  s_f621eb37f8854e::t_8f0c91b1f3e8f9 36-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "a9a1f6e27bb6d9df0c5767bf23388899c547e1c3",
+  "prompts": {},
+  "sessions": {
+    "s_f621eb37f8854e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c55e94-39a7-4bfc-8532-53c810e8d334",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
