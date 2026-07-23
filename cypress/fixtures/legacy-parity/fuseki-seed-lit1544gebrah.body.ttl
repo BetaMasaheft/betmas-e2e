@@ -1,0 +1,59 @@
+@prefix :         <https://betamasaheft.eu/ontology/> .
+@prefix address:  <http://schemas.talis.com/2005/address/schema#> .
+@prefix agrelon:  <http://d-nb.info/standards/elementset/agrelon.owl#> .
+@prefix bibo:     <http://purl.org/ontology/bibo/> .
+@prefix bm:       <https://betamasaheft.eu/> .
+@prefix core:     <http://purl.org/ontology/olo/core#> .
+@prefix crm:      <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ctag:     <http://commontag.org/ns#> .
+@prefix dc:       <http://purl.org/dc/elements/1.1/> .
+@prefix doap:     <http://usefulinc.com/ns/doap#> .
+@prefix ecrm:     <http://erlangen-crm.org/current/> .
+@prefix efrbroo:  <http://erlangen-crm.org/efrbroo/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix geo:      <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gn:       <http://www.geonames.org/ontology#> .
+@prefix iha:      <http://islhornafr.tors.sc.ku.dk/> .
+@prefix lawd:     <http://lawd.info/ontology/> .
+@prefix ns:       <http://creativecommons.org/ns#> .
+@prefix ns1:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix oa:       <http://www.w3.org/ns/oa#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix pelagios: <http://pelagios.github.io/vocab/terms#> .
+@prefix pleiades: <https://pleiades.stoa.org/> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel:      <http://purl.org/vocab/relationship/> .
+@prefix res:      <http://purl.org/vocab/resourcelist/schema#> .
+@prefix saws:     <http://purl.org/saws/ontology#> .
+@prefix sc:       <http://umbel.org/umbel/sc/> .
+@prefix sdc:      <https://w3id.org/sdc/ontology#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix snap:     <http://data.snapdrgn.net/ontology/snap#> .
+@prefix svcs:     <http://rdfs.org/sioc/services#> .
+@prefix syriaca:  <http://syriaca.org/documentation/relations.html#> .
+@prefix t:        <http://www.tei-c.org/ns/1.0> .
+@prefix terms:    <http://purl.org/dc/terms/> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix wd:       <https://www.wikidata.org/> .
+@prefix wot:      <http://xmlns.com/wot/0.1/> .
+@prefix xs:       <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix z:        <http://www.zotero.org/namespaces/export#> .
+
+bm:LIT1544Gebrah  rdf:type           bm:ChristianLiterature , pelagios:AnnotatedThing , bm:work , bm:Liturgy , lawd:ConceptualWork , crm:E28_Conceptual_Object ;
+        dc:contributor               "Alessandro Bausi" , "Massimo Villa" ;
+        dc:format                    "xml" ;
+        dc:language                  "en"^^xsd:language , "gez"^^xsd:language ;
+        dc:publisher                 "Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine multimediale Forschungsumgebung / Beta maṣāḥǝft,  Akademie der Wissenschaften in Hamburg" ;
+        dc:title                     "ግብረ፡ ሕማማት፡"@gez , "Maṣḥafa Gǝbra Ḥǝmāmāt"@gez , "መጽሐፈ፡ ግብረ፡ ሕማማት፡"@gez , "Gǝbra Ḥǝmāmāt"@gez , "Lectionary of the Holy Week"@en ;
+        terms:bibliographicCitation  "LIT1544Gebrah" ;
+        terms:hasPart                <https://betamasaheft.eu/LIT1544Gebrah/part/PalmSundayGH> , <https://betamasaheft.eu/LIT1544Gebrah/part/Tuesday> , <https://betamasaheft.eu/LIT1544Gebrah/part/Directives> , <https://betamasaheft.eu/LIT1544Gebrah/part/EvePalmSunday> , <https://betamasaheft.eu/LIT1544Gebrah/part/Sunday> , <https://betamasaheft.eu/LIT1544Gebrah/part/Saturday> , <https://betamasaheft.eu/LIT1544Gebrah/part/Monday> , <https://betamasaheft.eu/LIT1544Gebrah/part/Thursday> , <https://betamasaheft.eu/LIT1544Gebrah/part/Introduction> , <https://betamasaheft.eu/LIT1544Gebrah/part/Friday> , <https://betamasaheft.eu/LIT1544Gebrah/part/Wednesday> ;
+        terms:isPartOf               <https://betamasaheft.eu> ;
+        terms:licence                <http://opendatacommons.org/licenses/odbl/1.0/> ;
+        terms:source                 <https://betamasaheft.eu/tei/LIT1544Gebrah.xml> ;
+        crm:P102_has_title           <https://betamasaheft.eu/LIT1544Gebrah/title/t2> , <https://betamasaheft.eu/LIT1544Gebrah/title/t1> ;
+        crm:P48_has_preferred_identifier
+                "LIT1544Gebrah" ;
+        foaf:homepage                <https://betamasaheft.eu/works/LIT1544Gebrah/main> .

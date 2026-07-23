@@ -126,6 +126,18 @@
       "bytes": 41
     },
     {
+      "slug": "fuseki-seed-lit1544gebrah",
+      "url": "https://betamasaheft.eu/fuseki/betamasaheft/query?query=CONSTRUCT%20%7B%20%3Chttps%3A%2F%2Fbetamasaheft.eu%2FLIT1544Gebrah%3E%20%3Fp%20%3Fo%20%7D%20WHERE%20%7B%20%3Chttps%3A%2F%2Fbetamasaheft.eu%2FLIT1544Gebrah%3E%20%3Fp%20%3Fo%20%7D",
+      "file": "fuseki-seed-lit1544gebrah.body.ttl",
+      "sha256": "6fd93f33a1fac811ef6fcbce9507a454ff13dbdacfa0b0c5c99a433f383b8056",
+      "captured_at": "2026-07-23T14:35:47Z",
+      "status": 200,
+      "content_type": "text/turtle",
+      "redirect_url": "",
+      "time_total": 0.128604,
+      "bytes": 4450
+    },
+    {
       "slug": "iiif-manifest",
       "url": "https://betamasaheft.eu/api/iiif/ESdz010/manifest",
       "file": "iiif-manifest.body.json",
