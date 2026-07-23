@@ -58,6 +58,21 @@ jobs:
           do sleep 2s; \
           done
 
+      # The dummy Fuseki (full profile) starts empty - stain/jena-fuseki
+      # generates a random admin password per boot, so it's scraped from
+      # the container's own logs rather than hardcoded. Real triples
+      # (LIT1544Gebrah, already used elsewhere in the suite) captured the
+      # same way as the legacy-parity fixtures - see their README.
+      - name: Seed dummy Fuseki with real test data
+        run: |
+          FUSEKI_PW=$(docker compose -f BetMas/docker-compose.yml logs fuseki 2>&1 | sed -n 's/.*admin=\([^ ]*\).*/\1/p' | head -1)
+          for i in $(seq 1 15); do
+            curl -sf -u "admin:$FUSEKI_PW" -X POST http://localhost:8080/fuseki/betamasaheft/data \
+              --data-binary @cypress/fixtures/legacy-parity/fuseki-seed-lit1544gebrah.body.ttl \
+              -H "Content-Type: text/turtle" && break
+            sleep 2
+          done
+
       # The image ships without test users; create the accounts the @auth
       # specs log in with. Editors membership is required for the personal
       # page and newentry form (nav.xqm); Dillmann accounts use the

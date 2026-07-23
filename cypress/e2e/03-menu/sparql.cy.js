@@ -41,7 +41,10 @@ describe('SPARQL query page rendering (stubbed endpoint)', { tags: '@container' 
   })
 })
 
-describe('SPARQL live round-trip', { tags: ['@production-only'] }, () => {
+describe('SPARQL live round-trip', { tags: ['@container'] }, () => {
+  // Dual-env since BetMas#137 (nginx /api/ routing) and #138 (FUSEKI_URL) -
+  // the container's dummy Fuseki is seeded with real data (LIT1544Gebrah,
+  // test-container.yml) so this has something real to assert against.
   it('answers a minimal query and renders the table', () => {
     cy.intercept({ method: 'GET', pathname: '**/api/SPARQL/json' }).as('sparql')
     cy.visit('sparql.html')

@@ -46,12 +46,11 @@ describe('Manuscripts: view images and content', { tags: '@container' }, () => {
 
 })
 
-describe('Manuscripts: view images', { tags: '@production-only' }, () => {
+describe('Manuscripts: view images', { tags: '@container' }, () => {
     /**
-     * Container: RestXQ `/api/` routes — including the IIIF manifest
-     * `/api/iiif/{id}/manifest` that Mirador loads — return HTTP 405
-     * (verified 2026-07-10), so the viewer never renders there.
-     * Same drift family as https://github.com/BetaMasaheft/betmas-e2e/issues/66
+     * Dual-env since BetMas#130/#137: the IIIF manifest + iipsrv-fixtures
+     * (real JPEGs, ESdz010's manuscript) are both genuinely reachable in
+     * the composed stack now - the old RestXQ-405 blocker no longer applies.
      */
     // See user 13
 

@@ -21,6 +21,16 @@ Note: some probes document *absence or failure* as the baseline — a legacy
 `404`/`500` capture means the replacement can only improve on that surface
 (document the delta rather than "fixing" the fixture).
 
+## `fuseki-seed-lit1544gebrah`: a different kind of fixture
+
+Everything else here is a replay-comparison target for the dormant
+`CYPRESS_PARITY_TARGET` spec. This one isn't - it's real triples (`LIT1544Gebrah`,
+already used elsewhere in the suite, e.g. `base-path-drift.cy.js`) loaded into the
+composed stack's dummy Fuseki at CI boot (`test-container.yml`), so
+`sparql.cy.js`'s live round-trip has something real to assert against instead of
+an empty in-memory store. Captured the same way, same discipline, different
+consumer.
+
 ## Alignment with the other suites
 
 - The three SPARQL queries are **the same queries** as sparql-service's golden

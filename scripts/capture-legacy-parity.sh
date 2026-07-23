@@ -47,6 +47,10 @@ SURFACES=(
   'rdfxml-work|/api/RDFXML/manuscripts/LIT1367Exodus'
   'rdfjson-work|/api/RDFJSON/manuscripts/LIT1367Exodus'
   'fuseki-ask|/fuseki/betamasaheft/query?query=ASK%7B%7D'
+  # Seed data for the container stack's dummy Fuseki (test-container.yml) -
+  # not a replay-comparison target like the rest of this file. LIT1544Gebrah
+  # already appears elsewhere in the suite (base-path-drift.cy.js).
+  'fuseki-seed-lit1544gebrah|/fuseki/betamasaheft/query?query=CONSTRUCT%20%7B%20%3Chttps%3A%2F%2Fbetamasaheft.eu%2FLIT1544Gebrah%3E%20%3Fp%20%3Fo%20%7D%20WHERE%20%7B%20%3Chttps%3A%2F%2Fbetamasaheft.eu%2FLIT1544Gebrah%3E%20%3Fp%20%3Fo%20%7D|text/turtle'
   'collatex-two-witnesses|/api/collatex?format=json&dts=https%3A%2F%2Fbetamasaheft.eu%2FESamm007.5va%2Chttps%3A%2F%2Fbetamasaheft.eu%2FESmr001.93rb'
   'clavis-bare|/api/clavis'
   'clavis-all|/api/clavis/all'
@@ -67,23 +71,30 @@ captured_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
 for entry in "${SURFACES[@]}"; do
   slug="${entry%%|*}"
-  path="${entry#*|}"
+  rest="${entry#*|}"
+  case "$rest" in
+    *'|'*) path="${rest%%|*}"; accept="${rest#*|}" ;;
+    *)     path="$rest"; accept='' ;;
+  esac
   if [ $# -gt 0 ]; then
     case " $* " in *" $slug "*) ;; *) continue ;; esac
   fi
   url="$HOST$path"
   echo "-- $slug"
   body="$OUT/$slug.body.tmp"
-  meta=$(curl -sS -A "$UA" --max-time "$MAXTIME" -o "$body" \
+  accept_args=()
+  [ -n "$accept" ] && accept_args=(-H "Accept: $accept")
+  meta=$(curl -sS -A "$UA" --max-time "$MAXTIME" -o "$body" "${accept_args[@]}" \
       -w '{"status":%{http_code},"content_type":"%{content_type}","redirect_url":"%{redirect_url}","time_total":%{time_total},"bytes":%{size_download}}' \
       "$url" || echo '{"status":0,"content_type":"","redirect_url":"","time_total":0,"bytes":0}')
   ctype=$(printf '%s' "$meta" | sed -n 's/.*"content_type":"\([^"]*\)".*/\1/p')
   case "$ctype" in
-    *json*) ext='json' ;;
-    *xml*)  ext='xml'  ;;
-    *)      ext='txt'  ;;
+    *json*)   ext='json' ;;
+    *xml*)    ext='xml'  ;;
+    *turtle*) ext='ttl'  ;;
+    *)        ext='txt'  ;;
   esac
-  rm -f "$OUT/$slug".body.json "$OUT/$slug".body.xml "$OUT/$slug".body.txt
+  rm -f "$OUT/$slug".body.json "$OUT/$slug".body.xml "$OUT/$slug".body.txt "$OUT/$slug".body.ttl
   mv "$body" "$OUT/$slug.body.$ext" 2>/dev/null || : > "$OUT/$slug.body.$ext"
   sha=$(shasum -a 256 "$OUT/$slug.body.$ext" | cut -d' ' -f1)
   printf '{"slug":"%s","url":"%s","file":"%s.body.%s","sha256":"%s","captured_at":"%s",%s\n' \
