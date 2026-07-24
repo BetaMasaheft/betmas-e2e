@@ -1,0 +1,20 @@
+cypress/e2e/03-menu/guidelines.cy.js
+  s_f621eb37f8854e::t_017336214408f8 1,4-7,20-28,31-38,62
+  s_f621eb37f8854e::t_e497d8cce64c45 12,39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "e69b80de3b5bab6a5c21ce3426e7ec81cd7e953c",
+  "prompts": {},
+  "sessions": {
+    "s_f621eb37f8854e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c55e94-39a7-4bfc-8532-53c810e8d334",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
