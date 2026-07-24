@@ -1,0 +1,20 @@
+cypress/e2e/03-menu/apidoc.cy.js
+  s_f621eb37f8854e::t_596915e23c7326 20-21,25-28
+  s_f621eb37f8854e::t_af34628dc81f27 22-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "5a796a31c321888a8a77fe1a7324d45b6d7ba5cd",
+  "prompts": {},
+  "sessions": {
+    "s_f621eb37f8854e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c55e94-39a7-4bfc-8532-53c810e8d334",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": null
+    }
+  }
+}
