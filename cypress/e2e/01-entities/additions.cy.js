@@ -81,10 +81,18 @@ describe('additions page', { tags: ['@container', '@slow'] }, () => {
       // TODO(DP) add better assertion for result 
     })
 
-    // TODO(DP) search crashes see #12
-    it.skip('should accept text input in search form', () => {
-      cy.get(':nth-child(3) > .w3-input')
-        .should('be.visible')
+    // GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/12
+    // A literal apostrophe used to break the server-side query (it closed
+    // the XQuery string literal early) - fixed in BetMasWeb's resources.xqm.
+    it('should accept an apostrophe in the text input search without erroring', () => {
+      cy.get('input[name="termText"]')
+        .type("d'Abbadie")
+      cy.get('.w3-bar > .w3-red')
+        .click()
+      cy.get('#content')
+        .find('h3')
+        .contains('entities matching')
+      cy.contains('error', { matchCase: false }).should('not.exist')
     })
   })
 })

@@ -1,4 +1,4 @@
-describe('Collatex cross-service contract', { tags: '@production-only' }, () => {
+describe('Collatex cross-service contract', { tags: '@container' }, () => {
   /**
    * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/55
    *
@@ -11,8 +11,8 @@ describe('Collatex cross-service contract', { tags: '@production-only' }, () => 
    * Witness URNs verified on production (2026-07-13); collatex W1/W2 fixtures in
    * Manuscripts/ES/ESamm007.xml and ESmr001.xml (LIT3058RepCh338 hymn).
    *
-   * @production-only: collatex servlet is on the prod VM (:8081) but not in
-   * release-expanded yet — container eXist cannot reach it (HTTP 500).
+   * Dual-env since BetMas#139 (COLLATEX_URL) + BetMasWeb#41 (dtslib
+   * FORX0003) merged 2026-07-23 - verified directly against the container.
    */
 
   const witnessUrns = [
