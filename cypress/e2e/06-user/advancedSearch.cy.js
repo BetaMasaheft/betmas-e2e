@@ -84,8 +84,7 @@ describe('The advanced search page', { tags: '@container' }, () => {
         .should('be.visible')
       cy.get('[value="CUnumber"]')
         .check()
-      // 03_User 7.7-8 
-      // see #14 error triggerd when clicking submit-data button below
+      // 03_User 7.7-8
       cy.get('#submit-data')
         .click()
       // 03_User 7.9  
