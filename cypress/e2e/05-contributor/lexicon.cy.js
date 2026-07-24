@@ -1,15 +1,14 @@
 const username = 'JinntecLexicon'
 
 /**
- * Cross-app smoke: BetMas routes to Dillmann and lexicon login works on production.
+ * Cross-app smoke: BetMas routes to Dillmann and lexicon login works.
  * Contributor depth (Plan/02_contributor.md §3–§5) lives in BetaMasaheft/Dillmann
- * test/cypress/e2e/user_admin.cy.js and editor.cy.js. Dillmann now shares the
- * composed stack's eXist instance (BetMas#130) and login-from-Dillmann works
- * there too (verified directly) - flipping this dual-env just waits on
- * Dillmann#558's videash.js crash fix (see dillmann.cy.js) reaching a
- * published image.
+ * test/cypress/e2e/user_admin.cy.js and editor.cy.js. Dillmann shares the
+ * composed stack's eXist instance (BetMas#130); Dillmann#558/#559's
+ * videash.js crash fix is baked into release-expanded as of 2026-07-23 -
+ * verified directly against the container.
  */
-describe('Dillmann lexicon integration smoke', { tags: ['@auth', '@production-only'] }, () => {
+describe('Dillmann lexicon integration smoke', { tags: ['@auth', '@container'] }, () => {
   beforeEach(() => {
     cy.visit('Dillmann/')
     cy.loginLexicon()

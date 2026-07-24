@@ -1,9 +1,9 @@
-describe('Dillmann page', { tags: '@production-only' }, () => {
+describe('Dillmann page', { tags: '@container' }, () => {
     // GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/66 (closed)
-    // Dillmann now shares the app's own eXist instance in the composed
-    // stack and no longer 405s (BetMas#130) - but Dillmann#558's
-    // videash.js crash (uncaught exception on this exact page) blocks
-    // flipping this dual-env until that's fixed.
+    // Dillmann shares the app's own eXist instance in the composed stack
+    // (BetMas#130) and Dillmann#558/#559's videash.js crash fix is baked
+    // into release-expanded as of 2026-07-23 - verified directly against
+    // the container.
     beforeEach(() => {
         cy.visit('Dillmann/')
     })

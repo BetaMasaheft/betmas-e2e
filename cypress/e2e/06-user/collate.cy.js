@@ -41,12 +41,15 @@ describe('Collate page rendering (stubbed collatex)', { tags: '@container' }, ()
   })
 })
 
-describe('Collate live cross-service flow', { tags: ['@production-only', '@slow'] }, () => {
+describe('Collate live cross-service flow', { tags: ['@container', '@slow'] }, () => {
   /**
    * GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/55
    * Same witnesses as api/api-collatex-cross-service.cy.js; this covers
    * the UI leg on top of the API contract. Server-side witness building
    * reads two expanded TEI documents, so allow a generous response time.
+   *
+   * Dual-env since BetMas#139 + BetMasWeb#41 merged 2026-07-23 - verified
+   * directly against the container.
    */
 
   it('collates two manuscript witnesses end to end', () => {
