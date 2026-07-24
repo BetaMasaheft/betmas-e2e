@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1784785487994,
+  "lastUpdate": 1784871686751,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -522,6 +522,64 @@ window.BENCHMARK_DATA = {
             "value": 3838,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[4830, 3838, 3605]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "b19e18dec35e00c36c6bc9d64e263a0f31fce131",
+          "message": "Merge pull request #78 from BetaMasaheft/dp-sparql-fuseki-seed\n\ntest(sparql, iiif): seed dummy Fuseki with real data + flip both dual-env",
+          "timestamp": "2026-07-23T18:41:20Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/b19e18dec35e00c36c6bc9d64e263a0f31fce131"
+        },
+        "date": 1784871686423,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 5141,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[7765, 5141, 4489]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1171,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[6751, 1171, 1170]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 509,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[794, 509, 470]"
+          },
+          {
+            "name": "decorations",
+            "value": 16024,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[17512, 15682, 16024]"
+          },
+          {
+            "name": "additions",
+            "value": 23068,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[24038, 23068, 23060]"
+          },
+          {
+            "name": "work-text",
+            "value": 3269,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[4440, 3269, 3134]"
           }
         ]
       }
