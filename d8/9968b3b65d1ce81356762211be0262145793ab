@@ -1,0 +1,27 @@
+cypress/e2e/api/api-collatex-cross-service.cy.js
+  s_f621eb37f8854e::t_7f3abc16d20d30 1,14-15
+cypress/e2e/03-menu/dillmann.cy.js
+  s_f621eb37f8854e::t_8c91dc86bd9d95 1,3-6
+cypress/e2e/06-user/collate.cy.js
+  s_f621eb37f8854e::t_806afc83d1bbd1 44,50-52
+cypress/e2e/05-contributor/lexicon.cy.js
+  s_f621eb37f8854e::t_4e189ca5a64b0c 4,6-9,11
+package.json
+  s_f621eb37f8854e::t_30ba148478beaf 8-9,12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "d89968b3b65d1ce81356762211be0262145793ab",
+  "prompts": {},
+  "sessions": {
+    "s_f621eb37f8854e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c55e94-39a7-4bfc-8532-53c810e8d334",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
