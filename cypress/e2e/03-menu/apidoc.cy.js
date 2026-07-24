@@ -17,5 +17,13 @@ describe('api documentation page', { tags: '@container' }, () => {
           .children()
           .should('have.length.at.least', 16)
     })
-    // TODO(DP): see #3 
+
+    // GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/3
+    // Fixed in BetMasWeb's w3local.css (.w3-quarter pre wraps instead of
+    // overflowing).
+    it('example <pre> blocks should not overflow their column', () => {
+        cy.get('.w3-quarter pre').each(($pre) => {
+            expect($pre[0].scrollWidth).to.be.at.most($pre[0].clientWidth)
+        })
+    })
 })
