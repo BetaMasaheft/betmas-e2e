@@ -1,0 +1,19 @@
+cypress/e2e/06-user/lemma.cy.js
+  s_f621eb37f8854e::t_d15df1e7b172bd 1,5-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "4507b5e5f7841217f03b8e0a1adca18d199f29fc",
+  "prompts": {},
+  "sessions": {
+    "s_f621eb37f8854e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "50c55e94-39a7-4bfc-8532-53c810e8d334",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
