@@ -58,6 +58,19 @@ jobs:
           do sleep 2s; \
           done
 
+      # betmas-init writes services.xml (incl. COLLATEX_URL) during instance
+      # initialisation. "Server has started" only means nginx/eXist are up.
+      # Cypress can hit /api/collatex before the wiring is visible, triggering
+      # BetMasWeb's default localhost fallback and resulting in a 504.
+      - name: Wait for COLLATEX_URL wiring
+        timeout-minutes: 5
+        run: |
+          while ! curl -sf -u admin: \
+            http://localhost:8081/exist/rest/db/apps/BetMasWeb/services.xml \
+            | grep -q "collatex:17105/collate"; \
+          do sleep 2s; \
+          done
+
       # The dummy Fuseki (full profile) starts empty - stain/jena-fuseki
       # generates a random admin password per boot, so it's scraped from
       # the container's own logs rather than hardcoded. Real triples
