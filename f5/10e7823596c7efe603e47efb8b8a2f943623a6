@@ -1,0 +1,19 @@
+cypress/fixtures/legacy-parity/README.md
+  s_6f344296aa289a::t_1f9fa78eab8780 44-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "f510e7823596c7efe603e47efb8b8a2f943623a6",
+  "prompts": {},
+  "sessions": {
+    "s_6f344296aa289a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "ec01ec47-5ef3-4804-9ec3-c1bda4281db1",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
