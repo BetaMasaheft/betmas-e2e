@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1785908147178,
+  "lastUpdate": 1787254406915,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -1276,6 +1276,64 @@ window.BENCHMARK_DATA = {
             "value": 3266,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[4811, 3192, 3266]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]",
+            "email": "49699333+dependabot[bot]@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "977c8e6a7e309e01b030a04ad2f135f012b658f0",
+          "message": "chore(deps-dev): bump cypress from 15.18.1 to 15.20.1 (#84)\n\nBumps [cypress](https://github.com/cypress-io/cypress) from 15.18.1 to 15.20.1.\n- [Release notes](https://github.com/cypress-io/cypress/releases)\n- [Changelog](https://github.com/cypress-io/cypress/blob/develop/CHANGELOG.md)\n- [Commits](https://github.com/cypress-io/cypress/compare/v15.18.1...v15.20.1)\n\n---\nupdated-dependencies:\n- dependency-name: cypress\n  dependency-version: 15.20.1\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>\nCo-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",
+          "timestamp": "2026-08-17T10:40:31Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/977c8e6a7e309e01b030a04ad2f135f012b658f0"
+        },
+        "date": 1787254405963,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 3317,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[5548, 3317, 3307]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 996,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[6279, 824, 996]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 431,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[762, 431, 399]"
+          },
+          {
+            "name": "decorations",
+            "value": 9860,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12641, 9860, 9755]"
+          },
+          {
+            "name": "additions",
+            "value": 13982,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[15863, 13872, 13982]"
+          },
+          {
+            "name": "work-text",
+            "value": 3016,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[4956, 3005, 3016]"
           }
         ]
       }
