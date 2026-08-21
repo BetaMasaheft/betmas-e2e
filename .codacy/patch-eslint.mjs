@@ -38,6 +38,7 @@ if (!src.includes('cy: "readonly"')) {
             fetch: "readonly",
             Blob: "readonly",
             Chart: "readonly",
+            getComputedStyle: "readonly",
           },
         },
 `
@@ -69,7 +70,16 @@ if (!src.includes('cy: "readonly"')) {
             document: "readonly",
             fetch: "readonly",
             Blob: "readonly",
-            Chart: "readonly",`
+            Chart: "readonly",
+            getComputedStyle: "readonly",`
+    )
+    changed = true
+  }
+  if (!src.includes('getComputedStyle: "readonly"')) {
+    src = src.replace(
+      /Chart: "readonly",/,
+      `Chart: "readonly",
+            getComputedStyle: "readonly",`
     )
     changed = true
   }

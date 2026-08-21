@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Slow page benchmarks</title>
+    <script>
+      (function () {
+        var t = localStorage.getItem('bench-theme')
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t)
+      })()
+    </script>
     <link rel="stylesheet" href="./bench.css" />
   </head>
   <body>
@@ -22,6 +28,7 @@
       <div class="header-row">
         <span class="small">Last update:</span>
         <span id="last-update" class="small"></span>
+        <button type="button" class="theme-toggle" id="theme-toggle">Theme: auto</button>
         <span class="spacer"></span>
         <span class="small">Repository:</span>
         <a class="small" href="https://github.com/BetaMasaheft/betmas-e2e">https://github.com/BetaMasaheft/betmas-e2e</a>

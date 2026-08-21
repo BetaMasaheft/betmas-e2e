@@ -6,6 +6,87 @@
  */
 (function (global) {
   const HIDDEN_PREFIX = '_'
+  const THEME_KEY = 'bench-theme'
+  const THEMES = ['auto', 'dark', 'light']
+
+  function cssVar (name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim()
+  }
+
+  function storedTheme () {
+    const t = window.localStorage.getItem(THEME_KEY)
+    return THEMES.indexOf(t) === -1 ? 'auto' : t
+  }
+
+  function seriesColor (source) {
+    return cssVar('--series-' + source.key) || source.color
+  }
+
+  function chartTheme () {
+    return {
+      tick: cssVar('--chart-tick'),
+      grid: cssVar('--chart-grid'),
+      tooltipBg: cssVar('--tooltip-bg'),
+      tooltipFg: cssVar('--tooltip-fg')
+    }
+  }
+
+  function applyChartTheme (chart) {
+    const t = chartTheme()
+    chart.options.scales.x.ticks.color = t.tick
+    chart.options.scales.y.ticks.color = t.tick
+    chart.options.scales.x.grid.color = t.grid
+    chart.options.scales.y.grid.color = t.grid
+    chart.options.plugins.tooltip.backgroundColor = t.tooltipBg
+    chart.options.plugins.tooltip.titleColor = t.tooltipFg
+    chart.options.plugins.tooltip.bodyColor = t.tooltipFg
+    chart.data.datasets.forEach(function (ds) {
+      const color = cssVar('--series-' + ds.sourceKey) || ds.borderColor
+      if (!color || color === 'transparent') return
+      if (ds.label.indexOf(HIDDEN_PREFIX) === 0) {
+        ds.backgroundColor = hexAlpha(color, '33')
+        if (ds.fill && typeof ds.fill === 'object') ds.fill.above = hexAlpha(color, '33')
+        return
+      }
+      ds.borderColor = color
+      if (ds.label.indexOf(' budget') === -1) ds.backgroundColor = color
+    })
+    chart.update('none')
+  }
+
+  function applyDocumentTheme (pref) {
+    if (pref === 'auto') document.documentElement.removeAttribute('data-theme')
+    else document.documentElement.setAttribute('data-theme', pref)
+    const btn = document.getElementById('theme-toggle')
+    if (btn) {
+      btn.textContent = 'Theme: ' + pref
+      btn.setAttribute('aria-label', 'Colour theme ' + pref + '. Click to change')
+    }
+    document.querySelectorAll('canvas').forEach(function (canvas) {
+      const chart = Chart.getChart(canvas)
+      if (chart) applyChartTheme(chart)
+    })
+  }
+
+  function bindThemeToggle () {
+    applyDocumentTheme(storedTheme())
+    const btn = document.getElementById('theme-toggle')
+    if (btn && !btn.dataset.bound) {
+      btn.dataset.bound = '1'
+      btn.onclick = function () {
+        const next = THEMES[(THEMES.indexOf(storedTheme()) + 1) % THEMES.length]
+        window.localStorage.setItem(THEME_KEY, next)
+        applyDocumentTheme(next)
+      }
+    }
+    const mq = window.matchMedia('(prefers-color-scheme: dark)')
+    if (mq.addEventListener && !bindThemeToggle.watching) {
+      bindThemeToggle.watching = true
+      mq.addEventListener('change', function () {
+        if (storedTheme() === 'auto') applyDocumentTheme('auto')
+      })
+    }
+  }
 
   function parseExtra (extra) {
     const out = { target: null, budgetMs: null, samples: [] }
@@ -122,7 +203,7 @@
   }
 
   function seriesDatasets (source, points) {
-    const color = source.color
+    const color = seriesColor(source)
     const label = source.label
     const maxPts = points.map(function (p) { return { x: p.x, y: p.max } })
     const minPts = points.map(function (p) { return { x: p.x, y: p.min } })
@@ -142,6 +223,7 @@
         fill: { target: '+1', above: hexAlpha(color, '33') },
         backgroundColor: hexAlpha(color, '33'),
         order: 3,
+        sourceKey: source.key,
         metaPoints: points
       },
       {
@@ -153,6 +235,7 @@
         tension: 0,
         fill: false,
         order: 3,
+        sourceKey: source.key,
         metaPoints: points
       },
       {
@@ -166,6 +249,7 @@
         fill: false,
         spanGaps: true,
         order: 1,
+        sourceKey: source.key,
         metaPoints: points
       }
     ]
@@ -182,6 +266,7 @@
         fill: false,
         spanGaps: true,
         order: 0,
+        sourceKey: source.key,
         metaPoints: points.filter(function (p) { return p.budgetMs != null })
       })
     }
@@ -262,6 +347,7 @@
 
     const maxY = yScaleMax(dataMaxY(datasets))
     const fitted = withFittingBudgets(datasets, maxY)
+    const t = chartTheme()
     fitted.forEach(function (ds) {
       if (ds.label.indexOf(HIDDEN_PREFIX) !== 0) return
       ds.data = ds.data.map(function (p) {
@@ -281,6 +367,9 @@
         plugins: {
           legend: { display: false },
           tooltip: {
+            backgroundColor: t.tooltipBg,
+            titleColor: t.tooltipFg,
+            bodyColor: t.tooltipFg,
             filter: function (item) {
               return item.dataset.label.indexOf(HIDDEN_PREFIX) !== 0
             },
@@ -295,7 +384,8 @@
           x: {
             type: 'time',
             time: { tooltipFormat: 'yyyy-MM-dd HH:mm' },
-            ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 5, font: { size: 10 } }
+            ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 5, font: { size: 10 }, color: t.tick },
+            grid: { color: t.grid }
           },
           y: {
             beginAtZero: true,
@@ -303,8 +393,10 @@
             ticks: {
               maxTicksLimit: 4,
               font: { size: 10 },
+              color: t.tick,
               callback: function (value) { return formatDuration(value) }
-            }
+            },
+            grid: { color: t.grid }
           }
         },
         onClick: onChartClick
@@ -313,6 +405,7 @@
   }
 
   function mount (opts) {
+    bindThemeToggle()
     renderNav(opts.nav, opts.currentHref)
     document.getElementById('page-title').textContent = opts.title
 
