@@ -14,7 +14,7 @@
   "author": "Duncan Paterson",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@cypress/grep": "^6.0.2",
+    "@cypress/grep": "^6.0.3",
     "cypress": "^15.20.1"
   }
 }
