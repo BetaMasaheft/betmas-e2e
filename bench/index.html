@@ -3,25 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Container slow pages</title>
+    <title>Slow page benchmarks</title>
     <script>
       (function () {
         var t = localStorage.getItem('bench-theme')
         if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t)
       })()
     </script>
-    <link rel="stylesheet" href="../bench.css" />
+    <link rel="stylesheet" href="./bench.css" />
   </head>
   <body>
     <header>
-      <h1 id="page-title">Container slow pages</h1>
+      <h1 id="page-title">Slow page benchmarks</h1>
       <nav id="bench-nav" aria-label="Benchmark views"></nav>
       <p class="caption">
         Median of three <code>cy.request</code> samples (TTFB). Shaded band is min–max.
         Budget is in each title; a dashed line is drawn only when it sits near the timings.
         Click a median point to open the commit.
       </p>
-      <p class="caption"><span class="swatch swatch-container"></span>Container</p>
+      <p class="caption">
+        <span class="swatch swatch-container"></span>Container (daily) ·
+        <span class="swatch swatch-production"></span>Production (manual)
+      </p>
       <div class="header-row">
         <span class="small">Last update:</span>
         <span id="last-update" class="small"></span>
@@ -39,18 +42,19 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-    <script src="../charts.js"></script>
+    <script src="./charts.js"></script>
     <script>
       BenchCharts.mount({
-        title: 'Container slow pages',
+        title: 'Slow page benchmarks',
         currentHref: './',
         nav: [
-          { href: '../', label: 'Combined' },
-          { href: './', label: 'Container' },
-          { href: '../production/', label: 'Production' }
+          { href: './', label: 'Combined' },
+          { href: './container/', label: 'Container' },
+          { href: './production/', label: 'Production' }
         ],
         sources: [
-          { key: 'container', label: 'Container', url: './data.js', color: '#0f766e' }
+          { key: 'container', label: 'Container', url: './container/data.js', color: '#0f766e' },
+          { key: 'production', label: 'Production', url: './production/data.js', color: '#c2410c' }
         ]
       })
     </script>
