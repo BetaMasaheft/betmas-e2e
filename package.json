@@ -4,7 +4,7 @@
   "description": "end to end test for betamasaheft",
   "scripts": {
     "test": "cypress run",
-    "test:prod": "cypress run -b firefox",
+    "test:prod": "cypress run -b firefox --expose grepTags=-@container-only+-@perf,grepFilterSpecs=true,grepOmitFiltered=true",
     "test:container": "cypress run -b firefox --config baseUrl=http://localhost:8080/ --env grepTags='@container -@production-only -@slow',grepFilterSpecs=true,grepOmitFiltered=true",
     "test:container:open": "cypress open --config baseUrl=http://localhost:8080/",
     "codacy:init": "codacy-cli init && codacy-cli install && node .codacy/patch-eslint.mjs && cp .codacy/languages-config.yaml .codacy/tools-configs/languages-config.yaml",
