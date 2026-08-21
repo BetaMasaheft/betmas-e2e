@@ -1,0 +1,87 @@
+cypress/e2e/01-entities/art-themes.cy.js
+  s_fcc935fa265564::t_22fb4cecf3a17d 2,4,6-11,13
+cypress/e2e/01-entities/decorations.cy.js
+  s_fcc935fa265564::t_f50b6fe3283f7f 1-14,16-20,22-31
+cypress/e2e/01-entities/authority-files.cy.js
+  s_fcc935fa265564::t_18ad1f4d82bb45 2,4,6-11,13
+cypress/e2e/01-entities/compare.cy.js
+  s_fcc935fa265564::t_412eff7f788776 2-4,6-15
+cypress/e2e/07-docs/permalinks.cy.js
+  s_fcc935fa265564::t_2ec07c93154885 1
+  s_fcc935fa265564::t_2500ab4b595d9a 2-13
+cypress/e2e/03-menu/pid.cy.js
+  s_fcc935fa265564::t_8ae2a57ee83c8a 2-4,6-11
+cypress/e2e/03-menu/projects.cy.js
+  s_fcc935fa265564::t_5f085fbf518d36 2-4,6-14
+cypress/e2e/01-entities/availableImages.cy.js
+  s_fcc935fa265564::t_2e2c08e18a5e76 2,4,6-15,17
+cypress/e2e/01-entities/catalogues.cy.js
+  s_fcc935fa265564::t_9e7c38631c8586 2-17
+cypress/e2e/00-general/landing.cy.js
+  s_fcc935fa265564::t_ab17097f3b873e 91-92,94,97
+cypress/e2e/03-menu/about.cy.js
+  s_fcc935fa265564::t_bac8322583cc23 35-46
+  s_fcc935fa265564::t_3991c587f1aeb1 2
+Plan/01_admin.md
+  s_fcc935fa265564::t_8f21ab8915cb76 5
+cypress/e2e/03-menu/lod.cy.js
+  s_fcc935fa265564::t_6904e5ba5165e0 2-4,6-14
+cypress/e2e/03-menu/morpho.cy.js
+  s_fcc935fa265564::t_e32f18bc33165f 2-8
+cypress/e2e/03-menu/visualizations.cy.js
+  s_fcc935fa265564::t_e21439c5b6eff2 2-4,6-14
+cypress/e2e/01-entities/bindings.cy.js
+  s_fcc935fa265564::t_fad91b19477707 1-18
+cypress/e2e/01-entities/bibliography.cy.js
+  s_fcc935fa265564::t_8ccf39bec9feb9 1-2,4,7-16,18
+cypress/e2e/01-entities/indexPlaces.cy.js
+  s_fcc935fa265564::t_a2507e3ef7e96b 1-5,7-17
+Plan/03_user.md
+  s_fcc935fa265564::t_d56ae79f123e12 286
+  s_fcc935fa265564::t_1aa1a1ed139a66 410,412
+  s_fcc935fa265564::t_60421b11e75074 370,372
+  s_fcc935fa265564::t_3e8e65b5c94783 78
+  s_fcc935fa265564::t_25a2bd9351824d 320,322
+  s_fcc935fa265564::t_8fc4ba9d7adf8e 390,392
+  s_fcc935fa265564::t_c2e1bcbc0b5336 330,332
+  s_fcc935fa265564::t_ded411de236816 360,362
+  s_fcc935fa265564::t_7ea919c0abf666 5,7,9-13,15,20-23
+  s_fcc935fa265564::t_5dc0e8569e261b 310,312
+  s_fcc935fa265564::t_5db1289997ddcc 36,38
+  s_fcc935fa265564::t_06ceaf65fb6ca5 275,277
+  s_fcc935fa265564::t_6acdd41f4206a7 350,352
+  s_fcc935fa265564::t_69929da78637e2 380,382
+  s_fcc935fa265564::t_0438f151fec570 400,402
+  s_fcc935fa265564::t_d5fd88bda8b821 299,301
+  s_fcc935fa265564::t_0c13c1371ec7e1 340,342
+cypress/e2e/01-entities/placeOfOrigin.cy.js
+  s_fcc935fa265564::t_b8c3808e1f45f4 2-5,7-14
+Plan/02_contributor.md
+  s_fcc935fa265564::t_5b7095982b23e6 9
+  s_fcc935fa265564::t_3f6d84d5c69182 24
+  s_fcc935fa265564::t_0c4d3d8c1935fd 37
+cypress/e2e/03-menu/indexesList.cy.js
+  s_fcc935fa265564::t_526bbe20be7189 2-4,6-16
+cypress/e2e/01-entities/indexPersons.cy.js
+  s_fcc935fa265564::t_ded2f3b88c48de 1-5,7-17
+cypress/e2e/03-menu/help.cy.js
+  s_fcc935fa265564::t_3b6af8d5b53d75 2-4,6-14
+cypress/e2e/01-entities/titles.cy.js
+  s_fcc935fa265564::t_ad9323f4b4ca8a 1-5,7-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "54389cd02e4a38a5b4fe0ef2fdb98b72a196ec2d",
+  "prompts": {},
+  "sessions": {
+    "s_fcc935fa265564": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "526a47de-4fb1-4c08-bde8-c7162fb16a62",
+        "model": "grok-4.6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
