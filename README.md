@@ -1,32 +1,38 @@
 # betmas-e2e
-[![Cypress Tests](https://github.com/duncdrum/betmas-e2e/actions/workflows/main.yml/badge.svg)](https://github.com/duncdrum/betmas-e2e/actions/workflows/main.yml)
 
- end to end test for betamasaheft
+[![Test against Container](https://github.com/BetaMasaheft/betmas-e2e/actions/workflows/test-container.yml/badge.svg)](https://github.com/BetaMasaheft/betmas-e2e/actions/workflows/test-container.yml)
+[![Cypress Tests](https://github.com/BetaMasaheft/betmas-e2e/actions/workflows/main.yml/badge.svg)](https://github.com/BetaMasaheft/betmas-e2e/actions/workflows/main.yml)
 
- ## Requirements
+End-to-end tests for Beta maṣāḥǝft. The PR gate is **Test against Container** (`test-container.yml`). `main.yml` is the production Firefox run (push to `main` and Saturday cron).
+
+## Requirements
 
 - node `v22` or later
 
- ### Environment variables
+### Environment variables
 
- This test suite assumes the presence of the following environment variables:
- 
- - `PASSWORD_CATALOGUER` with the password for test user `JinntecCatalogue`
- - `PASSWORD_LEXICOGRAPHER` with the password for test user `JinntecLexicon` (production Dillmann login smoke in `05-contributor/lexicon.cy.js`; contributor depth is in the Dillmann app repo)
+This test suite assumes the presence of the following environment variables (Cypress reads them as `CYPRESS_*`):
+
+- `CYPRESS_PASSWORD_CATALOGUER` 
+- `CYPRESS_PASSWORD_LEXICOGRAPHER` 
 
 ## How to use
 
-You can see the results of the latest run on the `Actions` tab here on Github. To run the tests locally open a local copy of this repository in your shell:
+Latest runs are on the GitHub **Actions** tab. Locally:
 
-1. `npm install` (you only need to do this once)
+```bash
+npm install   # once
+npm run test:container   # compose stack at http://localhost:8080/
+npm run test:prod        # https://betamasaheft.eu (Firefox)
+```
 
-2. `npx cypress run -b firefox`
+Default `baseUrl` in `cypress.config.mjs` is production (`https://betamasaheft.eu`). The composed stack is reached through nginx on **port 8080**, not `/exist/apps/BetMasWeb/`.
 
-### Against a local Instance
-
-You can change the URL of the instance under test via the `--config` flag, eg.:
-
-1. `npx cypress --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ open` 
+```bash
+npx cypress open --config baseUrl=http://localhost:8080/
+# or
+npm run test:container:open
+```
 
 ## Active tags
 
@@ -50,22 +56,22 @@ The suite uses `@cypress/grep` tags to keep container and production runs aligne
 
 ### Local examples
 
-Run the full tagged container-oriented subset:
+Container subset (same tags as CI; `npm run test:container` also drops `@slow`):
 
 ```bash
-npx cypress run --config baseUrl=http://localhost:8080/exist/apps/BetMasWeb/ --expose grepTags="@container",grepFilterSpecs=true,grepOmitFiltered=true
+npx cypress run --config baseUrl=http://localhost:8080/ --expose grepTags=-@production-only+-@perf,grepFilterSpecs=true,grepOmitFiltered=true
 ```
 
-Run the production-safe subset:
+Production-safe subset (same tags as `main.yml`):
 
 ```bash
-npx cypress run --expose grepTags="-@container-only",grepFilterSpecs=true,grepOmitFiltered=true
+npx cypress run --expose grepTags=-@container-only+-@perf,grepFilterSpecs=true,grepOmitFiltered=true
 ```
 
-Run auth-tagged specs only:
+Auth-tagged specs only:
 
 ```bash
-npx cypress run --expose grepTags="@auth",grepFilterSpecs=true,grepOmitFiltered=true
+npx cypress run --expose grepTags=@auth,grepFilterSpecs=true,grepOmitFiltered=true
 ```
 
 ## Third-party hosts
@@ -82,10 +88,14 @@ Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-perfor
 - **CI:** `.github/workflows/benchmark.yml` runs daily against the container and pushes the series to the `gh-pages` branch (`bench/container/`) via [github-action-benchmark](https://github.com/benchmark-action/github-action-benchmark); regressions >150% get a commit comment. A production baseline lives under `bench/production/` and is refreshed manually (`benchmark-prod.yml` via workflow dispatch) since production changes are infrequent.
 - **Local run:** `npm run bench:container` (against `localhost:8080`); the results land in `benchmark-results.json` (gitignored, path overridable via `BENCHMARK_OUT`).
 - **Viewing the charts:** served via GitHub Pages —
-  [combined overlay](https://betamasaheft.github.io/betmas-e2e/bench/) (container teal, production orange; date axis, sample min–max band, budget dashed line) ·
-  [container only](https://betamasaheft.github.io/betmas-e2e/bench/container/) ·
+  [combined overlay](https://betamasaheft.github.io/betmas-e2e/bench/) (container teal, production orange; date axis, sample min–max band, budget dashed line).
+  [container only](https://betamasaheft.github.io/betmas-e2e/bench/container/). 
   [production only](https://betamasaheft.github.io/betmas-e2e/bench/production/).
   Chart HTML lives in `pages/bench/` on `main` and is copied to `gh-pages` by `publish-bench-pages.yml` (also after each benchmark workflow). The daily container series is capped at 90 points (`max-items-in-chart`).
+
+## Lighthouse
+
+`.github/workflows/lighthouse.yml` is a **manual** front-end audit of a few fast production pages (`lighthouserc.json`). It complements the TTFB benchmarks: Lighthouse gives up on the slow pages those cover. Assertions are warn-only until a baseline is tuned; there is no cron yet.
 
 ## Local code analysis (Codacy CLI)
 
