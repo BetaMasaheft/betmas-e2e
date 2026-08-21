@@ -8,7 +8,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 - [PR #70](https://github.com/BetaMasaheft/betmas-e2e/pull/70): **Test against Container** green; prod/container tag split (`@production-only` / `@container-only`); collatex cross-service API spec (`api-collatex-cross-service.cy.js`).
 - Epic [#75](https://github.com/BetaMasaheft/betmas-e2e/issues/75): composed-stack gate, DTS/parity fixtures ([#88](https://github.com/BetaMasaheft/betmas-e2e/pull/88), [#87](https://github.com/BetaMasaheft/betmas-e2e/pull/87)).
-- Index/docs **load smokes** for §23–§34 plus leftover menu pages (help, lod, pid, projects, visualizations, indexeslist, compare, morpho UI). Empty `it.skip('')` stubs are gone. Filter click-through on those indexes is still out of scope.
+- Index/docs **load smokes** for §23–§34 plus leftover menu pages (help, pid, projects, visualizations, indexeslist, compare). Empty `it.skip('')` stubs are gone. LOD UI ([BetMasWeb#65](https://github.com/BetaMasaheft/BetMasWeb/issues/65)) and morpho browser heading ([BetMasWeb#66](https://github.com/BetaMasaheft/BetMasWeb/issues/66)) skipped with JSDoc links. Filter click-through on those indexes is still out of scope.
 - §1 statistics: `about.cy.js` against `about.html` / `#countModal` (homepage no longer has the control).
 - App bugs that used to live here were transferred: additions cluster [BetMasWeb#60–63](https://github.com/BetaMasaheft/BetMasWeb/issues/60), confirmation exceptions [BetMasWeb#64](https://github.com/BetaMasaheft/BetMasWeb/issues/64), `.html` URLs [BetMasWeb#59](https://github.com/BetaMasaheft/BetMasWeb/issues/59), Dillmann exception bypass [Dillmann#571](https://github.com/BetaMasaheft/Dillmann/issues/571).
 - Codacy: local CLI under `.codacy/`; remote Codacy MCP disabled for this project.
@@ -20,6 +20,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 - Filter/apply/refine click-through on §23–§34 (additions-style); titles/decorations/bindings/indexes are `@slow`.
 - [e2e#7](https://github.com/BetaMasaheft/betmas-e2e/issues/7) menubar `realHover` (Cypress/Chrome 100+).
 - [BetMasWeb#58](https://github.com/BetaMasaheft/BetMasWeb/issues/58) `vis is not defined` (still swallowed in a few specs).
+- [BetMasWeb#65](https://github.com/BetaMasaheft/BetMasWeb/issues/65) LOD docs smoke (hidden nav `#loddata`); [BetMasWeb#66](https://github.com/BetaMasaheft/BetMasWeb/issues/66) morpho browser heading.
 - Cataloguer personal-page activity counts; re-enable Dillmann New Entry when the UI returns (see `Plan/02_contributor.md`).
 
 ---
@@ -272,9 +273,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
  OR
 4. Doublie click on the term to get Alpheios results ![image](https://user-images.githubusercontent.com/17987728/213695287-1b849032-98ca-4cd9-94ad-ca43a98af7da.png)
 
-**E2E:** Hover/Alpheios UI is still out of scope here. Parser contract is `api/morpho.cy.js`; `03-menu/morpho.cy.js` smokes the HTML result page for `?query=sabe`. Dillmann search/attestations/scan covered in `dillmann.cy.js` + `lemma.cy.js` (§18–20).
+**E2E:** Hover/Alpheios UI is still out of scope here. Parser contract is `api/morpho.cy.js`. `03-menu/morpho.cy.js` UI smoke skipped ([BetMasWeb#66](https://github.com/BetaMasaheft/BetMasWeb/issues/66)). Dillmann search/attestations/scan covered in `dillmann.cy.js` + `lemma.cy.js` (§18–20).
 
-- [x] Done (parser HTML + API; hover/Alpheios not automated)
+- [x] Done (API; UI heading skipped)
 
 ## 22 Collate manuscript passages (Collatex)
 
