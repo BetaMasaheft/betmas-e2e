@@ -1,0 +1,38 @@
+pages/bench/index.html
+  s_fcc935fa265564::t_72af13cd14c022 14-16
+pages/bench/container/index.html
+  s_fcc935fa265564::t_94e6006b944beb 14-16
+pages/bench/bench.css
+  s_fcc935fa265564::t_23009902144ecd 107,111-112
+  s_fcc935fa265564::t_e657f971db2e35 26
+  s_fcc935fa265564::t_b74e22af528224 21-25
+  s_fcc935fa265564::t_24b26b65cea134 88,91,93-104,115
+  s_fcc935fa265564::t_503156887aeab8 105-106,109-110
+pages/bench/production/index.html
+  s_fcc935fa265564::t_569eda5004f98b 14-16
+pages/bench/charts.js
+  s_fcc935fa265564::t_a87fff6e2a68a2 76
+  s_fcc935fa265564::t_adba6d5b1a09ef 104
+  s_fcc935fa265564::t_137c4ea9e1c174 302
+  s_fcc935fa265564::t_268e8d775d41c4 74-75,77-103,105-123
+  s_fcc935fa265564::t_1f06a44cbb1548 256-258,260
+  s_fcc935fa265564::t_5af718e4cccee7 345
+  s_fcc935fa265564::t_e0a0e24392c9d4 241,246-254,263-264,271,274,280,282,298,303-307
+  s_fcc935fa265564::t_1dfe021b2e8005 265-270
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "b04a349fb7411bb33b7f34974167c9d23aa617e2",
+  "prompts": {},
+  "sessions": {
+    "s_fcc935fa265564": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "526a47de-4fb1-4c08-bde8-c7162fb16a62",
+        "model": "grok-4.6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
