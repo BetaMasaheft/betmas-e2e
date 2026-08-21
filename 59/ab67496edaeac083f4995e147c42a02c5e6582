@@ -1,0 +1,41 @@
+pages/bench/container/index.html
+  s_fcc935fa265564::t_e46ddc01c9bfb8 7-12
+  s_fcc935fa265564::t_4e31e1672373f9 28
+pages/bench/index.html
+  s_fcc935fa265564::t_15ac55bb635e99 7-12
+  s_fcc935fa265564::t_651abc731ee5e6 31
+pages/bench/production/index.html
+  s_fcc935fa265564::t_692ad6f28160be 7-12
+  s_fcc935fa265564::t_684f8b62469446 28
+.codacy/patch-eslint.mjs
+  s_fcc935fa265564::t_2b31cf03f853bd 78-82
+  s_fcc935fa265564::t_ba46f6f0029213 41,73-74
+  s_fcc935fa265564::t_09e1d041c869f5 75-77
+pages/bench/bench.css
+  s_fcc935fa265564::t_6403cc4eae25eb 1-59,63,67-68,89,94,97-99,105-113,139,150,153,170,188,191-193
+pages/bench/charts.js
+  s_fcc935fa265564::t_c342eae8d6f5fd 9-89
+  s_fcc935fa265564::t_19e7b7f853cfd5 252
+  s_fcc935fa265564::t_23757ccb0c4681 226,238
+  s_fcc935fa265564::t_5c7dcc97d0823d 206
+  s_fcc935fa265564::t_75ec1ab1fd2115 350
+  s_fcc935fa265564::t_bf5f5c016bf685 408
+  s_fcc935fa265564::t_435af7d281b7b7 370-372,387-388,396,398-399
+  s_fcc935fa265564::t_af3ed640a5ce03 269
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "59ab67496edaeac083f4995e147c42a02c5e6582",
+  "prompts": {},
+  "sessions": {
+    "s_fcc935fa265564": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "526a47de-4fb1-4c08-bde8-c7162fb16a62",
+        "model": "grok-4.6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
