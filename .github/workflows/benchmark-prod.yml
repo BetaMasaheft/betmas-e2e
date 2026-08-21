@@ -44,3 +44,9 @@ jobs:
           comment-on-alert: true
           fail-on-alert: false
           summary-always: true
+
+  publish-pages:
+    needs: bench
+    uses: ./.github/workflows/publish-bench-pages.yml
+    permissions:
+      contents: write

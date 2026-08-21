@@ -82,8 +82,10 @@ Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-perfor
 - **CI:** `.github/workflows/benchmark.yml` runs daily against the container and pushes the series to the `gh-pages` branch (`bench/container/`) via [github-action-benchmark](https://github.com/benchmark-action/github-action-benchmark); regressions >150% get a commit comment. A production baseline lives under `bench/production/` and is refreshed manually (`benchmark-prod.yml` via workflow dispatch) since production changes are infrequent.
 - **Local run:** `npm run bench:container` (against `localhost:8080`); the results land in `benchmark-results.json` (gitignored, path overridable via `BENCHMARK_OUT`).
 - **Viewing the charts:** served via GitHub Pages —
-  [container series](https://betamasaheft.github.io/betmas-e2e/bench/container/) ·
-  [production baseline](https://betamasaheft.github.io/betmas-e2e/bench/production/)
+  [combined overlay](https://betamasaheft.github.io/betmas-e2e/bench/) (container teal, production orange; date axis, sample min–max band, budget dashed line) ·
+  [container only](https://betamasaheft.github.io/betmas-e2e/bench/container/) ·
+  [production only](https://betamasaheft.github.io/betmas-e2e/bench/production/).
+  Chart HTML lives in `pages/bench/` on `main` and is copied to `gh-pages` by `publish-bench-pages.yml` (also after each benchmark workflow). The daily container series is capped at 90 points (`max-items-in-chart`).
 
 ## Local code analysis (Codacy CLI)
 
