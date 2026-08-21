@@ -1,8 +1,13 @@
 describe('authority files page', { tags: '@container' }, () => {
+  // see 03_user 25
   beforeEach(() => {
-      cy.visit('authority-files/list')
+    cy.visit('authority-files/list')
   })
-  // Todo(DP): what about authority-files ?
-  it.skip('', () => {
+
+  it('shows the keyword taxonomy sidebar', () => {
+    cy.contains('Select an entry on the left')
+      .should('be.visible')
+    cy.get('#content button.w3-red')
+      .should('have.length.at.least', 1)
   })
 })

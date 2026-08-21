@@ -2,22 +2,25 @@
 
 We collect necessary workflows for users of BM app here. Including steps that require external services or locations.
 
-## Sprint status (2026-07-13)
+## Sprint status (2026-08-21)
 
-**Shipped this sprint**
+**Shipped**
 
-- [PR #70](https://github.com/BetaMasaheft/betmas-e2e/pull/70): **Test against Container** green; prod/container tag split (`@production-only` / `@container-only`); collatex cross-service API spec (`api-collatex-cross-service.cy.js`, #55).
+- [PR #70](https://github.com/BetaMasaheft/betmas-e2e/pull/70): **Test against Container** green; prod/container tag split (`@production-only` / `@container-only`); collatex cross-service API spec (`api-collatex-cross-service.cy.js`).
+- Epic [#75](https://github.com/BetaMasaheft/betmas-e2e/issues/75): composed-stack gate, DTS/parity fixtures ([#88](https://github.com/BetaMasaheft/betmas-e2e/pull/88), [#87](https://github.com/BetaMasaheft/betmas-e2e/pull/87)).
+- Index/docs **load smokes** for §23–§34 plus leftover menu pages (help, lod, pid, projects, visualizations, indexeslist, compare, morpho UI). Empty `it.skip('')` stubs are gone. Filter click-through on those indexes is still out of scope.
+- §1 statistics: `about.cy.js` against `about.html` / `#countModal` (homepage no longer has the control).
+- App bugs that used to live here were transferred: additions cluster [BetMasWeb#60–63](https://github.com/BetaMasaheft/BetMasWeb/issues/60), confirmation exceptions [BetMasWeb#64](https://github.com/BetaMasaheft/BetMasWeb/issues/64), `.html` URLs [BetMasWeb#59](https://github.com/BetaMasaheft/BetMasWeb/issues/59), Dillmann exception bypass [Dillmann#571](https://github.com/BetaMasaheft/Dillmann/issues/571).
 - Codacy: local CLI under `.codacy/`; remote Codacy MCP disabled for this project.
-- Lexicon contributor split: §3–§5 depth in [Dillmann](https://github.com/BetaMasaheft/Dillmann) `user_admin.cy.js` (+ `editor.cy.js` pending read-only refactor); betmas-e2e keeps `05-contributor/lexicon.cy.js` integration smoke only ([PR #26](https://github.com/BetaMasaheft/betmas-e2e/pull/26) superseded).
-- Index-page stories **§23–§34** added below; stub specs in `cypress/e2e/01-entities/` (`it.skip` placeholders).
+- Lexicon contributor split: §3–§5 depth in [Dillmann](https://github.com/BetaMasaheft/Dillmann) `user_admin.cy.js` + `editor.cy.js`; betmas-e2e keeps `05-contributor/lexicon.cy.js` production login smoke.
 - **Read-only policy:** no automated creates/updates/deletes — `cypress/support/read-only.js` allows only known session/search POSTs on app hosts and blocks every other mutating request (browser and `cy.request`); cataloguer/lexicon forms stop before Confirm.
 
 **Next up**
 
-- §1: move statistics test from skipped `landing.cy.js` to `about.html` / `#countModal`.
-- §23–§34: implement index-page specs (replace stubs).
-- Land Dillmann `user_admin.cy.js` changes; refactor `editor.cy.js` to match read-only policy (update form only, no Confirm).
-- Merge PR #70.
+- Filter/apply/refine click-through on §23–§34 (additions-style); titles/decorations/bindings/indexes are `@slow`.
+- [e2e#7](https://github.com/BetaMasaheft/betmas-e2e/issues/7) menubar `realHover` (Cypress/Chrome 100+).
+- [BetMasWeb#58](https://github.com/BetaMasaheft/BetMasWeb/issues/58) `vis is not defined` (still swallowed in a few specs).
+- Cataloguer personal-page activity counts; re-enable Dillmann New Entry when the UI returns (see `Plan/02_contributor.md`).
 
 ---
 
@@ -30,10 +33,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 
 **Note:** This control was moved from `index.html` to `about.html` in the BetMasWeb redesign (April 2025). The homepage no longer shows the statistics button.
 
-**E2E:** Skipped in `landing.cy.js` (`Produces readable statistics`); needs new spec against `about.html` / `#countModal`.
+**E2E:** `about.cy.js` — click **Beta maṣāḥǝft in numbers**, `#countModal` visible, five `b.lead` counts from `GET /api/count`. Homepage no longer has this control (`landing.cy.js`).
 
-- [ ] Done
-- [x] In progress
+- [x] Done
 
 ## 2 Open record when ID known
 
@@ -73,7 +75,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. E.g. to find Ownership Notes referring to `Antoine d'Abbadie` click Ownership Note and select `Antoine d'Abbadie [d'Arrast]` in the scroll-down menu for persons mentioned. Get the results at https://betamasaheft.eu/additions?type=OwnershipNote&termText=&otherText=&target-pers=https%3A%2F%2Fbetamasaheft.eu%2FPRS1071dAbbadi
 ![image](https://user-images.githubusercontent.com/17987728/213427940-b92727f7-725b-4888-a8c2-6e95130f54c3.png)
 
-**E2E:** `additions.cy.js` (`@slow`) — layout, browse-by-type, and Antoine d'Abbadie filter covered. **Gaps:** free-text search skipped (`#12` crash); weak assertions on link behaviour, select-all, and hit-count parity (`#9`–`11`).
+**E2E:** `additions.cy.js` (`@slow`) — layout, browse-by-type, Antoine d'Abbadie filter, and apostrophe in free-text search. **Gaps** (app, not e2e): select-all / scrollable lists / browser-back [BetMasWeb#61–63](https://github.com/BetaMasaheft/BetMasWeb/issues/61); page slowness [BetMasWeb#60](https://github.com/BetaMasaheft/BetMasWeb/issues/60).
 
 - [x] Done (partial automation)
 
@@ -270,10 +272,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
  OR
 4. Doublie click on the term to get Alpheios results ![image](https://user-images.githubusercontent.com/17987728/213695287-1b849032-98ca-4cd9-94ad-ca43a98af7da.png)
 
-**E2E:** Not in this repo (see NOTE above). `morpho.cy.js` is a **placeholder stub** only. Dillmann search/attestations/scan covered in `dillmann.cy.js` + `lemma.cy.js` (§18–20).
+**E2E:** Hover/Alpheios UI is still out of scope here. Parser contract is `api/morpho.cy.js`; `03-menu/morpho.cy.js` smokes the HTML result page for `?query=sabe`. Dillmann search/attestations/scan covered in `dillmann.cy.js` + `lemma.cy.js` (§18–20).
 
-- [ ] Done
-- [x] In progress (out of scope here; morpho stub)
+- [x] Done (parser HTML + API; hover/Alpheios not automated)
 
 ## 22 Collate manuscript passages (Collatex)
 
@@ -282,7 +283,7 @@ We collect necessary workflows for users of BM app here. Including steps that re
 3. Click **Collate**
 4. A table appears with aligned witness tokens (Ethiopic text from expanded transcriptions)
 
-**Automated coverage:** `cypress/e2e/api/api-collatex-cross-service.cy.js` (`@production-only`, #55) — API contract, BetMasWeb → collatex servlet on host `:8081`. `cypress/e2e/06-user/collate.cy.js` — UI flow in two layers: rendering test stubbed with a real CollateX alignment fixture (dual-env; the page JS calls the absolute `/api/collatex` path, so live collation cannot work behind the container base path) and the live end-to-end flow (`@production-only @slow`). Service-level golden fixtures live in the [collatex-service](https://github.com/BetaMasaheft/collatex-service) repo (its PR #1).
+**Automated coverage:** `cypress/e2e/api/api-collatex-cross-service.cy.js` (`@production-only`) — API contract, BetMasWeb → collatex servlet on host `:8081`. `cypress/e2e/06-user/collate.cy.js` — UI flow in two layers: rendering test stubbed with a real CollateX alignment fixture (dual-env; the page JS calls the absolute `/api/collatex` path, so live collation cannot work behind the container base path) and the live end-to-end flow (`@production-only @slow`). Service-level golden fixtures live in the [collatex-service](https://github.com/BetaMasaheft/collatex-service) repo.
 
 - [x] Done (API contract + UI flow automated; container live-collation waits on collatex containerisation)
 
@@ -295,10 +296,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 3. Use the filter form on the left; results appear on the right with hit count and pagination
 4. Open a result link to reach the related person or manuscript record
 
-**E2E:** `indexPersons.cy.js` — stub only.
+**E2E:** `indexPersons.cy.js` (`@slow`) — heading + hit count + results. Filter click-through not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 24 Browse the places index
 
@@ -307,10 +307,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 3. Use the filter form on the left; results appear on the right with hit count and pagination
 4. Open a result link to reach the related place or manuscript record
 
-**E2E:** `indexPlaces.cy.js` — stub only.
+**E2E:** `indexPlaces.cy.js` (`@slow`) — heading + hit count + results. Filter click-through not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 25 Browse authority keywords (taxonomy)
 
@@ -318,10 +317,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See the list of authority-file keywords used to classify records
 3. Open a keyword to reach filtered search results or related records
 
-**E2E:** `authority-files.cy.js` — stub only.
+**E2E:** `authority-files.cy.js` — taxonomy sidebar + “select an entry” prompt. Keyword drill-down not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 26 Browse art themes
 
@@ -329,10 +327,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See the art-theme taxonomy (general keywords and detailed art-theme records)
 3. Open a theme to reach related decoration or manuscript records
 
-**E2E:** `art-themes.cy.js` — stub only.
+**E2E:** `art-themes.cy.js` — taxonomy sidebar. Keyword drill-down not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 27 Search the decorations index
 
@@ -340,10 +337,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See **Decorations Filtered Search** with filters on the left and results on the right
 3. Apply filters and confirm hit count and result list update
 
-**E2E:** `decorations.cy.js` — stub only.
+**E2E:** `decorations.cy.js` (`@slow`) — heading + hit count + results.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 28 Search illuminations (miniatures)
 
@@ -351,10 +347,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See decoration results limited to miniatures
 3. Confirm thumbnails or links appear where images are available
 
-**E2E:** `decorations.cy.js` (miniatures URL) — stub only.
+**E2E:** `decorations.cy.js` (`@slow`) — `?type=miniature` URL + hit count.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 29 Browse the bibliography
 
@@ -362,10 +357,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See the bibliography listing (references cited in project records)
 3. Filter or open entries as needed
 
-**E2E:** `bibliography.cy.js` — stub only.
+**E2E:** `bibliography.cy.js` (`@slow`) — listing, hit count, type filters present. Apply-filter click-through not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 30 Search titles, colophons, and supplications
 
@@ -373,10 +367,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See **Titles Filtered Search** with filters on the left
 3. Apply filters and confirm results and hit count on the right
 
-**E2E:** `titles.cy.js` — stub only.
+**E2E:** `titles.cy.js` (`@slow`) — heading + hit count + results. Filter click-through not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 31 Browse catalogues encoded
 
@@ -384,10 +377,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See the list of manuscript catalogues used as sources
 3. Click a catalogue title to open the list of manuscripts encoded from that source
 
-**E2E:** `catalogues.cy.js` — stub only.
+**E2E:** `catalogues.cy.js` — catalogue count + table rows. Opening a catalogue’s manuscript list not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 32 Consult digitized manuscripts available elsewhere
 
@@ -395,10 +387,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. Read the introduction and external links to digitized collections
 3. Follow an external link (opens in a new tab) to a host institution
 
-**E2E:** `availableImages.cy.js` — stub only.
+**E2E:** `availableImages.cy.js` — heading + at least one external `href` (the third-party host is not fetched). Visit `availableImages.html` (extensionless `/availableImages` 404s; [BetMasWeb#59](https://github.com/BetaMasaheft/BetMasWeb/issues/59)).
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 33 Search bindings
 
@@ -406,10 +397,9 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See **Bindings Filtered Search** with filters on the left
 3. Apply filters and confirm results and hit count on the right
 
-**E2E:** `bindings.cy.js` — stub only.
+**E2E:** `bindings.cy.js` (`@slow`) — heading + hit count + results. Filter click-through not automated.
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)
 
 ## 34 View places of origin (map)
 
@@ -417,7 +407,6 @@ We collect necessary workflows for users of BM app here. Including steps that re
 2. See the embedded map of places of origin (`origPlaces` / GeoBrowser iframe)
 3. Interact with the map to explore manuscript origin locations
 
-**E2E:** `placeOfOrigin.cy.js` — stub only.
+**E2E:** `placeOfOrigin.cy.js` — `#geobrowserMap` iframe `src` includes `origPlaces.kml`. The GeoBrowser host is not visited. Uses `placeoforigin.html` ([BetMasWeb#59](https://github.com/BetaMasaheft/BetMasWeb/issues/59)).
 
-- [ ] Done
-- [x] In progress
+- [x] Done (load smoke)

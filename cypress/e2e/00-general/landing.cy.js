@@ -88,25 +88,13 @@ describe('landing page', { tags: ['@container', '@container-only'] }, () => {
       .should('have.length', 2)
   })
 
-  // Contribute
-  // NOTE: #contribute section no longer exists on the index page
-  it.skip('displays contribution section', () => {
+  // Contribute — homepage no longer has #contribute (April 2025 redesign)
+  it('has no contribution section on the index page', () => {
     cy.get('#contribute')
-      .children()
-      .children()
-      .should('have.length', 2)
+      .should('not.exist')
   })
 
-  // See user 1
-  // NOTE: Statistics button ("Beta masaheft in numbers") no longer exists on index.html
-  // It may have been moved to about.html or removed
-  it.skip('Produces readable statistics', () => {
-    cy.get(':nth-child(2) > .w3-margin-bottom > .w3-black')
-      .click()
-    cy.get('b.lead')
-      .should('be.visible')
-      .should('have.length', 5)
-  })
+  // See 03_user 1 — statistics live on about.html / #countModal (about.cy.js)
 
   // Footer
   it('displays footer section', () => {
