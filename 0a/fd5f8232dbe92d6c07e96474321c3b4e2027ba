@@ -1,0 +1,52 @@
+pages/bench/publish.sh
+  s_fcc935fa265564::t_7617b3657e5d7a 1-14
+.github/workflows/publish-bench-pages.yml
+  s_fcc935fa265564::t_c3532d05626ca6 1-42
+pages/bench/index.html
+  s_fcc935fa265564::t_98078b68d353f2 1-30,32-54
+  s_fcc935fa265564::t_eff41332931f8b 31
+pages/bench/charts.js
+  s_fcc935fa265564::t_9527bafec6abe9 118
+  s_fcc935fa265564::t_e22a206453a180 1
+  s_fcc935fa265564::t_896e3319a703b3 7
+  s_fcc935fa265564::t_54347cb009d720 105
+  s_fcc935fa265564::t_9b9498cdb557f6 134
+  s_fcc935fa265564::t_d338d6bbf51060 282-298,301
+  s_fcc935fa265564::t_6858ae78b99816 2-6
+  s_fcc935fa265564::t_12cc2ff84ff09b 8-93,95-104,106-117,119-133,135-281,299-300,302-314
+  s_fcc935fa265564::t_8110879d3fc627 94
+pages/bench/production/index.html
+  s_fcc935fa265564::t_d7224d5451b49d 28
+  s_fcc935fa265564::t_f047421cad6225 1-27,29-50
+pages/bench/bench.css
+  s_fcc935fa265564::t_b94c5f3819f521 1-105
+.github/workflows/benchmark.yml
+  s_fcc935fa265564::t_529bdd9f45f51b 90-95
+  s_fcc935fa265564::t_8bdd87a99aace0 83
+pages/bench/container/index.html
+  s_fcc935fa265564::t_28008cca782434 1-27,29-50
+  s_fcc935fa265564::t_7ae62b2f93c522 28
+README.md
+  s_fcc935fa265564::t_161e737ce6209c 85-88
+.codacy/patch-eslint.mjs
+  s_fcc935fa265564::t_8bdd63d1162dee 64-75
+  s_fcc935fa265564::t_9f6fc0132a2082 36-40
+.github/workflows/benchmark-prod.yml
+  s_fcc935fa265564::t_3743ffeb543309 47-52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "0afd5f8232dbe92d6c07e96474321c3b4e2027ba",
+  "prompts": {},
+  "sessions": {
+    "s_fcc935fa265564": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "526a47de-4fb1-4c08-bde8-c7162fb16a62",
+        "model": "grok-4.6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
