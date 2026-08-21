@@ -1,0 +1,25 @@
+Plan/03_user.md
+  s_fcc935fa265564::t_494a0245561606 11
+  s_fcc935fa265564::t_1c4cbf702a42ef 23
+  s_fcc935fa265564::t_bfe81b5812ee55 276,278
+cypress/e2e/03-menu/lod.cy.js
+  s_fcc935fa265564::t_60e5d2cbe52c1e 6-11
+cypress/e2e/03-menu/morpho.cy.js
+  s_fcc935fa265564::t_cf7f2c783ae8a8 3-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "8717645d6de446497fca9a0b0e069e2639fc3e21",
+  "prompts": {},
+  "sessions": {
+    "s_fcc935fa265564": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "526a47de-4fb1-4c08-bde8-c7162fb16a62",
+        "model": "grok-4.6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
