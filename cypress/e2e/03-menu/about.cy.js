@@ -1,5 +1,5 @@
 describe('about page', { tags: '@container' }, () => {
-    // TODO(DP) see #2
+    // TODO(DP) see BetMasWeb#59 (.html vs extensionless URLs)
     beforeEach(() => {
         cy.visit('about.html')
     })
@@ -32,5 +32,16 @@ describe('about page', { tags: '@container' }, () => {
           .last()
           .should('contain', 'homepage')  
     })
-    
+
+    // see 03_user 1 — counts load via GET /api/count into #count
+    it('opens statistics modal with record counts', () => {
+        cy.get('#count b.lead', { timeout: 20000 })
+          .should('have.length', 5)
+        cy.contains('a', 'Beta maṣāḥǝft in numbers')
+          .click()
+        cy.get('#countModal')
+          .should('be.visible')
+        cy.get('#countModal h3')
+          .should('contain', 'numbers')
+    })
 })

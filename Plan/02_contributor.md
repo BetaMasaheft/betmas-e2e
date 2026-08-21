@@ -6,7 +6,7 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 
 **Shipped:** [PR #70](https://github.com/BetaMasaheft/betmas-e2e/pull/70) merged — read-only policy (session POSTs recognised by body; all other writes blocked), both test users provisioned in container CI, lexicon prod smoke. Dillmann [PR #555](https://github.com/BetaMasaheft/Dillmann/pull/555) merged — same read-only policy in the Dillmann suite, `user_admin.cy.js` + `editor.cy.js` refactored to read-only; write flows kept behind `CYPRESS_ALLOW_WRITES=1` (disposable local stacks only).
 
-**Next up:** cataloguer activity counts (#23); re-enable Dillmann create-entry tests when the New Entry UI returns.
+**Next up:** cataloguer activity counts (personal page still asserts URL only); re-enable Dillmann create-entry tests when the New Entry UI returns. Confirmation-page uncaught exceptions now [BetMasWeb#64](https://github.com/BetaMasaheft/BetMasWeb/issues/64); Dillmann exception bypass [Dillmann#571](https://github.com/BetaMasaheft/Dillmann/issues/571).
 
 ---
 
@@ -21,7 +21,7 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 
 **NOTE**: Form submission introduces side effects (creates new entries). E2E tests only cover form filling, not submission. Full workflow testing should be done manually or in a dedicated test environment.
 
-**E2E:** `cataloguer.cy.js` (`@auth`) — login from subpage, new-work form fill (submit/XML download **commented out**), personal-page URL only (#23: test user not in editors list).
+**E2E:** `cataloguer.cy.js` (`@auth`) — login from subpage, new-work form fill (submit/XML download **commented out**), personal-page URL only (test user not in editors list).
 
 - [ ] Done
 - [x] In progress
@@ -34,7 +34,7 @@ We collect necessary workflows for cataloguer users here. Including steps that r
 4. This takes you to https://betamasaheft.eu/user/USERNAME (e.g. https://betamasaheft.eu/user/Eugenia)
 5. See the personal page documenting activities (Your latest 50 changes in files out of XXX you recorded in a change element / The last 50 pages you visited / Your queries / Your xpaths). **NB NEGATIVE**: in some cases the xquery does not do the matching right, in case of Eugenia=ES the page only shows **4** files with the change element even though they are several thousand; for most users all is correct though, possibly related to user management issue
 
-**E2E:** Same spec as §1 — URL contains username only; activity counts not asserted (#23).
+**E2E:** Same spec as §1 — URL contains username only; activity counts not asserted.
 
 - [ ] Done
 - [x] In progress
