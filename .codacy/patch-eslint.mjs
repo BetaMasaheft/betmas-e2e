@@ -33,6 +33,11 @@ if (!src.includes('cy: "readonly"')) {
             afterEach: "readonly",
             URL: "readonly",
             URLSearchParams: "readonly",
+            window: "readonly",
+            document: "readonly",
+            fetch: "readonly",
+            Blob: "readonly",
+            Chart: "readonly",
           },
         },
 `
@@ -53,6 +58,18 @@ if (!src.includes('cy: "readonly"')) {
       `afterEach: "readonly",
             URL: "readonly",
             URLSearchParams: "readonly",`
+    )
+    changed = true
+  }
+  if (!src.includes('Chart: "readonly"')) {
+    src = src.replace(
+      /URLSearchParams: "readonly",/,
+      `URLSearchParams: "readonly",
+            window: "readonly",
+            document: "readonly",
+            fetch: "readonly",
+            Blob: "readonly",
+            Chart: "readonly",`
     )
     changed = true
   }

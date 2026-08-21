@@ -80,9 +80,16 @@ jobs:
           comment-on-alert: true
           fail-on-alert: false
           summary-always: true
+          max-items-in-chart: '90'
 
       - name: Clean up stack
         if: always()
         run: |
           docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
             --profile full down -v || true
+
+  publish-pages:
+    needs: bench
+    uses: ./.github/workflows/publish-bench-pages.yml
+    permissions:
+      contents: write

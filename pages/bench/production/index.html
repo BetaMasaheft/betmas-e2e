@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Production slow pages</title>
+    <link rel="stylesheet" href="../bench.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="page-title">Production slow pages</h1>
+      <nav id="bench-nav" aria-label="Benchmark views"></nav>
+      <p class="caption">
+        Median of three <code>cy.request</code> samples (TTFB). Shaded band is min–max of those samples.
+        Dashed line is the report-only budget. Click a median point to open the commit.
+      </p>
+      <p class="caption"><span class="swatch swatch-production"></span>Production</p>
+      <div class="header-row">
+        <span class="small">Last update:</span>
+        <span id="last-update" class="small"></span>
+        <span class="spacer"></span>
+        <span class="small">Repository:</span>
+        <a class="small" href="https://github.com/BetaMasaheft/betmas-e2e">https://github.com/BetaMasaheft/betmas-e2e</a>
+      </div>
+    </header>
+    <main id="main"></main>
+    <footer>
+      <button type="button" id="dl-button">Download series JSON</button>
+      <span class="spacer"></span>
+      <span class="small">Powered by github-action-benchmark + custom charts</span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../charts.js"></script>
+    <script>
+      BenchCharts.mount({
+        title: 'Production slow pages',
+        currentHref: './',
+        nav: [
+          { href: '../', label: 'Combined' },
+          { href: '../container/', label: 'Container' },
+          { href: './', label: 'Production' }
+        ],
+        sources: [
+          { key: 'production', label: 'Production', url: './data.js', color: '#c2410c' }
+        ]
+      })
+    </script>
+  </body>
+</html>
