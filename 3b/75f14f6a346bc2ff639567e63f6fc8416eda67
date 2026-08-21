@@ -1,0 +1,28 @@
+cypress/e2e/00-general/landing.cy.js
+  s_fcc935fa265564::t_64d63ec7d9bd1d 12-13
+  s_fcc935fa265564::t_fa018744cfc625 10-11,14-15
+cypress/e2e/03-menu/guidelines.cy.js
+  s_fcc935fa265564::t_9432a570205cd4 47
+cypress/e2e/00-general/entities.cy.js
+  s_fcc935fa265564::t_dbb1f6fe37ba16 2-51
+cypress/e2e/06-user/advancedSearch.cy.js
+  s_fcc935fa265564::t_3280e312b7f767 77
+cypress/e2e/03-menu/simpleSearch.cy.js
+  s_fcc935fa265564::t_4b678c7665967e 53-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "3b75f14f6a346bc2ff639567e63f6fc8416eda67",
+  "prompts": {},
+  "sessions": {
+    "s_fcc935fa265564": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "526a47de-4fb1-4c08-bde8-c7162fb16a62",
+        "model": "grok-4.6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
