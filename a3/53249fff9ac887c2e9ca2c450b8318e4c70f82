@@ -1,0 +1,19 @@
+cypress/e2e/01-entities/additions.cy.js
+  s_262d47f800812c::t_d032b1499ddb8e 69-72,74-79,81,84,86,88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "a353249fff9ac887c2e9ca2c450b8318e4c70f82",
+  "prompts": {},
+  "sessions": {
+    "s_262d47f800812c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "cf0d8c0f-c203-4ae5-8f51-5699f5924e21",
+        "model": "default"
+      },
+      "human_author": null
+    }
+  }
+}
