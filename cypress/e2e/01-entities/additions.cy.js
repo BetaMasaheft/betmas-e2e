@@ -66,19 +66,26 @@ describe('additions page', { tags: ['@container', '@slow'] }, () => {
     // See 03_User 5.4, 5.5
     // (DP) De-/Select all missing see #9
     // (DP) scrollable list has no deselct see #10
-    // (DP) Browser Navigation see #11 
+    // (DP) Browser Navigation see #11
+    // Type checkboxes are built client-side from .additionType spans on the
+    // current results page (lists:addRes group pagination, BetMasWeb#67).
+    // Deep-link the type so OwnershipNote is among the rendered groups.
     it('should use addtional filters for large sets', () => {
-      cy.get('#additiontypes > .w3-container')
-        .find('[value="OwnershipNote"]')
+      cy.visit({
+        url: 'additions?type=OwnershipNote',
+        timeout: 100000
+      })
+      cy.get('#additiontypes [value="OwnershipNote"]')
+        .should('exist')
         .check()
-      cy.get('#target-pers')  
+      cy.get('#target-pers')
         .find('[value$="dAbbadi"]')
         .click()
-      cy.get('.w3-bar > .w3-red')  
+      cy.get('.w3-bar > .w3-red')
         .click()
-      cy.get('#results') 
+      cy.get('#results')
         .should('be.visible')
-      // TODO(DP) add better assertion for result 
+      // TODO(DP) add better assertion for result
     })
 
     // GH issue: https://github.com/BetaMasaheft/betmas-e2e/issues/12
