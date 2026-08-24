@@ -49,8 +49,9 @@ describe('simple search page', { tags: '@container' }, () => {
 
     describe('search options', () => {
       // DP: was 14 modi see #20, then 13; 12 on both targets since 2026-07-10
+      // BetMasWeb#69: this bar now has a stable id instead of :nth-child(4)
       it('should display 12 modi', () => {
-        cy.get(':nth-child(4) > .w3-bar')
+        cy.get('#search-modes')
           .children()
           .should('have.length', '12')
       })

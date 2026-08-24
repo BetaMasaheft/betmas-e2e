@@ -73,8 +73,8 @@ describe('The advanced search page', { tags: '@container' }, () => {
       // 03_User 7.5  
       cy.get('[name="homophones"]')
         .should('have.attr', 'checked')
-      // 03_User 7.6a   
-      cy.get(':nth-child(1) > [value="mss"]')
+      // 03_User 7.6a - BetMasWeb#69: stable id instead of :nth-child(1) > [value="mss"]
+      cy.get('#work-type-mss')
         .check()
       cy.get('#collectionfilter')
         .select('Manuscripts')
