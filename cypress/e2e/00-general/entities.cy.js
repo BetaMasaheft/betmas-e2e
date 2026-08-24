@@ -3,89 +3,73 @@ describe('Entities sections', { tags: '@container' }, () => {
         cy.visit('')
     })
 
+    // BetMasWeb#69: these used to count DOM children under fragile
+    // :nth-child/class selectors and check first()/last() text - broke
+    // whenever a W3.CSS wrapper moved. Each access button now has a stable
+    // id (BetMasWeb#69), so assert on those directly instead.
     it('Gazetteer displays 3 access links', () => {
-        cy.get('#gazetteer > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .should('have.length', 3)
-        cy.get('#gazetteer > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .first()
-          .should('contain', 'Browse')
-        cy.get('#gazetteer > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .last()
-          .should('contain', 'Repositories')
+        ['gazetteer-browse', 'gazetteer-index', 'gazetteer-repositories'].forEach((id) => {
+            cy.get(`#${id}`).should('exist')
+        })
+        cy.get('#gazetteer-browse').should('contain', 'Browse')
+        cy.get('#gazetteer-repositories').should('contain', 'Repositories')
     })
-    
-    it('Manuscripts displays 7 access links', () => {
-        cy.get('#manuscripts > .w3-row > .w3-margin-top')
-          .children()
-          .children()
-          .should('have.length', 7)
-        cy.get('#manuscripts > .w3-row > .w3-margin-top')
-          .children()
-          .children()
-          .first()
-          .should('contain', 'shelf mark')
-        cy.get('#manuscripts > .w3-row > .w3-margin-top')
-          .children()
-          .children()
-          .last()
-          .should('contain', 'Available')
+
+    it('Manuscripts displays 6 access links', () => {
+        [
+            'manuscripts-shelfmark',
+            'manuscripts-catalogue',
+            'manuscripts-repository',
+            'manuscripts-list',
+            'manuscripts-origin',
+            'manuscripts-viewer',
+        ].forEach((id) => {
+            cy.get(`#${id}`).should('exist')
+        })
+        cy.get('#manuscripts-shelfmark').should('contain', 'shelf mark')
+        cy.get('#manuscripts-viewer').should('contain', 'Viewer')
     })
 
     it('Prosopography displays 3 access links', () => {
-        cy.get('#prosopography > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .should('have.length', 3)
-        cy.get('#prosopography > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .first()
-          .should('contain', 'Browse')
-        cy.get('#prosopography > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .last()
-          .should('contain', 'Ethnic')
+        ['prosopography-browse', 'prosopography-index', 'prosopography-ethnic'].forEach((id) => {
+            cy.get(`#${id}`).should('exist')
+        })
+        cy.get('#prosopography-browse').should('contain', 'Browse')
+        cy.get('#prosopography-ethnic').should('contain', 'Ethnic')
     })
 
     it('Taxonomy displays 10 access links', () => {
-        cy.get('#taxonomy > .w3-rest')
-          .children()
-          .children()
-          .should('have.length', 10)
-        cy.get('#taxonomy > .w3-rest')
-          .children()
-          .children()
-          .first()
-          .should('contain', 'Keywords')
-        cy.get('#taxonomy > .w3-rest')
-          .children()
-          .children()
-          .last()
-          .should('contain', 'Bibliography')
+        [
+            'taxonomy-keywords',
+            'taxonomy-art-themes',
+            'taxonomy-decorations',
+            'taxonomy-miniatures',
+            'taxonomy-bindings',
+            'taxonomy-additions',
+            'taxonomy-titles',
+            'taxonomy-index-places',
+            'taxonomy-index-persons',
+            'taxonomy-bibliography',
+        ].forEach((id) => {
+            cy.get(`#${id}`).should('exist')
+        })
+        cy.get('#taxonomy-keywords').should('contain', 'Keywords')
+        cy.get('#taxonomy-bibliography').should('contain', 'Bibliography')
     })
 
     it('Texts displays 6 access links', () => {
-        cy.get('#texts > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .should('have.length', 6)
-        cy.get('#texts > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .first()
-          .should('contain', 'Clavis')
-        cy.get('#texts > .w3-row > :nth-child(2)')
-          .children()
-          .children()
-          .last()
-          .should('contain', 'Lexicon')
+        [
+            'texts-clavis',
+            'texts-narratives',
+            'texts-studies',
+            'texts-compare',
+            'texts-collatex',
+            'texts-lexicon',
+        ].forEach((id) => {
+            cy.get(`#${id}`).should('exist')
+        })
+        cy.get('#texts-clavis').should('contain', 'Clavis')
+        cy.get('#texts-lexicon').should('contain', 'Lexicon')
     })
 
 
