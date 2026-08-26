@@ -28,6 +28,22 @@ describe('Manuscripts: view images and content', { tags: '@container' }, () => {
         .should('exist')
       })
 
+    // BetMas#157: nginx's Docker config was missing `charset utf-8;`,
+    // so proxied non-ASCII content had no declared charset and could
+    // render as mojibake instead of Ge'ez script. cy.request()-based
+    // checks elsewhere in this suite can't catch that class of bug -
+    // they decode the response body as UTF-8 in Cypress's own Node
+    // process regardless of what charset (if any) the server actually
+    // declared, never going through a real browser's charset handling
+    // the way cy.visit() does. This asserts on the rendered DOM text
+    // itself, in-browser, so a missing/wrong charset would fail it.
+    it('Renders Ge\'ez transcription text correctly, not as mojibake', () => {
+        cy.get('p[lang="gez"]')
+          .first()
+          .invoke('text')
+          .should('match', /[ሀ-፿]{5,}/)
+      })
+
     // To get more information about a work contained, click on the underlined work title.
     // Container hrefs were broken (`/https://betamasaheft.eu/...`) until
     // BetaMasaheft/BetMas#113.
