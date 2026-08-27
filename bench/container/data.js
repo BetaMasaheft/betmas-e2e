@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1787715385180,
+  "lastUpdate": 1787810467992,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -1740,6 +1740,64 @@ window.BENCHMARK_DATA = {
             "value": 2576,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[3023, 2564, 2576]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "896ca948147f24266e6152a528454177818f0fc8",
+          "message": "Merge pull request #94 from BetaMasaheft/dp-geez-content-assertion\n\ntest: assert Ge'ez transcription text renders correctly, not as mojibake",
+          "timestamp": "2026-08-26T14:38:33Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/896ca948147f24266e6152a528454177818f0fc8"
+        },
+        "date": 1787810467089,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 2333,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[4019, 2327, 2333]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1175,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[6609, 1175, 1098]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 525,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[1129, 525, 442]"
+          },
+          {
+            "name": "decorations",
+            "value": 8548,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[11456, 8548, 8544]"
+          },
+          {
+            "name": "additions",
+            "value": 8043,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[10001, 8022, 8043]"
+          },
+          {
+            "name": "work-text",
+            "value": 1544,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2307, 1544, 1434]"
           }
         ]
       }
