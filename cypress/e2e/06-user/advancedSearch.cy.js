@@ -24,43 +24,44 @@ describe('The advanced search page', { tags: '@container' }, () => {
       // 03_User 7.11
       // see BetaMasaheft/Documentation#2219
       // known to be broken hence we can't test effect on results
-      // Each field is fetched once via ajax (filters.js callformpart) from an
-      // XQuery-generated form partial, which can be slow on a cold container.
-      // Wait on the request itself (responseTimeout applies) instead of
-      // polling the DOM with a padded timeout.
-      cy.intercept('GET', '**/forms/formlanguages.html').as('formlanguages')
-      cy.intercept('GET', '**/forms/formkeywords.html').as('formkeywords')
-      cy.intercept('GET', '**/forms/formrelations.html').as('formrelations')
-      cy.intercept('GET', '**/forms/formdates.html').as('formdates')
-
+      // BetMasWeb#101 server-renders every general filter's form
+      // unconditionally (hidden via CSS when inactive), so the wrapper
+      // element already exists on page load - filters.js's callformpart
+      // guard (`if getElementById(id) === null`) sees that and just
+      // toggles visibility instead of fetching, no AJAX round-trip
+      // fires anymore. See BetaMasaheft/betmas-e2e#97 for the full
+      // account of why this changed.
+      cy.get('#languages')
+        .should('exist')
+        .and('not.be.visible')
       cy.get('[value="languages"]')
         .check()
-      cy.wait('@formlanguages')
-        .its('response.statusCode').should('eq', 200)
-      cy.get('#language')
-        .should('exist')
+      cy.get('#languages')
+        .should('be.visible')
 
-      cy.get('[value="keywords"]')
-        .check()
-      cy.wait('@formkeywords')
-        .its('response.statusCode').should('eq', 200)
       cy.get('#keywords')
         .should('exist')
-
-      cy.get('[value="relations"]')
+        .and('not.be.visible')
+      cy.get('[value="keywords"]')
         .check()
-      cy.wait('@formrelations')
-        .its('response.statusCode').should('eq', 200)
+      cy.get('#keywords')
+        .should('be.visible')
+
       cy.get('#relations')
         .should('exist')
-
-      cy.get('[value="date"]')
+        .and('not.be.visible')
+      cy.get('[value="relations"]')
         .check()
-      cy.wait('@formdates')
-        .its('response.statusCode').should('eq', 200)
+      cy.get('#relations')
+        .should('be.visible')
+
       cy.get('#datesform')
         .should('exist')
-
+        .and('not.be.visible')
+      cy.get('[value="date"]')
+        .check()
+      cy.get('#datesform')
+        .should('be.visible')
     })
     
   })
