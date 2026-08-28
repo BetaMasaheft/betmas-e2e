@@ -1,0 +1,20 @@
+cypress/e2e/01-entities/manuscripts-view.cy.js
+  s_4157e799fd6089::t_018c0544447edc 31
+  s_4157e799fd6089::t_0981b38036c40a 33-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "26d89caf60e51f9995dee2ee684e3df2d5a4bd12",
+  "prompts": {},
+  "sessions": {
+    "s_4157e799fd6089": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "896d708a-933b-4a29-9666-698048585053",
+        "model": "grok-4.6"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
