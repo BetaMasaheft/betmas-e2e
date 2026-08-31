@@ -67,7 +67,23 @@ describe('The advanced search page', { tags: '@container' }, () => {
       cy.get('#datesform')
         .should('be.visible')
     })
-    
+
+    it('should restore an active filter\'s state from the URL on load, with no click needed', () => {
+      // BetMasWeb#101's actual point: reload a search with a filter
+      // already active and see it restored server-side, no JS
+      // execution required for the state itself. Unlike the click-to-
+      // reveal case above, the facet's own param is already present,
+      // so its form renders inline on this same request - no AJAX
+      // wait needed here.
+      cy.visit('as.html', { qs: { 'work-types': 'mss', language: 'gez' } })
+      cy.get('[value="languages"]')
+        .should('have.attr', 'checked')
+      cy.get('#languages')
+        .should('be.visible')
+      cy.get('#languages select[name="language"]')
+        .find('option[value="gez"]')
+        .should('have.attr', 'selected')
+    })
   })
   describe('search', () => {
     // it would be better to use ID attr instead of name
