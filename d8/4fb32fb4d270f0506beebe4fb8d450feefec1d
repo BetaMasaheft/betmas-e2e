@@ -1,0 +1,19 @@
+cypress/e2e/06-user/advancedSearch.cy.js
+  s_5790d61a112fab::t_a67448d994597f 27-41,44-45,51-52,58-59,65-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "d84fb32fb4d270f0506beebe4fb8d450feefec1d",
+  "prompts": {},
+  "sessions": {
+    "s_5790d61a112fab": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "afee661f-7272-43aa-9fa9-756d05500b88",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
