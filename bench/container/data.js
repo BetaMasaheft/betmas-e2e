@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1788166519417,
+  "lastUpdate": 1788249696467,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -2088,6 +2088,64 @@ window.BENCHMARK_DATA = {
             "value": 1858,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2613, 1839, 1858]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "8a347bc56b0eba36ddfa1ca439e285043f3e1675",
+          "message": "Merge pull request #98 from BetaMasaheft/fix/advanced-search-zerojs-facets\n\ntest: fix advancedSearch.cy.js for BetMasWeb#101's zero-JS facet rendering",
+          "timestamp": "2026-08-31T16:28:42Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/8a347bc56b0eba36ddfa1ca439e285043f3e1675"
+        },
+        "date": 1788249695139,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 3194,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[4206, 2755, 3194]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1662,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[7506, 1662, 1560]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 576,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[789, 486, 576]"
+          },
+          {
+            "name": "decorations",
+            "value": 15396,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[16964, 15396, 14527]"
+          },
+          {
+            "name": "additions",
+            "value": 10591,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[11722, 10458, 10591]"
+          },
+          {
+            "name": "work-text",
+            "value": 1760,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2233, 1760, 1688]"
           }
         ]
       }
