@@ -26,4 +26,29 @@ describe('api documentation page', { tags: '@container' }, () => {
             expect($pre[0].scrollWidth).to.be.at.most($pre[0].clientWidth)
         })
     })
+
+    /**
+     * GH: BetMasWeb#133 (fixes BetaMasaheft/BetMas#162). The IIIF, SHINE and
+     * JSON-API sections were filled by a RESTXQ template
+     * (`data-template="apidoc:iiif"` / `"apidoc:shine"`) that stopped
+     * working, so they rendered empty. #133 replaces them with static
+     * pattern tables (`#APIpatternsIIIF` / `SHINE` / `JSONAPI`).
+     * Skipped until #133 ships in the container image - unskip then.
+     */
+    it.skip('IIIF, SHINE and JSON-API sections list their URL patterns', () => {
+        const sections = [
+            { id: 'APIpatternsIIIF', sample: '/iiif/collections' },
+            { id: 'APIpatternsSHINE', sample: '/api/resources/{uuid}/metadata' },
+            { id: 'APIpatternsJSONAPI', sample: '/api/sections/{uuid}/content_units' }
+        ]
+
+        sections.forEach(({ id, sample }) => {
+            cy.get(`#${id}`)
+              .should('exist')
+              .find('pre')
+              .should('have.length.at.least', 1)
+            cy.get(`#${id}`)
+              .should('contain.text', sample)
+        })
+    })
 })
