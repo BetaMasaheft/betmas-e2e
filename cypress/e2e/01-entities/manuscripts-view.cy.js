@@ -111,3 +111,26 @@ describe('Manuscripts: view images', { tags: '@container' }, () => {
       })
 
 })
+
+describe('Manuscripts: titled contents with subtitles', { tags: '@container' }, () => {
+  /**
+   * GH issue: https://github.com/BetaMasaheft/BetMas/issues/34
+   * (BetaMasaheft/Documentation#3012) - an msItem
+   * <title ref="LIT2505Weddas#Monday"/> must render as
+   * "<work title>: <subtitle>". Stale titles.xqm / exptit output put ".."
+   * between the two, printed "No item", or fell back to the raw xml:id.
+   * ESdd023 (DD-023) is the manuscript from the issue: Wǝddāse ʾAmlāk with
+   * a per-weekday subtitle on each part, nested two deep on Friday.
+   */
+  it('joins work title and subtitle with a single colon, never ".." or "No item"', () => {
+    cy.request('/manuscripts/ESdd023/main').its('body').then((body) => {
+      expect(body).to.include('Wǝddāse ʾAmlāk: Monday')
+      expect(body).to.include('Wǝddāse ʾAmlāk: Friday: Prayer of Shenute')
+      expect(body, 'title/subtitle fell back to "No item"').to.not.match(/No item/i)
+      // the exact #3012 symptom: two dots as the separator. The top-level
+      // accordion label "Wǝddāse ʾAmlāk..." is a real three-dot ellipsis
+      // and must not trip this.
+      expect(body, 'two dots between title and subtitle').to.not.match(/Wǝddāse ʾAmlāk\.\.(?!\.)/)
+    })
+  })
+})
