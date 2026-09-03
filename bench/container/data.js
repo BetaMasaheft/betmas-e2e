@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1788333683230,
+  "lastUpdate": 1788420307374,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -2204,6 +2204,64 @@ window.BENCHMARK_DATA = {
             "value": 1716,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2603, 1716, 1687]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "8d8541b994798fe18d30ebcb7cda9c69f0045e8b",
+          "message": "Merge pull request #103 from BetaMasaheft/dp-compare-nodot-height\n\ntest(compareSelected): regression guard for ul.nodot's content-item box height",
+          "timestamp": "2026-09-02T13:11:56Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/8d8541b994798fe18d30ebcb7cda9c69f0045e8b"
+        },
+        "date": 1788420306200,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 3561,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[5339, 3561, 3013]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1333,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[7256, 1333, 1297]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 710,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[664, 731, 710]"
+          },
+          {
+            "name": "decorations",
+            "value": 12269,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12985, 12269, 12088]"
+          },
+          {
+            "name": "additions",
+            "value": 13610,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[14309, 13099, 13610]"
+          },
+          {
+            "name": "work-text",
+            "value": 1999,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2428, 1926, 1999]"
           }
         ]
       }
