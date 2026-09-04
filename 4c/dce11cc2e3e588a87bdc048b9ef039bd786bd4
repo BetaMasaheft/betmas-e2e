@@ -1,0 +1,19 @@
+cypress/e2e/03-menu/simpleSearch.cy.js
+  s_2383bbe59f7b8a::t_caf4a5e0a8e2fe 38-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "4cdce11cc2e3e588a87bdc048b9ef039bd786bd4",
+  "prompts": {},
+  "sessions": {
+    "s_2383bbe59f7b8a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4cb0ced1-8c4c-48d1-9339-c3396901af26",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
