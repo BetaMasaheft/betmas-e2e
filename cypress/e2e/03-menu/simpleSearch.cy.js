@@ -35,8 +35,11 @@ describe('simple search page', { tags: '@container' }, () => {
         cy.get('.resultsworks')
           .find('a')
           .first()
-          .contains('Mary')
-        // (DP) we're not clicking as the list and sorting can change
+        // (DP) we're not clicking as the list and sorting can change, and the
+        // linked title itself isn't guaranteed to contain the query text - a
+        // hit can match a body snippet while the record's own title doesn't
+        // (e.g. "Miracles of Mary" turned up as the top work hit for a title
+        // of "Maṣḥafa kidāna mǝḥrat" with no "Mary" in it at all)
         // just checking if there is a proper record page returned and if it contains the search term
           .invoke('attr', 'href')
           .then(href => {
