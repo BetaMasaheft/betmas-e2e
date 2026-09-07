@@ -88,40 +88,26 @@ describe(
       });
     });
 
-    describe("known pre-existing bug (not introduced by the roaster migration)", () => {
-      /**
-       * morpho:pattern2form() (modules/morphoparser.xqm) calls fn:analyze-string()
-       * with a pattern whose every capture group is optional, which XQuery F&O
-       * requires implementations to reject with err:FORX0003 ("regular
-       * expression could match empty string"). Reproduced by calling
-       * morpho:pattern2form() directly (bypassing all routing/request-map code),
-       * so this is independent of the roaster port - both routes fail for any
-       * root, on the old %rest:* dispatch just as much as on roaster. Left
-       * red-flagged here rather than silently fixed: the regex encodes Ge'ez
-       * verb-pattern rules from published grammatical tables and needs a
-       * domain-expert review, not a drive-by edit.
-       */
+    // morpho:pattern2form()/morpho:pattern2transcription() (modules/morphoparser.xqm)
+    // used to call fn:analyze-string() with a pattern whose every capture group
+    // was optional, which XQuery F&O requires implementations to reject with
+    // err:FORX0003 ("regular expression could match empty string") - both
+    // routes 500'd on any root. Fixed in BetMas#173 (closes BetMas#128).
+    it("GET /morpho/paradigm renders a paradigm table for a root", () => {
+      cy.request({ url: "/morpho/paradigm", qs: { root: query } }).then(
+        (res) => {
+          expect(res.status).to.eq(200);
+          expect(res.headers["content-type"]).to.include("text/html");
+          expect(res.body).to.include(`${query} paradigm`);
+        },
+      );
+    });
 
-      it("GET /morpho/paradigm currently 500s with FORX0003", () => {
-        cy.request({
-          url: "/morpho/paradigm",
-          qs: { root: query },
-          failOnStatusCode: false,
-        }).then((res) => {
-          expect(res.status).to.eq(500);
-          expect(JSON.stringify(res.body)).to.include("FORX0003");
-        });
-      });
-
-      it("GET /morpho/conj currently 500s with FORX0003", () => {
-        cy.request({
-          url: "/morpho/conj",
-          qs: { root: query },
-          failOnStatusCode: false,
-        }).then((res) => {
-          expect(res.status).to.eq(500);
-          expect(JSON.stringify(res.body)).to.include("FORX0003");
-        });
+    it("GET /morpho/conj renders a conjugation table for a root", () => {
+      cy.request({ url: "/morpho/conj", qs: { root: query } }).then((res) => {
+        expect(res.status).to.eq(200);
+        expect(res.headers["content-type"]).to.include("text/html");
+        expect(res.body).to.include("conjugation for");
       });
     });
   },
