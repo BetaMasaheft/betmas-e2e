@@ -1,0 +1,18 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text>
+    <body>
+      <fs type="graphunit">
+        <f name="fidäl">ሰባ</f>
+        <fs type="morpho">
+          <f name="lex">as001--sabe</f>
+          <f name="pos">verb</f>
+          <f name="tam">perfect</f>
+          <f name="gender">masculine</f>
+          <f name="case"></f>
+          <f name="state"></f>
+          <f name="number">singular</f>
+        </fs>
+      </fs>
+    </body>
+  </text>
+</TEI>

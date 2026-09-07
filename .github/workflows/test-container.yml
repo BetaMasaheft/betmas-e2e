@@ -92,6 +92,19 @@ jobs:
             --data-urlencode "_query=if (sm:user-exists('JinntecLexicon')) then 'user exists' else (sm:create-account('JinntecLexicon', '${CYPRESS_PASSWORD_LEXICOGRAPHER}', 'Cataloguers'), 'user created')" \
             --data-urlencode "_wrap=no"
 
+      # The real TraCES corpus is licensed data, intentionally .gitignore'd
+      # in BetMas and never baked into the image, so /db/apps/tracesData/ is
+      # empty in this stack by construction. Seed one synthetic entry
+      # straight into eXist (see cypress/fixtures/traces-corpus/README.md)
+      # so morpho.cy.js has a real hit to assert against instead of an
+      # always-empty collection.
+      - name: Seed TraCES corpus fixture
+        run: |
+          curl -sf -u admin: -X PUT \
+            http://localhost:8081/exist/rest/db/apps/tracesData/sabe-fixture.xml \
+            --data-binary @cypress/fixtures/traces-corpus/sabe.tei.xml \
+            -H "Content-Type: application/xml"
+
       # nginx is the app's origin now (matches prod: app at "/"), not the
       # bare eXist app-path base of the old single-container setup (#75).
       - name: Run Cypress tests
