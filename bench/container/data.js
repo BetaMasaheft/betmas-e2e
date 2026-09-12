@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1789111847295,
+  "lastUpdate": 1789197788750,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -2784,6 +2784,64 @@ window.BENCHMARK_DATA = {
             "value": 1803,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2045, 1803, 1717]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "3675514b6352a2f9b77b8fe2fc558f18f2bb67ff",
+          "message": "Merge pull request #109 from BetaMasaheft/dp-unskip-morpho-forx0003\n\ntest(morpho): assert /morpho/paradigm and /morpho/conj succeed (BetMas#128 fixed)",
+          "timestamp": "2026-09-07T14:10:13Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/3675514b6352a2f9b77b8fe2fc558f18f2bb67ff"
+        },
+        "date": 1789197787608,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 3347,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[4865, 3347, 2577]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1620,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[8111, 1620, 1267]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 627,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[786, 627, 559]"
+          },
+          {
+            "name": "decorations",
+            "value": 12143,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12764, 12143, 11364]"
+          },
+          {
+            "name": "additions",
+            "value": 12803,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[13551, 12803, 12280]"
+          },
+          {
+            "name": "work-text",
+            "value": 1700,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[1832, 1700, 1564]"
           }
         ]
       }
