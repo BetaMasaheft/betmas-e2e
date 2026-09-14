@@ -1,0 +1,21 @@
+cypress/e2e/01-entities/works.cy.js
+  s_7980c66898794e::t_27baeee186eef6 81-93
+cypress/e2e/06-user/analytic.cy.js
+  s_7980c66898794e::t_fa2d4183f59f9c 26-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "739ce7f17e4d39c3e4f06c05926ca4dbd01563c7",
+  "prompts": {},
+  "sessions": {
+    "s_7980c66898794e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "6994e609-339f-42af-adbe-cb73adefdb86",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
