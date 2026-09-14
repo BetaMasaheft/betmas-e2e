@@ -78,6 +78,19 @@ describe('A works page', { tags: '@container' }, () => {
         })
     })
 
+    it('omits RestNav item sidebar on main view', () => {
+      // BetMasWeb#162: no left witnesses sidebar / no reserved margin.
+      cy.get('#main').should('be.visible')
+      cy.get('#sidebar').should('not.exist')
+      cy.get('#textWitnesses').should('not.exist')
+      cy.get('#main').should(($main) => {
+        const style = $main.attr('style') || ''
+        expect(style).not.to.match(/margin-left\s*:\s*10%/i)
+      })
+      // Witnesses stay available in the see-also panel, not RestNav.
+      cy.get('#computedWitnesses .openInDialog').should('exist')
+    })
+
     it('See the witnesses of a work', () => {
       // see 03_user 15
       //See the red box on the right "This unit, or parts of it, is contained in 13 manuscript records 13 times"

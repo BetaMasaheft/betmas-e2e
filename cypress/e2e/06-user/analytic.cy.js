@@ -23,17 +23,17 @@ describe('analytic page', { tags: ['@container', '@container-only'] }, () => {
       .should('be.visible')
   })
 
-  it('shows sidebar on analytic view', () => {
-    // Note: The sidebar is rendered when $collection = 'works' in RestNav (item.xqm line 959).
-    // Since the analytic view is for works, the sidebar should be visible here too.
-    // #sidebar exists in the release-expanded container but not yet on the
-    // production deploy (verified 2026-07-10) — this is why the spec stays
-    // @container-only until production catches up.
-    cy.get('#sidebar')
-      .should('exist')
-      .should('be.visible')
-      .find('a, h5')
-      .should('have.length.of.at.least', 1)
+  it('omits RestNav item sidebar on analytic view', () => {
+    // BetMasWeb#162 / Documentation#2922: record pages must not emit the
+    // left #sidebar from item2:RestNav (witnesses box + margin-left:10%).
+    // Help/index use a different #sidebar; this is the works ITEM shell.
+    cy.get('#main').should('be.visible')
+    cy.get('#sidebar').should('not.exist')
+    cy.get('#textWitnesses').should('not.exist')
+    cy.get('#main').should(($main) => {
+      const style = $main.attr('style') || ''
+      expect(style).not.to.match(/margin-left\s*:\s*10%/i)
+    })
   })
 
   it('contains a working Persons link', () => {
