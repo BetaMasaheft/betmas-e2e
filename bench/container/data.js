@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1789373328022,
+  "lastUpdate": 1789459384736,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -2958,6 +2958,64 @@ window.BENCHMARK_DATA = {
             "value": 1364,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[5231, 1327, 1364]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "11c784179366f2f55971254cef88a17484211531",
+          "message": "Merge pull request #110 from BetaMasaheft/fix/restnav-sidebar-162\n\ntest(works): assert RestNav item sidebar is gone",
+          "timestamp": "2026-09-14T15:23:13Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/11c784179366f2f55971254cef88a17484211531"
+        },
+        "date": 1789459383678,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 3487,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[5459, 3487, 2985]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1739,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[6643, 1739, 1159]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 634,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[659, 562, 634]"
+          },
+          {
+            "name": "decorations",
+            "value": 11463,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12173, 11463, 11167]"
+          },
+          {
+            "name": "additions",
+            "value": 11245,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12431, 11245, 10991]"
+          },
+          {
+            "name": "work-text",
+            "value": 1795,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[1795, 1975, 1608]"
           }
         ]
       }
