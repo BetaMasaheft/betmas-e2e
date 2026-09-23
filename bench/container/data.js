@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1790063911902,
+  "lastUpdate": 1790150356251,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -3422,6 +3422,64 @@ window.BENCHMARK_DATA = {
             "value": 1878,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[1878, 2097, 1609]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "850154549a26a6070118428774ae7cc3ff4a441d",
+          "message": "Merge pull request #111 from BetaMasaheft/dependabot/npm_and_yarn/cypress-16.1.0\n\nchore(deps-dev): bump cypress from 16.0.0 to 16.1.0",
+          "timestamp": "2026-09-21T07:59:03Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/850154549a26a6070118428774ae7cc3ff4a441d"
+        },
+        "date": 1790150355332,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "newsearch-mss-filter",
+            "value": 3334,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[3999, 3334, 2569]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 1349,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[6091, 1349, 1021]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 679,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[827, 679, 597]"
+          },
+          {
+            "name": "decorations",
+            "value": 9866,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[10025, 9866, 9088]"
+          },
+          {
+            "name": "additions",
+            "value": 10891,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[10891, 11082, 10544]"
+          },
+          {
+            "name": "work-text",
+            "value": 1396,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[1603, 1330, 1396]"
           }
         ]
       }
