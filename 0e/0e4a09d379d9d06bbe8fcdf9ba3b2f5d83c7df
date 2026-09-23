@@ -1,0 +1,19 @@
+cypress/e2e/07-docs/permalink-ui.cy.js
+  s_d2a9cb304e6ef8::t_4dea95dfc0b77c 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0e0e4a09d379d9d06bbe8fcdf9ba3b2f5d83c7df",
+  "prompts": {},
+  "sessions": {
+    "s_d2a9cb304e6ef8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "78572056-631a-400f-a384-ffe6c0523e51",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
