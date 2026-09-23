@@ -10,7 +10,7 @@ describe('permanent ID footer link', { tags: '@container' }, () => {
 
   beforeEach(() => {
     cy.intercept(
-      { method: 'GET', url: '**/repos/BetaMasaheft/**/commits**' },
+      { method: 'GET', pathname: '**/repos/BetaMasaheft/*/commits' },
       {
         statusCode: 200,
         body: [
