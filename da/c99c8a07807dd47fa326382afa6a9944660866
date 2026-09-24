@@ -1,0 +1,42 @@
+scripts/catalog-benchmark.mjs
+  s_68918b3788855a::t_63735ebb8a52b0 2,5-6,29,31,61,81-82,91,93
+  s_68918b3788855a::t_ba331a6772babe 1,3-4,7-28,30,32-60,62-80,83-90,92,94-103
+benchmarks/README.md
+  s_68918b3788855a::t_15a3dbf8a2c746 17-18
+  s_68918b3788855a::t_56de7a143b40dc 1-16
+package.json
+  s_68918b3788855a::t_ac4f6680c1ff68 12-14
+benchmarks/catalog-phase1-bibliography-coverage.json
+  s_68918b3788855a::t_ca97427fb70532 7-10
+  s_68918b3788855a::t_834251565cccab 1-6,11-50
+scripts/catalog-benchmark.test.mjs
+  s_68918b3788855a::t_07780d171cdf7b 1-20
+cypress/e2e/08-performance/slow-pages.cy.js
+  s_68918b3788855a::t_490927fccee927 1-2,20,54
+  s_68918b3788855a::t_62a0f99f022503 18-19,21-51
+cypress/fixtures/perf-budgets.json
+  s_68918b3788855a::t_afae4d2e7a24cb 3-33
+scripts/xquery/catalog-hp1.xq
+  s_68918b3788855a::t_40a9d975208f72 25,32
+  s_68918b3788855a::t_3a1d0f75667e8f 1-24,26-31
+benchmarks/catalog-phase1-baseline.json
+  s_68918b3788855a::t_ff4a1fe7f47d0c 1-20
+benchmarks/catalog-phase1-cypress.json
+  s_68918b3788855a::t_6328930f6dff48 1-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "dac99c8a07807dd47fa326382afa6a9944660866",
+  "prompts": {},
+  "sessions": {
+    "s_68918b3788855a": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "352a5e5f-8a7b-4040-9b54-13ff69de1fe7",
+        "model": "gpt-5.6-sol-medium"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
