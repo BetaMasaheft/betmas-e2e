@@ -1,0 +1,56 @@
+[
+  {
+    "name": "catalog-hp1-smoke",
+    "unit": "ms",
+    "value": 2783,
+    "extra": "target=container stat=p95 budget=30000ms samples=[2783, 7, 6]"
+  },
+  {
+    "name": "catalog-hp2-institutions",
+    "unit": "ms",
+    "value": 123,
+    "extra": "target=container stat=p95 budget=10000ms samples=[119, 123, 119]"
+  },
+  {
+    "name": "catalog-hp4-bibliography",
+    "unit": "ms",
+    "value": 5254,
+    "extra": "target=container stat=p95 budget=30000ms samples=[5254, 12, 22]"
+  },
+  {
+    "name": "newsearch-mss-filter",
+    "unit": "ms",
+    "value": 3,
+    "extra": "target=container budget=25000ms samples=[1739, 3, 2]"
+  },
+  {
+    "name": "manuscripts-browse",
+    "unit": "ms",
+    "value": 24,
+    "extra": "target=container budget=10000ms samples=[794, 7, 24]"
+  },
+  {
+    "name": "catalogues-list",
+    "unit": "ms",
+    "value": 2,
+    "extra": "target=container budget=5000ms samples=[281, 2, 1]"
+  },
+  {
+    "name": "decorations",
+    "unit": "ms",
+    "value": 7,
+    "extra": "target=container budget=60000ms samples=[6637, 7, 6]"
+  },
+  {
+    "name": "additions",
+    "unit": "ms",
+    "value": 8,
+    "extra": "target=container budget=60000ms samples=[7912, 8, 8]"
+  },
+  {
+    "name": "work-text",
+    "unit": "ms",
+    "value": 1,
+    "extra": "target=container budget=20000ms samples=[871, 1, 1]"
+  }
+]
