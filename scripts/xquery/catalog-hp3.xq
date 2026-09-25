@@ -12,15 +12,12 @@ declare variable $backend external := "legacy";
 
 let $persons := subsequence(collection("/db/apps/expanded")/t:TEI[@type = "pers"]/@xml:id/string(), 1, 250)
 let $places := subsequence(collection("/db/apps/expanded")/t:TEI[@type = ("place", "ins")]/@xml:id/string(), 1, 250)
-let $subids := subsequence(
-	distinct-values(collection("/db/apps/expanded")//t:title[contains(@corresp, "#")]/@corresp/string()),
+let $textparts := subsequence(
+	distinct-values(collection("/db/apps/expanded")//t:title[matches(@corresp, "#t[0-9]+$")]/@corresp/string()),
 	1,
-	400
+	250
 )
-let $retired := subsequence(doc("/db/apps/lists/deleted.xml")//t:item/string(), 1, 100)
-let $preferred := distinct-values(($persons, $places, $subids, $retired))
-let $fill := collection("/db/apps/expanded")/t:TEI[not(@xml:id = $preferred)]/@xml:id/string()
-let $ids := subsequence(($preferred, $fill), 1, 1000)
+let $ids := distinct-values(($persons, $places, $textparts))
 let $resolved :=
 	for $id in $ids
 	return exists(catalog:label($id, $backend))
@@ -30,6 +27,6 @@ return serialize(map {
 	"resolved": count($resolved[.]),
 	"persons": count($persons),
 	"places": count($places),
-	"subIds": count($subids),
-	"retired": count($retired)
+	"textparts": count($textparts),
+	"textPartSubIds": count($textparts[matches(., "#t[0-9]+$")])
 }, map {"method": "json"})
