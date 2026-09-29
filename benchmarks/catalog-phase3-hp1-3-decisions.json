@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "baselineBudgetsMs": {
+    "HP1": 7651,
+    "HP2": 129,
+    "HP3": 2230
+  },
+  "runs": [
+    {
+      "path": "HP1",
+      "p95A": 8019,
+      "p95B": 15335,
+      "oracleUnreviewed": 0,
+      "decision": "perf artifact",
+      "notes": "Catalog exceeds the Phase 1 budget by 7684 ms. A follow-up perf artifact is allowed but was not implemented in this task."
+    },
+    {
+      "path": "HP2",
+      "p95A": 227,
+      "p95B": 707,
+      "oracleUnreviewed": 7,
+      "decision": "fix selectors",
+      "notes": "Catalog exceeds the Phase 1 budget by 578 ms, but 7 of 924 institution labels differ from legacy. Fix or review INS0002IHA, INS0060GebbiGabriel, INS0428HamaraN, INS0515DabraSeyon, INS0922AbiyaEgzi, INS0996GGabriel, and INS1009Zammad before considering an artifact."
+    },
+    {
+      "path": "HP3",
+      "p95A": 2230,
+      "p95B": 9608,
+      "oracleUnreviewed": 0,
+      "decision": "perf artifact",
+      "notes": "HP3 budget was set from this legacy A run. Catalog exceeds it by 7378 ms. The 508-case oracle includes 250 persons, 250 places, and 8 #tN textparts; a follow-up perf artifact is allowed but was not implemented in this task."
+    }
+  ]
+}
