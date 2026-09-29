@@ -1,0 +1,19 @@
+cypress/e2e/05-contributor/cataloguer.cy.js
+  s_e98fb2299e704f::t_f78ba9691c00ed 24-31,44-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9378bb8faf00d66767223229f0b231d841cc1013",
+  "prompts": {},
+  "sessions": {
+    "s_e98fb2299e704f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe63e19d-7812-4cd3-8078-f384be04c806",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
