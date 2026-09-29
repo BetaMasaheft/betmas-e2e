@@ -1,5 +1,36 @@
 {
   "samples": 3,
+  "catalogWorkloads": [
+    {
+      "key": "catalog-hp1-smoke",
+      "intent": "Representative title-bearing pages; the 1,000-id workload is scripts/xquery/catalog-hp1.xq",
+      "paths": [
+        "persons/PRS9866Walay/main",
+        "places/LOC5374Rome/main",
+        "works/LIT1709Kebran/main"
+      ],
+      "budgetMs": { "container": 30000, "production": 30000 }
+    },
+    {
+      "key": "catalog-hp2-institutions",
+      "intent": "Institution full list plus the typeahead route used by Web chrome",
+      "paths": [
+        "api/listRepositoriesName",
+        "api/idlookup?id=INS00"
+      ],
+      "budgetMs": { "container": 10000, "production": 10000 }
+    },
+    {
+      "key": "catalog-hp4-bibliography",
+      "intent": "Bibliography resolution for representative bm pointers",
+      "paths": [
+        "bibliography?pointer=bm:BausiSmidt2010Wansleben",
+        "bibliography?pointer=bm:Dillmann1866Chrestomathia",
+        "bibliography?pointer=bm:GrebTiss1935Codices"
+      ],
+      "budgetMs": { "container": 30000, "production": 30000 }
+    }
+  ],
   "pages": [
     {
       "key": "newsearch-mss-filter",

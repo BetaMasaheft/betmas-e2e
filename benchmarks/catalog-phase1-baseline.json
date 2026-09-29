@@ -1,0 +1,20 @@
+[
+  {
+    "name": "catalog-hp1-title-1k",
+    "unit": "ms",
+    "value": 7651,
+    "extra": "stat=p95 samples=[7155, 7324, 7358, 7420, 7298, 7231, 7148, 7334, 7270, 7208, 7304, 7134, 7293, 7357, 7255, 7251, 7395, 7651, 7396, 7717] surface=xst legacy printTitleID over 1,000 mixed ids"
+  },
+  {
+    "name": "catalog-hp2-institutions",
+    "unit": "ms",
+    "value": 129,
+    "extra": "stat=p95 samples=[165, 129, 116, 115, 118, 122, 117, 125, 126, 111, 123, 114, 116, 115, 123, 118, 115, 114, 112, 110] surface=HTTP full repository list plus institution id typeahead"
+  },
+  {
+    "name": "catalog-hp4-bibliography",
+    "unit": "ms",
+    "value": 2,
+    "extra": "stat=p95 samples=[2, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] surface=HTTP bibliography page over representative bm pointers"
+  }
+]

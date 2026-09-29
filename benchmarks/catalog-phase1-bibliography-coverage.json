@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-09-24",
+  "source": "ghcr.io/betamasaheft/betamasaheft:release-expanded on localhost:8082",
+  "expandedDistinctBmPointers": 3742,
+  "ethioStudiesTags": 4499,
+  "legacyEntries": 3737,
+  "issues": [
+    "https://github.com/BetaMasaheft/bibliography/issues/27",
+    "https://github.com/BetaMasaheft/bibliography/issues/28"
+  ],
+  "missingFromEthioStudies": [
+    "bm:2003ChernetsovBafana",
+    "bm:Bollini2023Fondi",
+    "bm:ComboniHanriot",
+    "bm:ConTuristica1935Guida",
+    "bm:Conti1919Harari",
+    "bm:Derat2006Royal",
+    "bm:ElleroBlogUfficiale",
+    "bm:Erho2025Homiliary",
+    "bm:EzraGebrem2014Roden",
+    "bm:Guidi1935Vocabolario2nd",
+    "bm:Habtamu2021Fragility",
+    "bm:Kamil1957Sinai",
+    "bm:Ludolf1661lexicon",
+    "bm:Martinez2005EAeEllero",
+    "bm:MercierArt2001",
+    "bm:Pedersen2007Masasa",
+    "bm:Perruchon1894EskEnder",
+    "bm:Rubenson2003AliAlula",
+    "bm:Spencer1974Luke",
+    "bm:Tasfa1954DersanaM",
+    "bm:Tedros2005EAEFeqraMG",
+    "bm:Turaev1909ZaraBuruk",
+    "bm:bm:bausi2016colof"
+  ],
+  "listsOnly": [
+    "bm:2003ChernetsovBafana",
+    "bm:Bollini2023Fondi",
+    "bm:Erho2025Homiliary",
+    "bm:Habtamu2021Fragility",
+    "bm:Kamil1957Sinai",
+    "bm:Ludolf1661lexicon",
+    "bm:Mazzei2017RM",
+    "bm:MercierArt2001",
+    "bm:Pedersen2007Masasa",
+    "bm:Perruchon1894EskEnder",
+    "bm:Spencer1974Luke",
+    "bm:Tasfa1954DersanaM"
+  ]
+}

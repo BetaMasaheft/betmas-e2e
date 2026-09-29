@@ -21,7 +21,14 @@ describe('Necessary workflows for cataloguer users', { tags: ['@auth', '@contain
     // one of the tests ends in an error page
     // HBS: and for some reason, cy.get('back') doesn’t work from there
     cy.visit('/')
-    cy.get('#logout-nav button').click()
+    // Log out only if the session exists, so a failed login (or a
+    // dropped session cookie) doesn't also fail teardown and mask the
+    // real error — same pattern as lexicon.cy.js.
+    cy.get('body').then(($body) => {
+      if ($body.find('#logout-nav button').length > 0) {
+        cy.get('#logout-nav button').click()
+      }
+    })
   })
 
   // See NB NEGATIVE of 02_01
@@ -34,6 +41,11 @@ describe('Necessary workflows for cataloguer users', { tags: ['@auth', '@contain
     // appUrl-qualified in the container
     cy.get('#mss a[href$="/availableImages.html"]').click()
     cy.loginCataloguer()
+    // Assert on the login POST response before any further navigation:
+    // a broken proxy_cookie_path would still show the greeting here and
+    // only drop the session on the next visit.
+    cy.contains(`Hi ${username}`).should('be.visible')
+    cy.get('#logout-nav button').should('exist')
   })
 
     //See test 02_02
