@@ -50,8 +50,10 @@ let $catalog-institutions := local:institution-map("catalog")
 let $institution-ids := distinct-values((map:keys($legacy-institutions), map:keys($catalog-institutions)))
 let $hp2-mismatches :=
 	for $id in $institution-ids
-	let $legacy := $legacy-institutions($id)
-	let $catalog := $catalog-institutions($id)
+	(: Map miss is (); `$a ne $b` is vacuous if either side is empty — coerce so
+	   one-sided institutions are reported as mismatches. :)
+	let $legacy := ($legacy-institutions($id), "")[1]
+	let $catalog := ($catalog-institutions($id), "")[1]
 	where $legacy ne $catalog
 	return map {"id": $id, "legacy": $legacy, "catalog": $catalog}
 let $hp3-mismatches := local:label-mismatches($hp3-ids)
