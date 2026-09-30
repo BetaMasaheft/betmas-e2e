@@ -1,0 +1,21 @@
+scripts/check-bibl-coverage.sh
+  s_da38168d43b50e::t_47b9f4101ba52d 1-33
+.github/workflows/test-container.yml
+  s_da38168d43b50e::t_bc5300384732b3 95-97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "415b89bd433afb91033742ca3c81b98095568840",
+  "prompts": {},
+  "sessions": {
+    "s_da38168d43b50e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "21d6959b-6933-485c-bda5-ae276705b425",
+        "model": "claude-sonnet-5-5-high"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
