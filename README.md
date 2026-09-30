@@ -95,7 +95,16 @@ Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-perfor
 
 ## Lighthouse
 
-`.github/workflows/lighthouse.yml` is a **manual** front-end audit of a few fast production pages (`lighthouserc.json`). It complements the TTFB benchmarks: Lighthouse gives up on the slow pages those cover. Assertions are warn-only until a baseline is tuned; there is no cron yet.
+`.github/workflows/lighthouse.yml` audits ~14 production pages (`lighthouserc.json`) weekly (Mon 04:00 UTC) and on manual dispatch. It complements the TTFB benchmarks: Lighthouse gives up on the slow pages those cover. Assertions are warn-only. Each run produces the `lighthouse-reports` artifact (HTML + JSON per run), a job summary with scores and failing accessibility audits (`scripts/lighthouse-summary.mjs`), and a score trend on `gh-pages` under `lighthouse/`.
+
+Run it locally (needs Chrome; set `CHROME_PATH` if it isn't found):
+
+```bash
+npm run lighthouse:prod        # the URLs in lighthouserc.json
+npm run lighthouse:container   # same paths on http://localhost:8080/
+```
+
+Extra flags pass through, e.g. `npm run lighthouse:prod -- --collect.numberOfRuns=1`. Reports land in `.lighthouseci/`.
 
 ## Local code analysis (Codacy CLI)
 

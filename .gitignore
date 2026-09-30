@@ -144,3 +144,5 @@ notes/
 .moderne/
 .claude/
 benchmark-results.json
+.lighthouseci/
+lighthouse-results.json

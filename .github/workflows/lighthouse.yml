@@ -1,21 +1,29 @@
 name: Lighthouse audit (production)
 
-# Front-end health audit of representative fast pages — complements the
-# server-timing benchmarks (benchmark.yml), which cover the slow-page/TTFB
-# story that Lighthouse cannot (its maxWaitForLoad gives up long before the
-# BetMas#57 pages finish).
+# Front-end health and accessibility audit of representative production pages
+# — complements the server-timing benchmarks (benchmark*.yml), which cover the
+# slow-page/TTFB story that Lighthouse cannot (its maxWaitForLoad gives up long
+# before the BetMas#57 pages finish).
 #
-# Manual for now; add a weekly cron once baseline scores are known and the
-# warn-level assertions in lighthouserc.json have been tuned.
+# Outputs:
+#  - workflow artifact `lighthouse-reports`: full HTML + JSON report per run
+#  - job summary: score table and failing accessibility audits per page
+#  - score trend on gh-pages under lighthouse/ (github-action-benchmark)
 on:
   workflow_dispatch:
+  schedule:
+    # Weekly, Monday 04:00 UTC. Production is audited (~40 page loads), so
+    # keep it infrequent.
+    - cron: '0 4 * * 1'
 
 permissions:
-  contents: read
+  # github-action-benchmark pushes the data series to gh-pages
+  contents: write
 
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
       - name: Checkout code
@@ -28,4 +36,23 @@ jobs:
           # private repo: keep reports as workflow artifacts, never on
           # public temporary storage
           uploadArtifacts: true
+          artifactName: lighthouse-reports
           temporaryPublicStorage: false
+
+      - name: Summarise scores
+        if: always()
+        run: node scripts/lighthouse-summary.mjs .lighthouseci >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Track scores on gh-pages
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: Lighthouse scores
+          tool: customBiggerIsBetter
+          output-file-path: lighthouse-results.json
+          benchmark-data-dir-path: lighthouse
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # report-only: alert on a >20% score drop, never fail the run
+          alert-threshold: '80%'
+          comment-on-alert: false
+          fail-on-alert: false
