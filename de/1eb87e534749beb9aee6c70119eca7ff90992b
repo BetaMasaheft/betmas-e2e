@@ -1,0 +1,19 @@
+scripts/check-bibl-coverage.sh
+  s_da38168d43b50e::t_1d4d357b1b593f 7,13-20,23-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "de1eb87e534749beb9aee6c70119eca7ff90992b",
+  "prompts": {},
+  "sessions": {
+    "s_da38168d43b50e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "21d6959b-6933-485c-bda5-ae276705b425",
+        "model": "claude-sonnet-5-5-high"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
