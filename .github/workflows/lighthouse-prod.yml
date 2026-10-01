@@ -1,20 +1,20 @@
 name: Lighthouse audit (production)
 
 # Front-end health and accessibility audit of representative production pages
-# — complements the server-timing benchmarks (benchmark*.yml), which cover the
-# slow-page/TTFB story that Lighthouse cannot (its maxWaitForLoad gives up long
-# before the BetMas#57 pages finish).
+# — complements the server-timing benchmarks, which cover the slow-page/TTFB
+# story that Lighthouse cannot (its maxWaitForLoad gives up long before the
+# BetMas#57 pages finish).
 #
-# Outputs:
-#  - workflow artifact `lighthouse-reports`: full HTML + JSON report per run
-#  - job summary: score table and failing accessibility audits per page
-#  - score trend on gh-pages under lighthouse/ (github-action-benchmark)
+# Manual only, like benchmark-prod.yml: production changes are infrequent, so
+# audits are taken deliberately (e.g. after a deploy). The scheduled series
+# lives in lighthouse.yml (container). Each run loads ~40 pages on production;
+# dispatch sparingly.
+#
+# Outputs: `lighthouse-reports-production` artifact (HTML + JSON per run), a
+# job summary with scores and failing accessibility audits, and a score trend
+# on gh-pages under lighthouse/production.
 on:
   workflow_dispatch:
-  schedule:
-    # Weekly, Monday 04:00 UTC. Production is audited (~40 page loads), so
-    # keep it infrequent.
-    - cron: '0 4 * * 1'
 
 permissions:
   # github-action-benchmark pushes the data series to gh-pages
@@ -36,7 +36,7 @@ jobs:
           # private repo: keep reports as workflow artifacts, never on
           # public temporary storage
           uploadArtifacts: true
-          artifactName: lighthouse-reports
+          artifactName: lighthouse-reports-production
           temporaryPublicStorage: false
 
       - name: Summarise scores
@@ -46,10 +46,10 @@ jobs:
       - name: Track scores on gh-pages
         uses: benchmark-action/github-action-benchmark@v1
         with:
-          name: Lighthouse scores
+          name: Lighthouse production scores
           tool: customBiggerIsBetter
           output-file-path: lighthouse-results.json
-          benchmark-data-dir-path: lighthouse
+          benchmark-data-dir-path: lighthouse/production
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # report-only: alert on a >20% score drop, never fail the run

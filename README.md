@@ -95,7 +95,7 @@ Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-perfor
 
 ## Lighthouse
 
-`.github/workflows/lighthouse.yml` audits ~14 production pages (`lighthouserc.json`) weekly (Mon 04:00 UTC) and on manual dispatch. It complements the TTFB benchmarks: Lighthouse gives up on the slow pages those cover. Assertions are warn-only. Each run produces the `lighthouse-reports` artifact (HTML + JSON per run), a job summary with scores and failing accessibility audits (`scripts/lighthouse-summary.mjs`), and a score trend on `gh-pages` under `lighthouse/`.
+Same structure as the benchmarks: `lighthouse.yml` audits ~14 pages (`lighthouserc.json`) against the container stack weekly (Mon 04:00 UTC) and on dispatch; `lighthouse-prod.yml` audits the same paths on production, **manual only**. It complements the TTFB benchmarks: Lighthouse gives up on the slow pages those cover. Assertions are warn-only. Each run produces a `lighthouse-reports-{container,production}` artifact (HTML + JSON per run), a job summary with scores and failing accessibility audits (`scripts/lighthouse-summary.mjs`), and a score trend on `gh-pages` under `lighthouse/{container,production}`.
 
 Run it locally (needs Chrome; set `CHROME_PATH` if it isn't found):
 
@@ -105,6 +105,17 @@ npm run lighthouse:container   # same paths on http://localhost:8080/
 ```
 
 Extra flags pass through, e.g. `npm run lighthouse:prod -- --collect.numberOfRuns=1`. Reports land in `.lighthouseci/`.
+
+## WCAG audit (axe-core)
+
+`cypress/e2e/09-a11y/wcag.cy.js` (tag `@a11y`, page list in `cypress/fixtures/a11y-pages.json`) runs the full axe-core rule set for WCAG 2.0/2.1/2.2 A/AA via [cypress-axe](https://github.com/component-driven/cypress-axe). It complements Lighthouse's accessibility category, which runs only a subset of axe on first load. **Report-only** for now: violations never fail the spec; drop the last `true` (`skipFailures`) argument of `checkA11y` once the baseline is fixed.
+
+```bash
+npm run a11y:container   # against http://localhost:8080/
+npm run a11y:prod
+```
+
+Results land in `a11y-results.json` (github-action-benchmark format, value = violating nodes per page). `scripts/a11y-summary.mjs` turns that into a per-page and per-rule markdown table. `.github/workflows/a11y.yml` runs it weekly against the container stack (Mon 05:30 UTC) and on dispatch, publishing the summary, an `a11y-results` artifact and a trend on `gh-pages` under `a11y/container`. `@a11y` is excluded from the other test runs.
 
 ## Local code analysis (Codacy CLI)
 

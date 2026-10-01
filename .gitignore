@@ -146,3 +146,5 @@ notes/
 benchmark-results.json
 .lighthouseci/
 lighthouse-results.json
+lighthouserc.container.json
+a11y-results.json

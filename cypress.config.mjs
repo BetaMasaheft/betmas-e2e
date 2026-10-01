@@ -12,14 +12,32 @@ export default defineConfig({
       // github-action-benchmark's customSmallerIsBetter format
       const benchmarkResults = []
 
+      // @a11y specs report axe violations here; written once per run in
+      // github-action-benchmark's customSmallerIsBetter format
+      const a11yResults = []
+
       on('task', {
         recordBenchmark (entry) {
           benchmarkResults.push(entry)
+          return null
+        },
+        recordA11y (entry) {
+          a11yResults.push(entry)
           return null
         }
       })
 
       on('after:run', async () => {
+        if (a11yResults.length > 0) {
+          const outPath = process.env.A11Y_OUT || 'a11y-results.json'
+          const rows = a11yResults.map(({ name, nodes, violations }) => ({
+            name,
+            unit: 'violating nodes',
+            value: nodes,
+            extra: JSON.stringify(violations)
+          }))
+          await writeFile(outPath, JSON.stringify(rows, null, 2) + '\n')
+        }
         if (benchmarkResults.length === 0) {
           return
         }

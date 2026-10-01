@@ -101,7 +101,7 @@ jobs:
           install: npm ci
           config: baseUrl=http://localhost:8080/
           # note: '+' joins tag conditions with AND; space-separated would be OR
-          expose: 'grepTags=-@production-only+-@perf,grepFilterSpecs=true,grepOmitFiltered=true'
+          expose: 'grepTags=-@production-only+-@perf+-@a11y,grepFilterSpecs=true,grepOmitFiltered=true'
           wait-on: http://localhost:8080/
           wait-on-timeout: 300
         env:
