@@ -1,0 +1,58 @@
+name: Lighthouse audit (production)
+
+# Front-end health and accessibility audit of representative production pages
+# — complements the server-timing benchmarks, which cover the slow-page/TTFB
+# story that Lighthouse cannot (its maxWaitForLoad gives up long before the
+# BetMas#57 pages finish).
+#
+# Manual only, like benchmark-prod.yml: production changes are infrequent, so
+# audits are taken deliberately (e.g. after a deploy). The scheduled series
+# lives in lighthouse.yml (container). Each run loads ~40 pages on production;
+# dispatch sparingly.
+#
+# Outputs: `lighthouse-reports-production` artifact (HTML + JSON per run), a
+# job summary with scores and failing accessibility audits, and a score trend
+# on gh-pages under lighthouse/production.
+on:
+  workflow_dispatch:
+
+permissions:
+  # github-action-benchmark pushes the data series to gh-pages
+  contents: write
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: lighthouserc.json
+          # private repo: keep reports as workflow artifacts, never on
+          # public temporary storage
+          uploadArtifacts: true
+          artifactName: lighthouse-reports-production
+          temporaryPublicStorage: false
+
+      - name: Summarise scores
+        if: always()
+        run: node scripts/lighthouse-summary.mjs .lighthouseci >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Track scores on gh-pages
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: Lighthouse production scores
+          tool: customBiggerIsBetter
+          output-file-path: lighthouse-results.json
+          benchmark-data-dir-path: lighthouse/production
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # report-only: alert on a >20% score drop, never fail the run
+          alert-threshold: '80%'
+          comment-on-alert: false
+          fail-on-alert: false

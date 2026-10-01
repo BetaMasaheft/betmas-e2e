@@ -4,8 +4,18 @@
       "url": [
         "https://betamasaheft.eu/",
         "https://betamasaheft.eu/about.html",
+        "https://betamasaheft.eu/help.html",
+        "https://betamasaheft.eu/newSearch.html",
+        "https://betamasaheft.eu/simpleSearch.html",
+        "https://betamasaheft.eu/manuscripts/browse",
+        "https://betamasaheft.eu/catalogues/list",
+        "https://betamasaheft.eu/authority-files/list",
+        "https://betamasaheft.eu/compare",
+        "https://betamasaheft.eu/visualizations.html",
         "https://betamasaheft.eu/works/LIT1709Kebran/main",
-        "https://betamasaheft.eu/manuscripts/ESap028/main"
+        "https://betamasaheft.eu/works/LIT1709Kebran/text",
+        "https://betamasaheft.eu/manuscripts/ESap028/main",
+        "https://betamasaheft.eu/persons/PRS9429Tewodros/main"
       ],
       "numberOfRuns": 3,
       "settings": {
