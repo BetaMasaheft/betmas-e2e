@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1790758707066,
+  "lastUpdate": 1790846547918,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -3904,6 +3904,82 @@ window.BENCHMARK_DATA = {
             "value": 3,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2541, 3, 2]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "dc5938c25d8c0d2327bd875ee13e3d4c4888b5b3",
+          "message": "Merge pull request #119 from BetaMasaheft/lighthouse\n\nEnable Lighthouse WCAG auditing and Cypress-axe WCAG testing",
+          "timestamp": "2026-10-01T09:01:20Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/dc5938c25d8c0d2327bd875ee13e3d4c4888b5b3"
+        },
+        "date": 1790846547445,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 15102,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[15102, 53, 11]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 7321,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[7321, 446, 323]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5839,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[5839, 8, 11]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 4,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[3941, 3, 4]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 33,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[2895, 33, 12]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 5,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[3497, 5, 5]"
+          },
+          {
+            "name": "decorations",
+            "value": 23,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[13242, 23, 9]"
+          },
+          {
+            "name": "additions",
+            "value": 23,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[13888, 23, 12]"
+          },
+          {
+            "name": "work-text",
+            "value": 4,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2361, 4, 2]"
           }
         ]
       }
