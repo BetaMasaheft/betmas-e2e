@@ -1,0 +1,20 @@
+{
+  "tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"],
+  "pages": [
+    { "name": "home", "path": "/" },
+    { "name": "about", "path": "about.html" },
+    { "name": "help", "path": "help.html" },
+    { "name": "search form", "path": "newSearch.html" },
+    { "name": "simple search form", "path": "simpleSearch.html" },
+    { "name": "search results (works)", "path": "newSearch.html?searchType=text&mode=any&work-types=ins" },
+    { "name": "manuscripts browse", "path": "manuscripts/browse" },
+    { "name": "catalogues list", "path": "catalogues/list" },
+    { "name": "authority files list", "path": "authority-files/list" },
+    { "name": "compare", "path": "compare" },
+    { "name": "visualizations", "path": "visualizations.html" },
+    { "name": "work main", "path": "works/LIT1709Kebran/main" },
+    { "name": "work text", "path": "works/LIT1709Kebran/text" },
+    { "name": "manuscript main", "path": "manuscripts/ESap028/main" },
+    { "name": "person main", "path": "persons/PRS9429Tewodros/main" }
+  ]
+}

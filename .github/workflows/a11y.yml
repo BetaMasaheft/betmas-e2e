@@ -1,0 +1,106 @@
+name: WCAG audit (container)
+
+# axe-core WCAG 2.x A/AA audit (cypress-axe, cypress/e2e/09-a11y) against the
+# canonical compose stack. Report-only: violations never fail the run. It
+# complements the Lighthouse accessibility category, which runs a subset of axe
+# on first load only.
+#
+# Outputs: a job summary listing violations per page, and a violation-count
+# trend on gh-pages under a11y/container (github-action-benchmark).
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly, Monday 05:30 UTC — after lighthouse.yml (04:00)
+    - cron: '30 5 * * 1'
+
+permissions:
+  # github-action-benchmark pushes the data series to gh-pages
+  contents: write
+
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Checkout BetMas (canonical compose stack)
+        uses: actions/checkout@v7
+        with:
+          repository: BetaMasaheft/BetMas
+          path: BetMas
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: betmas-bot
+          password: ${{ secrets.BOT_CONTAINER_PAT }}
+
+      # `betmas` is the only private image; nginx + the full-profile services are all public.
+      - name: Pull stack images
+        run: |
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full pull betmas nginx fuseki collatex qlever iipsrv
+
+      - name: Clean up any existing stack
+        if: always()
+        run: |
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full down -v || true
+
+      - name: Start stack
+        run: |
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full up -d --no-build betmas nginx fuseki collatex qlever iipsrv
+
+      - name: wait for install to finish
+        timeout-minutes: 5
+        run: |
+          while ! docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml logs betmas 2>&1 | grep -q "Server has started"; \
+          do sleep 2s; \
+          done
+
+      - name: Run WCAG specs
+        uses: cypress-io/github-action@v7
+        with:
+          install: npm ci
+          config: baseUrl=http://localhost:8080/
+          expose: 'grepTags=@a11y,grepFilterSpecs=true,grepOmitFiltered=true'
+          wait-on: http://localhost:8080/
+          wait-on-timeout: 300
+
+      - name: Summarise violations
+        if: always()
+        run: node scripts/a11y-summary.mjs a11y-results.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload raw results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a11y-results
+          path: a11y-results.json
+          if-no-files-found: ignore
+
+      - name: Track results on gh-pages
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          name: WCAG violations (container)
+          tool: customSmallerIsBetter
+          output-file-path: a11y-results.json
+          benchmark-data-dir-path: a11y/container
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # report-only: alert on >150% regressions, never fail the run
+          alert-threshold: '150%'
+          comment-on-alert: false
+          fail-on-alert: false
+          summary-always: true
+
+      - name: Clean up stack
+        if: always()
+        run: |
+          docker compose -f BetMas/docker-compose.yml -f .github/ci/docker-compose.ci-override.yml \
+            --profile full down -v || true
