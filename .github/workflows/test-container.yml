@@ -92,6 +92,9 @@ jobs:
             --data-urlencode "_query=if (sm:user-exists('JinntecLexicon')) then 'user exists' else (sm:create-account('JinntecLexicon', '${CYPRESS_PASSWORD_LEXICOGRAPHER}', 'Cataloguers'), 'user created')" \
             --data-urlencode "_wrap=no"
 
+      - name: Bibliography coverage gate
+        run: EXIST_REST=http://localhost:8081/exist/rest/db ./scripts/check-bibl-coverage.sh
+
       # nginx is the app's origin now (matches prod: app at "/"), not the
       # bare eXist app-path base of the old single-container setup (#75).
       - name: Run Cypress tests
