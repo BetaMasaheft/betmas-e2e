@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1790846547918,
+  "lastUpdate": 1790931389899,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -3980,6 +3980,82 @@ window.BENCHMARK_DATA = {
             "value": 4,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2361, 4, 2]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "committer": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "id": "42af814850e7cea5d54eff7e64c24d5d0d61e9fd",
+          "message": "feat(a11y): add missing a11y and lighthouse workflow files\n\nFiles left out of the merged lighthouse PR.\n\nCo-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>",
+          "timestamp": "2026-10-01T11:31:41Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/42af814850e7cea5d54eff7e64c24d5d0d61e9fd"
+        },
+        "date": 1790931388920,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 15365,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[15365, 13, 16]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 7521,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[7521, 310, 284]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5612,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[5612, 7, 8]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 30,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[3071, 5, 30]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 48,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1721, 48, 21]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 5,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[3528, 5, 3]"
+          },
+          {
+            "name": "decorations",
+            "value": 29,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[13268, 29, 11]"
+          },
+          {
+            "name": "additions",
+            "value": 31,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12600, 31, 16]"
+          },
+          {
+            "name": "work-text",
+            "value": 5,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2312, 4, 5]"
           }
         ]
       }
