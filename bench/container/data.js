@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1791016371402,
+  "lastUpdate": 1791103471264,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -4132,6 +4132,82 @@ window.BENCHMARK_DATA = {
             "value": 5,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2623, 5, 3]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "cebe1d4ce26a7d53328c99eeb746f1dde0b030cb",
+          "message": "Merge pull request #118 from BetaMasaheft/dp-catalog-phase4-bibl-coverage\n\nci(bibl): fail if expanded bm: pointers miss EthioStudies and exceptions",
+          "timestamp": "2026-10-02T09:46:46Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/cebe1d4ce26a7d53328c99eeb746f1dde0b030cb"
+        },
+        "date": 1791103470798,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 15102,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[15102, 10, 11]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 6808,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[6808, 275, 369]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5922,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[5922, 10, 14]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 6,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[3663, 6, 3]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 33,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[2108, 33, 12]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 5,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[3228, 4, 5]"
+          },
+          {
+            "name": "decorations",
+            "value": 18,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[14118, 18, 14]"
+          },
+          {
+            "name": "additions",
+            "value": 36,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[13002, 36, 12]"
+          },
+          {
+            "name": "work-text",
+            "value": 8,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2111, 8, 3]"
           }
         ]
       }
