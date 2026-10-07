@@ -412,8 +412,21 @@
     return Promise.all(opts.sources.map(function (src) {
       return loadBenchmarkFile(src.url).then(function (data) {
         return { source: src, flat: flattenBenches(data) }
+      }, function (err) {
+        // a series with no data yet (e.g. a new target before its first run)
+        // must not take the other series down with it
+        if (opts.sources.length === 1) throw err
+        return { source: src, flat: flattenBenches({}), error: err }
       })
     })).then(function (loaded) {
+      const missing = loaded.filter(function (l) { return l.error })
+      if (missing.length === loaded.length) throw missing[0].error
+      if (missing.length) {
+        const note = document.createElement('p')
+        note.className = 'caption'
+        note.textContent = 'No data yet for: ' + missing.map(function (l) { return l.source.label }).join(', ')
+        document.getElementById('main').appendChild(note)
+      }
       const last = Math.max.apply(null, loaded.map(function (l) {
         return l.flat.lastUpdate || 0
       }))
