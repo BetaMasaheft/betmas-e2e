@@ -1,7 +1,7 @@
 /* global Cypress, cy, describe, expect, it */
 
 import budgets from '../../fixtures/perf-budgets.json'
-import { isContainer } from '../../support/env'
+import { isContainer, isStaging } from '../../support/env'
 
 /**
  * Server-timing benchmarks for the known slow pages (BetMas#57).
@@ -13,11 +13,13 @@ import { isContainer } from '../../support/env'
  * and are tracked over time by .github/workflows/benchmark.yml.
  */
 describe('Slow page benchmarks', { tags: ['@perf', '@slow'] }, () => {
-  const target = isContainer() ? 'container' : 'production'
+  const target = isContainer() ? 'container' : isStaging() ? 'staging' : 'production'
+  // staging has no budgets of its own yet; it is judged against production's
+  const budgetFor = (budgetMs) => budgetMs[target] ?? budgetMs.production
 
   budgets.catalogWorkloads.forEach((workload) => {
     it(`measures ${workload.key}`, () => {
-      const budgetMs = target === 'container' ? workload.budgetMs.container : workload.budgetMs.production
+      const budgetMs = budgetFor(workload.budgetMs)
       const samples = []
 
       Cypress._.times(budgets.samples, () => {
@@ -51,7 +53,7 @@ describe('Slow page benchmarks', { tags: ['@perf', '@slow'] }, () => {
 
   budgets.pages.forEach((page) => {
     it(`measures ${page.key}`, () => {
-      const budgetMs = target === 'container' ? page.budgetMs.container : page.budgetMs.production
+      const budgetMs = budgetFor(page.budgetMs)
       const durations = []
 
       // sequential samples; the median damps cold caches and runner noise

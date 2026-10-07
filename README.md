@@ -85,12 +85,13 @@ Records link out to external resources (lexica, IIIF viewers, aggregators). The 
 
 Server-timing benchmarks for the known slow pages live in `cypress/e2e/08-performance/slow-pages.cy.js` (`@perf @slow`): three sequential `cy.request` samples per page, the **median** is recorded. Budgets per page and target are in `cypress/fixtures/perf-budgets.json`; going over budget logs a warning but never fails a run (report-only).
 
-- **CI:** `.github/workflows/benchmark.yml` runs daily against the container and pushes the series to the `gh-pages` branch (`bench/container/`) via [github-action-benchmark](https://github.com/benchmark-action/github-action-benchmark); regressions >150% get a commit comment. A production baseline lives under `bench/production/` and is refreshed manually (`benchmark-prod.yml` via workflow dispatch) since production changes are infrequent.
-- **Local run:** `npm run bench:container` (against `localhost:8080`); the results land in `benchmark-results.json` (gitignored, path overridable via `BENCHMARK_OUT`).
+- **CI:** `.github/workflows/benchmark.yml` runs daily against the container and pushes the series to the `gh-pages` branch (`bench/container/`) via [github-action-benchmark](https://github.com/benchmark-action/github-action-benchmark); regressions >150% get a commit comment. A production baseline lives under `bench/production/` and is refreshed manually (`benchmark-prod.yml` via workflow dispatch) since production changes are infrequent. The staging environment (https://betamasaheft.awhamburg.de/) is the third target, runs daily at 02:30 UTC like the container (`benchmark-staging.yml`, series under `bench/staging/`, also dispatchable); it has no budgets of its own and uses the production ones.
+- **Local run:** `npm run bench:container` (against `localhost:8080`; `npm run bench:staging` for https://betamasaheft.awhamburg.de/); the results land in `benchmark-results.json` (gitignored, path overridable via `BENCHMARK_OUT`).
 - **Viewing the charts:** served via GitHub Pages —
   [combined overlay](https://betamasaheft.github.io/betmas-e2e/bench/) (container teal, production orange; date axis, sample min–max band, budget dashed line).
   [container only](https://betamasaheft.github.io/betmas-e2e/bench/container/). 
   [production only](https://betamasaheft.github.io/betmas-e2e/bench/production/).
+  [staging only](https://betamasaheft.github.io/betmas-e2e/bench/staging/).
   Chart HTML lives in `pages/bench/` on `main` and is copied to `gh-pages` by `publish-bench-pages.yml` (also after each benchmark workflow). The daily container series is capped at 90 points (`max-items-in-chart`).
 
 ## Lighthouse
