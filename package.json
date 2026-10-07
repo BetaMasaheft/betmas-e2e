@@ -14,6 +14,7 @@
     "a11y:container": "cypress run --config baseUrl=http://localhost:8080/ --expose grepTags=@a11y,grepFilterSpecs=true,grepOmitFiltered=true",
     "a11y:prod": "cypress run -b firefox --config baseUrl=https://betamasaheft.eu/ --expose grepTags=@a11y,grepFilterSpecs=true,grepOmitFiltered=true",
     "bench:container": "cypress run --config baseUrl=http://localhost:8080/ --expose grepTags=@perf,grepFilterSpecs=true,grepOmitFiltered=true",
+    "bench:staging": "cypress run --config baseUrl=https://betamasaheft.awhamburg.de/ --expose grepTags=@perf,grepFilterSpecs=true,grepOmitFiltered=true",
     "bench:catalog": "node scripts/catalog-benchmark.mjs",
     "test:catalog-bench": "node --test scripts/catalog-benchmark.test.mjs"
   },

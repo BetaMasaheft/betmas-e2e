@@ -23,7 +23,8 @@
       </p>
       <p class="caption">
         <span class="swatch swatch-container"></span>Container (daily) ·
-        <span class="swatch swatch-production"></span>Production (manual)
+        <span class="swatch swatch-production"></span>Production (manual) ·
+        <span class="swatch swatch-staging"></span>Staging (manual)
       </p>
       <div class="header-row">
         <span class="small">Last update:</span>
@@ -50,11 +51,13 @@
         nav: [
           { href: './', label: 'Combined' },
           { href: './container/', label: 'Container' },
-          { href: './production/', label: 'Production' }
+          { href: './production/', label: 'Production' },
+          { href: './staging/', label: 'Staging' }
         ],
         sources: [
           { key: 'container', label: 'Container', url: './container/data.js', color: '#0f766e' },
-          { key: 'production', label: 'Production', url: './production/data.js', color: '#c2410c' }
+          { key: 'production', label: 'Production', url: './production/data.js', color: '#c2410c' },
+          { key: 'staging', label: 'Staging', url: './staging/data.js', color: '#7c3aed' }
         ]
       })
     </script>

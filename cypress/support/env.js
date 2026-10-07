@@ -3,3 +3,6 @@ export const isContainer = () =>
 
 export const isProduction = () =>
   Cypress.config('baseUrl')?.includes('betamasaheft.eu') ?? false
+
+export const isStaging = () =>
+  Cypress.config('baseUrl')?.includes('betamasaheft.awhamburg.de') ?? false

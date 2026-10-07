@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Container slow pages</title>
+    <title>Staging slow pages</title>
     <script>
       (function () {
         var t = localStorage.getItem('bench-theme')
@@ -14,14 +14,14 @@
   </head>
   <body>
     <header>
-      <h1 id="page-title">Container slow pages</h1>
+      <h1 id="page-title">Staging slow pages</h1>
       <nav id="bench-nav" aria-label="Benchmark views"></nav>
       <p class="caption">
         Median of three <code>cy.request</code> samples (TTFB). Shaded band is min–max.
         Budget is in each title; a dashed line is drawn only when it sits near the timings.
         Click a median point to open the commit.
       </p>
-      <p class="caption"><span class="swatch swatch-container"></span>Container</p>
+      <p class="caption"><span class="swatch swatch-staging"></span>Staging</p>
       <div class="header-row">
         <span class="small">Last update:</span>
         <span id="last-update" class="small"></span>
@@ -42,16 +42,16 @@
     <script src="../charts.js"></script>
     <script>
       BenchCharts.mount({
-        title: 'Container slow pages',
+        title: 'Staging slow pages',
         currentHref: './',
         nav: [
           { href: '../', label: 'Combined' },
-          { href: './', label: 'Container' },
+          { href: '../container/', label: 'Container' },
           { href: '../production/', label: 'Production' },
-          { href: '../staging/', label: 'Staging' }
+          { href: './', label: 'Staging' }
         ],
         sources: [
-          { key: 'container', label: 'Container', url: './data.js', color: '#0f766e' }
+          { key: 'staging', label: 'Staging', url: './data.js', color: '#7c3aed' }
         ]
       })
     </script>
