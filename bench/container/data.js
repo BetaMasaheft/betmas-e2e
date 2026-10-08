@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1791402410307,
+  "lastUpdate": 1791451560934,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -4512,6 +4512,82 @@ window.BENCHMARK_DATA = {
             "value": 6,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2130, 6, 3]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "committer": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "id": "366a660cfdda74c65bafaa5c61a37831020d95e1",
+          "message": "feat(team): add a test for the team page: it should work\n\nAnd the links should also resolve.",
+          "timestamp": "2026-10-01T11:43:03Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/366a660cfdda74c65bafaa5c61a37831020d95e1"
+        },
+        "date": 1791451560036,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 15773,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[15773, 11, 11]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 6505,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[6505, 369, 345]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5596,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[5596, 9, 13]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 6,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[2943, 6, 4]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 51,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1872, 51, 30]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 3,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[3402, 3, 3]"
+          },
+          {
+            "name": "decorations",
+            "value": 23,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12228, 23, 9]"
+          },
+          {
+            "name": "additions",
+            "value": 31,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[11956, 31, 14]"
+          },
+          {
+            "name": "work-text",
+            "value": 3,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2839, 3, 3]"
           }
         ]
       }
