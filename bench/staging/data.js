@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1791450812950,
+  "lastUpdate": 1791537769152,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Staging slow pages": [
@@ -152,6 +152,82 @@ window.BENCHMARK_DATA = {
             "value": 149,
             "unit": "ms",
             "extra": "target=staging budget=60000ms samples=[2707, 149, 149]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "committer": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "id": "366a660cfdda74c65bafaa5c61a37831020d95e1",
+          "message": "feat(team): add a test for the team page: it should work\n\nAnd the links should also resolve.",
+          "timestamp": "2026-10-01T11:43:03Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/366a660cfdda74c65bafaa5c61a37831020d95e1"
+        },
+        "date": 1791537768515,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 6764,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[6764, 368, 363]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 580,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=10000ms samples=[565, 572, 580]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5373,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[5373, 372, 360]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 121,
+            "unit": "ms",
+            "extra": "target=staging budget=30000ms samples=[2737, 121, 121]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 242,
+            "unit": "ms",
+            "extra": "target=staging budget=10000ms samples=[1704, 242, 133]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 121,
+            "unit": "ms",
+            "extra": "target=staging budget=5000ms samples=[3227, 121, 121]"
+          },
+          {
+            "name": "decorations",
+            "value": 241,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[12959, 241, 128]"
+          },
+          {
+            "name": "additions",
+            "value": 238,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[12769, 238, 134]"
+          },
+          {
+            "name": "work-text",
+            "value": 120,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[2421, 120, 120]"
           }
         ]
       }
