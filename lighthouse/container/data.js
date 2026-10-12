@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1791402876352,
+  "lastUpdate": 1791806037418,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Lighthouse container scores": [
@@ -588,6 +588,308 @@ window.BENCHMARK_DATA = {
           {
             "name": "/works/LIT1709Kebran/text performance",
             "value": 31,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/text accessibility",
+            "value": 81,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/text best-practices",
+            "value": 96,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/text seo",
+            "value": 91,
+            "unit": "score"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "f014b438cceb137383125f40d2cea83cd1b42879",
+          "message": "Merge pull request #125 from BetaMasaheft/dependabot/npm_and_yarn/axe-core-4.14.0\n\nchore(deps-dev): bump axe-core from 4.13.0 to 4.14.0",
+          "timestamp": "2026-10-12T10:16:31Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/f014b438cceb137383125f40d2cea83cd1b42879"
+        },
+        "date": 1791806036190,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "/ performance",
+            "value": 77,
+            "unit": "score"
+          },
+          {
+            "name": "/ accessibility",
+            "value": 79,
+            "unit": "score"
+          },
+          {
+            "name": "/ best-practices",
+            "value": 93,
+            "unit": "score"
+          },
+          {
+            "name": "/ seo",
+            "value": 82,
+            "unit": "score"
+          },
+          {
+            "name": "/about.html performance",
+            "value": 85,
+            "unit": "score"
+          },
+          {
+            "name": "/about.html accessibility",
+            "value": 81,
+            "unit": "score"
+          },
+          {
+            "name": "/about.html best-practices",
+            "value": 96,
+            "unit": "score"
+          },
+          {
+            "name": "/about.html seo",
+            "value": 91,
+            "unit": "score"
+          },
+          {
+            "name": "/authority-files/list performance",
+            "value": 76,
+            "unit": "score"
+          },
+          {
+            "name": "/authority-files/list accessibility",
+            "value": 90,
+            "unit": "score"
+          },
+          {
+            "name": "/authority-files/list best-practices",
+            "value": 100,
+            "unit": "score"
+          },
+          {
+            "name": "/authority-files/list seo",
+            "value": 91,
+            "unit": "score"
+          },
+          {
+            "name": "/catalogues/list performance",
+            "value": 90,
+            "unit": "score"
+          },
+          {
+            "name": "/catalogues/list accessibility",
+            "value": 75,
+            "unit": "score"
+          },
+          {
+            "name": "/catalogues/list best-practices",
+            "value": 100,
+            "unit": "score"
+          },
+          {
+            "name": "/catalogues/list seo",
+            "value": 82,
+            "unit": "score"
+          },
+          {
+            "name": "/compare performance",
+            "value": 83,
+            "unit": "score"
+          },
+          {
+            "name": "/compare accessibility",
+            "value": 85,
+            "unit": "score"
+          },
+          {
+            "name": "/compare best-practices",
+            "value": 96,
+            "unit": "score"
+          },
+          {
+            "name": "/compare seo",
+            "value": 91,
+            "unit": "score"
+          },
+          {
+            "name": "/help.html performance",
+            "value": 89,
+            "unit": "score"
+          },
+          {
+            "name": "/help.html accessibility",
+            "value": 84,
+            "unit": "score"
+          },
+          {
+            "name": "/help.html best-practices",
+            "value": 96,
+            "unit": "score"
+          },
+          {
+            "name": "/help.html seo",
+            "value": 80,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/ESap028/main performance",
+            "value": 31,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/ESap028/main accessibility",
+            "value": 68,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/ESap028/main best-practices",
+            "value": 100,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/ESap028/main seo",
+            "value": 91,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/browse performance",
+            "value": 84,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/browse accessibility",
+            "value": 82,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/browse best-practices",
+            "value": 100,
+            "unit": "score"
+          },
+          {
+            "name": "/manuscripts/browse seo",
+            "value": 82,
+            "unit": "score"
+          },
+          {
+            "name": "/newSearch.html performance",
+            "value": 87,
+            "unit": "score"
+          },
+          {
+            "name": "/newSearch.html accessibility",
+            "value": 81,
+            "unit": "score"
+          },
+          {
+            "name": "/newSearch.html best-practices",
+            "value": 96,
+            "unit": "score"
+          },
+          {
+            "name": "/newSearch.html seo",
+            "value": 82,
+            "unit": "score"
+          },
+          {
+            "name": "/persons/PRS9429Tewodros/main performance",
+            "value": 34,
+            "unit": "score"
+          },
+          {
+            "name": "/persons/PRS9429Tewodros/main accessibility",
+            "value": 69,
+            "unit": "score"
+          },
+          {
+            "name": "/persons/PRS9429Tewodros/main best-practices",
+            "value": 100,
+            "unit": "score"
+          },
+          {
+            "name": "/persons/PRS9429Tewodros/main seo",
+            "value": 91,
+            "unit": "score"
+          },
+          {
+            "name": "/simpleSearch.html performance",
+            "value": 90,
+            "unit": "score"
+          },
+          {
+            "name": "/simpleSearch.html accessibility",
+            "value": 88,
+            "unit": "score"
+          },
+          {
+            "name": "/simpleSearch.html best-practices",
+            "value": 96,
+            "unit": "score"
+          },
+          {
+            "name": "/simpleSearch.html seo",
+            "value": 90,
+            "unit": "score"
+          },
+          {
+            "name": "/visualizations.html performance",
+            "value": 87,
+            "unit": "score"
+          },
+          {
+            "name": "/visualizations.html accessibility",
+            "value": 88,
+            "unit": "score"
+          },
+          {
+            "name": "/visualizations.html best-practices",
+            "value": 96,
+            "unit": "score"
+          },
+          {
+            "name": "/visualizations.html seo",
+            "value": 90,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/main performance",
+            "value": 35,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/main accessibility",
+            "value": 61,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/main best-practices",
+            "value": 100,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/main seo",
+            "value": 91,
+            "unit": "score"
+          },
+          {
+            "name": "/works/LIT1709Kebran/text performance",
+            "value": 28,
             "unit": "score"
           },
           {
