@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1791964822570,
+  "lastUpdate": 1792135910097,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -5044,6 +5044,82 @@ window.BENCHMARK_DATA = {
             "value": 3,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2936, 3, 3]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "f014b438cceb137383125f40d2cea83cd1b42879",
+          "message": "Merge pull request #125 from BetaMasaheft/dependabot/npm_and_yarn/axe-core-4.14.0\n\nchore(deps-dev): bump axe-core from 4.13.0 to 4.14.0",
+          "timestamp": "2026-10-12T10:16:31Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/f014b438cceb137383125f40d2cea83cd1b42879"
+        },
+        "date": 1792135909555,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 20814,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[20814, 11, 9]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 6022,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[6022, 430, 438]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5997,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[5997, 21, 11]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 5,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[3685, 5, 3]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 47,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1689, 47, 19]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 6,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[9974, 4, 6]"
+          },
+          {
+            "name": "decorations",
+            "value": 21,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12328, 21, 9]"
+          },
+          {
+            "name": "additions",
+            "value": 27,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12682, 27, 11]"
+          },
+          {
+            "name": "work-text",
+            "value": 3,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[3937, 2, 3]"
           }
         ]
       }
