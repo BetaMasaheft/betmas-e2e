@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1792397201909,
+  "lastUpdate": 1792482996221,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
@@ -5272,6 +5272,82 @@ window.BENCHMARK_DATA = {
             "value": 2,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[3447, 2, 2]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "adb8a78fa1f25c21d9eb0efbbc6b602fdc05489f",
+          "message": "Merge pull request #126 from BetaMasaheft/dependabot/npm_and_yarn/cypress-16.2.0",
+          "timestamp": "2026-10-19T07:40:25Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/adb8a78fa1f25c21d9eb0efbbc6b602fdc05489f"
+        },
+        "date": 1792482995147,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 21435,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[21435, 13, 10]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 6110,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[6110, 429, 385]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5707,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[5707, 10, 10]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 10,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[3875, 4, 10]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 33,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1800, 33, 21]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 4,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[9511, 3, 4]"
+          },
+          {
+            "name": "decorations",
+            "value": 23,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12644, 23, 11]"
+          },
+          {
+            "name": "additions",
+            "value": 32,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[12910, 32, 12]"
+          },
+          {
+            "name": "work-text",
+            "value": 5,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[3640, 3, 5]"
           }
         ]
       }
