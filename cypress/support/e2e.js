@@ -64,3 +64,34 @@ Cypress.on('uncaught:exception', (err, _runnable) => {
     return false
   }
 })
+
+// nginx bot protection (BetMas docker/nginx.conf) challenges clients without
+// the ds_verification_token cookie and 403s some requests without a trusted
+// Referer. Browsers satisfy this on their own; cy.request()/cy.visit() don't,
+// so send both, the way a real visitor would.
+beforeEach(() => {
+  cy.setCookie('ds_verification_token', 'proof_passed')
+})
+
+const withReferer = (options) => {
+  const baseUrl = Cypress.config('baseUrl')
+  if (!baseUrl) return options
+  const headers = options.headers || {}
+  const hasReferer = Object.keys(headers).some((k) => k.toLowerCase() === 'referer')
+  return hasReferer ? options : { ...options, headers: { Referer: baseUrl, ...headers } }
+}
+
+Cypress.Commands.overwrite('request', (originalFn, ...args) => {
+  // forms: (url) | (method, url) | (method, url, body) | (options)
+  if (args.length === 1 && typeof args[0] === 'object') {
+    return originalFn(withReferer(args[0]))
+  }
+  if (args.length === 1) return originalFn(withReferer({ url: args[0] }))
+  const [method, url, body] = args
+  return originalFn(withReferer({ method, url, body }))
+})
+
+Cypress.Commands.overwrite('visit', (originalFn, url, options = {}) => {
+  if (typeof url === 'object') return originalFn(withReferer(url))
+  return originalFn(url, withReferer(options))
+})
