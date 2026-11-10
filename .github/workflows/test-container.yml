@@ -92,8 +92,13 @@ jobs:
             --data-urlencode "_query=if (sm:user-exists('JinntecLexicon')) then 'user exists' else (sm:create-account('JinntecLexicon', '${CYPRESS_PASSWORD_LEXICOGRAPHER}', 'Cataloguers'), 'user created')" \
             --data-urlencode "_wrap=no"
 
-      - name: Bibliography coverage gate
-        run: EXIST_REST=http://localhost:8081/exist/rest/db ./scripts/check-bibl-coverage.sh
+      # Data check runs in the background alongside Cypress (same stack,
+      # read-only REST queries); its result is collected in the next-but-one
+      # step below so a data gap does not block the UI tests.
+      - name: Start bibliography coverage gate (background)
+        run: |
+          (EXIST_REST=http://localhost:8081/exist/rest/db ./scripts/check-bibl-coverage.sh \
+            > bibl-coverage.log 2>&1; echo $? > bibl-coverage.status) &
 
       # nginx is the app's origin now (matches prod: app at "/"), not the
       # bare eXist app-path base of the old single-container setup (#75).
@@ -110,6 +115,13 @@ jobs:
         env:
           CYPRESS_PASSWORD_CATALOGUER: ${{ secrets.CYPRESS_PASSWORD_CATALOGUER }}
           CYPRESS_PASSWORD_LEXICOGRAPHER: ${{ secrets.CYPRESS_PASSWORD_LEXICOGRAPHER }}
+
+      - name: Bibliography coverage gate result
+        if: always()
+        run: |
+          for i in $(seq 1 60); do [ -f bibl-coverage.status ] && break; sleep 2; done
+          cat bibl-coverage.log
+          [ "$(cat bibl-coverage.status 2>/dev/null)" = "0" ]
 
       - name: Upload Cypress screenshots
         if: failure()
