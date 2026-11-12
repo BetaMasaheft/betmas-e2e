@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1794305327846,
+  "lastUpdate": 1794477663675,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Staging slow pages": [
@@ -2204,6 +2204,82 @@ window.BENCHMARK_DATA = {
             "value": 153,
             "unit": "ms",
             "extra": "target=staging budget=60000ms samples=[154, 153, 152]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "committer": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "id": "71b1541ccda548169e6bfae7fcc1c9335969afbc",
+          "message": "Pass ds_verification_token cookie and referrer for endpoints\n\nThis works around the checks added in https://github.com/BetaMasaheft/BetMas/commit/38b4478537a41d63299247045f291d2b04f61cbc",
+          "timestamp": "2026-11-10T13:11:03Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/71b1541ccda548169e6bfae7fcc1c9335969afbc"
+        },
+        "date": 1794477662623,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 10704,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[10704, 452, 450]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 698,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=10000ms samples=[657, 698, 686]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 6563,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[6563, 459, 446]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 301,
+            "unit": "ms",
+            "extra": "target=staging budget=30000ms samples=[5146, 301, 298]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 297,
+            "unit": "ms",
+            "extra": "target=staging budget=10000ms samples=[1887, 297, 161]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 151,
+            "unit": "ms",
+            "extra": "target=staging budget=5000ms samples=[9954, 151, 149]"
+          },
+          {
+            "name": "decorations",
+            "value": 302,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[13878, 300, 302]"
+          },
+          {
+            "name": "additions",
+            "value": 301,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[13008, 301, 162]"
+          },
+          {
+            "name": "work-text",
+            "value": 155,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[4629, 155, 155]"
           }
         ]
       }
