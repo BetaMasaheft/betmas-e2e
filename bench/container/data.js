@@ -1,66 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1794390595104,
+  "lastUpdate": 1794478314663,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
-      {
-        "commit": {
-          "author": {
-            "name": "duncdrum",
-            "username": "duncdrum",
-            "email": "d.paterson@me.com"
-          },
-          "committer": {
-            "name": "duncdrum",
-            "username": "duncdrum",
-            "email": "d.paterson@me.com"
-          },
-          "id": "d6537bbae94871f93482525287d2cb7c7a4aaf65",
-          "message": "docs(readme): link served benchmark charts on GitHub Pages",
-          "timestamp": "2026-07-15T09:16:49Z",
-          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/d6537bbae94871f93482525287d2cb7c7a4aaf65"
-        },
-        "date": 1784179830720,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "newsearch-mss-filter",
-            "value": 5334,
-            "unit": "ms",
-            "extra": "target=container budget=25000ms samples=[6184, 5334, 4819]"
-          },
-          {
-            "name": "manuscripts-browse",
-            "value": 1229,
-            "unit": "ms",
-            "extra": "target=container budget=10000ms samples=[1487, 1229, 1225]"
-          },
-          {
-            "name": "catalogues-list",
-            "value": 741,
-            "unit": "ms",
-            "extra": "target=container budget=5000ms samples=[752, 741, 481]"
-          },
-          {
-            "name": "decorations",
-            "value": 20785,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[20915, 20785, 20422]"
-          },
-          {
-            "name": "additions",
-            "value": 26065,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[26065, 26073, 25989]"
-          },
-          {
-            "name": "work-text",
-            "value": 3654,
-            "unit": "ms",
-            "extra": "target=container budget=20000ms samples=[4665, 3654, 3474]"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5688,6 +5630,82 @@ window.BENCHMARK_DATA = {
             "value": 16,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[4309, 16, 6]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "committer": {
+            "name": "Martin Middel",
+            "username": "DrRataplan",
+            "email": "martin@elliat.nl"
+          },
+          "id": "71b1541ccda548169e6bfae7fcc1c9335969afbc",
+          "message": "Pass ds_verification_token cookie and referrer for endpoints\n\nThis works around the checks added in https://github.com/BetaMasaheft/BetMas/commit/38b4478537a41d63299247045f291d2b04f61cbc",
+          "timestamp": "2026-11-10T13:11:03Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/71b1541ccda548169e6bfae7fcc1c9335969afbc"
+        },
+        "date": 1794478313795,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 19824,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[19824, 8, 8]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 4913,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[4913, 536, 387]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 6312,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[6312, 20, 8]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 57,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[4427, 19, 57]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 14,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1534, 14, 11]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 5,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[6107, 3, 5]"
+          },
+          {
+            "name": "decorations",
+            "value": 14,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[8897, 14, 8]"
+          },
+          {
+            "name": "additions",
+            "value": 23,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[7948, 23, 10]"
+          },
+          {
+            "name": "work-text",
+            "value": 7,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[3392, 7, 5]"
           }
         ]
       }
