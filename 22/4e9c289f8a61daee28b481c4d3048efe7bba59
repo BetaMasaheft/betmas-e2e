@@ -1,0 +1,40 @@
+.github/workflows/main.yml
+  h_ff0005bef58c9d 15
+.github/workflows/lighthouse.yml
+  h_ff0005bef58c9d 18,23
+.github/workflows/benchmark.yml
+  h_ff0005bef58c9d 15
+.github/workflows/test-container.yml
+  h_ff0005bef58c9d 15
+.github/workflows/benchmark-prod.yml
+  h_ff0005bef58c9d 19
+.github/workflows/publish-bench-pages.yml
+  h_ff0005bef58c9d 17
+.github/workflows/a11y.yml
+  s_8bfb3335156c05::t_ac5ca6a25dc75f 22
+.github/workflows/benchmark-staging.yml
+  s_8bfb3335156c05::t_60dd6655cdc4c7 17
+.github/workflows/lighthouse-prod.yml
+  s_8bfb3335156c05::t_5d0d6aa17184b8 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "224e9c289f8a61daee28b481c4d3048efe7bba59",
+  "prompts": {},
+  "humans": {
+    "h_ff0005bef58c9d": {
+      "author": "duncdrum <d.paterson@me.com>"
+    }
+  },
+  "sessions": {
+    "s_8bfb3335156c05": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "643a5d21-eab7-43a8-94bd-0b532756f586",
+        "model": "unknown"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
