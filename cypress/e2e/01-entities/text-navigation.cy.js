@@ -52,4 +52,24 @@ describe('Text view navigation (refslist)', { tags: '@container' }, () => {
     cy.get(`#refslist a[href="/${id}.1"]`).should('exist')
     cy.get('#refslist .w3-bar-item a.page-scroll').its('length').should('be.gt', 1)
   })
+  /**
+   * The Transkribus "not revised" note is a direct child of the edition div.
+   * The large-manuscript guard in viewItem:textfragment only rendered div
+   * children and dropped it. No real manuscript has both >120 folia and a
+   * note, so the guard + note case is covered by the XQSuite tests in
+   * BetMasWeb (ts-viewitem-textfragment.xqm).
+   */
+  it('renders the transcription note for ESap046', () => {
+    cy.request({ url: `/manuscripts/${id}/text`, qs: { _: Date.now() }, failOnStatusCode: false }).then((res) => {
+      expect(res.status).to.eq(200)
+      expect(res.body).to.contain('This transcription has not been revised')
+    })
+  })
+
+  it('keeps the large-manuscript guard for ESqds004 (185 folia)', () => {
+    cy.request({ url: '/manuscripts/ESqds004/text', qs: { _: Date.now() }, failOnStatusCode: false }).then((res) => {
+      expect(res.status).to.eq(200)
+      expect(res.body).to.contain('too much to show')
+    })
+  })
 })
