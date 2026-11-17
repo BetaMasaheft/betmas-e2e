@@ -1,66 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1794823791304,
+  "lastUpdate": 1794913459722,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
-      {
-        "commit": {
-          "author": {
-            "name": "Duncan Paterson",
-            "username": "duncdrum",
-            "email": "duncdrum@users.noreply.github.com"
-          },
-          "committer": {
-            "name": "GitHub",
-            "username": "web-flow",
-            "email": "noreply@github.com"
-          },
-          "id": "db406d9463fed8346d34df9662a5d958b8100cc2",
-          "message": "Merge pull request #73 from BetaMasaheft/dp-api",
-          "timestamp": "2026-07-18T10:51:23Z",
-          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/db406d9463fed8346d34df9662a5d958b8100cc2"
-        },
-        "date": 1784698818649,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "newsearch-mss-filter",
-            "value": 4690,
-            "unit": "ms",
-            "extra": "target=container budget=25000ms samples=[6170, 4436, 4690]"
-          },
-          {
-            "name": "manuscripts-browse",
-            "value": 1216,
-            "unit": "ms",
-            "extra": "target=container budget=10000ms samples=[2408, 1216, 1056]"
-          },
-          {
-            "name": "catalogues-list",
-            "value": 531,
-            "unit": "ms",
-            "extra": "target=container budget=5000ms samples=[815, 531, 431]"
-          },
-          {
-            "name": "decorations",
-            "value": 15298,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[16699, 14983, 15298]"
-          },
-          {
-            "name": "additions",
-            "value": 21284,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[22512, 20822, 21284]"
-          },
-          {
-            "name": "work-text",
-            "value": 4174,
-            "unit": "ms",
-            "extra": "target=container budget=20000ms samples=[5334, 4170, 4174]"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5778,6 +5720,82 @@ window.BENCHMARK_DATA = {
             "value": 12,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[4247, 12, 6]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "3d184317acd00c45cfb07cd567aa72e9b87d50ec",
+          "message": "Merge pull request #133 from BetaMasaheft/hotfix/ci-ubuntu-24.04\n\nci: pin GitHub Actions runners to ubuntu-24.04",
+          "timestamp": "2026-11-16T14:39:15Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/3d184317acd00c45cfb07cd567aa72e9b87d50ec"
+        },
+        "date": 1794913459341,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 15903,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[15903, 7, 7]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 4616,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[4616, 570, 345]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 6178,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[6178, 6, 7]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 16,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[4341, 16, 7]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 35,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1136, 35, 13]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 4,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[6490, 3, 4]"
+          },
+          {
+            "name": "decorations",
+            "value": 19,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[7667, 19, 9]"
+          },
+          {
+            "name": "additions",
+            "value": 30,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[9566, 30, 12]"
+          },
+          {
+            "name": "work-text",
+            "value": 6,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2962, 6, 6]"
           }
         ]
       }
