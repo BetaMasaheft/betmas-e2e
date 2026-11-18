@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1794477663675,
+  "lastUpdate": 1794990582530,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Staging slow pages": [
@@ -2280,6 +2280,82 @@ window.BENCHMARK_DATA = {
             "value": 155,
             "unit": "ms",
             "extra": "target=staging budget=60000ms samples=[4629, 155, 155]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "3d184317acd00c45cfb07cd567aa72e9b87d50ec",
+          "message": "Merge pull request #133 from BetaMasaheft/hotfix/ci-ubuntu-24.04\n\nci: pin GitHub Actions runners to ubuntu-24.04",
+          "timestamp": "2026-11-16T14:39:15Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/3d184317acd00c45cfb07cd567aa72e9b87d50ec"
+        },
+        "date": 1794990582183,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 24530,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[24530, 342, 337]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 666,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=10000ms samples=[666, 537, 538]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 6876,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[6876, 342, 339]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 225,
+            "unit": "ms",
+            "extra": "target=staging budget=30000ms samples=[5749, 225, 120]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 221,
+            "unit": "ms",
+            "extra": "target=staging budget=10000ms samples=[2257, 221, 121]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 114,
+            "unit": "ms",
+            "extra": "target=staging budget=5000ms samples=[9731, 114, 113]"
+          },
+          {
+            "name": "decorations",
+            "value": 119,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[14337, 118, 119]"
+          },
+          {
+            "name": "additions",
+            "value": 223,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[75754, 223, 122]"
+          },
+          {
+            "name": "work-text",
+            "value": 118,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[35377, 118, 116]"
           }
         ]
       }
