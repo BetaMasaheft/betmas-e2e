@@ -1,66 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1794998237227,
+  "lastUpdate": 1795085068577,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
-      {
-        "commit": {
-          "author": {
-            "name": "Duncan Paterson",
-            "username": "duncdrum",
-            "email": "duncdrum@users.noreply.github.com"
-          },
-          "committer": {
-            "name": "GitHub",
-            "username": "web-flow",
-            "email": "noreply@github.com"
-          },
-          "id": "b19e18dec35e00c36c6bc9d64e263a0f31fce131",
-          "message": "Merge pull request #78 from BetaMasaheft/dp-sparql-fuseki-seed\n\ntest(sparql, iiif): seed dummy Fuseki with real data + flip both dual-env",
-          "timestamp": "2026-07-23T18:41:20Z",
-          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/b19e18dec35e00c36c6bc9d64e263a0f31fce131"
-        },
-        "date": 1784871686423,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "newsearch-mss-filter",
-            "value": 5141,
-            "unit": "ms",
-            "extra": "target=container budget=25000ms samples=[7765, 5141, 4489]"
-          },
-          {
-            "name": "manuscripts-browse",
-            "value": 1171,
-            "unit": "ms",
-            "extra": "target=container budget=10000ms samples=[6751, 1171, 1170]"
-          },
-          {
-            "name": "catalogues-list",
-            "value": 509,
-            "unit": "ms",
-            "extra": "target=container budget=5000ms samples=[794, 509, 470]"
-          },
-          {
-            "name": "decorations",
-            "value": 16024,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[17512, 15682, 16024]"
-          },
-          {
-            "name": "additions",
-            "value": 23068,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[24038, 23068, 23060]"
-          },
-          {
-            "name": "work-text",
-            "value": 3269,
-            "unit": "ms",
-            "extra": "target=container budget=20000ms samples=[4440, 3269, 3134]"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5814,6 +5756,82 @@ window.BENCHMARK_DATA = {
             "value": 8,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2679, 8, 6]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "c094ced56d0b4dbd6ac99d2ce18e1b6388213919",
+          "message": "Merge pull request #134 from BetaMasaheft/manuscript-notes\n\ntest: add a test for 'not revised' notes in manuscripts",
+          "timestamp": "2026-11-19T09:31:12Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/c094ced56d0b4dbd6ac99d2ce18e1b6388213919"
+        },
+        "date": 1795085067790,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 20985,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[20985, 11, 9]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 6733,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[6733, 649, 518]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 7229,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[7229, 7, 7]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 33,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[6293, 33, 10]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 37,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[2359, 37, 35]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 10,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[9847, 9, 10]"
+          },
+          {
+            "name": "decorations",
+            "value": 36,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[14998, 36, 10]"
+          },
+          {
+            "name": "additions",
+            "value": 26,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[14158, 26, 12]"
+          },
+          {
+            "name": "work-text",
+            "value": 9,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2967, 9, 6]"
           }
         ]
       }
