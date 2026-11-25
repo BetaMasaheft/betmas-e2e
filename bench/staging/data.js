@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1795524262724,
+  "lastUpdate": 1795606323420,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Staging slow pages": [
@@ -2432,6 +2432,82 @@ window.BENCHMARK_DATA = {
             "value": 125,
             "unit": "ms",
             "extra": "target=staging budget=60000ms samples=[3066, 125, 121]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "343dc10c6836206fd30299260695b85d5193eab5",
+          "message": "Merge pull request #136 from BetaMasaheft/dependabot/npm_and_yarn/axe-core-4.14.1\n\nchore(deps-dev): bump axe-core from 4.14.0 to 4.14.1",
+          "timestamp": "2026-11-23T09:21:34Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/343dc10c6836206fd30299260695b85d5193eab5"
+        },
+        "date": 1795606322557,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 9070,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[9070, 478, 479]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 997,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=10000ms samples=[705, 997, 832]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 5347,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[5347, 473, 470]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 315,
+            "unit": "ms",
+            "extra": "target=staging budget=30000ms samples=[4796, 315, 166]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 309,
+            "unit": "ms",
+            "extra": "target=staging budget=10000ms samples=[2400, 309, 167]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 158,
+            "unit": "ms",
+            "extra": "target=staging budget=5000ms samples=[759, 158, 157]"
+          },
+          {
+            "name": "decorations",
+            "value": 317,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[14926, 317, 165]"
+          },
+          {
+            "name": "additions",
+            "value": 311,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[12601, 311, 171]"
+          },
+          {
+            "name": "work-text",
+            "value": 162,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[3980, 162, 160]"
           }
         ]
       }
