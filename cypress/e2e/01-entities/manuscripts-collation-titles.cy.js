@@ -11,8 +11,9 @@ describe('Manuscripts: quire image dialogs titles', { tags: '@container' }, () =
   const msId = 'EMIP00064'
 
   beforeEach(() => {
-    // Ignore unrelated page script errors: vis is not defined, and the
-    // OpenSeadragon viewer init (this.element is null) on this manuscript
+    // Ignore unrelated page script errors (tracked, do not widen casually):
+    // - vis is not defined → #34 (also BetMasWeb#58)
+    // - OpenSeadragon init this.element is null → #137
     cy.on('uncaught:exception', (err) => {
       if (err.message.includes('vis is not defined') || err.message.includes('this.element is null')) {
         return false
