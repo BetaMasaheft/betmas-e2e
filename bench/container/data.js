@@ -1,66 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1795524864955,
+  "lastUpdate": 1795606890343,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Container slow pages": [
-      {
-        "commit": {
-          "author": {
-            "name": "Duncan Paterson",
-            "username": "duncdrum",
-            "email": "duncdrum@users.noreply.github.com"
-          },
-          "committer": {
-            "name": "GitHub",
-            "username": "web-flow",
-            "email": "noreply@github.com"
-          },
-          "id": "0f353b5e9588a11b08c4c784f1b551fdbda998de",
-          "message": "test(collatex,dillmann): flip 4 specs dual-env, already work (#80)\n\n* test(collatex,dillmann): flip 4 specs dual-env, already work\n\nVerified directly against the container (booted via BetMas's compose +\nCI override, release-expanded image pulled fresh):\n- api-collatex-cross-service.cy.js + collate.cy.js's live flow: blocked\n  on BetMas#139 (COLLATEX_URL never set) + BetMasWeb#41 (dtslib\n  FORX0003), both merged 2026-07-23.\n- dillmann.cy.js + lexicon.cy.js: blocked on Dillmann#558's videash.js\n  crash, fixed by Dillmann#559 (merged 2026-07-23) and baked into a\n  fresh release-expanded build the same day.\n\nAlso fixes package.json's test:container/bench:container scripts: the\nbaseUrl still pointed at the old bare eXist app path\n(/exist/apps/BetMasWeb/) instead of root, which is what nginx has\nactually proxied since BetMas#130 - test-container.yml's CI config\nalready had this right, the local dev scripts had just drifted.\n\n* test(dillmann): flip lemma.cy.js dual-env, already works\n\nStated blocker (Dillmann/ routes 405 in container) was stale, same as\nits dillmann.cy.js/lexicon.cy.js siblings. Verified directly: both\ntests pass consistently against the container once the corpus has had\na moment to settle after boot - an earlier check against a\nfreshly-booted, not-yet-settled container gave a false negative\n(kwicsearch API call never fired), not a real blocker.\n\n* test(apidoc): un-skip regression test for the overflow bug, now fixed\n\n<pre> examples inside .w3-quarter columns were overflowing their\ncontainer instead of wrapping (confirmed: scrollWidth up to 2x\nclientWidth). Test passes clean now that the underlying CSS is fixed.\n\nRefs #3\nFixes BetaMasaheft/BetMasWeb#43\n\n* test(support): remove Map container not found bypass\n\nThe bypass was masking a real bug in BetMasWeb's geojsonmap.js, not a\n3rd-party-library quirk to work around. Now that the source is fixed,\nremoving the bypass so a regression would fail loudly again.\n\nRefs #1\nFixes BetaMasaheft/BetMasWeb#43\n\n* test(support): remove form is not defined bypass, now fixed\n\nThe existing advancedSearch submit test was already exercising this\nexact click - it passed silently because the bypass swallowed the\nuncaught exception. Now that the source is fixed, that test is real\nregression coverage without the bypass masking it.\n\nRefs #14\nFixes BetaMasaheft/BetMasWeb#43\n\n* test(additions): un-skip and fix text-input search regression test\n\nA literal apostrophe used to crash the server-side query - fixed in\nBetMasWeb. The test now actually types the reported input and submits,\ninstead of only checking the field is visible.\n\nRefs #12\nFixes BetaMasaheft/BetMasWeb#43\n\n* test(guidelines): flip dual-env, now wired into the container\n\nGuidelines was never routed anywhere in the container before - fixed\nin BetMas#140. Merged the two describe blocks: 2 of 3 tests verified\nworking end to end (search page loads, quick-links-by-id works). The\nthird is skipped, not fixed - it asserts a specific pagination\nposition for a search result, a content-order assumption that depends\non guidelines-data.xar's release snapshot rather than on routing.\n\nAlso fixed both container URLs to use a trailing slash (Guidelines/,\nmatching the already-working Dillmann/ convention) - the bare form\nhits an nginx auto-redirect that's missing its port in this container\nsetup, unrelated to the routing fix itself.\n\nRefs #67\nFixes BetaMasaheft/BetMas#140",
-          "timestamp": "2026-07-24T18:37:45Z",
-          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/0f353b5e9588a11b08c4c784f1b551fdbda998de"
-        },
-        "date": 1785389373666,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "newsearch-mss-filter",
-            "value": 4615,
-            "unit": "ms",
-            "extra": "target=container budget=25000ms samples=[7115, 4615, 3990]"
-          },
-          {
-            "name": "manuscripts-browse",
-            "value": 1357,
-            "unit": "ms",
-            "extra": "target=container budget=10000ms samples=[5642, 1357, 1196]"
-          },
-          {
-            "name": "catalogues-list",
-            "value": 486,
-            "unit": "ms",
-            "extra": "target=container budget=5000ms samples=[486, 494, 406]"
-          },
-          {
-            "name": "decorations",
-            "value": 18830,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[19996, 18830, 18758]"
-          },
-          {
-            "name": "additions",
-            "value": 20708,
-            "unit": "ms",
-            "extra": "target=container budget=60000ms samples=[21204, 20185, 20708]"
-          },
-          {
-            "name": "work-text",
-            "value": 4180,
-            "unit": "ms",
-            "extra": "target=container budget=20000ms samples=[5139, 4180, 4033]"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -5922,6 +5864,82 @@ window.BENCHMARK_DATA = {
             "value": 40,
             "unit": "ms",
             "extra": "target=container budget=20000ms samples=[2121, 25, 40]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "343dc10c6836206fd30299260695b85d5193eab5",
+          "message": "Merge pull request #136 from BetaMasaheft/dependabot/npm_and_yarn/axe-core-4.14.1\n\nchore(deps-dev): bump axe-core from 4.14.0 to 4.14.1",
+          "timestamp": "2026-11-23T09:21:34Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/343dc10c6836206fd30299260695b85d5193eab5"
+        },
+        "date": 1795606888876,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 17716,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[17716, 9, 8]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 5203,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=10000ms samples=[5203, 475, 373]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 7215,
+            "unit": "ms",
+            "extra": "target=container stat=p95 budget=30000ms samples=[7215, 11, 7]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 24,
+            "unit": "ms",
+            "extra": "target=container budget=25000ms samples=[4832, 11, 24]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 11,
+            "unit": "ms",
+            "extra": "target=container budget=10000ms samples=[1720, 10, 11]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 3,
+            "unit": "ms",
+            "extra": "target=container budget=5000ms samples=[602, 2, 3]"
+          },
+          {
+            "name": "decorations",
+            "value": 15,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[11720, 15, 7]"
+          },
+          {
+            "name": "additions",
+            "value": 28,
+            "unit": "ms",
+            "extra": "target=container budget=60000ms samples=[9780, 28, 15]"
+          },
+          {
+            "name": "work-text",
+            "value": 6,
+            "unit": "ms",
+            "extra": "target=container budget=20000ms samples=[2661, 6, 6]"
           }
         ]
       }
