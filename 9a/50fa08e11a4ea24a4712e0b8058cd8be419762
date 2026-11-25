@@ -1,0 +1,19 @@
+cypress/e2e/01-entities/manuscripts-collation-titles.cy.js
+  s_b9450a356bc06f::t_20205937ef42da 14-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9a50fa08e11a4ea24a4712e0b8058cd8be419762",
+  "prompts": {},
+  "sessions": {
+    "s_b9450a356bc06f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "1bd97766-acd4-49d3-bb31-b1719f9da3e6",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
