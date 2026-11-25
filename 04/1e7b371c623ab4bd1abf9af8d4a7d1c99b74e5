@@ -1,0 +1,19 @@
+cypress/e2e/03-menu/morpho.cy.js
+  s_b9450a356bc06f::t_4cda2ecb31e5dd 3-12,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "041e7b371c623ab4bd1abf9af8d4a7d1c99b74e5",
+  "prompts": {},
+  "sessions": {
+    "s_b9450a356bc06f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "1bd97766-acd4-49d3-bb31-b1719f9da3e6",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
