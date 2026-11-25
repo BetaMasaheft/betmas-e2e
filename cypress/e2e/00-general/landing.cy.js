@@ -58,10 +58,10 @@ describe('landing page', { tags: ['@container', '@container-only'] }, () => {
     })
   })
 
-  // Cover
-  it('loads as guest user', () => {
+  // Cover — anonymous nav shows About (#138); authenticated greets "Hi …!"
+  it('loads as anonymous user', () => {
     cy.get('#introductory > button.w3-button')
-      .should('contain', 'guest')
+      .should('contain', 'About')
   })
 
   // TODO(DP): The fake interactiviy on hoover is bad accessibility design, or is this broken and something should happen
