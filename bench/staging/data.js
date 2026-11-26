@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1795606323420,
+  "lastUpdate": 1795691602450,
   "repoUrl": "https://github.com/BetaMasaheft/betmas-e2e",
   "entries": {
     "Staging slow pages": [
@@ -2508,6 +2508,82 @@ window.BENCHMARK_DATA = {
             "value": 162,
             "unit": "ms",
             "extra": "target=staging budget=60000ms samples=[3980, 162, 160]"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Duncan Paterson",
+            "username": "duncdrum",
+            "email": "duncdrum@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "10606298b139bb268c507a1052380112a9258ddd",
+          "message": "Merge pull request #140 from BetaMasaheft/fix/container-ci-landing-mirador-morpho\n\nfix(e2e): unblock container CI for landing, text-nav, morpho",
+          "timestamp": "2026-11-26T09:17:17Z",
+          "url": "https://github.com/BetaMasaheft/betmas-e2e/commit/10606298b139bb268c507a1052380112a9258ddd"
+        },
+        "date": 1795691602045,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "catalog-hp1-smoke",
+            "value": 8183,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[8183, 371, 368]"
+          },
+          {
+            "name": "catalog-hp2-institutions",
+            "value": 575,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=10000ms samples=[567, 575, 541]"
+          },
+          {
+            "name": "catalog-hp4-bibliography",
+            "value": 4243,
+            "unit": "ms",
+            "extra": "target=staging stat=p95 budget=30000ms samples=[4243, 376, 369]"
+          },
+          {
+            "name": "newsearch-mss-filter",
+            "value": 246,
+            "unit": "ms",
+            "extra": "target=staging budget=30000ms samples=[4861, 246, 133]"
+          },
+          {
+            "name": "manuscripts-browse",
+            "value": 241,
+            "unit": "ms",
+            "extra": "target=staging budget=10000ms samples=[1791, 241, 129]"
+          },
+          {
+            "name": "catalogues-list",
+            "value": 124,
+            "unit": "ms",
+            "extra": "target=staging budget=5000ms samples=[720, 124, 123]"
+          },
+          {
+            "name": "decorations",
+            "value": 131,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[14031, 129, 131]"
+          },
+          {
+            "name": "additions",
+            "value": 243,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[12836, 243, 132]"
+          },
+          {
+            "name": "work-text",
+            "value": 128,
+            "unit": "ms",
+            "extra": "target=staging budget=60000ms samples=[3941, 128, 126]"
           }
         ]
       }
