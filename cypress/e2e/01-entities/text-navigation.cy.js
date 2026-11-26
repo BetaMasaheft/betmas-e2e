@@ -18,6 +18,12 @@ describe('Text view navigation (refslist)', { tags: '@container' }, () => {
   // cy.request cannot execute; pass it up front.
   beforeEach(() => {
     cy.setCookie('ds_verification_token', 'proof_passed')
+    // Mirador init on /text when the mount node is missing (#139)
+    cy.on('uncaught:exception', (err) => {
+      if (err.message.includes('offsetWidth') || err.message.includes('getElementById(...) is null')) {
+        return false
+      }
+    })
   })
 
   it('renders the numbered section links in #refslist', () => {
